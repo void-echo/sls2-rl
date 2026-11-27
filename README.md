@@ -16,7 +16,7 @@ overlooks when its world changes. This repository holds the code and the figure 
 | `rl/` | Training stack: observation encoder, set transformer policy and value network, actors, PPO learner, evaluation, tracing, a small built-in stand-in game (`fake_engine.py`) and unit tests (`rl/README.md`, in Chinese). |
 | `tools/` | Engine checks (smoke, determinism, scenarios, save/load, navigation cycles, rule reverts), the analysis and evaluation scripts behind the paper, `update_game.sh` for re-checking the engine after a game update, and background launch/stop wrappers in `tools/b100/`. |
 | `parity/` | In-client verification: a mod for the real game client that replays runs recorded by the engine and compares them decision by decision (`parity/README.md`). |
-| `paper/` | The manuscript; `figs/` holds the scripts and rendered outputs of the six main and four Extended Data figures, `figdata/` the data behind the panels. |
+| `paper/` | The manuscript; `figs/` holds the scripts and rendered outputs of the six main and two Extended Data figures, `figdata/` the data behind the panels. |
 
 ## Requirements
 
