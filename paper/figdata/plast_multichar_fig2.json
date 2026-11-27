@@ -1,0 +1,668 @@
+{
+  "description": "Consolidated plasticity & 1,000-step random-label memorization probe dataset across all 6 playable characters (>26.2B cumulative env steps) plus Ironclad reference baselines for Figure 2.",
+  "step_size": 131072,
+  "total_6char_updates": 200300,
+  "total_6char_env_steps": 26253721600,
+  "total_6char_env_steps_B": 26.254,
+  "baselines": {
+    "aged_large_step": {
+      "character": "Ironclad",
+      "label": "Aged large-step (0.43B)",
+      "checkpoint": "plast/ckpts/boss_g1_013200.pt",
+      "update": 13200,
+      "env_steps": 432537600,
+      "env_steps_B": 0.4325,
+      "states_eval": "4096 v0.111 states (lineage2)",
+      "weight_norms": {
+        "non_table": 253.22522495493905,
+        "non_embedding": 253.22522495493905,
+        "blocks_non_layernorm": 174.19907717742439,
+        "total": 305.3604385281656
+      },
+      "dormant": {
+        "mean_01": 0.4595424107142857,
+        "mean_025": 0.3178013392857143,
+        "mean_by_kind_01": {
+          "blocks": 0.392822265625,
+          "cand_blocks": 0.4072265625,
+          "logit": 0.67578125,
+          "value": 0.5625
+        }
+      },
+      "attention_entropy_mean": 0.012792462250217795,
+      "features": {
+        "g": {
+          "srank_01": 198,
+          "entropy_rank": 43.51395797729492
+        },
+        "cand": {
+          "srank_01": 189,
+          "entropy_rank": 33.76313781738281
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            2.0828816890716553,
+            1.0357481241226196,
+            0.9835644960403442,
+            0.6220917105674744
+          ],
+          "mse_by_step": {
+            "0": 2.0828816890716553,
+            "100": 1.0357481241226196,
+            "300": 0.9835644960403442,
+            "1000": 0.6220917105674744
+          },
+          "final_mse": 0.6220917105674744
+        }
+      }
+    },
+    "random_init": {
+      "character": "Ironclad",
+      "label": "Random init",
+      "checkpoint": "random",
+      "update": null,
+      "env_steps": 0,
+      "env_steps_B": 0.0,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 128.19473770688697,
+        "non_embedding": 128.19473770688697,
+        "blocks_non_layernorm": 55.4932902596957,
+        "total": 152.13939980645335
+      },
+      "dormant": {
+        "mean_01": 0.0,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.0,
+          "value": 0.0
+        }
+      },
+      "attention_entropy_mean": 0.9893037527799606,
+      "features": {
+        "g": {
+          "srank_01": 187,
+          "entropy_rank": 20.616718292236328
+        },
+        "cand": {
+          "srank_01": 236,
+          "entropy_rank": 90.8962173461914
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.063254475593567,
+            1.0277982950210571,
+            0.9429980516433716,
+            0.22644565999507904
+          ],
+          "mse_by_step": {
+            "0": 1.063254475593567,
+            "100": 1.0277982950210571,
+            "300": 0.9429980516433716,
+            "1000": 0.22644565999507904
+          },
+          "final_mse": 0.22644565999507904
+        }
+      }
+    },
+    "young_kd": {
+      "character": "Ironclad",
+      "label": "Freshly distilled (+0.46B)",
+      "checkpoint": "runs/plast1125/young_kd.pt",
+      "update": 3500,
+      "env_steps": 458752000,
+      "env_steps_B": 0.4588,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 130.33287730588003,
+        "non_embedding": 130.33287730588003,
+        "blocks_non_layernorm": 58.54368682452737,
+        "total": 154.7639003925937
+      },
+      "dormant": {
+        "mean_01": 0.0,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.0,
+          "value": 0.0
+        }
+      },
+      "attention_entropy_mean": 0.9176153242588043,
+      "features": {
+        "g": {
+          "srank_01": 231,
+          "entropy_rank": 92.37012481689453
+        },
+        "cand": {
+          "srank_01": 240,
+          "entropy_rank": 125.98406219482422
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.9241979122161865,
+            0.9920940399169922,
+            0.5173137784004211,
+            0.048003967851400375
+          ],
+          "mse_by_step": {
+            "0": 1.9241979122161865,
+            "100": 0.9920940399169922,
+            "300": 0.5173137784004211,
+            "1000": 0.048003967851400375
+          },
+          "final_mse": 0.048003967851400375
+        }
+      }
+    },
+    "ironclad_3p5B": {
+      "character": "Ironclad",
+      "label": "Ironclad (3.5B, patch)",
+      "checkpoint": "runs/plast1125/ckpt_026700_enc2.pt",
+      "update": 26700,
+      "env_steps": 3499622400,
+      "env_steps_B": 3.4996,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 131.5771293361003,
+        "non_embedding": 131.5771293361003,
+        "blocks_non_layernorm": 60.181288307845755,
+        "total": 156.24787117206944
+      },
+      "dormant": {
+        "mean_01": 0.0011160714285714285,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.00390625,
+          "value": 0.00390625
+        }
+      },
+      "attention_entropy_mean": 0.8666181862354279,
+      "features": {
+        "g": {
+          "srank_01": 231,
+          "entropy_rank": 89.55415344238281
+        },
+        "cand": {
+          "srank_01": 240,
+          "entropy_rank": 120.17786407470703
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.897818684577942,
+            1.00730299949646,
+            0.5807048678398132,
+            0.054398003965616226
+          ],
+          "mse_by_step": {
+            "0": 1.897818684577942,
+            "100": 1.00730299949646,
+            "300": 0.5807048678398132,
+            "1000": 0.054398003965616226
+          },
+          "final_mse": 0.054398003965616226
+        }
+      }
+    },
+    "ironclad_5p2B": {
+      "character": "Ironclad",
+      "label": "Ironclad (5.2B)",
+      "checkpoint": "runs/v3_iron/eval_ckpts/ckpt_040000.pt",
+      "update": 40000,
+      "env_steps": 5242880000,
+      "env_steps_B": 5.2429,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 131.73844022963684,
+        "non_embedding": 131.73844022963684,
+        "blocks_non_layernorm": 60.38643724570144,
+        "total": 156.41312870278023
+      },
+      "dormant": {
+        "mean_01": 0.0011160714285714285,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.00390625,
+          "value": 0.00390625
+        }
+      },
+      "attention_entropy_mean": 0.8638002872467041,
+      "features": {
+        "g": {
+          "srank_01": 231,
+          "entropy_rank": 90.18563842773438
+        },
+        "cand": {
+          "srank_01": 240,
+          "entropy_rank": 120.57662200927734
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.8425217866897583,
+            1.0061767101287842,
+            0.5825471878051758,
+            0.04795052111148834
+          ],
+          "mse_by_step": {
+            "0": 1.8425217866897583,
+            "100": 1.0061767101287842,
+            "300": 0.5825471878051758,
+            "1000": 0.04795052111148834
+          },
+          "final_mse": 0.04795052111148834
+        }
+      }
+    }
+  },
+  "characters_latest": {
+    "Ironclad": {
+      "character": "Ironclad",
+      "label": "Ironclad (6.7B)",
+      "checkpoint": "runs/v3_iron/eval_ckpts/ckpt_051000.pt",
+      "update": 51000,
+      "env_steps": 6684672000,
+      "env_steps_B": 6.6847,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 131.85205277970616,
+        "non_embedding": 131.85205277970616,
+        "blocks_non_layernorm": 60.530912757698225,
+        "total": 156.52900766482628
+      },
+      "dormant": {
+        "mean_01": 0.0016741071428571428,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.00390625,
+          "value": 0.0078125
+        }
+      },
+      "attention_entropy_mean": 0.8647672235965729,
+      "features": {
+        "g": {
+          "srank_01": 231,
+          "entropy_rank": 90.86345672607422
+        },
+        "cand": {
+          "srank_01": 240,
+          "entropy_rank": 121.73011779785156
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.8339797258377075,
+            1.007312297821045,
+            0.5572142601013184,
+            0.04795738309621811
+          ],
+          "mse_by_step": {
+            "0": 1.8339797258377075,
+            "100": 1.007312297821045,
+            "300": 0.5572142601013184,
+            "1000": 0.04795738309621811
+          },
+          "final_mse": 0.04795738309621811
+        }
+      }
+    },
+    "Silent": {
+      "character": "Silent",
+      "label": "Silent (5.2B)",
+      "checkpoint": "runs/plast5char/ckpts/silent_ckpt_039500.pt",
+      "update": 39500,
+      "env_steps": 5177344000,
+      "env_steps_B": 5.1773,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 132.20907365222254,
+        "non_embedding": 132.20907365222254,
+        "blocks_non_layernorm": 61.010275997215935,
+        "total": 156.96453146154647
+      },
+      "dormant": {
+        "mean_01": 0.004464285714285714,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.0078125,
+          "value": 0.0234375
+        }
+      },
+      "attention_entropy_mean": 0.8545252680778503,
+      "features": {
+        "g": {
+          "srank_01": 230,
+          "entropy_rank": 85.75244903564453
+        },
+        "cand": {
+          "srank_01": 239,
+          "entropy_rank": 112.81765747070312
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.906398057937622,
+            1.0118874311447144,
+            0.5508643984794617,
+            0.0660952776670456
+          ],
+          "mse_by_step": {
+            "0": 1.906398057937622,
+            "100": 1.0118874311447144,
+            "300": 0.5508643984794617,
+            "1000": 0.0660952776670456
+          },
+          "final_mse": 0.0660952776670456
+        }
+      }
+    },
+    "Necrobinder": {
+      "character": "Necrobinder",
+      "label": "Necro (4.7B)",
+      "checkpoint": "runs/plast5char/ckpts/necro_ckpt_035700.pt",
+      "update": 35700,
+      "env_steps": 4679270400,
+      "env_steps_B": 4.6793,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 132.12633602255906,
+        "non_embedding": 132.12633602255906,
+        "blocks_non_layernorm": 60.89192524527448,
+        "total": 156.86191424638616
+      },
+      "dormant": {
+        "mean_01": 0.0034877232142857145,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0009765625,
+          "logit": 0.0078125,
+          "value": 0.015625
+        }
+      },
+      "attention_entropy_mean": 0.8604595065116882,
+      "features": {
+        "g": {
+          "srank_01": 231,
+          "entropy_rank": 88.73703002929688
+        },
+        "cand": {
+          "srank_01": 239,
+          "entropy_rank": 116.65057373046875
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.8043155670166016,
+            1.0096930265426636,
+            0.7092745900154114,
+            0.05487319827079773
+          ],
+          "mse_by_step": {
+            "0": 1.8043155670166016,
+            "100": 1.0096930265426636,
+            "300": 0.7092745900154114,
+            "1000": 0.05487319827079773
+          },
+          "final_mse": 0.05487319827079773
+        }
+      }
+    },
+    "Regent": {
+      "character": "Regent",
+      "label": "Regent (4.0B)",
+      "checkpoint": "runs/plast5char/ckpts/regent_ckpt_030850.pt",
+      "update": 30850,
+      "env_steps": 4043571200,
+      "env_steps_B": 4.0436,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 132.02122844284438,
+        "non_embedding": 132.02122844284438,
+        "blocks_non_layernorm": 60.75563006727278,
+        "total": 156.7651052294285
+      },
+      "dormant": {
+        "mean_01": 0.004045758928571429,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0009765625,
+          "logit": 0.0078125,
+          "value": 0.01953125
+        }
+      },
+      "attention_entropy_mean": 0.860311895608902,
+      "features": {
+        "g": {
+          "srank_01": 230,
+          "entropy_rank": 85.70016479492188
+        },
+        "cand": {
+          "srank_01": 239,
+          "entropy_rank": 112.98583984375
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.8419394493103027,
+            1.0143871307373047,
+            0.6399919390678406,
+            0.050847023725509644
+          ],
+          "mse_by_step": {
+            "0": 1.8419394493103027,
+            "100": 1.0143871307373047,
+            "300": 0.6399919390678406,
+            "1000": 0.050847023725509644
+          },
+          "final_mse": 0.050847023725509644
+        }
+      }
+    },
+    "Defect": {
+      "character": "Defect",
+      "label": "Defect (4.0B)",
+      "checkpoint": "runs/plast5char/ckpts/defect_ckpt_030600.pt",
+      "update": 30600,
+      "env_steps": 4010803200,
+      "env_steps_B": 4.0108,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 132.02898313673177,
+        "non_embedding": 132.02898313673177,
+        "blocks_non_layernorm": 60.778143996908206,
+        "total": 156.78547222401
+      },
+      "dormant": {
+        "mean_01": 0.0016741071428571428,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.0078125,
+          "value": 0.00390625
+        }
+      },
+      "attention_entropy_mean": 0.8644411265850067,
+      "features": {
+        "g": {
+          "srank_01": 229,
+          "entropy_rank": 86.20280456542969
+        },
+        "cand": {
+          "srank_01": 239,
+          "entropy_rank": 113.63236236572266
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            1.876230001449585,
+            1.0186951160430908,
+            0.8136141896247864,
+            0.060408882796764374
+          ],
+          "mse_by_step": {
+            "0": 1.876230001449585,
+            "100": 1.0186951160430908,
+            "300": 0.8136141896247864,
+            "1000": 0.060408882796764374
+          },
+          "final_mse": 0.060408882796764374
+        }
+      }
+    },
+    "Fool": {
+      "character": "Fool",
+      "label": "Fool (1.7B)",
+      "checkpoint": "runs/plast5char/ckpts/fool_ckpt_012650.pt",
+      "update": 12650,
+      "env_steps": 1658060800,
+      "env_steps_B": 1.6581,
+      "states_eval": "4096 v0.113.1 states",
+      "weight_norms": {
+        "non_table": 131.8759258896182,
+        "non_embedding": 131.8759258896182,
+        "blocks_non_layernorm": 60.57411040978266,
+        "total": 156.6243844542586
+      },
+      "dormant": {
+        "mean_01": 0.0,
+        "mean_025": 0.0,
+        "mean_by_kind_01": {
+          "blocks": 0.0,
+          "cand_blocks": 0.0,
+          "logit": 0.0,
+          "value": 0.0
+        }
+      },
+      "attention_entropy_mean": 0.8544380962848663,
+      "features": {
+        "g": {
+          "srank_01": 230,
+          "entropy_rank": 88.21658325195312
+        },
+        "cand": {
+          "srank_01": 239,
+          "entropy_rank": 114.981689453125
+        }
+      },
+      "probe": {
+        "memory": {
+          "steps": [
+            0,
+            100,
+            300,
+            1000
+          ],
+          "mse": [
+            2.094403028488159,
+            1.0057910680770874,
+            0.5682763457298279,
+            0.050118327140808105
+          ],
+          "mse_by_step": {
+            "0": 2.094403028488159,
+            "100": 1.0057910680770874,
+            "300": 0.5682763457298279,
+            "1000": 0.050118327140808105
+          },
+          "final_mse": 0.050118327140808105
+        }
+      }
+    }
+  },
+  "character_order": [
+    "Ironclad",
+    "Silent",
+    "Necrobinder",
+    "Regent",
+    "Defect",
+    "Fool"
+  ]
+}

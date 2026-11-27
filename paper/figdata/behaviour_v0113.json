@@ -1,0 +1,1877 @@
+{
+ "source": "n10:~/sls2-rl/runs/pre114/*_v113_a10.jsonl.gz (300 greedy A10 runs per character on v0.113.1, evaluation checkpoints of 11-24; Fool u12650); script tmp/behaviour1126/shop_event_relic.py",
+ "shop": {
+  "Defect": {
+   "all": {
+    "visits": 1224,
+    "gold_at_entry": 277.72222222222223,
+    "spent_per_visit": 192.34477124183007,
+    "spend_share": {
+     "buy_card": 0.3360531792889606,
+     "buy_relic": 0.41054241175721023,
+     "remove": 0.15554517266278725,
+     "buy_potion": 0.09785923629104193
+    },
+    "visit_frac_buying": {
+     "buy_card": 0.6691176470588235,
+     "buy_relic": 0.35375816993464054,
+     "remove": 0.2761437908496732,
+     "buy_potion": 0.2704248366013072
+    },
+    "visit_frac_offered": {
+     "buy_card": 0.9607843137254902,
+     "buy_potion": 0.5089869281045751,
+     "remove": 0.8390522875816994,
+     "leave": 1.0,
+     "discard_potion": 0.8954248366013072,
+     "buy_relic": 0.6021241830065359,
+     "potion": 0.12173202614379085
+    }
+   },
+   "by_act": {
+    "1": {
+     "visits": 355,
+     "gold_at_entry": 187.10422535211268,
+     "spent_per_visit": 146.92957746478874,
+     "spend_share": {
+      "buy_card": 0.47960122699386504,
+      "remove": 0.1267254601226994,
+      "buy_potion": 0.07254601226993865,
+      "buy_relic": 0.3211273006134969
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.819718309859155,
+      "remove": 0.19154929577464788,
+      "buy_potion": 0.18309859154929578,
+      "buy_relic": 0.22816901408450704
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9802816901408451,
+      "buy_potion": 0.6338028169014085,
+      "remove": 0.9042253521126761,
+      "leave": 1.0,
+      "discard_potion": 0.7633802816901408,
+      "potion": 0.12394366197183099,
+      "buy_relic": 0.38028169014084506
+     }
+    },
+    "2": {
+     "visits": 424,
+     "gold_at_entry": 292.2169811320755,
+     "spent_per_visit": 192.93867924528303,
+     "spend_share": {
+      "buy_card": 0.2847590641273256,
+      "buy_relic": 0.4467153998484219,
+      "buy_potion": 0.0767914333911938,
+      "remove": 0.1917341026330587
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.5660377358490566,
+      "buy_relic": 0.3915094339622642,
+      "buy_potion": 0.21462264150943397,
+      "remove": 0.3632075471698113
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9740566037735849,
+      "buy_relic": 0.6910377358490566,
+      "buy_potion": 0.4716981132075472,
+      "remove": 0.8419811320754716,
+      "leave": 1.0,
+      "discard_potion": 0.9316037735849056,
+      "potion": 0.1320754716981132
+     }
+    },
+    "3": {
+     "visits": 445,
+     "gold_at_entry": 336.2022471910112,
+     "spent_per_visit": 228.00898876404494,
+     "spend_share": {
+      "buy_relic": 0.4273436884017977,
+      "remove": 0.14118307971300165,
+      "buy_potion": 0.12785815658755814,
+      "buy_card": 0.30361507529764253
+     },
+     "visit_frac_buying": {
+      "buy_relic": 0.41797752808988764,
+      "remove": 0.2606741573033708,
+      "buy_potion": 0.39325842696629215,
+      "buy_card": 0.647191011235955
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9325842696629213,
+      "buy_relic": 0.6943820224719102,
+      "remove": 0.7842696629213484,
+      "leave": 1.0,
+      "discard_potion": 0.9662921348314607,
+      "buy_potion": 0.4449438202247191,
+      "potion": 0.1101123595505618
+     }
+    }
+   }
+  },
+  "Fool": {
+   "all": {
+    "visits": 1181,
+    "gold_at_entry": 251.22015241320915,
+    "spent_per_visit": 179.9805249788315,
+    "spend_share": {
+     "buy_card": 0.30799267961064564,
+     "buy_potion": 0.10206203512469596,
+     "remove": 0.2078030834082152,
+     "buy_relic": 0.3821422018564432
+    },
+    "visit_frac_buying": {
+     "buy_card": 0.6181202370872142,
+     "buy_potion": 0.25656223539373413,
+     "remove": 0.32514817950889074,
+     "buy_relic": 0.3090601185436071
+    },
+    "visit_frac_offered": {
+     "buy_card": 0.9635901778154107,
+     "buy_potion": 0.5224386113463166,
+     "remove": 0.7756138865368332,
+     "leave": 1.0,
+     "discard_potion": 0.890770533446232,
+     "buy_relic": 0.554614733276884,
+     "potion": 0.12447078746824725
+    }
+   },
+   "by_act": {
+    "1": {
+     "visits": 375,
+     "gold_at_entry": 191.408,
+     "spent_per_visit": 148.31733333333332,
+     "spend_share": {
+      "buy_card": 0.4847624013376724,
+      "buy_potion": 0.10142217587515058,
+      "buy_relic": 0.26845142846868875,
+      "remove": 0.1453639943184883
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.792,
+      "buy_potion": 0.232,
+      "buy_relic": 0.20266666666666666,
+      "remove": 0.22133333333333333
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.984,
+      "buy_potion": 0.6506666666666666,
+      "remove": 0.8986666666666666,
+      "leave": 1.0,
+      "discard_potion": 0.8106666666666666,
+      "potion": 0.12533333333333332,
+      "buy_relic": 0.44
+     }
+    },
+    "2": {
+     "visits": 391,
+     "gold_at_entry": 261.55242966751916,
+     "spent_per_visit": 182.7851662404092,
+     "spend_share": {
+      "remove": 0.259063370132505,
+      "buy_card": 0.23705382753361598,
+      "buy_potion": 0.08074829646420126,
+      "buy_relic": 0.42313450586967777
+     },
+     "visit_frac_buying": {
+      "remove": 0.4398976982097187,
+      "buy_card": 0.5115089514066496,
+      "buy_potion": 0.20971867007672634,
+      "buy_relic": 0.36828644501278773
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9744245524296675,
+      "buy_relic": 0.6035805626598465,
+      "buy_potion": 0.5063938618925832,
+      "remove": 0.7800511508951407,
+      "leave": 1.0,
+      "discard_potion": 0.9181585677749361,
+      "potion": 0.12276214833759591
+     }
+    },
+    "3": {
+     "visits": 415,
+     "gold_at_entry": 295.5325301204819,
+     "spent_per_visit": 205.94939759036146,
+     "spend_share": {
+      "buy_potion": 0.12030092782178334,
+      "buy_relic": 0.42184885748049,
+      "buy_card": 0.25227860393827,
+      "remove": 0.20557161075945665
+     },
+     "visit_frac_buying": {
+      "buy_potion": 0.3228915662650602,
+      "buy_relic": 0.3493975903614458,
+      "buy_card": 0.5614457831325301,
+      "remove": 0.3108433734939759
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9349397590361446,
+      "buy_relic": 0.6120481927710844,
+      "buy_potion": 0.42168674698795183,
+      "remove": 0.6602409638554216,
+      "leave": 1.0,
+      "discard_potion": 0.9373493975903614,
+      "potion": 0.12530120481927712
+     }
+    }
+   }
+  },
+  "Ironclad": {
+   "all": {
+    "visits": 1234,
+    "gold_at_entry": 283.5178282009725,
+    "spent_per_visit": 194.3192868719611,
+    "spend_share": {
+     "buy_card": 0.2598440301930856,
+     "buy_relic": 0.47706326368906127,
+     "remove": 0.1401226072813712,
+     "buy_potion": 0.12297009883648193
+    },
+    "visit_frac_buying": {
+     "buy_card": 0.5105348460291734,
+     "buy_relic": 0.4141004862236629,
+     "remove": 0.2520259319286872,
+     "buy_potion": 0.3427876823338736
+    },
+    "visit_frac_offered": {
+     "buy_card": 0.9716369529983793,
+     "buy_potion": 0.5129659643435981,
+     "remove": 0.8841166936790924,
+     "leave": 1.0,
+     "discard_potion": 0.9141004862236629,
+     "buy_relic": 0.6482982171799028,
+     "potion": 0.3233387358184765
+    }
+   },
+   "by_act": {
+    "1": {
+     "visits": 374,
+     "gold_at_entry": 203.19251336898395,
+     "spent_per_visit": 148.37433155080214,
+     "spend_share": {
+      "buy_card": 0.42535861025012617,
+      "remove": 0.05955813450587472,
+      "buy_potion": 0.11980105240395011,
+      "buy_relic": 0.395282202840049
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.7005347593582888,
+      "remove": 0.09358288770053476,
+      "buy_potion": 0.28342245989304815,
+      "buy_relic": 0.27807486631016043
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.983957219251337,
+      "buy_potion": 0.6737967914438503,
+      "remove": 0.9491978609625669,
+      "leave": 1.0,
+      "discard_potion": 0.8128342245989305,
+      "potion": 0.21657754010695188,
+      "buy_relic": 0.44919786096256686
+     }
+    },
+    "2": {
+     "visits": 427,
+     "gold_at_entry": 298.94145199063234,
+     "spent_per_visit": 198.27400468384076,
+     "spend_share": {
+      "buy_relic": 0.5143569209690183,
+      "remove": 0.17735020020552072,
+      "buy_card": 0.21428487060463247,
+      "buy_potion": 0.09400800822082846
+     },
+     "visit_frac_buying": {
+      "buy_relic": 0.4847775175644028,
+      "remove": 0.351288056206089,
+      "buy_card": 0.41920374707259955,
+      "buy_potion": 0.28337236533957844
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9812646370023419,
+      "buy_relic": 0.7259953161592506,
+      "buy_potion": 0.4613583138173302,
+      "remove": 0.8594847775175644,
+      "leave": 1.0,
+      "discard_potion": 0.9437939110070258,
+      "potion": 0.32084309133489464
+     }
+    },
+    "3": {
+     "visits": 433,
+     "gold_at_entry": 337.68822170900694,
+     "spent_per_visit": 230.1039260969977,
+     "spend_share": {
+      "buy_relic": 0.4909218648065439,
+      "buy_potion": 0.14934510965022332,
+      "buy_card": 0.20637326240778842,
+      "remove": 0.15335976313544436
+     },
+     "visit_frac_buying": {
+      "buy_relic": 0.4618937644341801,
+      "buy_potion": 0.45265588914549654,
+      "buy_card": 0.43648960739030024,
+      "remove": 0.2909930715935335
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9515011547344111,
+      "buy_relic": 0.74364896073903,
+      "remove": 0.8521939953810623,
+      "leave": 1.0,
+      "discard_potion": 0.9722863741339491,
+      "buy_potion": 0.42494226327944573,
+      "potion": 0.418013856812933
+     }
+    }
+   }
+  },
+  "Necrobinder": {
+   "all": {
+    "visits": 1171,
+    "gold_at_entry": 258.401366353544,
+    "spent_per_visit": 180.71477369769428,
+    "spend_share": {
+     "buy_card": 0.2902744108460095,
+     "remove": 0.1713709201056626,
+     "buy_potion": 0.13170019421880094,
+     "buy_relic": 0.40665447482952694
+    },
+    "visit_frac_buying": {
+     "buy_card": 0.5935098206660974,
+     "remove": 0.2783945345858241,
+     "buy_potion": 0.3373185311699402,
+     "buy_relic": 0.32450896669513235
+    },
+    "visit_frac_offered": {
+     "buy_card": 0.9581554227156277,
+     "buy_potion": 0.53800170794193,
+     "remove": 0.8087105038428694,
+     "leave": 1.0,
+     "discard_potion": 0.8941076003415884,
+     "buy_relic": 0.5721605465414176,
+     "potion": 0.11272416737830913
+    }
+   },
+   "by_act": {
+    "1": {
+     "visits": 389,
+     "gold_at_entry": 191.66066838046274,
+     "spent_per_visit": 147.5681233933162,
+     "spend_share": {
+      "buy_card": 0.4466413490349105,
+      "remove": 0.16523238798689988,
+      "buy_relic": 0.2687965995401017,
+      "buy_potion": 0.11932966343808794
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.7275064267352185,
+      "remove": 0.2467866323907455,
+      "buy_relic": 0.1928020565552699,
+      "buy_potion": 0.2853470437017995
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9845758354755784,
+      "buy_potion": 0.6349614395886889,
+      "remove": 0.9151670951156813,
+      "leave": 1.0,
+      "discard_potion": 0.8071979434447301,
+      "potion": 0.11825192802056556,
+      "buy_relic": 0.43444730077120824
+     }
+    },
+    "2": {
+     "visits": 399,
+     "gold_at_entry": 270.55388471177946,
+     "spent_per_visit": 187.8997493734336,
+     "spend_share": {
+      "buy_potion": 0.11692365149655871,
+      "remove": 0.21247932561489624,
+      "buy_card": 0.24039641466147363,
+      "buy_relic": 0.43020060822707146
+     },
+     "visit_frac_buying": {
+      "buy_potion": 0.3258145363408521,
+      "remove": 0.37092731829573933,
+      "buy_card": 0.5213032581453634,
+      "buy_relic": 0.3684210526315789
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9649122807017544,
+      "buy_relic": 0.6240601503759399,
+      "buy_potion": 0.5388471177944862,
+      "remove": 0.7844611528822055,
+      "leave": 1.0,
+      "potion": 0.10275689223057644,
+      "discard_potion": 0.9398496240601504
+     }
+    },
+    "3": {
+     "visits": 383,
+     "gold_at_entry": 313.52741514360315,
+     "spent_per_visit": 206.89556135770235,
+     "spend_share": {
+      "buy_potion": 0.15464216756477075,
+      "buy_card": 0.22418949786095582,
+      "buy_relic": 0.4842442674877904,
+      "remove": 0.136924067086483
+     },
+     "visit_frac_buying": {
+      "buy_potion": 0.402088772845953,
+      "buy_card": 0.5326370757180157,
+      "buy_relic": 0.412532637075718,
+      "remove": 0.21409921671018275
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9242819843342036,
+      "buy_relic": 0.6579634464751958,
+      "buy_potion": 0.4386422976501306,
+      "remove": 0.7258485639686684,
+      "leave": 1.0,
+      "discard_potion": 0.9347258485639687,
+      "potion": 0.1174934725848564
+     }
+    }
+   }
+  },
+  "Regent": {
+   "all": {
+    "visits": 1329,
+    "gold_at_entry": 264.4206170052671,
+    "spent_per_visit": 177.60120391271633,
+    "spend_share": {
+     "buy_card": 0.30206497424078094,
+     "buy_relic": 0.4547180043383948,
+     "remove": 0.12820295553145336,
+     "buy_potion": 0.11501406588937094
+    },
+    "visit_frac_buying": {
+     "buy_card": 0.5876598946576373,
+     "buy_relic": 0.3544018058690745,
+     "remove": 0.21369450714823177,
+     "buy_potion": 0.30624529721595184
+    },
+    "visit_frac_offered": {
+     "buy_card": 0.9683972911963883,
+     "buy_potion": 0.5026335590669676,
+     "remove": 0.8465011286681715,
+     "leave": 1.0,
+     "discard_potion": 0.9149736644093304,
+     "buy_relic": 0.5959367945823928,
+     "potion": 0.11662904439428141
+    }
+   },
+   "by_act": {
+    "1": {
+     "visits": 380,
+     "gold_at_entry": 187.85526315789474,
+     "spent_per_visit": 131.43947368421053,
+     "spend_share": {
+      "buy_card": 0.4541213686507698,
+      "buy_relic": 0.40653092277814484,
+      "buy_potion": 0.1173243638256552,
+      "remove": 0.022023344745430155
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.7289473684210527,
+      "buy_relic": 0.24473684210526317,
+      "buy_potion": 0.26052631578947366,
+      "remove": 0.034210526315789476
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9894736842105263,
+      "buy_potion": 0.65,
+      "remove": 0.9078947368421053,
+      "leave": 1.0,
+      "discard_potion": 0.8026315789473685,
+      "potion": 0.13421052631578947,
+      "buy_relic": 0.39210526315789473
+     }
+    },
+    "2": {
+     "visits": 457,
+     "gold_at_entry": 298.55798687089714,
+     "spent_per_visit": 198.70459518599563,
+     "spend_share": {
+      "buy_relic": 0.5290833406748304,
+      "buy_card": 0.2301559333979385,
+      "buy_potion": 0.08917716500748833,
+      "remove": 0.15158356091974276
+     },
+     "visit_frac_buying": {
+      "buy_relic": 0.47921225382932164,
+      "buy_card": 0.5054704595185996,
+      "buy_potion": 0.2647702407002188,
+      "remove": 0.30196936542669583
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9846827133479212,
+      "buy_relic": 0.7439824945295405,
+      "buy_potion": 0.487964989059081,
+      "remove": 0.8971553610503282,
+      "leave": 1.0,
+      "discard_potion": 0.9649890590809628,
+      "potion": 0.1137855579868709
+     }
+    },
+    "3": {
+     "visits": 492,
+     "gold_at_entry": 291.8475609756098,
+     "spent_per_visit": 193.65243902439025,
+     "spend_share": {
+      "buy_relic": 0.4091018818812515,
+      "remove": 0.16158149395971746,
+      "buy_card": 0.2908886719774972,
+      "buy_potion": 0.13842795218153384
+     },
+     "visit_frac_buying": {
+      "buy_relic": 0.3231707317073171,
+      "remove": 0.2703252032520325,
+      "buy_card": 0.5548780487804879,
+      "buy_potion": 0.3800813008130081
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9369918699186992,
+      "buy_relic": 0.6158536585365854,
+      "remove": 0.7520325203252033,
+      "leave": 1.0,
+      "discard_potion": 0.9552845528455285,
+      "buy_potion": 0.4024390243902439,
+      "potion": 0.10569105691056911
+     }
+    }
+   }
+  },
+  "Silent": {
+   "all": {
+    "visits": 1279,
+    "gold_at_entry": 260.2064112587959,
+    "spent_per_visit": 171.24237685691946,
+    "spend_share": {
+     "buy_card": 0.3444541341162182,
+     "buy_relic": 0.3943995726398166,
+     "remove": 0.16208639433108543,
+     "buy_potion": 0.09905989891287971
+    },
+    "visit_frac_buying": {
+     "buy_card": 0.6794370602032838,
+     "buy_relic": 0.2986708365910868,
+     "remove": 0.2517591868647381,
+     "buy_potion": 0.2509773260359656
+    },
+    "visit_frac_offered": {
+     "buy_card": 0.9601250977326036,
+     "buy_potion": 0.44487881157154024,
+     "remove": 0.8170445660672401,
+     "leave": 1.0,
+     "discard_potion": 0.9147771696637998,
+     "potion": 0.09929632525410477,
+     "buy_relic": 0.5465207193119624
+    }
+   },
+   "by_act": {
+    "1": {
+     "visits": 423,
+     "gold_at_entry": 168.8321513002364,
+     "spent_per_visit": 127.46808510638297,
+     "spend_share": {
+      "buy_card": 0.5540347558374599,
+      "buy_relic": 0.22340918785585787,
+      "buy_potion": 0.11869656336356386,
+      "remove": 0.10385949294311839
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.817966903073286,
+      "buy_relic": 0.1347517730496454,
+      "buy_potion": 0.2553191489361702,
+      "remove": 0.1347517730496454
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9810874704491725,
+      "buy_potion": 0.6572104018912529,
+      "remove": 0.8817966903073287,
+      "leave": 1.0,
+      "discard_potion": 0.8014184397163121,
+      "potion": 0.12293144208037825,
+      "buy_relic": 0.31678486997635935
+     }
+    },
+    "2": {
+     "visits": 410,
+     "gold_at_entry": 287.3219512195122,
+     "spent_per_visit": 188.5780487804878,
+     "spend_share": {
+      "buy_card": 0.2654526171475872,
+      "remove": 0.20241344076981777,
+      "buy_potion": 0.09444236067100378,
+      "buy_relic": 0.43769158141159126
+     },
+     "visit_frac_buying": {
+      "buy_card": 0.6097560975609756,
+      "remove": 0.36585365853658536,
+      "buy_potion": 0.24390243902439024,
+      "buy_relic": 0.3951219512195122
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9853658536585366,
+      "buy_potion": 0.3902439024390244,
+      "remove": 0.8414634146341463,
+      "leave": 1.0,
+      "potion": 0.0951219512195122,
+      "discard_potion": 0.9634146341463414,
+      "buy_relic": 0.675609756097561
+     }
+    },
+    "3": {
+     "visits": 446,
+     "gold_at_entry": 321.94170403587447,
+     "spent_per_visit": 196.82286995515696,
+     "spend_share": {
+      "buy_potion": 0.0910654682569518,
+      "buy_relic": 0.4612966064044291,
+      "remove": 0.16233211441850928,
+      "buy_card": 0.2853058109201098
+     },
+     "visit_frac_buying": {
+      "buy_potion": 0.2533632286995516,
+      "buy_relic": 0.3654708520179372,
+      "remove": 0.257847533632287,
+      "buy_card": 0.6121076233183856
+     },
+     "visit_frac_offered": {
+      "buy_card": 0.9170403587443946,
+      "buy_relic": 0.6457399103139013,
+      "buy_potion": 0.2937219730941704,
+      "remove": 0.7331838565022422,
+      "leave": 1.0,
+      "potion": 0.08071748878923767,
+      "discard_potion": 0.9775784753363229
+     }
+    }
+   }
+  }
+ },
+ "removed": {
+  "Defect": {
+   "CARD.DUALCAST": 178,
+   "CARD.ZAP": 47,
+   "CARD.STRIKE_DEFECT": 41,
+   "CARD.DOUBT": 13,
+   "CARD.REGRET": 10,
+   "CARD.PECK": 9,
+   "CARD.INJURY": 8,
+   "CARD.CLUMSY": 7,
+   "CARD.DECAY": 5,
+   "CARD.NORMALITY": 4,
+   "CARD.ENTRENCH": 3,
+   "CARD.DEBT": 2,
+   "CARD.SHAME": 2,
+   "CARD.DUAL_WIELD": 2,
+   "CARD.WRITHE": 2,
+   "CARD.DEFEND_DEFECT": 2,
+   "CARD.CLASH": 1,
+   "CARD.OUTMANEUVER": 1,
+   "CARD.FIGHT_THROUGH": 1
+  },
+  "Fool": {
+   "CARD.STRIKE_FOOL": 276,
+   "CARD.DEFEND_FOOL": 28,
+   "CARD.CLUMSY": 20,
+   "CARD.DOUBT": 9,
+   "CARD.REGRET": 6,
+   "CARD.INJURY": 5,
+   "CARD.CLASH": 3,
+   "CARD.FOOLISH_SHOT": 3,
+   "CARD.ALL_IS_WELL": 3,
+   "CARD.NORMALITY": 3,
+   "CARD.DECAY": 3,
+   "CARD.REBOUND": 3,
+   "CARD.SHAME": 2,
+   "CARD.ENTRENCH": 2,
+   "CARD.POOR_SLEEP": 2,
+   "CARD.HEAVY_SHOT": 1,
+   "CARD.DINGY_DAGGER": 1,
+   "CARD.BOW_SMACK": 1,
+   "CARD.YAH": 1,
+   "CARD.DUAL_WIELD": 1,
+   "CARD.WRITHE": 1,
+   "CARD.WAH_SWEEP": 1,
+   "CARD.HONING": 1,
+   "CARD.OUTMANEUVER": 1,
+   "CARD.CHO_BARBS": 1,
+   "CARD.STACK": 1,
+   "CARD.WAH_HAMMER": 1,
+   "CARD.SORROWFUL_STRIKE": 1,
+   "CARD.SHOW_OFF": 1,
+   "CARD.SERRATED_ARROWS": 1,
+   "CARD.DISTRACTION": 1
+  },
+  "Ironclad": {
+   "CARD.DEFEND_IRONCLAD": 230,
+   "CARD.DOUBT": 15,
+   "CARD.REGRET": 14,
+   "CARD.CLUMSY": 12,
+   "CARD.STRIKE_IRONCLAD": 7,
+   "CARD.INJURY": 7,
+   "CARD.NORMALITY": 4,
+   "CARD.DECAY": 4,
+   "CARD.DUAL_WIELD": 2,
+   "CARD.WRITHE": 2,
+   "CARD.ENTRENCH": 2,
+   "CARD.ANGER": 2,
+   "CARD.SHAME": 1,
+   "CARD.DARK_EMBRACE": 1,
+   "CARD.WHIRLWIND": 1,
+   "CARD.BREAKTHROUGH": 1,
+   "CARD.PERFECTED_STRIKE": 1,
+   "CARD.REBOUND": 1,
+   "CARD.BASH": 1,
+   "CARD.DEBT": 1,
+   "CARD.RUPTURE": 1,
+   "CARD.INFERNO": 1
+  },
+  "Necrobinder": {
+   "CARD.STRIKE_NECROBINDER": 261,
+   "CARD.DOUBT": 11,
+   "CARD.TRANSFIGURE": 8,
+   "CARD.INJURY": 8,
+   "CARD.REGRET": 8,
+   "CARD.CLUMSY": 4,
+   "CARD.REAVE": 4,
+   "CARD.ENTRENCH": 3,
+   "CARD.NORMALITY": 3,
+   "CARD.DRAIN_POWER": 2,
+   "CARD.DECAY": 2,
+   "CARD.CLASH": 2,
+   "CARD.REBOUND": 2,
+   "CARD.POOR_SLEEP": 1,
+   "CARD.DUAL_WIELD": 1,
+   "CARD.OUTMANEUVER": 1,
+   "CARD.DEFEND_NECROBINDER": 1,
+   "CARD.DINGY_DAGGER": 1,
+   "CARD.METAMORPHOSIS": 1,
+   "CARD.SHROUD": 1,
+   "CARD.BLIGHT_STRIKE": 1
+  },
+  "Regent": {
+   "CARD.STRIKE_REGENT": 133,
+   "CARD.CLUMSY": 62,
+   "CARD.PECK": 12,
+   "CARD.DOUBT": 10,
+   "CARD.WROUGHT_IN_WAR": 10,
+   "CARD.REGRET": 9,
+   "CARD.DEFEND_REGENT": 8,
+   "CARD.NORMALITY": 7,
+   "CARD.DECAY": 5,
+   "CARD.SHAME": 3,
+   "CARD.THE_SMITH": 3,
+   "CARD.ENTRENCH": 3,
+   "CARD.INJURY": 3,
+   "CARD.CELESTIAL_MIGHT": 3,
+   "CARD.WRITHE": 2,
+   "CARD.REBOUND": 2,
+   "CARD.DEBT": 2,
+   "CARD.DUAL_WIELD": 1,
+   "CARD.CLASH": 1,
+   "CARD.PARRY": 1,
+   "CARD.REFINE_BLADE": 1,
+   "CARD.ROYAL_GAMBLE": 1,
+   "CARD.BLACK_HOLE": 1,
+   "CARD.CRUSH_UNDER": 1
+  },
+  "Silent": {
+   "CARD.STRIKE_SILENT": 231,
+   "CARD.CLUMSY": 16,
+   "CARD.DOUBT": 11,
+   "CARD.DEFEND_SILENT": 9,
+   "CARD.REGRET": 6,
+   "CARD.SNAKEBITE": 4,
+   "CARD.CLASH": 3,
+   "CARD.SHAME": 3,
+   "CARD.WRITHE": 3,
+   "CARD.NORMALITY": 3,
+   "CARD.CORROSIVE_WAVE": 3,
+   "CARD.INJURY": 3,
+   "CARD.MASTER_PLANNER": 2,
+   "CARD.PECK": 2,
+   "CARD.DECAY": 2,
+   "CARD.GUILTY": 2,
+   "CARD.SPEEDSTER": 2,
+   "CARD.ENTRENCH": 2,
+   "CARD.REBOUND": 2,
+   "CARD.DEBT": 2,
+   "CARD.HAZE": 1,
+   "CARD.ECHOING_SLASH": 1,
+   "CARD.DUAL_WIELD": 1,
+   "CARD.SHADOW_STEP": 1,
+   "CARD.BOUNCING_FLASK": 1,
+   "CARD.POOR_SLEEP": 1,
+   "CARD.POISONED_STAB": 1,
+   "CARD.ACCELERANT": 1,
+   "CARD.OUTMANEUVER": 1,
+   "CARD.DEADLY_POISON": 1,
+   "CARD.NIGHTMARE": 1
+  }
+ },
+ "events": {
+  "ROOM_FULL_OF_CHEESE|INITIAL|SEARCH": {
+   "event": "Room Full of Cheese",
+   "option": "lose HP for a relic",
+   "offered": 410,
+   "chosen": 145,
+   "by_hp_below50_50to75_above75": [
+    [
+     30,
+     4
+    ],
+    [
+     166,
+     49
+    ],
+    [
+     214,
+     92
+    ]
+   ]
+  },
+  "BRAIN_LEECH|INITIAL|RIP": {
+   "event": "Brain Leech",
+   "option": "lose HP for a colorless card",
+   "offered": 424,
+   "chosen": 125,
+   "by_hp_below50_50to75_above75": [
+    [
+     36,
+     6
+    ],
+    [
+     183,
+     35
+    ],
+    [
+     205,
+     84
+    ]
+   ]
+  },
+  "SUNKEN_STATUE|INITIAL|DIVE_INTO_WATER": {
+   "event": "The Sunken Statue",
+   "option": "lose HP for gold",
+   "offered": 289,
+   "chosen": 155,
+   "by_hp_below50_50to75_above75": [
+    [
+     17,
+     7
+    ],
+    [
+     135,
+     65
+    ],
+    [
+     137,
+     83
+    ]
+   ]
+  },
+  "ROUND_TEA_PARTY|INITIAL|PICK_FIGHT": {
+   "event": "The Round Tea Party",
+   "option": "lose HP for a random relic (other option: a relic and a full heal)",
+   "offered": 236,
+   "chosen": 223,
+   "by_hp_below50_50to75_above75": [
+    [
+     5,
+     2
+    ],
+    [
+     18,
+     15
+    ],
+    [
+     70,
+     70
+    ]
+   ]
+  },
+  "THIS_OR_THAT|INITIAL|ORNATE": {
+   "event": "This or That?",
+   "option": "take a curse for a relic (other option: lose HP for gold)",
+   "offered": 598,
+   "chosen": 598,
+   "by_hp_below50_50to75_above75": [
+    [
+     36,
+     36
+    ],
+    [
+     226,
+     226
+    ],
+    [
+     336,
+     336
+    ]
+   ]
+  },
+  "POTION_COURIER|INITIAL|RANSACK": {
+   "event": "Potion Courier",
+   "option": "one uncommon potion (other option: several foul potions)",
+   "offered": 401,
+   "chosen": 400,
+   "by_hp_below50_50to75_above75": [
+    [
+     16,
+     16
+    ],
+    [
+     104,
+     104
+    ],
+    [
+     281,
+     280
+    ]
+   ]
+  },
+  "SLIPPERY_BRIDGE|INITIAL|OVERCOME": {
+   "event": "Slippery Bridge",
+   "option": "accept the card removal (other option: lose HP to re-roll it)",
+   "offered": 785,
+   "chosen": 419,
+   "by_hp_below50_50to75_above75": [
+    [
+     82,
+     56
+    ],
+    [
+     241,
+     157
+    ],
+    [
+     462,
+     206
+    ]
+   ]
+  }
+ },
+ "relics_event": {
+  "RELIC.KALEIDOSCOPE": {
+   "offered": 300,
+   "chosen": 15
+  },
+  "RELIC.NEOWS_TALISMAN": {
+   "offered": 114,
+   "chosen": 55
+  },
+  "RELIC.DOWSING_ROD": {
+   "offered": 174,
+   "chosen": 0
+  },
+  "RELIC.ELECTRIC_SHRYMP": {
+   "offered": 183,
+   "chosen": 19
+  },
+  "RELIC.RADIANT_PEARL": {
+   "offered": 116,
+   "chosen": 72
+  },
+  "RELIC.ARCHAIC_TOOTH": {
+   "offered": 234,
+   "chosen": 127
+  },
+  "RELIC.WHISPERING_EARRING": {
+   "offered": 152,
+   "chosen": 60
+  },
+  "RELIC.SERE_TALON": {
+   "offered": 166,
+   "chosen": 0
+  },
+  "RELIC.CHOICES_PARADOX": {
+   "offered": 144,
+   "chosen": 62
+  },
+  "RELIC.SMALL_CAPSULE": {
+   "offered": 126,
+   "chosen": 88
+  },
+  "RELIC.GOLDEN_PEARL": {
+   "offered": 252,
+   "chosen": 140
+  },
+  "RELIC.NEOWS_SACRIFICE": {
+   "offered": 228,
+   "chosen": 228
+  },
+  "RELIC.ALCHEMICAL_COFFER": {
+   "offered": 116,
+   "chosen": 96
+  },
+  "RELIC.TOUCH_OF_OROBAS": {
+   "offered": 227,
+   "chosen": 75
+  },
+  "RELIC.LOOMING_FRUIT": {
+   "offered": 182,
+   "chosen": 74
+  },
+  "RELIC.DELICATE_FROND": {
+   "offered": 147,
+   "chosen": 4
+  },
+  "RELIC.SIGNET_RING": {
+   "offered": 147,
+   "chosen": 132
+  },
+  "RELIC.NEOWS_TORMENT": {
+   "offered": 300,
+   "chosen": 174
+  },
+  "RELIC.NEW_LEAF": {
+   "offered": 192,
+   "chosen": 45
+  },
+  "RELIC.LARGE_CAPSULE": {
+   "offered": 162,
+   "chosen": 110
+  },
+  "RELIC.GLASS_EYE": {
+   "offered": 164,
+   "chosen": 11
+  },
+  "RELIC.BEAUTIFUL_BRACELET": {
+   "offered": 102,
+   "chosen": 16
+  },
+  "RELIC.DIAMOND_DIADEM": {
+   "offered": 154,
+   "chosen": 89
+  },
+  "RELIC.DRIFTWOOD": {
+   "offered": 123,
+   "chosen": 3
+  },
+  "RELIC.RUNIC_PYRAMID": {
+   "offered": 97,
+   "chosen": 48
+  },
+  "RELIC.DUSTY_TOME": {
+   "offered": 139,
+   "chosen": 18
+  },
+  "RELIC.PHIAL_HOLSTER": {
+   "offered": 186,
+   "chosen": 172
+  },
+  "RELIC.POMANDER": {
+   "offered": 90,
+   "chosen": 17
+  },
+  "RELIC.NEOWS_BONES": {
+   "offered": 198,
+   "chosen": 0
+  },
+  "RELIC.VERY_HOT_COCOA": {
+   "offered": 161,
+   "chosen": 7
+  },
+  "RELIC.STORYBOOK": {
+   "offered": 183,
+   "chosen": 0
+  },
+  "RELIC.PUMPKIN_CANDLE": {
+   "offered": 150,
+   "chosen": 91
+  },
+  "RELIC.BLESSED_ANTLER": {
+   "offered": 221,
+   "chosen": 44
+  },
+  "RELIC.BOOMING_CONCH": {
+   "offered": 264,
+   "chosen": 122
+  },
+  "RELIC.LOST_COFFER": {
+   "offered": 222,
+   "chosen": 77
+  },
+  "RELIC.PRECARIOUS_SHEARS": {
+   "offered": 216,
+   "chosen": 18
+  },
+  "RELIC.GLITTER": {
+   "offered": 154,
+   "chosen": 112
+  },
+  "RELIC.BIG_MUSHROOM": {
+   "offered": 253,
+   "chosen": 253
+  },
+  "RELIC.FRAGRANT_MUSHROOM": {
+   "offered": 253,
+   "chosen": 0
+  },
+  "RELIC.ARCANE_SCROLL": {
+   "offered": 156,
+   "chosen": 0
+  },
+  "RELIC.ASTROLABE": {
+   "offered": 73,
+   "chosen": 34
+  },
+  "RELIC.VELVET_CHOKER": {
+   "offered": 78,
+   "chosen": 15
+  },
+  "RELIC.FIDDLE": {
+   "offered": 216,
+   "chosen": 98
+  },
+  "RELIC.MUSIC_BOX": {
+   "offered": 138,
+   "chosen": 138
+  },
+  "RELIC.HEFTY_TABLET": {
+   "offered": 192,
+   "chosen": 0
+  },
+  "RELIC.PAELS_HORN": {
+   "offered": 165,
+   "chosen": 44
+  },
+  "RELIC.PAELS_GROWTH": {
+   "offered": 62,
+   "chosen": 0
+  },
+  "RELIC.PAELS_BLOOD": {
+   "offered": 116,
+   "chosen": 116
+  },
+  "RELIC.CROSSBOW": {
+   "offered": 141,
+   "chosen": 128
+  },
+  "RELIC.IRON_CLUB": {
+   "offered": 166,
+   "chosen": 90
+  },
+  "RELIC.WAR_HAMMER": {
+   "offered": 185,
+   "chosen": 9
+  },
+  "RELIC.WINGED_BOOTS": {
+   "offered": 258,
+   "chosen": 10
+  },
+  "RELIC.FISHING_ROD": {
+   "offered": 210,
+   "chosen": 75
+  },
+  "RELIC.PHILOSOPHERS_STONE": {
+   "offered": 70,
+   "chosen": 40
+  },
+  "RELIC.LEAFY_POULTICE": {
+   "offered": 198,
+   "chosen": 0
+  },
+  "RELIC.SNECKO_EYE": {
+   "offered": 73,
+   "chosen": 31
+  },
+  "RELIC.BRILLIANT_SCARF": {
+   "offered": 165,
+   "chosen": 63
+  },
+  "RELIC.FUR_COAT": {
+   "offered": 181,
+   "chosen": 0
+  },
+  "RELIC.LAVA_ROCK": {
+   "offered": 90,
+   "chosen": 50
+  },
+  "RELIC.PAELS_TOOTH": {
+   "offered": 149,
+   "chosen": 12
+  },
+  "RELIC.PAELS_EYE": {
+   "offered": 196,
+   "chosen": 0
+  },
+  "RELIC.SCROLL_BOXES": {
+   "offered": 210,
+   "chosen": 32
+  },
+  "RELIC.TOASTY_MITTENS": {
+   "offered": 175,
+   "chosen": 26
+  },
+  "RELIC.GOLDEN_COMPASS": {
+   "offered": 137,
+   "chosen": 81
+  },
+  "RELIC.TANXS_WHISTLE": {
+   "offered": 154,
+   "chosen": 6
+  },
+  "RELIC.TRI_BOOMERANG": {
+   "offered": 126,
+   "chosen": 26
+  },
+  "RELIC.SPIKED_GAUNTLETS": {
+   "offered": 142,
+   "chosen": 12
+  },
+  "RELIC.PAELS_WING": {
+   "offered": 131,
+   "chosen": 11
+  },
+  "RELIC.JEWELRY_BOX": {
+   "offered": 155,
+   "chosen": 0
+  },
+  "RELIC.NUTRITIOUS_SOUP": {
+   "offered": 181,
+   "chosen": 156
+  },
+  "RELIC.BLOOD_SOAKED_ROSE": {
+   "offered": 150,
+   "chosen": 0
+  },
+  "RELIC.PRESERVED_FOG": {
+   "offered": 183,
+   "chosen": 0
+  },
+  "RELIC.LORDS_PARASOL": {
+   "offered": 115,
+   "chosen": 73
+  },
+  "RELIC.DISTINGUISHED_CAPE": {
+   "offered": 169,
+   "chosen": 0
+  },
+  "RELIC.PAELS_CLAW": {
+   "offered": 143,
+   "chosen": 15
+  },
+  "RELIC.BIIIG_HUG": {
+   "offered": 182,
+   "chosen": 0
+  },
+  "RELIC.THROWING_AXE": {
+   "offered": 137,
+   "chosen": 8
+  },
+  "RELIC.MEAT_CLEAVER": {
+   "offered": 107,
+   "chosen": 5
+  },
+  "RELIC.CURSED_PEARL": {
+   "offered": 162,
+   "chosen": 90
+  },
+  "RELIC.PAELS_LEGION": {
+   "offered": 173,
+   "chosen": 156
+  },
+  "RELIC.SILKEN_TRESS": {
+   "offered": 132,
+   "chosen": 7
+  },
+  "RELIC.PAELS_TEARS": {
+   "offered": 150,
+   "chosen": 31
+  },
+  "RELIC.TOY_BOX": {
+   "offered": 126,
+   "chosen": 87
+  },
+  "RELIC.PRECISE_SCISSORS": {
+   "offered": 186,
+   "chosen": 60
+  },
+  "RELIC.SEAL_OF_GOLD": {
+   "offered": 127,
+   "chosen": 84
+  },
+  "RELIC.SILVER_CRUCIBLE": {
+   "offered": 138,
+   "chosen": 5
+  },
+  "RELIC.YUMMY_COOKIE": {
+   "offered": 198,
+   "chosen": 8
+  },
+  "RELIC.LEAD_PAPERWEIGHT": {
+   "offered": 228,
+   "chosen": 45
+  },
+  "RELIC.STONE_HUMIDIFIER": {
+   "offered": 120,
+   "chosen": 120
+  },
+  "RELIC.SEA_GLASS": {
+   "offered": 82,
+   "chosen": 0
+  },
+  "RELIC.EMPTY_CAGE": {
+   "offered": 78,
+   "chosen": 11
+  },
+  "RELIC.JEWELED_MASK": {
+   "offered": 121,
+   "chosen": 87
+  },
+  "RELIC.PAELS_FLESH": {
+   "offered": 170,
+   "chosen": 100
+  },
+  "RELIC.SAND_CASTLE": {
+   "offered": 106,
+   "chosen": 42
+  },
+  "RELIC.NUTRITIOUS_OYSTER": {
+   "offered": 96,
+   "chosen": 45
+  },
+  "RELIC.SAI": {
+   "offered": 174,
+   "chosen": 157
+  },
+  "RELIC.CLAWS": {
+   "offered": 99,
+   "chosen": 34
+  }
+ },
+ "relics_shop": {
+  "RELIC.BURNING_STICKS": {
+   "offered": 191,
+   "affordable": 191,
+   "bought": 8
+  },
+  "RELIC.GORGET": {
+   "offered": 226,
+   "affordable": 226,
+   "bought": 166
+  },
+  "RELIC.ODDLY_SMOOTH_STONE": {
+   "offered": 236,
+   "affordable": 236,
+   "bought": 136
+  },
+  "RELIC.HAPPY_FLOWER": {
+   "offered": 190,
+   "affordable": 190,
+   "bought": 140
+  },
+  "RELIC.POTION_BELT": {
+   "offered": 204,
+   "affordable": 204,
+   "bought": 108
+  },
+  "RELIC.ORRERY": {
+   "offered": 175,
+   "affordable": 175,
+   "bought": 105
+  },
+  "RELIC.RINGING_TRIANGLE": {
+   "offered": 214,
+   "affordable": 214,
+   "bought": 1
+  },
+  "RELIC.WHETSTONE": {
+   "offered": 182,
+   "affordable": 182,
+   "bought": 19
+  },
+  "RELIC.DATA_DISK": {
+   "offered": 34,
+   "affordable": 34,
+   "bought": 32
+  },
+  "RELIC.BAG_OF_PREPARATION": {
+   "offered": 191,
+   "affordable": 191,
+   "bought": 113
+  },
+  "RELIC.BAG_OF_MARBLES": {
+   "offered": 196,
+   "affordable": 196,
+   "bought": 48
+  },
+  "RELIC.LANTERN": {
+   "offered": 191,
+   "affordable": 191,
+   "bought": 42
+  },
+  "RELIC.CENTENNIAL_PUZZLE": {
+   "offered": 156,
+   "affordable": 156,
+   "bought": 84
+  },
+  "RELIC.LAVA_LAMP": {
+   "offered": 159,
+   "affordable": 159,
+   "bought": 0
+  },
+  "RELIC.REGAL_PILLOW": {
+   "offered": 174,
+   "affordable": 174,
+   "bought": 27
+  },
+  "RELIC.VENERABLE_TEA_SET": {
+   "offered": 189,
+   "affordable": 189,
+   "bought": 9
+  },
+  "RELIC.BRONZE_SCALES": {
+   "offered": 181,
+   "affordable": 181,
+   "bought": 93
+  },
+  "RELIC.FESTIVE_POPPER": {
+   "offered": 193,
+   "affordable": 193,
+   "bought": 25
+  },
+  "RELIC.MYSTIC_LIGHTER": {
+   "offered": 155,
+   "affordable": 155,
+   "bought": 3
+  },
+  "RELIC.TOOLBOX": {
+   "offered": 160,
+   "affordable": 160,
+   "bought": 61
+  },
+  "RELIC.KIFUDA": {
+   "offered": 149,
+   "affordable": 149,
+   "bought": 118
+  },
+  "RELIC.RED_MASK": {
+   "offered": 153,
+   "affordable": 153,
+   "bought": 77
+  },
+  "RELIC.VAJRA": {
+   "offered": 161,
+   "affordable": 161,
+   "bought": 64
+  },
+  "RELIC.BLOOD_VIAL": {
+   "offered": 165,
+   "affordable": 165,
+   "bought": 4
+  },
+  "RELIC.DINGY_RUG": {
+   "offered": 171,
+   "affordable": 171,
+   "bought": 0
+  },
+  "RELIC.PENDULUM": {
+   "offered": 173,
+   "affordable": 173,
+   "bought": 102
+  },
+  "RELIC.BELT_BUCKLE": {
+   "offered": 167,
+   "affordable": 167,
+   "bought": 3
+  },
+  "RELIC.ROYAL_STAMP": {
+   "offered": 146,
+   "affordable": 146,
+   "bought": 1
+  },
+  "RELIC.WAR_PAINT": {
+   "offered": 167,
+   "affordable": 167,
+   "bought": 28
+  },
+  "RELIC.GHOST_SEED": {
+   "offered": 148,
+   "affordable": 148,
+   "bought": 22
+  },
+  "RELIC.CHEMICAL_X": {
+   "offered": 146,
+   "affordable": 146,
+   "bought": 0
+  },
+  "RELIC.STRIKE_DUMMY": {
+   "offered": 155,
+   "affordable": 155,
+   "bought": 39
+  },
+  "RELIC.ANCHOR": {
+   "offered": 170,
+   "affordable": 170,
+   "bought": 81
+  },
+  "RELIC.SLING_OF_COURAGE": {
+   "offered": 176,
+   "affordable": 176,
+   "bought": 0
+  },
+  "RELIC.LEES_WAFFLE": {
+   "offered": 141,
+   "affordable": 141,
+   "bought": 47
+  },
+  "RELIC.DOLLYS_MIRROR": {
+   "offered": 145,
+   "affordable": 145,
+   "bought": 74
+  },
+  "RELIC.STRAWBERRY": {
+   "offered": 159,
+   "affordable": 159,
+   "bought": 30
+  },
+  "RELIC.BOOK_OF_FIVE_RINGS": {
+   "offered": 157,
+   "affordable": 157,
+   "bought": 7
+  },
+  "RELIC.SCREAMING_FLAGON": {
+   "offered": 136,
+   "affordable": 136,
+   "bought": 0
+  },
+  "RELIC.WING_CHARM": {
+   "offered": 148,
+   "affordable": 148,
+   "bought": 1
+  },
+  "RELIC.JUZU_BRACELET": {
+   "offered": 153,
+   "affordable": 153,
+   "bought": 0
+  },
+  "RELIC.THE_ABACUS": {
+   "offered": 151,
+   "affordable": 151,
+   "bought": 9
+  },
+  "RELIC.DRAGON_FRUIT": {
+   "offered": 128,
+   "affordable": 128,
+   "bought": 8
+  },
+  "RELIC.MEMBERSHIP_CARD": {
+   "offered": 124,
+   "affordable": 124,
+   "bought": 86
+  },
+  "RELIC.PEAR": {
+   "offered": 98,
+   "affordable": 98,
+   "bought": 16
+  },
+  "RELIC.PUNCH_DAGGER": {
+   "offered": 126,
+   "affordable": 126,
+   "bought": 0
+  },
+  "RELIC.MEAL_TICKET": {
+   "offered": 125,
+   "affordable": 125,
+   "bought": 1
+  },
+  "RELIC.RIPPLE_BASIN": {
+   "offered": 96,
+   "affordable": 96,
+   "bought": 1
+  },
+  "RELIC.PEN_NIB": {
+   "offered": 90,
+   "affordable": 90,
+   "bought": 22
+  },
+  "RELIC.MINIATURE_TENT": {
+   "offered": 132,
+   "affordable": 132,
+   "bought": 88
+  },
+  "RELIC.GNARLED_HAMMER": {
+   "offered": 116,
+   "affordable": 116,
+   "bought": 6
+  },
+  "RELIC.CAULDRON": {
+   "offered": 120,
+   "affordable": 120,
+   "bought": 0
+  },
+  "RELIC.ORICHALCUM": {
+   "offered": 92,
+   "affordable": 92,
+   "bought": 2
+  },
+  "RELIC.BREAD": {
+   "offered": 131,
+   "affordable": 131,
+   "bought": 48
+  },
+  "RELIC.PANTOGRAPH": {
+   "offered": 113,
+   "affordable": 113,
+   "bought": 84
+  },
+  "RELIC.MINIATURE_CANNON": {
+   "offered": 81,
+   "affordable": 81,
+   "bought": 17
+  },
+  "RELIC.GREMLIN_HORN": {
+   "offered": 87,
+   "affordable": 87,
+   "bought": 0
+  },
+  "RELIC.LETTER_OPENER": {
+   "offered": 94,
+   "affordable": 94,
+   "bought": 3
+  },
+  "RELIC.AKABEKO": {
+   "offered": 84,
+   "affordable": 84,
+   "bought": 2
+  },
+  "RELIC.JOSS_PAPER": {
+   "offered": 91,
+   "affordable": 91,
+   "bought": 7
+  },
+  "RELIC.VAMBRACE": {
+   "offered": 68,
+   "affordable": 68,
+   "bought": 3
+  },
+  "RELIC.TUNING_FORK": {
+   "offered": 69,
+   "affordable": 69,
+   "bought": 20
+  },
+  "RELIC.KUSARIGAMA": {
+   "offered": 96,
+   "affordable": 96,
+   "bought": 22
+  },
+  "RELIC.ETERNAL_FEATHER": {
+   "offered": 66,
+   "affordable": 66,
+   "bought": 23
+  },
+  "RELIC.PETRIFIED_TOAD": {
+   "offered": 83,
+   "affordable": 83,
+   "bought": 1
+  },
+  "RELIC.BELLOWS": {
+   "offered": 53,
+   "affordable": 53,
+   "bought": 33
+  },
+  "RELIC.STONE_CRACKER": {
+   "offered": 47,
+   "affordable": 47,
+   "bought": 2
+  },
+  "RELIC.PERMAFROST": {
+   "offered": 56,
+   "affordable": 56,
+   "bought": 9
+  },
+  "RELIC.PARRYING_SHIELD": {
+   "offered": 53,
+   "affordable": 53,
+   "bought": 16
+  },
+  "RELIC.SPARKLING_ROUGE": {
+   "offered": 66,
+   "affordable": 66,
+   "bought": 43
+  },
+  "RELIC.PLANISPHERE": {
+   "offered": 69,
+   "affordable": 69,
+   "bought": 0
+  },
+  "RELIC.CANDELABRA": {
+   "offered": 64,
+   "affordable": 64,
+   "bought": 24
+  },
+  "RELIC.HORN_CLEAT": {
+   "offered": 66,
+   "affordable": 66,
+   "bought": 30
+  },
+  "RELIC.RAZOR_TOOTH": {
+   "offered": 43,
+   "affordable": 43,
+   "bought": 22
+  },
+  "RELIC.TINY_MAILBOX": {
+   "offered": 47,
+   "affordable": 47,
+   "bought": 4
+  },
+  "RELIC.ICE_CREAM": {
+   "offered": 46,
+   "affordable": 46,
+   "bought": 29
+  },
+  "RELIC.NUNCHAKU": {
+   "offered": 61,
+   "affordable": 61,
+   "bought": 8
+  },
+  "RELIC.REPTILE_TRINKET": {
+   "offered": 52,
+   "affordable": 52,
+   "bought": 0
+  },
+  "RELIC.ORNAMENTAL_FAN": {
+   "offered": 56,
+   "affordable": 56,
+   "bought": 39
+  },
+  "RELIC.MERCURY_HOURGLASS": {
+   "offered": 51,
+   "affordable": 51,
+   "bought": 23
+  },
+  "RELIC.VEXING_PUZZLEBOX": {
+   "offered": 29,
+   "affordable": 29,
+   "bought": 9
+  },
+  "RELIC.MEAT_ON_THE_BONE": {
+   "offered": 27,
+   "affordable": 27,
+   "bought": 2
+  },
+  "RELIC.MUMMIFIED_HAND": {
+   "offered": 29,
+   "affordable": 29,
+   "bought": 21
+  },
+  "RELIC.STONE_CALENDAR": {
+   "offered": 36,
+   "affordable": 36,
+   "bought": 3
+  },
+  "RELIC.UNCEASING_TOP": {
+   "offered": 40,
+   "affordable": 40,
+   "bought": 0
+  },
+  "RELIC.LASTING_CANDY": {
+   "offered": 46,
+   "affordable": 46,
+   "bought": 0
+  },
+  "RELIC.INTIMIDATING_HELMET": {
+   "offered": 26,
+   "affordable": 26,
+   "bought": 15
+  },
+  "RELIC.CHANDELIER": {
+   "offered": 26,
+   "affordable": 26,
+   "bought": 8
+  },
+  "RELIC.GAME_PIECE": {
+   "offered": 25,
+   "affordable": 25,
+   "bought": 9
+  },
+  "RELIC.EXERCISE_MAT": {
+   "offered": 32,
+   "affordable": 32,
+   "bought": 5
+  },
+  "RELIC.RED_SKULL": {
+   "offered": 43,
+   "affordable": 43,
+   "bought": 26
+  },
+  "RELIC.BONE_FLUTE": {
+   "offered": 30,
+   "affordable": 30,
+   "bought": 5
+  },
+  "RELIC.FENCING_MANUAL": {
+   "offered": 40,
+   "affordable": 40,
+   "bought": 2
+  },
+  "RELIC.SNECKO_SKULL": {
+   "offered": 31,
+   "affordable": 31,
+   "bought": 1
+  },
+  "RELIC.NINJA_SCROLL": {
+   "offered": 25,
+   "affordable": 25,
+   "bought": 2
+  }
+ },
+ "shop_pooled_by_act": {
+  "1": {
+   "visits": 2296,
+   "gold_at_entry": 187.95775261324042,
+   "spent_per_visit": 141.35060975609755,
+   "spend_per_visit_by_kind": {
+    "buy_card": 66.97560975609755,
+    "remove": 14.888937282229966,
+    "buy_potion": 15.323606271777004,
+    "buy_relic": 44.16245644599303
+   },
+   "visit_frac_buying": {
+    "buy_card": 0.764808362369338,
+    "remove": 0.15331010452961671,
+    "buy_potion": 0.2508710801393728,
+    "buy_relic": 0.21167247386759583
+   }
+  },
+  "2": {
+   "visits": 2508,
+   "gold_at_entry": 285.49003189792666,
+   "spent_per_visit": 191.80023923444975,
+   "spend_per_visit_by_kind": {
+    "buy_card": 46.98006379585327,
+    "buy_relic": 89.50199362041467,
+    "buy_potion": 17.614832535885167,
+    "remove": 37.70334928229666
+   },
+   "visit_frac_buying": {
+    "buy_card": 0.5215311004784688,
+    "buy_relic": 0.4166666666666667,
+    "buy_potion": 0.25717703349282295,
+    "remove": 0.36363636363636365
+   }
+  },
+  "3": {
+   "visits": 2614,
+   "gold_at_entry": 315.88791124713083,
+   "spent_per_visit": 209.97283856159143,
+   "spend_per_visit_by_kind": {
+    "buy_relic": 94.17444529456772,
+    "remove": 33.538638102524864,
+    "buy_potion": 27.38026013771997,
+    "buy_card": 54.87949502677888
+   },
+   "visit_frac_buying": {
+    "buy_relic": 0.3867635807192043,
+    "remove": 0.2681713848508034,
+    "buy_potion": 0.36687069625095636,
+    "buy_card": 0.558530986993114
+   }
+  }
+ }
+}

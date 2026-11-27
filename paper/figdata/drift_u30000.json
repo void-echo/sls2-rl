@@ -1,0 +1,999 @@
+{
+"old": "tmp/drift/old_026736.pt",
+"new": "tmp/drift/new_latest_ckpt_030000.pt",
+"trace": "tmp/traces1116/iron_v3_u27650_a10.jsonl.gz",
+"rows": [
+{
+"card": "CARD.FORGOTTEN_RITUAL",
+"name": "\u88ab\u9057\u5fd8\u7684\u4eea\u5f0f\uff08Forgotten Ritual\uff09",
+"drift": 0.25019171833992004,
+"rel": 0.2861074533234754,
+"offered": 162,
+"in_hand": 755
+},
+{
+"card": "CARD.EXPECT_A_FIGHT",
+"name": "\u8dc3\u8dc3\u6b32\u8bd5\uff08Expect a Fight\uff09",
+"drift": 0.08763289451599121,
+"rel": 0.13335579156044133,
+"offered": 169,
+"in_hand": 2181
+},
+{
+"card": "CARD.LUMINESCE",
+"name": "\u51b7\u5149\uff08Luminesce\uff09",
+"drift": 0.07269283384084702,
+"rel": 0.10871248249532244,
+"offered": 0,
+"in_hand": 1523
+},
+{
+"card": "CARD.BLOODLETTING",
+"name": "\u653e\u8840\uff08Bloodletting\uff09",
+"drift": 0.06865450739860535,
+"rel": 0.08392562256856968,
+"offered": 153,
+"in_hand": 1142
+},
+{
+"card": "CARD.DINGY_DAGGER",
+"name": "DINGY_DAGGER",
+"drift": 0.06297719478607178,
+"rel": 0.1341075130044999,
+"offered": 0,
+"in_hand": 1555
+},
+{
+"card": "CARD.GUILTY",
+"name": "\u6127\u759a\uff08Guilty\uff09",
+"drift": 0.060837339609861374,
+"rel": 0.09888582458608297,
+"offered": 0,
+"in_hand": 1296
+},
+{
+"card": "CARD.BODY_SLAM",
+"name": "\u5168\u8eab\u649e\u51fb\uff08Body Slam\uff09",
+"drift": 0.05454077944159508,
+"rel": 0.062043993558843866,
+"offered": 440,
+"in_hand": 628
+},
+{
+"card": "CARD.CLUMSY",
+"name": "\u7b28\u62d9\uff08Clumsy\uff09",
+"drift": 0.050969235599040985,
+"rel": 0.0699701343750606,
+"offered": 0,
+"in_hand": 4729
+},
+{
+"card": "CARD.FIEND_FIRE",
+"name": "\u6076\u9b54\u4e4b\u7130\uff08Fiend Fire\uff09",
+"drift": 0.046952471137046814,
+"rel": 0.04139110925173019,
+"offered": 68,
+"in_hand": 549
+},
+{
+"card": "CARD.JACKPOT",
+"name": "\u5927\u5956\uff08Jackpot\uff09",
+"drift": 0.04537269100546837,
+"rel": 0.03441112568965556,
+"offered": 0,
+"in_hand": 658
+},
+{
+"card": "CARD.BARRICADE",
+"name": "\u58c1\u5792\uff08Barricade\uff09",
+"drift": 0.044607773423194885,
+"rel": 0.04705208323378803,
+"offered": 104,
+"in_hand": 996
+},
+{
+"card": "CARD.RELAX",
+"name": "\u653e\u677e\uff08Relax\uff09",
+"drift": 0.04300554469227791,
+"rel": 0.04501016546591867,
+"offered": 0,
+"in_hand": 565
+},
+{
+"card": "CARD.DOUBT",
+"name": "\u7591\u8651\uff08Doubt\uff09",
+"drift": 0.0420587956905365,
+"rel": 0.055651814342078096,
+"offered": 0,
+"in_hand": 642
+},
+{
+"card": "CARD.INFERNAL_BLADE",
+"name": "\u5730\u72f1\u4e4b\u5203\uff08Infernal Blade\uff09",
+"drift": 0.04163401573896408,
+"rel": 0.05070082809318055,
+"offered": 178,
+"in_hand": 1007
+},
+{
+"card": "CARD.PECK",
+"name": "\u5544\u51fb\uff08Peck\uff09",
+"drift": 0.041016142815351486,
+"rel": 0.051674168633537035,
+"offered": 0,
+"in_hand": 2652
+},
+{
+"card": "CARD.PYRE",
+"name": "\u85aa\u706b\u4e4b\u6e90\uff08Pyre\uff09",
+"drift": 0.040773555636405945,
+"rel": 0.04542764862008056,
+"offered": 84,
+"in_hand": 1896
+},
+{
+"card": "CARD.RUPTURE",
+"name": "\u6495\u88c2\uff08Rupture\uff09",
+"drift": 0.04001970589160919,
+"rel": 0.040067001396158305,
+"offered": 171,
+"in_hand": 330
+},
+{
+"card": "CARD.CALAMITY",
+"name": "\u52ab\u96be\uff08Calamity\uff09",
+"drift": 0.03920259699225426,
+"rel": 0.043988327494288194,
+"offered": 0,
+"in_hand": 407
+},
+{
+"card": "CARD.CONFLAGRATION",
+"name": "\u711a\u70e7\uff08Conflagration\uff09",
+"drift": 0.039048098027706146,
+"rel": 0.04432820730214161,
+"offered": 97,
+"in_hand": 1815
+},
+{
+"card": "CARD.DARK_SHACKLES",
+"name": "\u9ed1\u6697\u9563\u94d0\uff08Dark Shackles\uff09",
+"drift": 0.03781658411026001,
+"rel": 0.04395950905852443,
+"offered": 10,
+"in_hand": 1090
+},
+{
+"card": "CARD.OFFERING",
+"name": "\u796d\u54c1\uff08Offering\uff09",
+"drift": 0.037443049252033234,
+"rel": 0.03767226170315722,
+"offered": 78,
+"in_hand": 2079
+},
+{
+"card": "CARD.FISTICUFFS",
+"name": "\u62f3\u6597\uff08Fisticuffs\uff09",
+"drift": 0.03732126206159592,
+"rel": 0.022703255064393954,
+"offered": 5,
+"in_hand": 1625
+},
+{
+"card": "CARD.TREMBLE",
+"name": "\u6218\u6817\uff08Tremble\uff09",
+"drift": 0.03724260628223419,
+"rel": 0.04127916287288858,
+"offered": 397,
+"in_hand": 521
+},
+{
+"card": "CARD.HAVOC",
+"name": "\u7834\u706d\uff08Havoc\uff09",
+"drift": 0.03686385229229927,
+"rel": 0.048744938992849825,
+"offered": 441,
+"in_hand": 1608
+},
+{
+"card": "CARD.OMNISLICE",
+"name": "\u4e07\u5411\u65a9\uff08Omnislice\uff09",
+"drift": 0.03683857619762421,
+"rel": 0.03807952324254219,
+"offered": 6,
+"in_hand": 1032
+},
+{
+"card": "CARD.INFLAME",
+"name": "\u71c3\u70e7\uff08Inflame\uff09",
+"drift": 0.03599390387535095,
+"rel": 0.04452761803244746,
+"offered": 162,
+"in_hand": 4457
+},
+{
+"card": "CARD.BULLY",
+"name": "\u6b3a\u51cc\uff08Bully\uff09",
+"drift": 0.03569614514708519,
+"rel": 0.03252613533974245,
+"offered": 168,
+"in_hand": 5523
+},
+{
+"card": "CARD.COLOSSUS",
+"name": "\u5de8\u50cf\uff08Colossus\uff09",
+"drift": 0.03499086573719978,
+"rel": 0.04674058111098681,
+"offered": 170,
+"in_hand": 4822
+},
+{
+"card": "CARD.BOLAS",
+"name": "\u6d41\u661f\u9524\uff08Bolas\uff09",
+"drift": 0.03488127887248993,
+"rel": 0.04193085233639476,
+"offered": 1,
+"in_hand": 2925
+},
+{
+"card": "CARD.SPITE",
+"name": "\u6028\u6068\uff08Spite\uff09",
+"drift": 0.034817107021808624,
+"rel": 0.029978367414263594,
+"offered": 162,
+"in_hand": 3552
+},
+{
+"card": "CARD.DRAMATIC_ENTRANCE",
+"name": "\u95ea\u4eae\u767b\u573a\uff08Dramatic Entrance\uff09",
+"drift": 0.03477032110095024,
+"rel": 0.03455439649109048,
+"offered": 10,
+"in_hand": 799
+},
+{
+"card": "CARD.DISMANTLE",
+"name": "\u62c6\u5378\uff08Dismantle\uff09",
+"drift": 0.0346696712076664,
+"rel": 0.0374881025048481,
+"offered": 157,
+"in_hand": 3583
+},
+{
+"card": "CARD.WHIRLWIND",
+"name": "\u65cb\u98ce\u65a9\uff08Whirlwind\uff09",
+"drift": 0.034041065722703934,
+"rel": 0.032082240405510255,
+"offered": 158,
+"in_hand": 549
+},
+{
+"card": "CARD.SLIMED",
+"name": "\u9ecf\u6db2\uff08Slimed\uff09",
+"drift": 0.03379177302122116,
+"rel": 0.028237627568974084,
+"offered": 0,
+"in_hand": 1333
+},
+{
+"card": "CARD.MAYHEM",
+"name": "\u4e71\u6218\uff08Mayhem\uff09",
+"drift": 0.03377305343747139,
+"rel": 0.02746998939825549,
+"offered": 0,
+"in_hand": 833
+},
+{
+"card": "CARD.STOKE",
+"name": "\u6dfb\u67f4\uff08Stoke\uff09",
+"drift": 0.033469490706920624,
+"rel": 0.046997646706510646,
+"offered": 91,
+"in_hand": 216
+},
+{
+"card": "CARD.HELLRAISER",
+"name": "\u5730\u72f1\u72c2\u5f92\uff08Hellraiser\uff09",
+"drift": 0.03327259048819542,
+"rel": 0.026913711623760182,
+"offered": 94,
+"in_hand": 420
+},
+{
+"card": "CARD.BLOOD_WALL",
+"name": "\u8840\u5899\uff08Blood Wall\uff09",
+"drift": 0.03316003456711769,
+"rel": 0.038746403216533415,
+"offered": 464,
+"in_hand": 925
+},
+{
+"card": "CARD.PACTS_END",
+"name": "\u5951\u7ea6\u7ec8\u7ed3\uff08Pact's End\uff09",
+"drift": 0.033065065741539,
+"rel": 0.024317013535895424,
+"offered": 81,
+"in_hand": 650
+},
+{
+"card": "CARD.SECOND_WIND",
+"name": "\u91cd\u632f\u7cbe\u795e\uff08Second Wind\uff09",
+"drift": 0.03227801248431206,
+"rel": 0.038273585951799756,
+"offered": 176,
+"in_hand": 249
+},
+{
+"card": "CARD.TWIN_STRIKE",
+"name": "\u53cc\u91cd\u6253\u51fb\uff08Twin Strike\uff09",
+"drift": 0.03200225904583931,
+"rel": 0.03883129712846222,
+"offered": 422,
+"in_hand": 3563
+},
+{
+"card": "CARD.UNRELENTING",
+"name": "\u65e0\u60c5\u731b\u653b\uff08Unrelenting\uff09",
+"drift": 0.0317164771258831,
+"rel": 0.02221050015243485,
+"offered": 181,
+"in_hand": 8155
+},
+{
+"card": "CARD.NEOWS_FURY",
+"name": "\u6d85\u5965\u4e4b\u6012\uff08Neow's Fury\uff09",
+"drift": 0.03159717097878456,
+"rel": 0.039648866597328296,
+"offered": 0,
+"in_hand": 1535
+},
+{
+"card": "CARD.POMMEL_STRIKE",
+"name": "\u5251\u67c4\u6253\u51fb\uff08Pommel Strike\uff09",
+"drift": 0.031272005289793015,
+"rel": 0.0441977477358705,
+"offered": 449,
+"in_hand": 12589
+},
+{
+"card": "CARD.CASCADE",
+"name": "\u503e\u6cfb\uff08Cascade\uff09",
+"drift": 0.030938543379306793,
+"rel": 0.026852679915563425,
+"offered": 78,
+"in_hand": 3723
+},
+{
+"card": "CARD.DAZED",
+"name": "\u6655\u7729\uff08Dazed\uff09",
+"drift": 0.030598316341638565,
+"rel": 0.040185150053625385,
+"offered": 0,
+"in_hand": 5208
+},
+{
+"card": "CARD.SQUASH",
+"name": "\u538b\u6241\uff08Squash\uff09",
+"drift": 0.030585769563913345,
+"rel": 0.0314898103526243,
+"offered": 0,
+"in_hand": 1496
+},
+{
+"card": "CARD.FIGHT_ME",
+"name": "\u4e0e\u6211\u4e00\u6218\uff01\uff08Fight Me!\uff09",
+"drift": 0.030317744240164757,
+"rel": 0.042602659943398846,
+"offered": 157,
+"in_hand": 6362
+},
+{
+"card": "CARD.MANGLE",
+"name": "\u51cc\u8650\uff08Mangle\uff09",
+"drift": 0.030295180156826973,
+"rel": 0.04126638517387871,
+"offered": 94,
+"in_hand": 3384
+},
+{
+"card": "CARD.AGGRESSION",
+"name": "\u597d\u52c7\u6597\u72e0\uff08Aggression\uff09",
+"drift": 0.029976217076182365,
+"rel": 0.02360907382928599,
+"offered": 82,
+"in_hand": 2450
+},
+{
+"card": "CARD.FINESSE",
+"name": "\u5999\u8ba1\uff08Finesse\uff09",
+"drift": 0.029930081218481064,
+"rel": 0.048354918230827236,
+"offered": 6,
+"in_hand": 587
+},
+{
+"card": "CARD.HOWL_FROM_BEYOND",
+"name": "\u5f7c\u5cb8\u5486\u54ee\uff08Howl from Beyond\uff09",
+"drift": 0.029767801985144615,
+"rel": 0.03624883633317315,
+"offered": 169,
+"in_hand": 633
+},
+{
+"card": "CARD.STOMP",
+"name": "\u8e29\u8e0f\uff08Stomp\uff09",
+"drift": 0.029685381799936295,
+"rel": 0.023177838174649256,
+"offered": 152,
+"in_hand": 4626
+},
+{
+"card": "CARD.BURNING_PACT",
+"name": "\u71c3\u70e7\u5951\u7ea6\uff08Burning Pact\uff09",
+"drift": 0.029464656487107277,
+"rel": 0.04126316521721565,
+"offered": 188,
+"in_hand": 411
+},
+{
+"card": "CARD.SETUP_STRIKE",
+"name": "\u9884\u5907\u6253\u51fb\uff08Setup Strike\uff09",
+"drift": 0.029413575306534767,
+"rel": 0.044908900582713386,
+"offered": 424,
+"in_hand": 3200
+},
+{
+"card": "CARD.UNMOVABLE",
+"name": "\u575a\u5b9a\u4e0d\u79fb\uff08Unmovable\uff09",
+"drift": 0.0294057447463274,
+"rel": 0.027241495317643534,
+"offered": 89,
+"in_hand": 906
+},
+{
+"card": "CARD.JUGGLING",
+"name": "\u6742\u800d\uff08Juggling\uff09",
+"drift": 0.02932865545153618,
+"rel": 0.03423863064595398,
+"offered": 177,
+"in_hand": 338
+},
+{
+"card": "CARD.PRIMAL_FORCE",
+"name": "\u539f\u59cb\u529b\u91cf\uff08Primal Force\uff09",
+"drift": 0.029247939586639404,
+"rel": 0.017849657200036027,
+"offered": 98,
+"in_hand": 1679
+},
+{
+"card": "CARD.SHRUG_IT_OFF",
+"name": "\u8038\u80a9\u65e0\u89c6\uff08Shrug It Off\uff09",
+"drift": 0.029030436649918556,
+"rel": 0.03617048247816236,
+"offered": 499,
+"in_hand": 17662
+},
+{
+"card": "CARD.MOLTEN_FIST",
+"name": "\u7194\u878d\u4e4b\u62f3\uff08Molten Fist\uff09",
+"drift": 0.02892778441309929,
+"rel": 0.03153191656142009,
+"offered": 453,
+"in_hand": 1097
+},
+{
+"card": "CARD.RAGE",
+"name": "\u72c2\u6012\uff08Rage\uff09",
+"drift": 0.02888593077659607,
+"rel": 0.03556037218582641,
+"offered": 159,
+"in_hand": 3554
+},
+{
+"card": "CARD.PILLAGE",
+"name": "\u52ab\u63a0\uff08Pillage\uff09",
+"drift": 0.02887599729001522,
+"rel": 0.02112775557466882,
+"offered": 176,
+"in_hand": 4211
+},
+{
+"card": "CARD.BRAND",
+"name": "\u70d9\u5370\uff08Brand\uff09",
+"drift": 0.027895374223589897,
+"rel": 0.032555061870772034,
+"offered": 98,
+"in_hand": 493
+},
+{
+"card": "CARD.GREED",
+"name": "\u8d2a\u5a6a\uff08Greed\uff09",
+"drift": 0.02770829387009144,
+"rel": 0.03245466288777838,
+"offered": 0,
+"in_hand": 5026
+},
+{
+"card": "CARD.BLUDGEON",
+"name": "\u91cd\u9524\uff08Bludgeon\uff09",
+"drift": 0.02767433226108551,
+"rel": 0.02661252261757701,
+"offered": 166,
+"in_hand": 2691
+},
+{
+"card": "CARD.IMPERVIOUS",
+"name": "\u5cbf\u7136\u4e0d\u52a8\uff08Impervious\uff09",
+"drift": 0.027514178305864334,
+"rel": 0.028640546282695863,
+"offered": 89,
+"in_hand": 2067
+},
+{
+"card": "CARD.THUNDERCLAP",
+"name": "\u95ea\u7535\u9739\u96f3\uff08Thunderclap\uff09",
+"drift": 0.02742779441177845,
+"rel": 0.03978728829159416,
+"offered": 453,
+"in_hand": 1207
+},
+{
+"card": "CARD.HEADBUTT",
+"name": "\u5934\u69cc\uff08Headbutt\uff09",
+"drift": 0.027414891868829727,
+"rel": 0.03599121260530143,
+"offered": 419,
+"in_hand": 3747
+},
+{
+"card": "CARD.THRUMMING_HATCHET",
+"name": "\u65e0\u4f11\u624b\u65a7\uff08Thrumming Hatchet\uff09",
+"drift": 0.027335917577147484,
+"rel": 0.027383469566843534,
+"offered": 10,
+"in_hand": 2913
+},
+{
+"card": "CARD.TOXIC",
+"name": "\u6bd2\u7d20\uff08Toxic\uff09",
+"drift": 0.027322905138134956,
+"rel": 0.03830541187847919,
+"offered": 0,
+"in_hand": 716
+},
+{
+"card": "CARD.MAUL",
+"name": "\u6495\u54ac\uff08Maul\uff09",
+"drift": 0.027181845158338547,
+"rel": 0.04084914128119575,
+"offered": 0,
+"in_hand": 848
+},
+{
+"card": "CARD.DOMINATE",
+"name": "\u4e3b\u5bb0\uff08Dominate\uff09",
+"drift": 0.027090882882475853,
+"rel": 0.037974342898989544,
+"offered": 103,
+"in_hand": 2476
+},
+{
+"card": "CARD.PANIC_BUTTON",
+"name": "\u5e94\u6025\u6309\u94ae\uff08Panic Button\uff09",
+"drift": 0.02705998159945011,
+"rel": 0.032534877225744274,
+"offered": 9,
+"in_hand": 1222
+},
+{
+"card": "CARD.EVIL_EYE",
+"name": "\u90aa\u773c\uff08Evil Eye\uff09",
+"drift": 0.027025239542126656,
+"rel": 0.03476862197996247,
+"offered": 162,
+"in_hand": 357
+},
+{
+"card": "CARD.INJURY",
+"name": "\u53d7\u4f24\uff08Injury\uff09",
+"drift": 0.026710445061326027,
+"rel": 0.040283666484392744,
+"offered": 0,
+"in_hand": 276
+},
+{
+"card": "CARD.CINDER",
+"name": "\u4f59\u70ec\uff08Cinder\uff09",
+"drift": 0.026692751795053482,
+"rel": 0.0249078761059289,
+"offered": 438,
+"in_hand": 821
+},
+{
+"card": "CARD.JUGGERNAUT",
+"name": "\u52bf\u4e0d\u53ef\u5f53\uff08Juggernaut\uff09",
+"drift": 0.026416828855872154,
+"rel": 0.046460320870173315,
+"offered": 90,
+"in_hand": 744
+},
+{
+"card": "CARD.INFECTION",
+"name": "\u611f\u67d3\uff08Infection\uff09",
+"drift": 0.026200972497463226,
+"rel": 0.03285733372949357,
+"offered": 0,
+"in_hand": 1993
+},
+{
+"card": "CARD.DEMON_FORM",
+"name": "\u6076\u9b54\u5f62\u6001\uff08Demon Form\uff09",
+"drift": 0.026096059009432793,
+"rel": 0.01775738021392283,
+"offered": 87,
+"in_hand": 3189
+},
+{
+"card": "CARD.FRANTIC_ESCAPE",
+"name": "\u72c2\u4e71\u9003\u79bb\uff08Frantic Escape\uff09",
+"drift": 0.026056282222270966,
+"rel": 0.031121401850289863,
+"offered": 0,
+"in_hand": 1838
+},
+{
+"card": "CARD.ASHEN_STRIKE",
+"name": "\u7070\u70ec\u6253\u51fb\uff08Ashen Strike\uff09",
+"drift": 0.02601751871407032,
+"rel": 0.027850955179133333,
+"offered": 172,
+"in_hand": 545
+},
+{
+"card": "CARD.THRASH",
+"name": "\u75db\u6bb4\uff08Thrash\uff09",
+"drift": 0.02592233195900917,
+"rel": 0.03687111417166126,
+"offered": 74,
+"in_hand": 515
+},
+{
+"card": "CARD.TEAR_ASUNDER",
+"name": "\u626f\u788e\uff08Tear Asunder\uff09",
+"drift": 0.025726603344082832,
+"rel": 0.03326337632368916,
+"offered": 101,
+"in_hand": 1642
+},
+{
+"card": "CARD.ARMAMENTS",
+"name": "\u6b66\u88c5\uff08Armaments\uff09",
+"drift": 0.02537074312567711,
+"rel": 0.022305646176062087,
+"offered": 454,
+"in_hand": 200
+},
+{
+"card": "CARD.FLASH_OF_STEEL",
+"name": "\u4eae\u5251\uff08Flash of Steel\uff09",
+"drift": 0.024956490844488144,
+"rel": 0.02839606146971133,
+"offered": 8,
+"in_hand": 1206
+},
+{
+"card": "CARD.GIANT_ROCK",
+"name": "\u5de8\u77f3\uff08Giant Rock\uff09",
+"drift": 0.024800412356853485,
+"rel": 0.03242464837284063,
+"offered": 0,
+"in_hand": 2377
+},
+{
+"card": "CARD.SPOILS_MAP",
+"name": "\u85cf\u5b9d\u56fe\uff08Spoils Map\uff09",
+"drift": 0.024711309000849724,
+"rel": 0.03125672170691492,
+"offered": 0,
+"in_hand": 2241
+},
+{
+"card": "CARD.VICIOUS",
+"name": "\u51f6\u6076\uff08Vicious\uff09",
+"drift": 0.02455143630504608,
+"rel": 0.03211039409032123,
+"offered": 193,
+"in_hand": 319
+},
+{
+"card": "CARD.ULTIMATE_STRIKE",
+"name": "\u7a76\u6781\u6253\u51fb\uff08Ultimate Strike\uff09",
+"drift": 0.024469977244734764,
+"rel": 0.034448204294893904,
+"offered": 7,
+"in_hand": 444
+},
+{
+"card": "CARD.INFERNO",
+"name": "\u72f1\u706b\uff08Inferno\uff09",
+"drift": 0.02380903623998165,
+"rel": 0.03849204074930525,
+"offered": 175,
+"in_hand": 380
+},
+{
+"card": "CARD.STRIKE_IRONCLAD",
+"name": "\u6253\u51fb\uff08Strike\uff09",
+"drift": 0.023807184770703316,
+"rel": 0.039244411759186325,
+"offered": 0,
+"in_hand": 160369
+},
+{
+"card": "CARD.DISCOVERY",
+"name": "\u53d1\u73b0\uff08Discovery\uff09",
+"drift": 0.023747524246573448,
+"rel": 0.024058830927585165,
+"offered": 6,
+"in_hand": 275
+},
+{
+"card": "CARD.RAMPAGE",
+"name": "\u66b4\u8d70\uff08Rampage\uff09",
+"drift": 0.02365126647055149,
+"rel": 0.03776538816026095,
+"offered": 172,
+"in_hand": 1737
+},
+{
+"card": "CARD.SWORD_BOOMERANG",
+"name": "\u98de\u5251\u56de\u65cb\u9556\uff08Sword Boomerang\uff09",
+"drift": 0.023556245490908623,
+"rel": 0.03898795401352021,
+"offered": 459,
+"in_hand": 1355
+},
+{
+"card": "CARD.BATTLE_TRANCE",
+"name": "\u6218\u6597\u4e13\u6ce8\uff08Battle Trance\uff09",
+"drift": 0.023462243378162384,
+"rel": 0.02156158879911447,
+"offered": 158,
+"in_hand": 8441
+},
+{
+"card": "CARD.UPPERCUT",
+"name": "\u4e0a\u52fe\u62f3\uff08Uppercut\uff09",
+"drift": 0.02330091781914234,
+"rel": 0.02053601310786777,
+"offered": 176,
+"in_hand": 8659
+},
+{
+"card": "CARD.WOUND",
+"name": "\u4f24\u53e3\uff08Wound\uff09",
+"drift": 0.023298362269997597,
+"rel": 0.02949666890461481,
+"offered": 0,
+"in_hand": 1464
+},
+{
+"card": "CARD.ANGER",
+"name": "\u6124\u6012\uff08Anger\uff09",
+"drift": 0.023189937695860863,
+"rel": 0.020610910484317672,
+"offered": 467,
+"in_hand": 26803
+},
+{
+"card": "CARD.STAMPEDE",
+"name": "\u60ca\u9003\uff08Stampede\uff09",
+"drift": 0.02261192724108696,
+"rel": 0.0193396285930582,
+"offered": 174,
+"in_hand": 2652
+},
+{
+"card": "CARD.SHOCKWAVE",
+"name": "\u9707\u8361\u6ce2\uff08Shockwave\uff09",
+"drift": 0.022471914067864418,
+"rel": 0.01829308991643667,
+"offered": 9,
+"in_hand": 1168
+},
+{
+"card": "CARD.CRIMSON_MANTLE",
+"name": "\u7eef\u7ea2\u62ab\u98ce\uff08Crimson Mantle\uff09",
+"drift": 0.02196345664560795,
+"rel": 0.030688522874333143,
+"offered": 90,
+"in_hand": 2525
+},
+{
+"card": "CARD.BURN",
+"name": "\u707c\u4f24\uff08Burn\uff09",
+"drift": 0.02193724550306797,
+"rel": 0.02260359638856779,
+"offered": 0,
+"in_hand": 7723
+},
+{
+"card": "CARD.TRUE_GRIT",
+"name": "\u575a\u6bc5\uff08True Grit\uff09",
+"drift": 0.0217476487159729,
+"rel": 0.026674280544140262,
+"offered": 443,
+"in_hand": 416
+},
+{
+"card": "CARD.FLAME_BARRIER",
+"name": "\u706b\u7130\u5c4f\u969c\uff08Flame Barrier\uff09",
+"drift": 0.02168687991797924,
+"rel": 0.04087968064690133,
+"offered": 195,
+"in_hand": 2587
+},
+{
+"card": "CARD.HEMOKINESIS",
+"name": "\u5fa1\u8840\u672f\uff08Hemokinesis\uff09",
+"drift": 0.02136532962322235,
+"rel": 0.022243563187349175,
+"offered": 166,
+"in_hand": 584
+},
+{
+"card": "CARD.STONE_ARMOR",
+"name": "\u5ca9\u77f3\u94e0\u7532\uff08Stone Armor\uff09",
+"drift": 0.021058248355984688,
+"rel": 0.02984422336581829,
+"offered": 199,
+"in_hand": 7661
+},
+{
+"card": "CARD.NOT_YET",
+"name": "\u65f6\u5019\u672a\u5230\uff08Not Yet\uff09",
+"drift": 0.02100636437535286,
+"rel": 0.03689313882524473,
+"offered": 85,
+"in_hand": 572
+},
+{
+"card": "CARD.ULTIMATE_DEFEND",
+"name": "\u7a76\u6781\u9632\u5fa1\uff08Ultimate Defend\uff09",
+"drift": 0.020777590572834015,
+"rel": 0.0185644217530061,
+"offered": 5,
+"in_hand": 1416
+},
+{
+"card": "CARD.BASH",
+"name": "\u75db\u51fb\uff08Bash\uff09",
+"drift": 0.019108610227704048,
+"rel": 0.029305270138540132,
+"offered": 0,
+"in_hand": 27491
+},
+{
+"card": "CARD.CRUELTY",
+"name": "\u6b8b\u9177\uff08Cruelty\uff09",
+"drift": 0.018887819722294807,
+"rel": 0.0286095285019076,
+"offered": 179,
+"in_hand": 1343
+},
+{
+"card": "CARD.PERFECTED_STRIKE",
+"name": "\u5b8c\u7f8e\u6253\u51fb\uff08Perfected Strike\uff09",
+"drift": 0.01873157173395157,
+"rel": 0.024273735072686355,
+"offered": 474,
+"in_hand": 8403
+},
+{
+"card": "CARD.BECKON",
+"name": "\u547c\u5524\uff08Beckon\uff09",
+"drift": 0.01863817125558853,
+"rel": 0.019987401792531983,
+"offered": 0,
+"in_hand": 908
+},
+{
+"card": "CARD.TAUNT",
+"name": "\u6311\u8845\uff08Taunt\uff09",
+"drift": 0.018430843949317932,
+"rel": 0.02828931213821642,
+"offered": 481,
+"in_hand": 15572
+},
+{
+"card": "CARD.ASCENDERS_BANE",
+"name": "\u8fdb\u9636\u4e4b\u707e\uff08Ascender's Bane\uff09",
+"drift": 0.01830674521625042,
+"rel": 0.037044597261688614,
+"offered": 0,
+"in_hand": 25685
+},
+{
+"card": "CARD.BREAKTHROUGH",
+"name": "\u7a81\u7834\uff08Breakthrough\uff09",
+"drift": 0.018264608457684517,
+"rel": 0.024666062463570927,
+"offered": 432,
+"in_hand": 434
+},
+{
+"card": "CARD.IRON_WAVE",
+"name": "\u94c1\u65a9\u6ce2\uff08Iron Wave\uff09",
+"drift": 0.018215268850326538,
+"rel": 0.02894355957816863,
+"offered": 462,
+"in_hand": 7363
+},
+{
+"card": "CARD.ETERNAL_ARMOR",
+"name": "\u6c38\u6052\u94e0\u7532\uff08Eternal Armor\uff09",
+"drift": 0.018122075125575066,
+"rel": 0.01911551539304702,
+"offered": 0,
+"in_hand": 975
+},
+{
+"card": "CARD.MIND_BLAST",
+"name": "\u5fc3\u7075\u9707\u6151\uff08Mind Blast\uff09",
+"drift": 0.017659785225987434,
+"rel": 0.02656050943780013,
+"offered": 8,
+"in_hand": 292
+},
+{
+"card": "CARD.EQUILIBRIUM",
+"name": "\u5747\u8861\uff08Equilibrium\uff09",
+"drift": 0.017476920038461685,
+"rel": 0.03342372762245128,
+"offered": 3,
+"in_hand": 248
+},
+{
+"card": "CARD.BREAK",
+"name": "\u7834\u51fb\uff08Break\uff09",
+"drift": 0.01644883304834366,
+"rel": 0.02096388968399533,
+"offered": 0,
+"in_hand": 1335
+},
+{
+"card": "CARD.MAD_SCIENCE",
+"name": "\u75af\u72c2\u79d1\u5b66\uff08Mad Science\uff09",
+"drift": 0.016373520717024803,
+"rel": 0.02826708391082158,
+"offered": 0,
+"in_hand": 776
+},
+{
+"card": "CARD.WITHER",
+"name": "\u51cb\u840e\uff08Wither\uff09",
+"drift": 0.016211599111557007,
+"rel": 0.01952721517374225,
+"offered": 0,
+"in_hand": 5124
+},
+{
+"card": "CARD.KI_WHIP",
+"name": "\u53fd \u957f\u97ad\uff08Ki Whip\uff09",
+"drift": 0.015973396599292755,
+"rel": 0.03382476206848328,
+"offered": 5,
+"in_hand": 256
+},
+{
+"card": "CARD.DEFEND_IRONCLAD",
+"name": "\u9632\u5fa1\uff08Defend\uff09",
+"drift": 0.01488195825368166,
+"rel": 0.02745001944594851,
+"offered": 0,
+"in_hand": 106197
+}
+]
+}

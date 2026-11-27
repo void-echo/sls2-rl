@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Headless replacement for GodotSharp.dll (sts2.dll is compiled against Godot 4.5's C# API).
+      Semantic/   hand-written: Godot value types and helpers that game logic relies on, with Godot's own semantics
+                  (the value types are Godot's MIT-licensed C# sources; see Semantic/README.md).
+      Generated/  inert declarations of every other Godot type/member sts2.dll references, produced by
+                  engine/tools/gen_stubs.sh (engine/tools/GodotStubGen). Do not edit by hand.
+    StubsHandOnly=true builds the hand-written part alone (input of the generator; built with -o elsewhere).
+  -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>Godot</RootNamespace>
+    <AssemblyName>GodotSharp</AssemblyName>
+    <Version>4.5.1.0</Version>
+    <AssemblyVersion>4.5.1.0</AssemblyVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <NoWarn>$(NoWarn);CS0618;CS0108;CS0114;CS1591;CS8981;CS0809;CS0659;CS0661;CS0660</NoWarn>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(StubsHandOnly)' == 'true'">
+    <Compile Remove="Generated/**" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6079 @@
+{
+  "meta": {
+    "subject_model": "AlphaDefect Ironclad v0.113.1 (ironclad_ema_v24782.pt)",
+    "paper_ref": "Chen, Yu, Komiyama & Huang, arXiv:2611.31076 (2026)",
+    "ckpt_sha256": "78ba58312335b1a49823fdaf6aa263ee46f9dae46b5d4753bc609eb671588f20",
+    "params": 19579374,
+    "training_decisions": 1371026272,
+    "obs_format": 28,
+    "eval_flags": {
+      "obs_format": 28,
+      "loop_cut": true,
+      "stall_turns": 20,
+      "policy": "greedy",
+      "tf32": false
+    },
+    "hardware": "n10 (NVIDIA GeForce RTX 3090, CUDA, .NET 9.0.320, sts2.dll v0.113.1 commit d09d48e5)",
+    "date": "2026-11-25"
+  },
+  "reproduction_rv1": {
+    "vs_published_table4": {
+      "n_seeds": 1000,
+      "published_wins": 665,
+      "published_win_rate_pct": 66.5,
+      "reproduced_wins": 667,
+      "reproduced_win_rate_pct": 66.7,
+      "delta_pp": 0.2,
+      "outcome_agreement_seeds": 992,
+      "outcome_agreement_pct": 99.2,
+      "outcome_and_floor_agreement_seeds": 990,
+      "outcome_and_floor_agreement_pct": 99.0,
+      "won_only_published": 3,
+      "won_only_reproduced": 5,
+      "mcnemar_exact_p": 0.726562
+    },
+    "rv1_std_summary": {
+      "games": 1000,
+      "wins": 667,
+      "win_rate_pct": 66.7,
+      "wilson_95_pct": [
+        63.72,
+        69.5522
+      ],
+      "stuck": 0,
+      "mean_floor": 46.33,
+      "mean_steps": 656.4,
+      "card_reward_screens": 15643,
+      "card_reward_screens_per_run": 15.643,
+      "skip_screens": 3106,
+      "skip_rate_pct": 19.8555,
+      "skip_rate_by_act_pct": [
+        8.8962,
+        28.8194,
+        28.6169
+      ],
+      "skip_prob": {
+        "n": 15643,
+        "mean": 0.207982,
+        "std": 0.325469,
+        "min": 0.0,
+        "q25": 0.00011,
+        "median": 0.015368,
+        "q75": 0.291535,
+        "p95": 0.975082,
+        "max": 0.999999,
+        "sum": 3253.469121
+      },
+      "forgotten_ritual_usage": {
+        "final_decks_with_fr": 11,
+        "final_deck_share_pct": 1.1,
+        "combat_hand_steps_total": 779,
+        "combat_hand_steps_exhausted_turn": 238,
+        "combat_hand_steps_unexhausted_turn": 541,
+        "plays_total": 186,
+        "plays_after_exhaust": 155,
+        "plays_without_exhaust": 31,
+        "energy_gained_total": 155,
+        "energy_gained_after_exhaust": 155,
+        "energy_gained_without_exhaust": 0,
+        "energy_gain_pct_of_plays": 83.3333
+      },
+      "target_cards": {
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered": 367,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            149,
+            138,
+            80
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 367,
+            "mean": 0.004438,
+            "std": 0.016059,
+            "min": 0.0,
+            "q25": 1e-06,
+            "median": 5.1e-05,
+            "q75": 0.000881,
+            "p95": 0.022802,
+            "max": 0.188715,
+            "sum": 1.628844
+          },
+          "shop_affordable_offered": 215,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.00186,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 279,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.002264,
+              "median_prob": 2.7e-05
+            },
+            "1_source": {
+              "offered": 74,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.012104,
+              "median_prob": 0.000379
+            },
+            "ge2_sources": {
+              "offered": 14,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.00726,
+              "median_prob": 0.000588
+            },
+            "no_stoke": {
+              "offered": 339,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.00428,
+              "median_prob": 4.3e-05
+            },
+            "stoke_in_deck": {
+              "offered": 28,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.006353,
+              "median_prob": 0.000514
+            },
+            "no_fnp": {
+              "offered": 360,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004519,
+              "median_prob": 5e-05
+            },
+            "fnp_in_deck": {
+              "offered": 7,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.00029,
+              "median_prob": 5.1e-05
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.000415,
+              "median_prob": 0.000415
+            }
+          }
+        },
+        "CARD.DARK_EMBRACE": {
+          "offered": 271,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            128,
+            119,
+            24
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 271,
+            "mean": 0.007014,
+            "std": 0.041307,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 1e-06,
+            "q75": 0.000148,
+            "p95": 0.011833,
+            "max": 0.451193,
+            "sum": 1.900685
+          },
+          "shop_affordable_offered": 11,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.004891,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 184,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001668,
+              "median_prob": 0.0
+            },
+            "1_source": {
+              "offered": 77,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.016836,
+              "median_prob": 5e-06
+            },
+            "ge2_sources": {
+              "offered": 10,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.029733,
+              "median_prob": 0.000107
+            },
+            "no_stoke": {
+              "offered": 248,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001872,
+              "median_prob": 1e-06
+            },
+            "stoke_in_deck": {
+              "offered": 23,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.06245,
+              "median_prob": 8e-06
+            },
+            "no_fnp": {
+              "offered": 257,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004597,
+              "median_prob": 1e-06
+            },
+            "fnp_in_deck": {
+              "offered": 14,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.051381,
+              "median_prob": 0.000328
+            },
+            "stoke_and_fnp": {
+              "offered": 7,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.099835,
+              "median_prob": 5e-06
+            }
+          }
+        },
+        "CARD.FEEL_NO_PAIN": {
+          "offered": 443,
+          "picked": 114,
+          "pick_rate_pct": 25.7336,
+          "by_act_offered": [
+            181,
+            134,
+            128
+          ],
+          "by_act_picked": [
+            3,
+            44,
+            67
+          ],
+          "policy_prob": {
+            "n": 443,
+            "mean": 0.249052,
+            "std": 0.39645,
+            "min": 0.0,
+            "q25": 8e-06,
+            "median": 0.001324,
+            "q75": 0.50237,
+            "p95": 0.999912,
+            "max": 1.0,
+            "sum": 110.329828
+          },
+          "shop_affordable_offered": 338,
+          "shop_bought": 27,
+          "shop_prob_mean": 0.071108,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 320,
+              "picked": 40,
+              "pick_rate_pct": 12.5,
+              "mean_prob": 0.123654,
+              "median_prob": 0.000175
+            },
+            "1_source": {
+              "offered": 98,
+              "picked": 54,
+              "pick_rate_pct": 55.102,
+              "mean_prob": 0.52864,
+              "median_prob": 0.646265
+            },
+            "ge2_sources": {
+              "offered": 25,
+              "picked": 20,
+              "pick_rate_pct": 80.0,
+              "mean_prob": 0.758156,
+              "median_prob": 0.99832
+            },
+            "no_stoke": {
+              "offered": 393,
+              "picked": 67,
+              "pick_rate_pct": 17.0483,
+              "mean_prob": 0.166843,
+              "median_prob": 0.000405
+            },
+            "stoke_in_deck": {
+              "offered": 50,
+              "picked": 47,
+              "pick_rate_pct": 94.0,
+              "mean_prob": 0.895214,
+              "median_prob": 0.998471
+            },
+            "no_fnp": {
+              "offered": 425,
+              "picked": 101,
+              "pick_rate_pct": 23.7647,
+              "mean_prob": 0.229761,
+              "median_prob": 0.000851
+            },
+            "fnp_in_deck": {
+              "offered": 18,
+              "picked": 13,
+              "pick_rate_pct": 72.2222,
+              "mean_prob": 0.704531,
+              "median_prob": 0.980657
+            },
+            "stoke_and_fnp": {
+              "offered": 3,
+              "picked": 3,
+              "pick_rate_pct": 100.0,
+              "mean_prob": 0.998239,
+              "median_prob": 0.999097
+            }
+          }
+        },
+        "CARD.SECOND_WIND": {
+          "offered": 369,
+          "picked": 7,
+          "pick_rate_pct": 1.897,
+          "by_act_offered": [
+            163,
+            110,
+            96
+          ],
+          "by_act_picked": [
+            0,
+            2,
+            5
+          ],
+          "policy_prob": {
+            "n": 369,
+            "mean": 0.024425,
+            "std": 0.122163,
+            "min": 0.0,
+            "q25": 1e-06,
+            "median": 0.000106,
+            "q75": 0.002006,
+            "p95": 0.082078,
+            "max": 0.9768,
+            "sum": 9.012724
+          },
+          "shop_affordable_offered": 211,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001115,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 262,
+              "picked": 2,
+              "pick_rate_pct": 0.7634,
+              "mean_prob": 0.014438,
+              "median_prob": 2.4e-05
+            },
+            "1_source": {
+              "offered": 90,
+              "picked": 5,
+              "pick_rate_pct": 5.5556,
+              "mean_prob": 0.056909,
+              "median_prob": 0.001716
+            },
+            "ge2_sources": {
+              "offered": 17,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.006358,
+              "median_prob": 0.000696
+            },
+            "no_stoke": {
+              "offered": 330,
+              "picked": 7,
+              "pick_rate_pct": 2.1212,
+              "mean_prob": 0.026097,
+              "median_prob": 7.5e-05
+            },
+            "stoke_in_deck": {
+              "offered": 39,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.010276,
+              "median_prob": 0.00088
+            },
+            "no_fnp": {
+              "offered": 353,
+              "picked": 5,
+              "pick_rate_pct": 1.4164,
+              "mean_prob": 0.020219,
+              "median_prob": 9.6e-05
+            },
+            "fnp_in_deck": {
+              "offered": 16,
+              "picked": 2,
+              "pick_rate_pct": 12.5,
+              "mean_prob": 0.117222,
+              "median_prob": 0.002552
+            },
+            "stoke_and_fnp": {
+              "offered": 6,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.030885,
+              "median_prob": 0.011894
+            }
+          }
+        },
+        "CARD.STOKE": {
+          "offered": 294,
+          "picked": 198,
+          "pick_rate_pct": 67.3469,
+          "by_act_offered": [
+            140,
+            126,
+            28
+          ],
+          "by_act_picked": [
+            101,
+            76,
+            21
+          ],
+          "policy_prob": {
+            "n": 294,
+            "mean": 0.665119,
+            "std": 0.423698,
+            "min": 0.0,
+            "q25": 0.149046,
+            "median": 0.971753,
+            "q75": 0.999916,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 195.544916
+          },
+          "shop_affordable_offered": 19,
+          "shop_bought": 5,
+          "shop_prob_mean": 0.316375,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 225,
+              "picked": 148,
+              "pick_rate_pct": 65.7778,
+              "mean_prob": 0.655459,
+              "median_prob": 0.977004
+            },
+            "1_source": {
+              "offered": 57,
+              "picked": 42,
+              "pick_rate_pct": 73.6842,
+              "mean_prob": 0.718265,
+              "median_prob": 0.969181
+            },
+            "ge2_sources": {
+              "offered": 12,
+              "picked": 8,
+              "pick_rate_pct": 66.6667,
+              "mean_prob": 0.593802,
+              "median_prob": 0.783595
+            },
+            "no_stoke": {
+              "offered": 275,
+              "picked": 186,
+              "pick_rate_pct": 67.6364,
+              "mean_prob": 0.669682,
+              "median_prob": 0.983694
+            },
+            "stoke_in_deck": {
+              "offered": 19,
+              "picked": 12,
+              "pick_rate_pct": 63.1579,
+              "mean_prob": 0.599077,
+              "median_prob": 0.90294
+            },
+            "no_fnp": {
+              "offered": 290,
+              "picked": 195,
+              "pick_rate_pct": 67.2414,
+              "mean_prob": 0.663882,
+              "median_prob": 0.971482
+            },
+            "fnp_in_deck": {
+              "offered": 4,
+              "picked": 3,
+              "pick_rate_pct": 75.0,
+              "mean_prob": 0.754757,
+              "median_prob": 0.996065
+            },
+            "stoke_and_fnp": {
+              "offered": 2,
+              "picked": 2,
+              "pick_rate_pct": 100.0,
+              "mean_prob": 0.996065,
+              "median_prob": 0.996065
+            }
+          }
+        }
+      },
+      "comparison_cards": {
+        "CARD.BURNING_PACT": {
+          "offered": 422,
+          "picked": 50,
+          "pick_rate_pct": 11.8483,
+          "by_act_offered": [
+            144,
+            151,
+            127
+          ],
+          "by_act_picked": [
+            0,
+            18,
+            32
+          ],
+          "policy_prob": {
+            "n": 422,
+            "mean": 0.124448,
+            "std": 0.260132,
+            "min": 0.0,
+            "q25": 3.8e-05,
+            "median": 0.002364,
+            "q75": 0.063727,
+            "p95": 0.855993,
+            "max": 0.999714,
+            "sum": 52.517018
+          },
+          "shop_affordable_offered": 210,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.005546,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 299,
+              "picked": 23,
+              "pick_rate_pct": 7.6923,
+              "mean_prob": 0.082041,
+              "median_prob": 0.000525
+            },
+            "1_source": {
+              "offered": 98,
+              "picked": 21,
+              "pick_rate_pct": 21.4286,
+              "mean_prob": 0.220632,
+              "median_prob": 0.038686
+            },
+            "ge2_sources": {
+              "offered": 25,
+              "picked": 6,
+              "pick_rate_pct": 24.0,
+              "mean_prob": 0.254593,
+              "median_prob": 0.060957
+            },
+            "no_stoke": {
+              "offered": 375,
+              "picked": 40,
+              "pick_rate_pct": 10.6667,
+              "mean_prob": 0.11044,
+              "median_prob": 0.001673
+            },
+            "stoke_in_deck": {
+              "offered": 47,
+              "picked": 10,
+              "pick_rate_pct": 21.2766,
+              "mean_prob": 0.236215,
+              "median_prob": 0.060957
+            },
+            "no_fnp": {
+              "offered": 411,
+              "picked": 45,
+              "pick_rate_pct": 10.9489,
+              "mean_prob": 0.116032,
+              "median_prob": 0.001998
+            },
+            "fnp_in_deck": {
+              "offered": 11,
+              "picked": 5,
+              "pick_rate_pct": 45.4545,
+              "mean_prob": 0.438898,
+              "median_prob": 0.157055
+            },
+            "stoke_and_fnp": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.538136,
+              "median_prob": 0.832325
+            }
+          }
+        },
+        "CARD.TRUE_GRIT": {
+          "offered": 1018,
+          "picked": 27,
+          "pick_rate_pct": 2.6523,
+          "by_act_offered": [
+            481,
+            284,
+            253
+          ],
+          "by_act_picked": [
+            0,
+            6,
+            21
+          ],
+          "policy_prob": {
+            "n": 1018,
+            "mean": 0.031231,
+            "std": 0.126582,
+            "min": 0.0,
+            "q25": 3e-06,
+            "median": 0.00026,
+            "q75": 0.00431,
+            "p95": 0.133061,
+            "max": 0.999813,
+            "sum": 31.793031
+          },
+          "shop_affordable_offered": 627,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.002398
+        },
+        "CARD.ASHEN_STRIKE": {
+          "offered": 398,
+          "picked": 33,
+          "pick_rate_pct": 8.2915,
+          "by_act_offered": [
+            204,
+            103,
+            91
+          ],
+          "by_act_picked": [
+            27,
+            4,
+            2
+          ],
+          "policy_prob": {
+            "n": 398,
+            "mean": 0.099044,
+            "std": 0.221519,
+            "min": 0.0,
+            "q25": 0.000117,
+            "median": 0.0037,
+            "q75": 0.05078,
+            "p95": 0.684134,
+            "max": 0.999996,
+            "sum": 39.419589
+          },
+          "shop_affordable_offered": 174,
+          "shop_bought": 1,
+          "shop_prob_mean": 0.006515,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 304,
+              "picked": 29,
+              "pick_rate_pct": 9.5395,
+              "mean_prob": 0.107026,
+              "median_prob": 0.002948
+            },
+            "1_source": {
+              "offered": 77,
+              "picked": 4,
+              "pick_rate_pct": 5.1948,
+              "mean_prob": 0.082684,
+              "median_prob": 0.011496
+            },
+            "ge2_sources": {
+              "offered": 17,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.03042,
+              "median_prob": 0.00328
+            },
+            "no_stoke": {
+              "offered": 372,
+              "picked": 32,
+              "pick_rate_pct": 8.6022,
+              "mean_prob": 0.101908,
+              "median_prob": 0.003295
+            },
+            "stoke_in_deck": {
+              "offered": 26,
+              "picked": 1,
+              "pick_rate_pct": 3.8462,
+              "mean_prob": 0.058066,
+              "median_prob": 0.012235
+            },
+            "no_fnp": {
+              "offered": 383,
+              "picked": 31,
+              "pick_rate_pct": 8.094,
+              "mean_prob": 0.09643,
+              "median_prob": 0.003325
+            },
+            "fnp_in_deck": {
+              "offered": 15,
+              "picked": 2,
+              "pick_rate_pct": 13.3333,
+              "mean_prob": 0.165792,
+              "median_prob": 0.027438
+            },
+            "stoke_and_fnp": {
+              "offered": 5,
+              "picked": 1,
+              "pick_rate_pct": 20.0,
+              "mean_prob": 0.186157,
+              "median_prob": 0.01699
+            }
+          }
+        },
+        "CARD.FIEND_FIRE": {
+          "offered": 256,
+          "picked": 3,
+          "pick_rate_pct": 1.1719,
+          "by_act_offered": [
+            118,
+            123,
+            15
+          ],
+          "by_act_picked": [
+            2,
+            0,
+            1
+          ],
+          "policy_prob": {
+            "n": 256,
+            "mean": 0.020511,
+            "std": 0.09633,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 6e-06,
+            "q75": 0.001471,
+            "p95": 0.098184,
+            "max": 0.866913,
+            "sum": 5.250755
+          },
+          "shop_affordable_offered": 26,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.004765
+        },
+        "CARD.OFFERING": {
+          "offered": 326,
+          "picked": 246,
+          "pick_rate_pct": 75.4601,
+          "by_act_offered": [
+            149,
+            144,
+            33
+          ],
+          "by_act_picked": [
+            117,
+            105,
+            24
+          ],
+          "policy_prob": {
+            "n": 326,
+            "mean": 0.743395,
+            "std": 0.38725,
+            "min": 0.0,
+            "q25": 0.488098,
+            "median": 0.996534,
+            "q75": 0.999976,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 242.346889
+          },
+          "shop_affordable_offered": 22,
+          "shop_bought": 12,
+          "shop_prob_mean": 0.428056
+        },
+        "CARD.IMPERVIOUS": {
+          "offered": 312,
+          "picked": 132,
+          "pick_rate_pct": 42.3077,
+          "by_act_offered": [
+            155,
+            120,
+            37
+          ],
+          "by_act_picked": [
+            72,
+            46,
+            14
+          ],
+          "policy_prob": {
+            "n": 312,
+            "mean": 0.414926,
+            "std": 0.447497,
+            "min": 0.0,
+            "q25": 0.000433,
+            "median": 0.100165,
+            "q75": 0.964383,
+            "p95": 0.999799,
+            "max": 0.999999,
+            "sum": 129.456808
+          },
+          "shop_affordable_offered": 13,
+          "shop_bought": 1,
+          "shop_prob_mean": 0.097867
+        },
+        "CARD.SHOCKWAVE": {
+          "offered": 23,
+          "picked": 21,
+          "pick_rate_pct": 91.3043,
+          "by_act_offered": [
+            12,
+            11,
+            0
+          ],
+          "by_act_picked": [
+            12,
+            9,
+            0
+          ],
+          "policy_prob": {
+            "n": 23,
+            "mean": 0.896007,
+            "std": 0.256964,
+            "min": 0.000368,
+            "q25": 0.989649,
+            "median": 0.999703,
+            "q75": 0.999997,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 20.608168
+          },
+          "shop_affordable_offered": 110,
+          "shop_bought": 85,
+          "shop_prob_mean": 0.686447
+        },
+        "CARD.BATTLE_TRANCE": {
+          "offered": 559,
+          "picked": 477,
+          "pick_rate_pct": 85.3309,
+          "by_act_offered": [
+            227,
+            189,
+            143
+          ],
+          "by_act_picked": [
+            206,
+            171,
+            100
+          ],
+          "policy_prob": {
+            "n": 559,
+            "mean": 0.838593,
+            "std": 0.306135,
+            "min": 0.0,
+            "q25": 0.887344,
+            "median": 0.998463,
+            "q75": 0.999997,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 468.77325
+          },
+          "shop_affordable_offered": 216,
+          "shop_bought": 92,
+          "shop_prob_mean": 0.37402
+        },
+        "CARD.CRIMSON_MANTLE": {
+          "offered": 313,
+          "picked": 278,
+          "pick_rate_pct": 88.8179,
+          "by_act_offered": [
+            136,
+            151,
+            26
+          ],
+          "by_act_picked": [
+            125,
+            130,
+            23
+          ],
+          "policy_prob": {
+            "n": 313,
+            "mean": 0.876334,
+            "std": 0.28232,
+            "min": 0.000103,
+            "q25": 0.956636,
+            "median": 0.999876,
+            "q75": 0.999999,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 274.292589
+          },
+          "shop_affordable_offered": 16,
+          "shop_bought": 12,
+          "shop_prob_mean": 0.553426
+        },
+        "CARD.STONE_ARMOR": {
+          "offered": 587,
+          "picked": 507,
+          "pick_rate_pct": 86.3714,
+          "by_act_offered": [
+            218,
+            180,
+            189
+          ],
+          "by_act_picked": [
+            188,
+            162,
+            157
+          ],
+          "policy_prob": {
+            "n": 587,
+            "mean": 0.832643,
+            "std": 0.304393,
+            "min": 0.0,
+            "q25": 0.845778,
+            "median": 0.993182,
+            "q75": 0.999905,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 488.76151
+          },
+          "shop_affordable_offered": 382,
+          "shop_bought": 109,
+          "shop_prob_mean": 0.267254
+        },
+        "CARD.UPPERCUT": {
+          "offered": 541,
+          "picked": 471,
+          "pick_rate_pct": 87.061,
+          "by_act_offered": [
+            222,
+            167,
+            152
+          ],
+          "by_act_picked": [
+            203,
+            142,
+            126
+          ],
+          "policy_prob": {
+            "n": 541,
+            "mean": 0.8412,
+            "std": 0.299447,
+            "min": 0.0,
+            "q25": 0.872217,
+            "median": 0.997706,
+            "q75": 0.999969,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 455.088987
+          },
+          "shop_affordable_offered": 180,
+          "shop_bought": 60,
+          "shop_prob_mean": 0.319851
+        },
+        "CARD.DEMON_FORM": {
+          "offered": 310,
+          "picked": 250,
+          "pick_rate_pct": 80.6452,
+          "by_act_offered": [
+            143,
+            145,
+            22
+          ],
+          "by_act_picked": [
+            127,
+            108,
+            15
+          ],
+          "policy_prob": {
+            "n": 310,
+            "mean": 0.794665,
+            "std": 0.367516,
+            "min": 0.0,
+            "q25": 0.807068,
+            "median": 0.999506,
+            "q75": 0.999999,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 246.346059
+          },
+          "shop_affordable_offered": 11,
+          "shop_bought": 7,
+          "shop_prob_mean": 0.57144
+        },
+        "CARD.BLOODLETTING": {
+          "offered": 460,
+          "picked": 89,
+          "pick_rate_pct": 19.3478,
+          "by_act_offered": [
+            214,
+            133,
+            113
+          ],
+          "by_act_picked": [
+            16,
+            32,
+            41
+          ],
+          "policy_prob": {
+            "n": 460,
+            "mean": 0.198263,
+            "std": 0.333799,
+            "min": 0.0,
+            "q25": 7.2e-05,
+            "median": 0.005723,
+            "q75": 0.234342,
+            "p95": 0.980517,
+            "max": 0.999973,
+            "sum": 91.200859
+          },
+          "shop_affordable_offered": 220,
+          "shop_bought": 4,
+          "shop_prob_mean": 0.019055
+        },
+        "CARD.WHIRLWIND": {
+          "offered": 395,
+          "picked": 1,
+          "pick_rate_pct": 0.2532,
+          "by_act_offered": [
+            170,
+            129,
+            96
+          ],
+          "by_act_picked": [
+            1,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 395,
+            "mean": 0.006228,
+            "std": 0.034992,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.00021,
+            "q75": 0.001759,
+            "p95": 0.025756,
+            "max": 0.637754,
+            "sum": 2.460255
+          },
+          "shop_affordable_offered": 190,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001482
+        }
+      },
+      "all_cards_count": 431
+    }
+  },
+  "probe1_card_pick_and_rule_revert": {
+    "pref_300_std": {
+      "games": 300,
+      "wins": 196,
+      "win_rate_pct": 65.3333,
+      "wilson_95_pct": [
+        59.7848,
+        70.4941
+      ],
+      "stuck": 0,
+      "mean_floor": 45.99,
+      "mean_steps": 654.0,
+      "card_reward_screens": 4710,
+      "card_reward_screens_per_run": 15.7,
+      "skip_screens": 922,
+      "skip_rate_pct": 19.5754,
+      "skip_rate_by_act_pct": [
+        8.9713,
+        28.8608,
+        27.4725
+      ],
+      "skip_prob": {
+        "n": 4710,
+        "mean": 0.207172,
+        "std": 0.325935,
+        "min": 0.0,
+        "q25": 0.000102,
+        "median": 0.015656,
+        "q75": 0.275966,
+        "p95": 0.97582,
+        "max": 0.999828,
+        "sum": 975.78111
+      },
+      "forgotten_ritual_usage": {
+        "final_decks_with_fr": 2,
+        "final_deck_share_pct": 0.6667,
+        "combat_hand_steps_total": 200,
+        "combat_hand_steps_exhausted_turn": 66,
+        "combat_hand_steps_unexhausted_turn": 134,
+        "plays_total": 46,
+        "plays_after_exhaust": 40,
+        "plays_without_exhaust": 6,
+        "energy_gained_total": 40,
+        "energy_gained_after_exhaust": 40,
+        "energy_gained_without_exhaust": 0,
+        "energy_gain_pct_of_plays": 86.9565
+      },
+      "target_cards": {
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered": 99,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            45,
+            27,
+            27
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 99,
+            "mean": 0.006405,
+            "std": 0.029906,
+            "min": 0.0,
+            "q25": 1e-06,
+            "median": 8.5e-05,
+            "q75": 0.000299,
+            "p95": 0.015388,
+            "max": 0.223826,
+            "sum": 0.634066
+          },
+          "shop_affordable_offered": 62,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.0019,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 77,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.005005,
+              "median_prob": 5.9e-05
+            },
+            "1_source": {
+              "offered": 18,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.013629,
+              "median_prob": 0.000267
+            },
+            "ge2_sources": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.000835,
+              "median_prob": 0.000582
+            },
+            "no_stoke": {
+              "offered": 89,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.005266,
+              "median_prob": 5.9e-05
+            },
+            "stoke_in_deck": {
+              "offered": 10,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.016537,
+              "median_prob": 0.000279
+            },
+            "no_fnp": {
+              "offered": 95,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004969,
+              "median_prob": 7.5e-05
+            },
+            "fnp_in_deck": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.040495,
+              "median_prob": 0.000709
+            },
+            "stoke_and_fnp": {
+              "offered": 3,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.053555,
+              "median_prob": 0.000102
+            }
+          }
+        },
+        "CARD.DARK_EMBRACE": {
+          "offered": 98,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            50,
+            45,
+            3
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 98,
+            "mean": 0.001899,
+            "std": 0.008273,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 1e-06,
+            "q75": 0.000154,
+            "p95": 0.007834,
+            "max": 0.068698,
+            "sum": 0.186109
+          },
+          "shop_affordable_offered": 6,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.006736,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 81,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001732,
+              "median_prob": 0.0
+            },
+            "1_source": {
+              "offered": 13,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001146,
+              "median_prob": 1e-06
+            },
+            "ge2_sources": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.007735,
+              "median_prob": 0.000225
+            },
+            "no_stoke": {
+              "offered": 91,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001705,
+              "median_prob": 0.0
+            },
+            "stoke_in_deck": {
+              "offered": 7,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004422,
+              "median_prob": 9e-06
+            },
+            "no_fnp": {
+              "offered": 92,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001601,
+              "median_prob": 1e-06
+            },
+            "fnp_in_deck": {
+              "offered": 6,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.006475,
+              "median_prob": 0.000433
+            },
+            "stoke_and_fnp": {
+              "offered": 2,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.015464,
+              "median_prob": 0.015464
+            }
+          }
+        },
+        "CARD.FEEL_NO_PAIN": {
+          "offered": 135,
+          "picked": 34,
+          "pick_rate_pct": 25.1852,
+          "by_act_offered": [
+            51,
+            49,
+            35
+          ],
+          "by_act_picked": [
+            4,
+            18,
+            12
+          ],
+          "policy_prob": {
+            "n": 135,
+            "mean": 0.239269,
+            "std": 0.390499,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.001066,
+            "q75": 0.392369,
+            "p95": 0.999908,
+            "max": 1.0,
+            "sum": 32.301286
+          },
+          "shop_affordable_offered": 107,
+          "shop_bought": 10,
+          "shop_prob_mean": 0.082315,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 99,
+              "picked": 14,
+              "pick_rate_pct": 14.1414,
+              "mean_prob": 0.131995,
+              "median_prob": 0.00021
+            },
+            "1_source": {
+              "offered": 28,
+              "picked": 14,
+              "pick_rate_pct": 50.0,
+              "mean_prob": 0.510606,
+              "median_prob": 0.405957
+            },
+            "ge2_sources": {
+              "offered": 8,
+              "picked": 6,
+              "pick_rate_pct": 75.0,
+              "mean_prob": 0.617106,
+              "median_prob": 0.726584
+            },
+            "no_stoke": {
+              "offered": 120,
+              "picked": 21,
+              "pick_rate_pct": 17.5,
+              "mean_prob": 0.161046,
+              "median_prob": 0.00044
+            },
+            "stoke_in_deck": {
+              "offered": 15,
+              "picked": 13,
+              "pick_rate_pct": 86.6667,
+              "mean_prob": 0.865048,
+              "median_prob": 0.994203
+            },
+            "no_fnp": {
+              "offered": 133,
+              "picked": 33,
+              "pick_rate_pct": 24.812,
+              "mean_prob": 0.235653,
+              "median_prob": 0.001066
+            },
+            "fnp_in_deck": {
+              "offered": 2,
+              "picked": 1,
+              "pick_rate_pct": 50.0,
+              "mean_prob": 0.479712,
+              "median_prob": 0.479712
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 1,
+              "pick_rate_pct": 100.0,
+              "mean_prob": 0.959423,
+              "median_prob": 0.959423
+            }
+          }
+        },
+        "CARD.SECOND_WIND": {
+          "offered": 131,
+          "picked": 3,
+          "pick_rate_pct": 2.2901,
+          "by_act_offered": [
+            55,
+            46,
+            30
+          ],
+          "by_act_picked": [
+            0,
+            1,
+            2
+          ],
+          "policy_prob": {
+            "n": 131,
+            "mean": 0.031185,
+            "std": 0.129398,
+            "min": 0.0,
+            "q25": 4e-06,
+            "median": 0.000165,
+            "q75": 0.001888,
+            "p95": 0.132304,
+            "max": 0.877185,
+            "sum": 4.085216
+          },
+          "shop_affordable_offered": 62,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001295,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 100,
+              "picked": 2,
+              "pick_rate_pct": 2.0,
+              "mean_prob": 0.025961,
+              "median_prob": 0.000118
+            },
+            "1_source": {
+              "offered": 26,
+              "picked": 1,
+              "pick_rate_pct": 3.8462,
+              "mean_prob": 0.055747,
+              "median_prob": 0.000275
+            },
+            "ge2_sources": {
+              "offered": 5,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.007929,
+              "median_prob": 0.006776
+            },
+            "no_stoke": {
+              "offered": 122,
+              "picked": 3,
+              "pick_rate_pct": 2.459,
+              "mean_prob": 0.03264,
+              "median_prob": 0.00015
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.011453,
+              "median_prob": 0.006776
+            },
+            "no_fnp": {
+              "offered": 128,
+              "picked": 3,
+              "pick_rate_pct": 2.3438,
+              "mean_prob": 0.031543,
+              "median_prob": 0.000153
+            },
+            "fnp_in_deck": {
+              "offered": 3,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.015921,
+              "median_prob": 0.006776
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.006776,
+              "median_prob": 0.006776
+            }
+          }
+        },
+        "CARD.STOKE": {
+          "offered": 88,
+          "picked": 56,
+          "pick_rate_pct": 63.6364,
+          "by_act_offered": [
+            51,
+            35,
+            2
+          ],
+          "by_act_picked": [
+            38,
+            17,
+            1
+          ],
+          "policy_prob": {
+            "n": 88,
+            "mean": 0.651861,
+            "std": 0.431012,
+            "min": 0.0,
+            "q25": 0.129186,
+            "median": 0.971764,
+            "q75": 0.999983,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 57.363748
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 3,
+          "shop_prob_mean": 0.385254,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 65,
+              "picked": 42,
+              "pick_rate_pct": 64.6154,
+              "mean_prob": 0.670864,
+              "median_prob": 0.995054
+            },
+            "1_source": {
+              "offered": 16,
+              "picked": 11,
+              "pick_rate_pct": 68.75,
+              "mean_prob": 0.671769,
+              "median_prob": 0.875994
+            },
+            "ge2_sources": {
+              "offered": 7,
+              "picked": 3,
+              "pick_rate_pct": 42.8571,
+              "mean_prob": 0.429894,
+              "median_prob": 0.033511
+            },
+            "no_stoke": {
+              "offered": 75,
+              "picked": 49,
+              "pick_rate_pct": 65.3333,
+              "mean_prob": 0.67223,
+              "median_prob": 0.982018
+            },
+            "stoke_in_deck": {
+              "offered": 13,
+              "picked": 7,
+              "pick_rate_pct": 53.8462,
+              "mean_prob": 0.534344,
+              "median_prob": 0.790065
+            },
+            "no_fnp": {
+              "offered": 83,
+              "picked": 53,
+              "pick_rate_pct": 63.8554,
+              "mean_prob": 0.655882,
+              "median_prob": 0.977476
+            },
+            "fnp_in_deck": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.585112,
+              "median_prob": 0.916957
+            },
+            "stoke_and_fnp": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.585112,
+              "median_prob": 0.916957
+            }
+          }
+        }
+      },
+      "comparison_cards": {
+        "CARD.BURNING_PACT": {
+          "offered": 139,
+          "picked": 13,
+          "pick_rate_pct": 9.3525,
+          "by_act_offered": [
+            56,
+            38,
+            45
+          ],
+          "by_act_picked": [
+            0,
+            3,
+            10
+          ],
+          "policy_prob": {
+            "n": 139,
+            "mean": 0.123217,
+            "std": 0.265039,
+            "min": 0.0,
+            "q25": 3.1e-05,
+            "median": 0.000968,
+            "q75": 0.067486,
+            "p95": 0.922876,
+            "max": 0.999998,
+            "sum": 17.127229
+          },
+          "shop_affordable_offered": 69,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.005223,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 107,
+              "picked": 7,
+              "pick_rate_pct": 6.5421,
+              "mean_prob": 0.085086,
+              "median_prob": 0.00024
+            },
+            "1_source": {
+              "offered": 21,
+              "picked": 4,
+              "pick_rate_pct": 19.0476,
+              "mean_prob": 0.277295,
+              "median_prob": 0.091368
+            },
+            "ge2_sources": {
+              "offered": 11,
+              "picked": 2,
+              "pick_rate_pct": 18.1818,
+              "mean_prob": 0.199988,
+              "median_prob": 0.042952
+            },
+            "no_stoke": {
+              "offered": 130,
+              "picked": 12,
+              "pick_rate_pct": 9.2308,
+              "mean_prob": 0.118893,
+              "median_prob": 0.000725
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 1,
+              "pick_rate_pct": 11.1111,
+              "mean_prob": 0.185685,
+              "median_prob": 0.064935
+            },
+            "no_fnp": {
+              "offered": 131,
+              "picked": 12,
+              "pick_rate_pct": 9.1603,
+              "mean_prob": 0.120488,
+              "median_prob": 0.000482
+            },
+            "fnp_in_deck": {
+              "offered": 8,
+              "picked": 1,
+              "pick_rate_pct": 12.5,
+              "mean_prob": 0.167918,
+              "median_prob": 0.017036
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 2.1e-05,
+              "median_prob": 2.1e-05
+            }
+          }
+        },
+        "CARD.TRUE_GRIT": {
+          "offered": 318,
+          "picked": 6,
+          "pick_rate_pct": 1.8868,
+          "by_act_offered": [
+            161,
+            90,
+            67
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            6
+          ],
+          "policy_prob": {
+            "n": 318,
+            "mean": 0.0286,
+            "std": 0.125193,
+            "min": 0.0,
+            "q25": 6e-06,
+            "median": 0.000303,
+            "q75": 0.002565,
+            "p95": 0.109769,
+            "max": 0.994086,
+            "sum": 9.094684
+          },
+          "shop_affordable_offered": 184,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.002193
+        },
+        "CARD.ASHEN_STRIKE": {
+          "offered": 123,
+          "picked": 10,
+          "pick_rate_pct": 8.1301,
+          "by_act_offered": [
+            56,
+            38,
+            29
+          ],
+          "by_act_picked": [
+            5,
+            2,
+            3
+          ],
+          "policy_prob": {
+            "n": 123,
+            "mean": 0.088059,
+            "std": 0.220647,
+            "min": 0.0,
+            "q25": 0.000109,
+            "median": 0.002532,
+            "q75": 0.029543,
+            "p95": 0.747407,
+            "max": 0.975292,
+            "sum": 10.83121
+          },
+          "shop_affordable_offered": 48,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.003216,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 98,
+              "picked": 9,
+              "pick_rate_pct": 9.1837,
+              "mean_prob": 0.095886,
+              "median_prob": 0.00226
+            },
+            "1_source": {
+              "offered": 23,
+              "picked": 1,
+              "pick_rate_pct": 4.3478,
+              "mean_prob": 0.058707,
+              "median_prob": 0.002678
+            },
+            "ge2_sources": {
+              "offered": 2,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.04206,
+              "median_prob": 0.04206
+            },
+            "no_stoke": {
+              "offered": 114,
+              "picked": 10,
+              "pick_rate_pct": 8.7719,
+              "mean_prob": 0.0942,
+              "median_prob": 0.002659
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.010268,
+              "median_prob": 0.000696
+            },
+            "no_fnp": {
+              "offered": 123,
+              "picked": 10,
+              "pick_rate_pct": 8.1301,
+              "mean_prob": 0.088059,
+              "median_prob": 0.002532
+            },
+            "fnp_in_deck": {
+              "offered": 0,
+              "picked": 0,
+              "pick_rate_pct": null,
+              "mean_prob": null,
+              "median_prob": null
+            },
+            "stoke_and_fnp": {
+              "offered": 0,
+              "picked": 0,
+              "pick_rate_pct": null,
+              "mean_prob": null,
+              "median_prob": null
+            }
+          }
+        },
+        "CARD.FIEND_FIRE": {
+          "offered": 79,
+          "picked": 1,
+          "pick_rate_pct": 1.2658,
+          "by_act_offered": [
+            38,
+            32,
+            9
+          ],
+          "by_act_picked": [
+            1,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 79,
+            "mean": 0.028541,
+            "std": 0.120036,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 4e-06,
+            "q75": 0.001183,
+            "p95": 0.129168,
+            "max": 0.989309,
+            "sum": 2.254754
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.000618
+        },
+        "CARD.OFFERING": {
+          "offered": 86,
+          "picked": 61,
+          "pick_rate_pct": 70.9302,
+          "by_act_offered": [
+            31,
+            43,
+            12
+          ],
+          "by_act_picked": [
+            23,
+            28,
+            10
+          ],
+          "policy_prob": {
+            "n": 86,
+            "mean": 0.720715,
+            "std": 0.392684,
+            "min": 1e-06,
+            "q25": 0.386991,
+            "median": 0.985957,
+            "q75": 0.999948,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 61.981479
+          },
+          "shop_affordable_offered": 2,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.12361
+        },
+        "CARD.IMPERVIOUS": {
+          "offered": 90,
+          "picked": 36,
+          "pick_rate_pct": 40.0,
+          "by_act_offered": [
+            49,
+            37,
+            4
+          ],
+          "by_act_picked": [
+            21,
+            13,
+            2
+          ],
+          "policy_prob": {
+            "n": 90,
+            "mean": 0.401634,
+            "std": 0.443707,
+            "min": 0.0,
+            "q25": 0.000243,
+            "median": 0.09123,
+            "q75": 0.943063,
+            "p95": 0.999647,
+            "max": 0.999998,
+            "sum": 36.147055
+          },
+          "shop_affordable_offered": 7,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.023151
+        },
+        "CARD.SHOCKWAVE": {
+          "offered": 8,
+          "picked": 5,
+          "pick_rate_pct": 62.5,
+          "by_act_offered": [
+            5,
+            3,
+            0
+          ],
+          "by_act_picked": [
+            2,
+            3,
+            0
+          ],
+          "policy_prob": {
+            "n": 8,
+            "mean": 0.709491,
+            "std": 0.386059,
+            "min": 6.3e-05,
+            "q25": 0.388295,
+            "median": 0.991341,
+            "q75": 0.999793,
+            "p95": 0.999996,
+            "max": 1.0,
+            "sum": 5.675929
+          },
+          "shop_affordable_offered": 31,
+          "shop_bought": 25,
+          "shop_prob_mean": 0.703894
+        },
+        "CARD.BATTLE_TRANCE": {
+          "offered": 170,
+          "picked": 149,
+          "pick_rate_pct": 87.6471,
+          "by_act_offered": [
+            69,
+            51,
+            50
+          ],
+          "by_act_picked": [
+            62,
+            46,
+            41
+          ],
+          "policy_prob": {
+            "n": 170,
+            "mean": 0.858994,
+            "std": 0.286222,
+            "min": 5e-06,
+            "q25": 0.931251,
+            "median": 0.998739,
+            "q75": 0.999992,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 146.028964
+          },
+          "shop_affordable_offered": 58,
+          "shop_bought": 23,
+          "shop_prob_mean": 0.344512
+        },
+        "CARD.CRIMSON_MANTLE": {
+          "offered": 90,
+          "picked": 75,
+          "pick_rate_pct": 83.3333,
+          "by_act_offered": [
+            43,
+            36,
+            11
+          ],
+          "by_act_picked": [
+            38,
+            26,
+            11
+          ],
+          "policy_prob": {
+            "n": 90,
+            "mean": 0.820832,
+            "std": 0.339039,
+            "min": 1.4e-05,
+            "q25": 0.920908,
+            "median": 0.998659,
+            "q75": 0.999999,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 73.87485
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 5,
+          "shop_prob_mean": 0.90121
+        },
+        "CARD.STONE_ARMOR": {
+          "offered": 190,
+          "picked": 164,
+          "pick_rate_pct": 86.3158,
+          "by_act_offered": [
+            76,
+            59,
+            55
+          ],
+          "by_act_picked": [
+            64,
+            53,
+            47
+          ],
+          "policy_prob": {
+            "n": 190,
+            "mean": 0.84548,
+            "std": 0.295261,
+            "min": 1e-05,
+            "q25": 0.869861,
+            "median": 0.993132,
+            "q75": 0.999926,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 160.641202
+          },
+          "shop_affordable_offered": 97,
+          "shop_bought": 24,
+          "shop_prob_mean": 0.227549
+        },
+        "CARD.UPPERCUT": {
+          "offered": 158,
+          "picked": 139,
+          "pick_rate_pct": 87.9747,
+          "by_act_offered": [
+            76,
+            43,
+            39
+          ],
+          "by_act_picked": [
+            72,
+            34,
+            33
+          ],
+          "policy_prob": {
+            "n": 158,
+            "mean": 0.851037,
+            "std": 0.277179,
+            "min": 2e-06,
+            "q25": 0.872388,
+            "median": 0.997306,
+            "q75": 0.999983,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 134.463919
+          },
+          "shop_affordable_offered": 72,
+          "shop_bought": 25,
+          "shop_prob_mean": 0.308656
+        },
+        "CARD.DEMON_FORM": {
+          "offered": 91,
+          "picked": 78,
+          "pick_rate_pct": 85.7143,
+          "by_act_offered": [
+            37,
+            48,
+            6
+          ],
+          "by_act_picked": [
+            35,
+            38,
+            5
+          ],
+          "policy_prob": {
+            "n": 91,
+            "mean": 0.831703,
+            "std": 0.330071,
+            "min": 1e-06,
+            "q25": 0.908068,
+            "median": 0.999722,
+            "q75": 0.999996,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 75.685003
+          },
+          "shop_affordable_offered": 2,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.012822
+        },
+        "CARD.BLOODLETTING": {
+          "offered": 139,
+          "picked": 22,
+          "pick_rate_pct": 15.8273,
+          "by_act_offered": [
+            54,
+            52,
+            33
+          ],
+          "by_act_picked": [
+            2,
+            12,
+            8
+          ],
+          "policy_prob": {
+            "n": 139,
+            "mean": 0.160533,
+            "std": 0.313482,
+            "min": 0.0,
+            "q25": 6.6e-05,
+            "median": 0.002973,
+            "q75": 0.071352,
+            "p95": 0.94297,
+            "max": 0.999162,
+            "sum": 22.314073
+          },
+          "shop_affordable_offered": 74,
+          "shop_bought": 2,
+          "shop_prob_mean": 0.024747
+        },
+        "CARD.WHIRLWIND": {
+          "offered": 123,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            57,
+            37,
+            29
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 123,
+            "mean": 0.003786,
+            "std": 0.013059,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.000158,
+            "q75": 0.000719,
+            "p95": 0.016139,
+            "max": 0.085294,
+            "sum": 0.465666
+          },
+          "shop_affordable_offered": 51,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.00034
+        }
+      },
+      "all_cards_count": 262
+    },
+    "pref_300_revert_full": {
+      "games": 300,
+      "wins": 195,
+      "win_rate_pct": 65.0,
+      "wilson_95_pct": [
+        59.4439,
+        70.1768
+      ],
+      "stuck": 0,
+      "mean_floor": 45.993,
+      "mean_steps": 654.3,
+      "card_reward_screens": 4707,
+      "card_reward_screens_per_run": 15.69,
+      "skip_screens": 923,
+      "skip_rate_pct": 19.6091,
+      "skip_rate_by_act_pct": [
+        8.9713,
+        29.0057,
+        27.4274
+      ],
+      "skip_prob": {
+        "n": 4707,
+        "mean": 0.20748,
+        "std": 0.325818,
+        "min": 0.0,
+        "q25": 0.000103,
+        "median": 0.015697,
+        "q75": 0.27828,
+        "p95": 0.975246,
+        "max": 0.999828,
+        "sum": 976.609431
+      },
+      "forgotten_ritual_usage": {
+        "final_decks_with_fr": 2,
+        "final_deck_share_pct": 0.6667,
+        "combat_hand_steps_total": 291,
+        "combat_hand_steps_exhausted_turn": 150,
+        "combat_hand_steps_unexhausted_turn": 141,
+        "plays_total": 33,
+        "plays_after_exhaust": 20,
+        "plays_without_exhaust": 13,
+        "energy_gained_total": 32,
+        "energy_gained_after_exhaust": 20,
+        "energy_gained_without_exhaust": 12,
+        "energy_gain_pct_of_plays": 96.9697
+      },
+      "target_cards": {
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered": 99,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            45,
+            27,
+            27
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 99,
+            "mean": 0.006403,
+            "std": 0.029906,
+            "min": 0.0,
+            "q25": 1e-06,
+            "median": 8.5e-05,
+            "q75": 0.000299,
+            "p95": 0.015388,
+            "max": 0.223826,
+            "sum": 0.633848
+          },
+          "shop_affordable_offered": 62,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001908,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 77,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.005002,
+              "median_prob": 5.9e-05
+            },
+            "1_source": {
+              "offered": 18,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.013629,
+              "median_prob": 0.000267
+            },
+            "ge2_sources": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.000835,
+              "median_prob": 0.000582
+            },
+            "no_stoke": {
+              "offered": 89,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.005264,
+              "median_prob": 5.9e-05
+            },
+            "stoke_in_deck": {
+              "offered": 10,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.016537,
+              "median_prob": 0.000279
+            },
+            "no_fnp": {
+              "offered": 95,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004967,
+              "median_prob": 7.5e-05
+            },
+            "fnp_in_deck": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.040495,
+              "median_prob": 0.000709
+            },
+            "stoke_and_fnp": {
+              "offered": 3,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.053555,
+              "median_prob": 0.000102
+            }
+          }
+        },
+        "CARD.DARK_EMBRACE": {
+          "offered": 98,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            50,
+            45,
+            3
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 98,
+            "mean": 0.001865,
+            "std": 0.008259,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 1e-06,
+            "q75": 0.000105,
+            "p95": 0.007834,
+            "max": 0.068698,
+            "sum": 0.182777
+          },
+          "shop_affordable_offered": 6,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.006736,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 81,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001691,
+              "median_prob": 0.0
+            },
+            "1_source": {
+              "offered": 13,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001146,
+              "median_prob": 1e-06
+            },
+            "ge2_sources": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.007734,
+              "median_prob": 0.000223
+            },
+            "no_stoke": {
+              "offered": 91,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001668,
+              "median_prob": 0.0
+            },
+            "stoke_in_deck": {
+              "offered": 7,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004422,
+              "median_prob": 9e-06
+            },
+            "no_fnp": {
+              "offered": 92,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001601,
+              "median_prob": 1e-06
+            },
+            "fnp_in_deck": {
+              "offered": 6,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.00592,
+              "median_prob": 0.00039
+            },
+            "stoke_and_fnp": {
+              "offered": 2,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.015464,
+              "median_prob": 0.015464
+            }
+          }
+        },
+        "CARD.FEEL_NO_PAIN": {
+          "offered": 135,
+          "picked": 34,
+          "pick_rate_pct": 25.1852,
+          "by_act_offered": [
+            51,
+            49,
+            35
+          ],
+          "by_act_picked": [
+            4,
+            18,
+            12
+          ],
+          "policy_prob": {
+            "n": 135,
+            "mean": 0.23955,
+            "std": 0.391035,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.001066,
+            "q75": 0.392369,
+            "p95": 0.999908,
+            "max": 1.0,
+            "sum": 32.339303
+          },
+          "shop_affordable_offered": 107,
+          "shop_bought": 10,
+          "shop_prob_mean": 0.082378,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 99,
+              "picked": 14,
+              "pick_rate_pct": 14.1414,
+              "mean_prob": 0.132208,
+              "median_prob": 0.00021
+            },
+            "1_source": {
+              "offered": 28,
+              "picked": 14,
+              "pick_rate_pct": 50.0,
+              "mean_prob": 0.511198,
+              "median_prob": 0.405957
+            },
+            "ge2_sources": {
+              "offered": 8,
+              "picked": 6,
+              "pick_rate_pct": 75.0,
+              "mean_prob": 0.617148,
+              "median_prob": 0.726753
+            },
+            "no_stoke": {
+              "offered": 120,
+              "picked": 21,
+              "pick_rate_pct": 17.5,
+              "mean_prob": 0.161222,
+              "median_prob": 0.00044
+            },
+            "stoke_in_deck": {
+              "offered": 15,
+              "picked": 13,
+              "pick_rate_pct": 86.6667,
+              "mean_prob": 0.866175,
+              "median_prob": 0.994203
+            },
+            "no_fnp": {
+              "offered": 133,
+              "picked": 33,
+              "pick_rate_pct": 24.812,
+              "mean_prob": 0.235936,
+              "median_prob": 0.001066
+            },
+            "fnp_in_deck": {
+              "offered": 2,
+              "picked": 1,
+              "pick_rate_pct": 50.0,
+              "mean_prob": 0.47988,
+              "median_prob": 0.47988
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 1,
+              "pick_rate_pct": 100.0,
+              "mean_prob": 0.95976,
+              "median_prob": 0.95976
+            }
+          }
+        },
+        "CARD.SECOND_WIND": {
+          "offered": 132,
+          "picked": 3,
+          "pick_rate_pct": 2.2727,
+          "by_act_offered": [
+            55,
+            47,
+            30
+          ],
+          "by_act_picked": [
+            0,
+            1,
+            2
+          ],
+          "policy_prob": {
+            "n": 132,
+            "mean": 0.030994,
+            "std": 0.128925,
+            "min": 0.0,
+            "q25": 4e-06,
+            "median": 0.000175,
+            "q75": 0.002053,
+            "p95": 0.131188,
+            "max": 0.877185,
+            "sum": 4.09124
+          },
+          "shop_affordable_offered": 62,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001295,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 101,
+              "picked": 2,
+              "pick_rate_pct": 1.9802,
+              "mean_prob": 0.025783,
+              "median_prob": 0.000123
+            },
+            "1_source": {
+              "offered": 26,
+              "picked": 1,
+              "pick_rate_pct": 3.8462,
+              "mean_prob": 0.055747,
+              "median_prob": 0.000275
+            },
+            "ge2_sources": {
+              "offered": 5,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.007549,
+              "median_prob": 0.004265
+            },
+            "no_stoke": {
+              "offered": 123,
+              "picked": 3,
+              "pick_rate_pct": 2.439,
+              "mean_prob": 0.032445,
+              "median_prob": 0.000158
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.011174,
+              "median_prob": 0.004265
+            },
+            "no_fnp": {
+              "offered": 129,
+              "picked": 3,
+              "pick_rate_pct": 2.3256,
+              "mean_prob": 0.031356,
+              "median_prob": 0.000158
+            },
+            "fnp_in_deck": {
+              "offered": 3,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.015436,
+              "median_prob": 0.004265
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004265,
+              "median_prob": 0.004265
+            }
+          }
+        },
+        "CARD.STOKE": {
+          "offered": 87,
+          "picked": 56,
+          "pick_rate_pct": 64.3678,
+          "by_act_offered": [
+            51,
+            34,
+            2
+          ],
+          "by_act_picked": [
+            38,
+            17,
+            1
+          ],
+          "policy_prob": {
+            "n": 87,
+            "mean": 0.658364,
+            "std": 0.428542,
+            "min": 0.0,
+            "q25": 0.148089,
+            "median": 0.974851,
+            "q75": 0.999985,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 57.277695
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 3,
+          "shop_prob_mean": 0.385346,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 64,
+              "picked": 42,
+              "pick_rate_pct": 65.625,
+              "mean_prob": 0.680415,
+              "median_prob": 0.995456
+            },
+            "1_source": {
+              "offered": 16,
+              "picked": 11,
+              "pick_rate_pct": 68.75,
+              "mean_prob": 0.671769,
+              "median_prob": 0.875994
+            },
+            "ge2_sources": {
+              "offered": 7,
+              "picked": 3,
+              "pick_rate_pct": 42.8571,
+              "mean_prob": 0.426116,
+              "median_prob": 0.015544
+            },
+            "no_stoke": {
+              "offered": 74,
+              "picked": 49,
+              "pick_rate_pct": 66.2162,
+              "mean_prob": 0.680509,
+              "median_prob": 0.987045
+            },
+            "stoke_in_deck": {
+              "offered": 13,
+              "picked": 7,
+              "pick_rate_pct": 53.8462,
+              "mean_prob": 0.532309,
+              "median_prob": 0.790065
+            },
+            "no_fnp": {
+              "offered": 82,
+              "picked": 53,
+              "pick_rate_pct": 64.6341,
+              "mean_prob": 0.663154,
+              "median_prob": 0.978434
+            },
+            "fnp_in_deck": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.579821,
+              "median_prob": 0.916957
+            },
+            "stoke_and_fnp": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.579821,
+              "median_prob": 0.916957
+            }
+          }
+        }
+      },
+      "comparison_cards": {
+        "CARD.BURNING_PACT": {
+          "offered": 139,
+          "picked": 13,
+          "pick_rate_pct": 9.3525,
+          "by_act_offered": [
+            56,
+            38,
+            45
+          ],
+          "by_act_picked": [
+            0,
+            3,
+            10
+          ],
+          "policy_prob": {
+            "n": 139,
+            "mean": 0.123429,
+            "std": 0.264996,
+            "min": 0.0,
+            "q25": 3.1e-05,
+            "median": 0.000968,
+            "q75": 0.075928,
+            "p95": 0.922876,
+            "max": 0.999998,
+            "sum": 17.15657
+          },
+          "shop_affordable_offered": 69,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.005245,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 107,
+              "picked": 7,
+              "pick_rate_pct": 6.5421,
+              "mean_prob": 0.085105,
+              "median_prob": 0.00024
+            },
+            "1_source": {
+              "offered": 21,
+              "picked": 4,
+              "pick_rate_pct": 19.0476,
+              "mean_prob": 0.277295,
+              "median_prob": 0.091368
+            },
+            "ge2_sources": {
+              "offered": 11,
+              "picked": 2,
+              "pick_rate_pct": 18.1818,
+              "mean_prob": 0.202469,
+              "median_prob": 0.042952
+            },
+            "no_stoke": {
+              "offered": 130,
+              "picked": 12,
+              "pick_rate_pct": 9.2308,
+              "mean_prob": 0.119118,
+              "median_prob": 0.000725
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 1,
+              "pick_rate_pct": 11.1111,
+              "mean_prob": 0.185685,
+              "median_prob": 0.064935
+            },
+            "no_fnp": {
+              "offered": 131,
+              "picked": 12,
+              "pick_rate_pct": 9.1603,
+              "mean_prob": 0.120696,
+              "median_prob": 0.000482
+            },
+            "fnp_in_deck": {
+              "offered": 8,
+              "picked": 1,
+              "pick_rate_pct": 12.5,
+              "mean_prob": 0.168175,
+              "median_prob": 0.018061
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 2.1e-05,
+              "median_prob": 2.1e-05
+            }
+          }
+        },
+        "CARD.TRUE_GRIT": {
+          "offered": 318,
+          "picked": 6,
+          "pick_rate_pct": 1.8868,
+          "by_act_offered": [
+            160,
+            91,
+            67
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            6
+          ],
+          "policy_prob": {
+            "n": 318,
+            "mean": 0.028638,
+            "std": 0.125186,
+            "min": 0.0,
+            "q25": 6e-06,
+            "median": 0.000307,
+            "q75": 0.002655,
+            "p95": 0.109769,
+            "max": 0.994086,
+            "sum": 9.106968
+          },
+          "shop_affordable_offered": 185,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.002299
+        },
+        "CARD.ASHEN_STRIKE": {
+          "offered": 123,
+          "picked": 10,
+          "pick_rate_pct": 8.1301,
+          "by_act_offered": [
+            56,
+            38,
+            29
+          ],
+          "by_act_picked": [
+            5,
+            2,
+            3
+          ],
+          "policy_prob": {
+            "n": 123,
+            "mean": 0.087977,
+            "std": 0.220677,
+            "min": 0.0,
+            "q25": 0.000109,
+            "median": 0.002477,
+            "q75": 0.029543,
+            "p95": 0.747407,
+            "max": 0.975292,
+            "sum": 10.821153
+          },
+          "shop_affordable_offered": 48,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.003204,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 98,
+              "picked": 9,
+              "pick_rate_pct": 9.1837,
+              "mean_prob": 0.095785,
+              "median_prob": 0.00199
+            },
+            "1_source": {
+              "offered": 23,
+              "picked": 1,
+              "pick_rate_pct": 4.3478,
+              "mean_prob": 0.058702,
+              "median_prob": 0.002678
+            },
+            "ge2_sources": {
+              "offered": 2,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.04206,
+              "median_prob": 0.04206
+            },
+            "no_stoke": {
+              "offered": 114,
+              "picked": 10,
+              "pick_rate_pct": 8.7719,
+              "mean_prob": 0.094113,
+              "median_prob": 0.002586
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.010254,
+              "median_prob": 0.000568
+            },
+            "no_fnp": {
+              "offered": 123,
+              "picked": 10,
+              "pick_rate_pct": 8.1301,
+              "mean_prob": 0.087977,
+              "median_prob": 0.002477
+            },
+            "fnp_in_deck": {
+              "offered": 0,
+              "picked": 0,
+              "pick_rate_pct": null,
+              "mean_prob": null,
+              "median_prob": null
+            },
+            "stoke_and_fnp": {
+              "offered": 0,
+              "picked": 0,
+              "pick_rate_pct": null,
+              "mean_prob": null,
+              "median_prob": null
+            }
+          }
+        },
+        "CARD.FIEND_FIRE": {
+          "offered": 80,
+          "picked": 1,
+          "pick_rate_pct": 1.25,
+          "by_act_offered": [
+            38,
+            33,
+            9
+          ],
+          "by_act_picked": [
+            1,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 80,
+            "mean": 0.028099,
+            "std": 0.119338,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 4e-06,
+            "q75": 0.001137,
+            "p95": 0.128903,
+            "max": 0.989309,
+            "sum": 2.247887
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.000618
+        },
+        "CARD.OFFERING": {
+          "offered": 86,
+          "picked": 61,
+          "pick_rate_pct": 70.9302,
+          "by_act_offered": [
+            31,
+            43,
+            12
+          ],
+          "by_act_picked": [
+            23,
+            28,
+            10
+          ],
+          "policy_prob": {
+            "n": 86,
+            "mean": 0.722857,
+            "std": 0.39264,
+            "min": 1e-06,
+            "q25": 0.386991,
+            "median": 0.984752,
+            "q75": 0.999948,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 62.165744
+          },
+          "shop_affordable_offered": 2,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.12361
+        },
+        "CARD.IMPERVIOUS": {
+          "offered": 89,
+          "picked": 35,
+          "pick_rate_pct": 39.3258,
+          "by_act_offered": [
+            49,
+            36,
+            4
+          ],
+          "by_act_picked": [
+            21,
+            12,
+            2
+          ],
+          "policy_prob": {
+            "n": 89,
+            "mean": 0.395554,
+            "std": 0.44256,
+            "min": 0.0,
+            "q25": 0.000218,
+            "median": 0.08652,
+            "q75": 0.944857,
+            "p95": 0.999656,
+            "max": 0.999998,
+            "sum": 35.204311
+          },
+          "shop_affordable_offered": 7,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.023151
+        },
+        "CARD.SHOCKWAVE": {
+          "offered": 8,
+          "picked": 5,
+          "pick_rate_pct": 62.5,
+          "by_act_offered": [
+            5,
+            3,
+            0
+          ],
+          "by_act_picked": [
+            2,
+            3,
+            0
+          ],
+          "policy_prob": {
+            "n": 8,
+            "mean": 0.709491,
+            "std": 0.386059,
+            "min": 6.3e-05,
+            "q25": 0.388295,
+            "median": 0.991341,
+            "q75": 0.999793,
+            "p95": 0.999996,
+            "max": 1.0,
+            "sum": 5.675929
+          },
+          "shop_affordable_offered": 31,
+          "shop_bought": 25,
+          "shop_prob_mean": 0.703175
+        },
+        "CARD.BATTLE_TRANCE": {
+          "offered": 168,
+          "picked": 147,
+          "pick_rate_pct": 87.5,
+          "by_act_offered": [
+            69,
+            50,
+            49
+          ],
+          "by_act_picked": [
+            62,
+            45,
+            40
+          ],
+          "policy_prob": {
+            "n": 168,
+            "mean": 0.859124,
+            "std": 0.287506,
+            "min": 5e-06,
+            "q25": 0.932448,
+            "median": 0.998739,
+            "q75": 0.999993,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 144.332882
+          },
+          "shop_affordable_offered": 57,
+          "shop_bought": 23,
+          "shop_prob_mean": 0.349902
+        },
+        "CARD.CRIMSON_MANTLE": {
+          "offered": 89,
+          "picked": 73,
+          "pick_rate_pct": 82.0225,
+          "by_act_offered": [
+            43,
+            35,
+            11
+          ],
+          "by_act_picked": [
+            38,
+            24,
+            11
+          ],
+          "policy_prob": {
+            "n": 89,
+            "mean": 0.814389,
+            "std": 0.346348,
+            "min": 1.4e-05,
+            "q25": 0.919078,
+            "median": 0.99872,
+            "q75": 0.999999,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 72.480661
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 5,
+          "shop_prob_mean": 0.90121
+        },
+        "CARD.STONE_ARMOR": {
+          "offered": 192,
+          "picked": 166,
+          "pick_rate_pct": 86.4583,
+          "by_act_offered": [
+            76,
+            59,
+            57
+          ],
+          "by_act_picked": [
+            64,
+            53,
+            49
+          ],
+          "policy_prob": {
+            "n": 192,
+            "mean": 0.845703,
+            "std": 0.293983,
+            "min": 1e-05,
+            "q25": 0.864373,
+            "median": 0.992943,
+            "q75": 0.99992,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 162.374907
+          },
+          "shop_affordable_offered": 97,
+          "shop_bought": 24,
+          "shop_prob_mean": 0.228721
+        },
+        "CARD.UPPERCUT": {
+          "offered": 156,
+          "picked": 137,
+          "pick_rate_pct": 87.8205,
+          "by_act_offered": [
+            76,
+            42,
+            38
+          ],
+          "by_act_picked": [
+            72,
+            33,
+            32
+          ],
+          "policy_prob": {
+            "n": 156,
+            "mean": 0.852451,
+            "std": 0.277668,
+            "min": 2e-06,
+            "q25": 0.879019,
+            "median": 0.997306,
+            "q75": 0.999983,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 132.982306
+          },
+          "shop_affordable_offered": 72,
+          "shop_bought": 25,
+          "shop_prob_mean": 0.305334
+        },
+        "CARD.DEMON_FORM": {
+          "offered": 90,
+          "picked": 78,
+          "pick_rate_pct": 86.6667,
+          "by_act_offered": [
+            37,
+            47,
+            6
+          ],
+          "by_act_picked": [
+            35,
+            38,
+            5
+          ],
+          "policy_prob": {
+            "n": 90,
+            "mean": 0.839368,
+            "std": 0.323879,
+            "min": 1e-06,
+            "q25": 0.928495,
+            "median": 0.999724,
+            "q75": 0.999996,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 75.543125
+          },
+          "shop_affordable_offered": 2,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.012822
+        },
+        "CARD.BLOODLETTING": {
+          "offered": 140,
+          "picked": 22,
+          "pick_rate_pct": 15.7143,
+          "by_act_offered": [
+            54,
+            52,
+            34
+          ],
+          "by_act_picked": [
+            2,
+            12,
+            8
+          ],
+          "policy_prob": {
+            "n": 140,
+            "mean": 0.15936,
+            "std": 0.312569,
+            "min": 0.0,
+            "q25": 6.6e-05,
+            "median": 0.002887,
+            "q75": 0.06689,
+            "p95": 0.941926,
+            "max": 0.999162,
+            "sum": 22.310443
+          },
+          "shop_affordable_offered": 75,
+          "shop_bought": 2,
+          "shop_prob_mean": 0.025626
+        },
+        "CARD.WHIRLWIND": {
+          "offered": 123,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            57,
+            37,
+            29
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 123,
+            "mean": 0.003698,
+            "std": 0.012726,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.000158,
+            "q75": 0.000719,
+            "p95": 0.016139,
+            "max": 0.085294,
+            "sum": 0.454888
+          },
+          "shop_affordable_offered": 51,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.000342
+        }
+      },
+      "all_cards_count": 262
+    },
+    "pref_300_revert_ruleonly": {
+      "games": 300,
+      "wins": 196,
+      "win_rate_pct": 65.3333,
+      "wilson_95_pct": [
+        59.7848,
+        70.4941
+      ],
+      "stuck": 0,
+      "mean_floor": 45.993,
+      "mean_steps": 654.4,
+      "card_reward_screens": 4710,
+      "card_reward_screens_per_run": 15.7,
+      "skip_screens": 928,
+      "skip_rate_pct": 19.7028,
+      "skip_rate_by_act_pct": [
+        8.9713,
+        29.2405,
+        27.4725
+      ],
+      "skip_prob": {
+        "n": 4710,
+        "mean": 0.207576,
+        "std": 0.325881,
+        "min": 0.0,
+        "q25": 0.000103,
+        "median": 0.015779,
+        "q75": 0.278297,
+        "p95": 0.974885,
+        "max": 0.999828,
+        "sum": 977.681317
+      },
+      "forgotten_ritual_usage": {
+        "final_decks_with_fr": 2,
+        "final_deck_share_pct": 0.6667,
+        "combat_hand_steps_total": 314,
+        "combat_hand_steps_exhausted_turn": 162,
+        "combat_hand_steps_unexhausted_turn": 152,
+        "plays_total": 32,
+        "plays_after_exhaust": 22,
+        "plays_without_exhaust": 10,
+        "energy_gained_total": 31,
+        "energy_gained_after_exhaust": 22,
+        "energy_gained_without_exhaust": 9,
+        "energy_gain_pct_of_plays": 96.875
+      },
+      "target_cards": {
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered": 99,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            45,
+            27,
+            27
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 99,
+            "mean": 0.006405,
+            "std": 0.029906,
+            "min": 0.0,
+            "q25": 1e-06,
+            "median": 8.5e-05,
+            "q75": 0.000299,
+            "p95": 0.015388,
+            "max": 0.223826,
+            "sum": 0.634065
+          },
+          "shop_affordable_offered": 62,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001908,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 77,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.005005,
+              "median_prob": 5.9e-05
+            },
+            "1_source": {
+              "offered": 18,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.013629,
+              "median_prob": 0.000267
+            },
+            "ge2_sources": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.000835,
+              "median_prob": 0.000582
+            },
+            "no_stoke": {
+              "offered": 89,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.005266,
+              "median_prob": 5.9e-05
+            },
+            "stoke_in_deck": {
+              "offered": 10,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.016537,
+              "median_prob": 0.000279
+            },
+            "no_fnp": {
+              "offered": 95,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004969,
+              "median_prob": 7.5e-05
+            },
+            "fnp_in_deck": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.040495,
+              "median_prob": 0.000709
+            },
+            "stoke_and_fnp": {
+              "offered": 3,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.053555,
+              "median_prob": 0.000102
+            }
+          }
+        },
+        "CARD.DARK_EMBRACE": {
+          "offered": 99,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            50,
+            46,
+            3
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 99,
+            "mean": 0.001847,
+            "std": 0.00822,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 1e-06,
+            "q75": 0.00011,
+            "p95": 0.007684,
+            "max": 0.068698,
+            "sum": 0.182874
+          },
+          "shop_affordable_offered": 6,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.006736,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 82,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001671,
+              "median_prob": 1e-06
+            },
+            "1_source": {
+              "offered": 13,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001146,
+              "median_prob": 1e-06
+            },
+            "ge2_sources": {
+              "offered": 4,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.007734,
+              "median_prob": 0.000223
+            },
+            "no_stoke": {
+              "offered": 92,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001651,
+              "median_prob": 1e-06
+            },
+            "stoke_in_deck": {
+              "offered": 7,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004422,
+              "median_prob": 9e-06
+            },
+            "no_fnp": {
+              "offered": 93,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.001584,
+              "median_prob": 1e-06
+            },
+            "fnp_in_deck": {
+              "offered": 6,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.00592,
+              "median_prob": 0.00039
+            },
+            "stoke_and_fnp": {
+              "offered": 2,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.015464,
+              "median_prob": 0.015464
+            }
+          }
+        },
+        "CARD.FEEL_NO_PAIN": {
+          "offered": 135,
+          "picked": 34,
+          "pick_rate_pct": 25.1852,
+          "by_act_offered": [
+            51,
+            49,
+            35
+          ],
+          "by_act_picked": [
+            4,
+            18,
+            12
+          ],
+          "policy_prob": {
+            "n": 135,
+            "mean": 0.239521,
+            "std": 0.390979,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.001066,
+            "q75": 0.392369,
+            "p95": 0.999908,
+            "max": 1.0,
+            "sum": 32.335308
+          },
+          "shop_affordable_offered": 107,
+          "shop_bought": 10,
+          "shop_prob_mean": 0.082378,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 99,
+              "picked": 14,
+              "pick_rate_pct": 14.1414,
+              "mean_prob": 0.132208,
+              "median_prob": 0.00021
+            },
+            "1_source": {
+              "offered": 28,
+              "picked": 14,
+              "pick_rate_pct": 50.0,
+              "mean_prob": 0.511055,
+              "median_prob": 0.405957
+            },
+            "ge2_sources": {
+              "offered": 8,
+              "picked": 6,
+              "pick_rate_pct": 75.0,
+              "mean_prob": 0.617148,
+              "median_prob": 0.726753
+            },
+            "no_stoke": {
+              "offered": 120,
+              "picked": 21,
+              "pick_rate_pct": 17.5,
+              "mean_prob": 0.161222,
+              "median_prob": 0.00044
+            },
+            "stoke_in_deck": {
+              "offered": 15,
+              "picked": 13,
+              "pick_rate_pct": 86.6667,
+              "mean_prob": 0.865908,
+              "median_prob": 0.994203
+            },
+            "no_fnp": {
+              "offered": 133,
+              "picked": 33,
+              "pick_rate_pct": 24.812,
+              "mean_prob": 0.235906,
+              "median_prob": 0.001066
+            },
+            "fnp_in_deck": {
+              "offered": 2,
+              "picked": 1,
+              "pick_rate_pct": 50.0,
+              "mean_prob": 0.47988,
+              "median_prob": 0.47988
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 1,
+              "pick_rate_pct": 100.0,
+              "mean_prob": 0.95976,
+              "median_prob": 0.95976
+            }
+          }
+        },
+        "CARD.SECOND_WIND": {
+          "offered": 132,
+          "picked": 3,
+          "pick_rate_pct": 2.2727,
+          "by_act_offered": [
+            55,
+            47,
+            30
+          ],
+          "by_act_picked": [
+            0,
+            1,
+            2
+          ],
+          "policy_prob": {
+            "n": 132,
+            "mean": 0.03103,
+            "std": 0.128919,
+            "min": 0.0,
+            "q25": 4e-06,
+            "median": 0.000175,
+            "q75": 0.002053,
+            "p95": 0.131188,
+            "max": 0.877185,
+            "sum": 4.095971
+          },
+          "shop_affordable_offered": 62,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001295,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 101,
+              "picked": 2,
+              "pick_rate_pct": 1.9802,
+              "mean_prob": 0.02583,
+              "median_prob": 0.000123
+            },
+            "1_source": {
+              "offered": 26,
+              "picked": 1,
+              "pick_rate_pct": 3.8462,
+              "mean_prob": 0.055747,
+              "median_prob": 0.000275
+            },
+            "ge2_sources": {
+              "offered": 5,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.007549,
+              "median_prob": 0.004265
+            },
+            "no_stoke": {
+              "offered": 123,
+              "picked": 3,
+              "pick_rate_pct": 2.439,
+              "mean_prob": 0.032483,
+              "median_prob": 0.000158
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.011174,
+              "median_prob": 0.004265
+            },
+            "no_fnp": {
+              "offered": 129,
+              "picked": 3,
+              "pick_rate_pct": 2.3256,
+              "mean_prob": 0.031393,
+              "median_prob": 0.000158
+            },
+            "fnp_in_deck": {
+              "offered": 3,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.015436,
+              "median_prob": 0.004265
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004265,
+              "median_prob": 0.004265
+            }
+          }
+        },
+        "CARD.STOKE": {
+          "offered": 87,
+          "picked": 56,
+          "pick_rate_pct": 64.3678,
+          "by_act_offered": [
+            51,
+            34,
+            2
+          ],
+          "by_act_picked": [
+            38,
+            17,
+            1
+          ],
+          "policy_prob": {
+            "n": 87,
+            "mean": 0.658364,
+            "std": 0.428542,
+            "min": 0.0,
+            "q25": 0.148089,
+            "median": 0.974851,
+            "q75": 0.999985,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 57.277695
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 3,
+          "shop_prob_mean": 0.385346,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 64,
+              "picked": 42,
+              "pick_rate_pct": 65.625,
+              "mean_prob": 0.680415,
+              "median_prob": 0.995456
+            },
+            "1_source": {
+              "offered": 16,
+              "picked": 11,
+              "pick_rate_pct": 68.75,
+              "mean_prob": 0.671769,
+              "median_prob": 0.875994
+            },
+            "ge2_sources": {
+              "offered": 7,
+              "picked": 3,
+              "pick_rate_pct": 42.8571,
+              "mean_prob": 0.426116,
+              "median_prob": 0.015544
+            },
+            "no_stoke": {
+              "offered": 74,
+              "picked": 49,
+              "pick_rate_pct": 66.2162,
+              "mean_prob": 0.680509,
+              "median_prob": 0.987045
+            },
+            "stoke_in_deck": {
+              "offered": 13,
+              "picked": 7,
+              "pick_rate_pct": 53.8462,
+              "mean_prob": 0.532309,
+              "median_prob": 0.790065
+            },
+            "no_fnp": {
+              "offered": 82,
+              "picked": 53,
+              "pick_rate_pct": 64.6341,
+              "mean_prob": 0.663154,
+              "median_prob": 0.978434
+            },
+            "fnp_in_deck": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.579821,
+              "median_prob": 0.916957
+            },
+            "stoke_and_fnp": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.579821,
+              "median_prob": 0.916957
+            }
+          }
+        }
+      },
+      "comparison_cards": {
+        "CARD.BURNING_PACT": {
+          "offered": 139,
+          "picked": 13,
+          "pick_rate_pct": 9.3525,
+          "by_act_offered": [
+            56,
+            38,
+            45
+          ],
+          "by_act_picked": [
+            0,
+            3,
+            10
+          ],
+          "policy_prob": {
+            "n": 139,
+            "mean": 0.123429,
+            "std": 0.264996,
+            "min": 0.0,
+            "q25": 3.1e-05,
+            "median": 0.000968,
+            "q75": 0.075928,
+            "p95": 0.922876,
+            "max": 0.999998,
+            "sum": 17.15657
+          },
+          "shop_affordable_offered": 69,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.005245,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 107,
+              "picked": 7,
+              "pick_rate_pct": 6.5421,
+              "mean_prob": 0.085105,
+              "median_prob": 0.00024
+            },
+            "1_source": {
+              "offered": 21,
+              "picked": 4,
+              "pick_rate_pct": 19.0476,
+              "mean_prob": 0.277295,
+              "median_prob": 0.091368
+            },
+            "ge2_sources": {
+              "offered": 11,
+              "picked": 2,
+              "pick_rate_pct": 18.1818,
+              "mean_prob": 0.202469,
+              "median_prob": 0.042952
+            },
+            "no_stoke": {
+              "offered": 130,
+              "picked": 12,
+              "pick_rate_pct": 9.2308,
+              "mean_prob": 0.119118,
+              "median_prob": 0.000725
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 1,
+              "pick_rate_pct": 11.1111,
+              "mean_prob": 0.185685,
+              "median_prob": 0.064935
+            },
+            "no_fnp": {
+              "offered": 131,
+              "picked": 12,
+              "pick_rate_pct": 9.1603,
+              "mean_prob": 0.120696,
+              "median_prob": 0.000482
+            },
+            "fnp_in_deck": {
+              "offered": 8,
+              "picked": 1,
+              "pick_rate_pct": 12.5,
+              "mean_prob": 0.168175,
+              "median_prob": 0.018061
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 2.1e-05,
+              "median_prob": 2.1e-05
+            }
+          }
+        },
+        "CARD.TRUE_GRIT": {
+          "offered": 318,
+          "picked": 6,
+          "pick_rate_pct": 1.8868,
+          "by_act_offered": [
+            160,
+            91,
+            67
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            6
+          ],
+          "policy_prob": {
+            "n": 318,
+            "mean": 0.028637,
+            "std": 0.125186,
+            "min": 0.0,
+            "q25": 6e-06,
+            "median": 0.000307,
+            "q75": 0.002655,
+            "p95": 0.109769,
+            "max": 0.994086,
+            "sum": 9.10671
+          },
+          "shop_affordable_offered": 184,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.002191
+        },
+        "CARD.ASHEN_STRIKE": {
+          "offered": 123,
+          "picked": 10,
+          "pick_rate_pct": 8.1301,
+          "by_act_offered": [
+            56,
+            38,
+            29
+          ],
+          "by_act_picked": [
+            5,
+            2,
+            3
+          ],
+          "policy_prob": {
+            "n": 123,
+            "mean": 0.087977,
+            "std": 0.220677,
+            "min": 0.0,
+            "q25": 0.000109,
+            "median": 0.002477,
+            "q75": 0.029543,
+            "p95": 0.747407,
+            "max": 0.975292,
+            "sum": 10.821153
+          },
+          "shop_affordable_offered": 48,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.003204,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 98,
+              "picked": 9,
+              "pick_rate_pct": 9.1837,
+              "mean_prob": 0.095785,
+              "median_prob": 0.00199
+            },
+            "1_source": {
+              "offered": 23,
+              "picked": 1,
+              "pick_rate_pct": 4.3478,
+              "mean_prob": 0.058702,
+              "median_prob": 0.002678
+            },
+            "ge2_sources": {
+              "offered": 2,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.04206,
+              "median_prob": 0.04206
+            },
+            "no_stoke": {
+              "offered": 114,
+              "picked": 10,
+              "pick_rate_pct": 8.7719,
+              "mean_prob": 0.094113,
+              "median_prob": 0.002586
+            },
+            "stoke_in_deck": {
+              "offered": 9,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.010254,
+              "median_prob": 0.000568
+            },
+            "no_fnp": {
+              "offered": 123,
+              "picked": 10,
+              "pick_rate_pct": 8.1301,
+              "mean_prob": 0.087977,
+              "median_prob": 0.002477
+            },
+            "fnp_in_deck": {
+              "offered": 0,
+              "picked": 0,
+              "pick_rate_pct": null,
+              "mean_prob": null,
+              "median_prob": null
+            },
+            "stoke_and_fnp": {
+              "offered": 0,
+              "picked": 0,
+              "pick_rate_pct": null,
+              "mean_prob": null,
+              "median_prob": null
+            }
+          }
+        },
+        "CARD.FIEND_FIRE": {
+          "offered": 78,
+          "picked": 1,
+          "pick_rate_pct": 1.2821,
+          "by_act_offered": [
+            38,
+            31,
+            9
+          ],
+          "by_act_picked": [
+            1,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 78,
+            "mean": 0.028757,
+            "std": 0.120786,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 4e-06,
+            "q75": 0.001026,
+            "p95": 0.129433,
+            "max": 0.989309,
+            "sum": 2.243061
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.000618
+        },
+        "CARD.OFFERING": {
+          "offered": 86,
+          "picked": 61,
+          "pick_rate_pct": 70.9302,
+          "by_act_offered": [
+            31,
+            43,
+            12
+          ],
+          "by_act_picked": [
+            23,
+            28,
+            10
+          ],
+          "policy_prob": {
+            "n": 86,
+            "mean": 0.722857,
+            "std": 0.39264,
+            "min": 1e-06,
+            "q25": 0.386991,
+            "median": 0.984752,
+            "q75": 0.999948,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 62.165744
+          },
+          "shop_affordable_offered": 2,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.12361
+        },
+        "CARD.IMPERVIOUS": {
+          "offered": 89,
+          "picked": 35,
+          "pick_rate_pct": 39.3258,
+          "by_act_offered": [
+            49,
+            36,
+            4
+          ],
+          "by_act_picked": [
+            21,
+            12,
+            2
+          ],
+          "policy_prob": {
+            "n": 89,
+            "mean": 0.395554,
+            "std": 0.44256,
+            "min": 0.0,
+            "q25": 0.000218,
+            "median": 0.08652,
+            "q75": 0.944857,
+            "p95": 0.999656,
+            "max": 0.999998,
+            "sum": 35.204311
+          },
+          "shop_affordable_offered": 7,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.023151
+        },
+        "CARD.SHOCKWAVE": {
+          "offered": 8,
+          "picked": 5,
+          "pick_rate_pct": 62.5,
+          "by_act_offered": [
+            5,
+            3,
+            0
+          ],
+          "by_act_picked": [
+            2,
+            3,
+            0
+          ],
+          "policy_prob": {
+            "n": 8,
+            "mean": 0.709491,
+            "std": 0.386059,
+            "min": 6.3e-05,
+            "q25": 0.388295,
+            "median": 0.991341,
+            "q75": 0.999793,
+            "p95": 0.999996,
+            "max": 1.0,
+            "sum": 5.675929
+          },
+          "shop_affordable_offered": 31,
+          "shop_bought": 25,
+          "shop_prob_mean": 0.703175
+        },
+        "CARD.BATTLE_TRANCE": {
+          "offered": 168,
+          "picked": 147,
+          "pick_rate_pct": 87.5,
+          "by_act_offered": [
+            69,
+            50,
+            49
+          ],
+          "by_act_picked": [
+            62,
+            45,
+            40
+          ],
+          "policy_prob": {
+            "n": 168,
+            "mean": 0.859124,
+            "std": 0.287506,
+            "min": 5e-06,
+            "q25": 0.932448,
+            "median": 0.998739,
+            "q75": 0.999993,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 144.332883
+          },
+          "shop_affordable_offered": 57,
+          "shop_bought": 23,
+          "shop_prob_mean": 0.349902
+        },
+        "CARD.CRIMSON_MANTLE": {
+          "offered": 90,
+          "picked": 74,
+          "pick_rate_pct": 82.2222,
+          "by_act_offered": [
+            43,
+            36,
+            11
+          ],
+          "by_act_picked": [
+            38,
+            25,
+            11
+          ],
+          "policy_prob": {
+            "n": 90,
+            "mean": 0.810928,
+            "std": 0.345939,
+            "min": 1.4e-05,
+            "q25": 0.899977,
+            "median": 0.998659,
+            "q75": 0.999999,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 72.983529
+          },
+          "shop_affordable_offered": 5,
+          "shop_bought": 5,
+          "shop_prob_mean": 0.90121
+        },
+        "CARD.STONE_ARMOR": {
+          "offered": 192,
+          "picked": 166,
+          "pick_rate_pct": 86.4583,
+          "by_act_offered": [
+            76,
+            59,
+            57
+          ],
+          "by_act_picked": [
+            64,
+            53,
+            49
+          ],
+          "policy_prob": {
+            "n": 192,
+            "mean": 0.845802,
+            "std": 0.294003,
+            "min": 1e-05,
+            "q25": 0.864373,
+            "median": 0.993559,
+            "q75": 0.99992,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 162.393908
+          },
+          "shop_affordable_offered": 97,
+          "shop_bought": 24,
+          "shop_prob_mean": 0.228703
+        },
+        "CARD.UPPERCUT": {
+          "offered": 155,
+          "picked": 136,
+          "pick_rate_pct": 87.7419,
+          "by_act_offered": [
+            76,
+            41,
+            38
+          ],
+          "by_act_picked": [
+            72,
+            32,
+            32
+          ],
+          "policy_prob": {
+            "n": 155,
+            "mean": 0.854307,
+            "std": 0.277596,
+            "min": 2e-06,
+            "q25": 0.887155,
+            "median": 0.997311,
+            "q75": 0.999984,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 132.41762
+          },
+          "shop_affordable_offered": 72,
+          "shop_bought": 25,
+          "shop_prob_mean": 0.305335
+        },
+        "CARD.DEMON_FORM": {
+          "offered": 90,
+          "picked": 78,
+          "pick_rate_pct": 86.6667,
+          "by_act_offered": [
+            37,
+            47,
+            6
+          ],
+          "by_act_picked": [
+            35,
+            38,
+            5
+          ],
+          "policy_prob": {
+            "n": 90,
+            "mean": 0.839368,
+            "std": 0.323879,
+            "min": 1e-06,
+            "q25": 0.928495,
+            "median": 0.999724,
+            "q75": 0.999996,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 75.543125
+          },
+          "shop_affordable_offered": 2,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.012822
+        },
+        "CARD.BLOODLETTING": {
+          "offered": 140,
+          "picked": 22,
+          "pick_rate_pct": 15.7143,
+          "by_act_offered": [
+            54,
+            52,
+            34
+          ],
+          "by_act_picked": [
+            2,
+            12,
+            8
+          ],
+          "policy_prob": {
+            "n": 140,
+            "mean": 0.15936,
+            "std": 0.312569,
+            "min": 0.0,
+            "q25": 6.6e-05,
+            "median": 0.002887,
+            "q75": 0.06689,
+            "p95": 0.941926,
+            "max": 0.999162,
+            "sum": 22.310443
+          },
+          "shop_affordable_offered": 74,
+          "shop_bought": 2,
+          "shop_prob_mean": 0.024756
+        },
+        "CARD.WHIRLWIND": {
+          "offered": 123,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            57,
+            37,
+            29
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 123,
+            "mean": 0.003698,
+            "std": 0.012726,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.000158,
+            "q75": 0.000719,
+            "p95": 0.016139,
+            "max": 0.085294,
+            "sum": 0.454888
+          },
+          "shop_affordable_offered": 51,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.000342
+        }
+      },
+      "all_cards_count": 262
+    },
+    "pref_300_paired_revert_vs_std": {
+      "n_paired": 300,
+      "wins_a": 196,
+      "win_rate_a_pct": 65.3333,
+      "wilson_95_a_pct": [
+        59.7848,
+        70.4941
+      ],
+      "wins_b": 195,
+      "win_rate_b_pct": 65.0,
+      "wilson_95_b_pct": [
+        59.4439,
+        70.1768
+      ],
+      "delta_b_minus_a_pp": -0.3333,
+      "wald_95_ci_pp": [
+        -1.7937,
+        1.1271
+      ],
+      "both_win": 193,
+      "both_loss": 102,
+      "won_only_a": 3,
+      "won_only_b": 2,
+      "identical_outcome_seeds": 295,
+      "identical_outcome_and_floor_seeds": 294,
+      "identical_outcome_floor_steps_seeds": 271,
+      "mcnemar_exact_p": 1.0
+    },
+    "pref_300_paired_ruleonly_vs_std": {
+      "n_paired": 300,
+      "wins_a": 196,
+      "win_rate_a_pct": 65.3333,
+      "wilson_95_a_pct": [
+        59.7848,
+        70.4941
+      ],
+      "wins_b": 196,
+      "win_rate_b_pct": 65.3333,
+      "wilson_95_b_pct": [
+        59.7848,
+        70.4941
+      ],
+      "delta_b_minus_a_pp": 0.0,
+      "wald_95_ci_pp": [
+        -1.3066,
+        1.3066
+      ],
+      "both_win": 194,
+      "both_loss": 102,
+      "won_only_a": 2,
+      "won_only_b": 2,
+      "identical_outcome_seeds": 296,
+      "identical_outcome_and_floor_seeds": 295,
+      "identical_outcome_floor_steps_seeds": 273,
+      "mcnemar_exact_p": 1.0
+    },
+    "rv1_1000_revert_full": {
+      "games": 1000,
+      "wins": 661,
+      "win_rate_pct": 66.1,
+      "wilson_95_pct": [
+        63.1094,
+        68.9673
+      ],
+      "stuck": 0,
+      "mean_floor": 46.277,
+      "mean_steps": 655.8,
+      "card_reward_screens": 15613,
+      "card_reward_screens_per_run": 15.613,
+      "skip_screens": 3096,
+      "skip_rate_pct": 19.8296,
+      "skip_rate_by_act_pct": [
+        8.9092,
+        28.8889,
+        28.4508
+      ],
+      "skip_prob": {
+        "n": 15613,
+        "mean": 0.207894,
+        "std": 0.3253,
+        "min": 0.0,
+        "q25": 0.00011,
+        "median": 0.015332,
+        "q75": 0.291237,
+        "p95": 0.975061,
+        "max": 0.999999,
+        "sum": 3245.855836
+      },
+      "forgotten_ritual_usage": {
+        "final_decks_with_fr": 11,
+        "final_deck_share_pct": 1.1,
+        "combat_hand_steps_total": 1018,
+        "combat_hand_steps_exhausted_turn": 482,
+        "combat_hand_steps_unexhausted_turn": 536,
+        "plays_total": 142,
+        "plays_after_exhaust": 87,
+        "plays_without_exhaust": 55,
+        "energy_gained_total": 142,
+        "energy_gained_after_exhaust": 87,
+        "energy_gained_without_exhaust": 55,
+        "energy_gain_pct_of_plays": 100.0
+      },
+      "target_cards": {
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered": 367,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            149,
+            138,
+            80
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 367,
+            "mean": 0.004364,
+            "std": 0.015787,
+            "min": 0.0,
+            "q25": 1e-06,
+            "median": 5.1e-05,
+            "q75": 0.000881,
+            "p95": 0.022802,
+            "max": 0.188715,
+            "sum": 1.601465
+          },
+          "shop_affordable_offered": 216,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001907,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 278,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.002171,
+              "median_prob": 2.8e-05
+            },
+            "1_source": {
+              "offered": 75,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.01195,
+              "median_prob": 0.000402
+            },
+            "ge2_sources": {
+              "offered": 14,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.00726,
+              "median_prob": 0.000588
+            },
+            "no_stoke": {
+              "offered": 338,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004211,
+              "median_prob": 4.3e-05
+            },
+            "stoke_in_deck": {
+              "offered": 29,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.006147,
+              "median_prob": 0.000535
+            },
+            "no_fnp": {
+              "offered": 360,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004443,
+              "median_prob": 5.2e-05
+            },
+            "fnp_in_deck": {
+              "offered": 7,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.00029,
+              "median_prob": 5.1e-05
+            },
+            "stoke_and_fnp": {
+              "offered": 1,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.000415,
+              "median_prob": 0.000415
+            }
+          }
+        },
+        "CARD.DARK_EMBRACE": {
+          "offered": 272,
+          "picked": 0,
+          "pick_rate_pct": 0.0,
+          "by_act_offered": [
+            129,
+            118,
+            25
+          ],
+          "by_act_picked": [
+            0,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 272,
+            "mean": 0.007356,
+            "std": 0.041889,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 1e-06,
+            "q75": 0.000163,
+            "p95": 0.011795,
+            "max": 0.451193,
+            "sum": 2.000712
+          },
+          "shop_affordable_offered": 10,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.00538,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 184,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.002172,
+              "median_prob": 1e-06
+            },
+            "1_source": {
+              "offered": 78,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.016714,
+              "median_prob": 4e-06
+            },
+            "ge2_sources": {
+              "offered": 10,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.029733,
+              "median_prob": 0.000107
+            },
+            "no_stoke": {
+              "offered": 249,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.002274,
+              "median_prob": 1e-06
+            },
+            "stoke_in_deck": {
+              "offered": 23,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.062365,
+              "median_prob": 8e-06
+            },
+            "no_fnp": {
+              "offered": 258,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.004967,
+              "median_prob": 1e-06
+            },
+            "fnp_in_deck": {
+              "offered": 14,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.051381,
+              "median_prob": 0.000328
+            },
+            "stoke_and_fnp": {
+              "offered": 7,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.099834,
+              "median_prob": 2e-06
+            }
+          }
+        },
+        "CARD.FEEL_NO_PAIN": {
+          "offered": 441,
+          "picked": 113,
+          "pick_rate_pct": 25.6236,
+          "by_act_offered": [
+            180,
+            135,
+            126
+          ],
+          "by_act_picked": [
+            3,
+            43,
+            67
+          ],
+          "policy_prob": {
+            "n": 441,
+            "mean": 0.250045,
+            "std": 0.396473,
+            "min": 0.0,
+            "q25": 9e-06,
+            "median": 0.001421,
+            "q75": 0.496621,
+            "p95": 0.999916,
+            "max": 1.0,
+            "sum": 110.2698
+          },
+          "shop_affordable_offered": 338,
+          "shop_bought": 27,
+          "shop_prob_mean": 0.07117,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 319,
+              "picked": 39,
+              "pick_rate_pct": 12.2257,
+              "mean_prob": 0.12378,
+              "median_prob": 0.000223
+            },
+            "1_source": {
+              "offered": 98,
+              "picked": 55,
+              "pick_rate_pct": 56.1224,
+              "mean_prob": 0.539082,
+              "median_prob": 0.669183
+            },
+            "ge2_sources": {
+              "offered": 24,
+              "picked": 19,
+              "pick_rate_pct": 79.1667,
+              "mean_prob": 0.748086,
+              "median_prob": 0.997481
+            },
+            "no_stoke": {
+              "offered": 391,
+              "picked": 66,
+              "pick_rate_pct": 16.8798,
+              "mean_prob": 0.167581,
+              "median_prob": 0.000471
+            },
+            "stoke_in_deck": {
+              "offered": 50,
+              "picked": 47,
+              "pick_rate_pct": 94.0,
+              "mean_prob": 0.894913,
+              "median_prob": 0.997632
+            },
+            "no_fnp": {
+              "offered": 424,
+              "picked": 100,
+              "pick_rate_pct": 23.5849,
+              "mean_prob": 0.230161,
+              "median_prob": 0.001063
+            },
+            "fnp_in_deck": {
+              "offered": 17,
+              "picked": 13,
+              "pick_rate_pct": 76.4706,
+              "mean_prob": 0.745971,
+              "median_prob": 0.992239
+            },
+            "stoke_and_fnp": {
+              "offered": 3,
+              "picked": 3,
+              "pick_rate_pct": 100.0,
+              "mean_prob": 0.998227,
+              "median_prob": 0.999097
+            }
+          }
+        },
+        "CARD.SECOND_WIND": {
+          "offered": 370,
+          "picked": 7,
+          "pick_rate_pct": 1.8919,
+          "by_act_offered": [
+            163,
+            113,
+            94
+          ],
+          "by_act_picked": [
+            0,
+            2,
+            5
+          ],
+          "policy_prob": {
+            "n": 370,
+            "mean": 0.024015,
+            "std": 0.121685,
+            "min": 0.0,
+            "q25": 1e-06,
+            "median": 0.000107,
+            "q75": 0.00201,
+            "p95": 0.066306,
+            "max": 0.9768,
+            "sum": 8.885404
+          },
+          "shop_affordable_offered": 209,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.001121,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 264,
+              "picked": 2,
+              "pick_rate_pct": 0.7576,
+              "mean_prob": 0.014214,
+              "median_prob": 2.5e-05
+            },
+            "1_source": {
+              "offered": 90,
+              "picked": 5,
+              "pick_rate_pct": 5.5556,
+              "mean_prob": 0.055815,
+              "median_prob": 0.001403
+            },
+            "ge2_sources": {
+              "offered": 16,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.006852,
+              "median_prob": 0.000864
+            },
+            "no_stoke": {
+              "offered": 332,
+              "picked": 7,
+              "pick_rate_pct": 2.1084,
+              "mean_prob": 0.025602,
+              "median_prob": 7.9e-05
+            },
+            "stoke_in_deck": {
+              "offered": 38,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.010149,
+              "median_prob": 0.001272
+            },
+            "no_fnp": {
+              "offered": 355,
+              "picked": 5,
+              "pick_rate_pct": 1.4085,
+              "mean_prob": 0.019801,
+              "median_prob": 9.8e-05
+            },
+            "fnp_in_deck": {
+              "offered": 15,
+              "picked": 2,
+              "pick_rate_pct": 13.3333,
+              "mean_prob": 0.123734,
+              "median_prob": 0.002226
+            },
+            "stoke_and_fnp": {
+              "offered": 5,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.033155,
+              "median_prob": 0.004249
+            }
+          }
+        },
+        "CARD.STOKE": {
+          "offered": 292,
+          "picked": 197,
+          "pick_rate_pct": 67.4658,
+          "by_act_offered": [
+            140,
+            124,
+            28
+          ],
+          "by_act_picked": [
+            101,
+            75,
+            21
+          ],
+          "policy_prob": {
+            "n": 292,
+            "mean": 0.666129,
+            "std": 0.423063,
+            "min": 0.0,
+            "q25": 0.148873,
+            "median": 0.971753,
+            "q75": 0.999918,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 194.509755
+          },
+          "shop_affordable_offered": 19,
+          "shop_bought": 5,
+          "shop_prob_mean": 0.312803,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 223,
+              "picked": 147,
+              "pick_rate_pct": 65.9193,
+              "mean_prob": 0.65692,
+              "median_prob": 0.977004
+            },
+            "1_source": {
+              "offered": 57,
+              "picked": 42,
+              "pick_rate_pct": 73.6842,
+              "mean_prob": 0.71719,
+              "median_prob": 0.96918
+            },
+            "ge2_sources": {
+              "offered": 12,
+              "picked": 8,
+              "pick_rate_pct": 66.6667,
+              "mean_prob": 0.594723,
+              "median_prob": 0.783595
+            },
+            "no_stoke": {
+              "offered": 273,
+              "picked": 185,
+              "pick_rate_pct": 67.7656,
+              "mean_prob": 0.67098,
+              "median_prob": 0.983694
+            },
+            "stoke_in_deck": {
+              "offered": 19,
+              "picked": 12,
+              "pick_rate_pct": 63.1579,
+              "mean_prob": 0.596433,
+              "median_prob": 0.902941
+            },
+            "no_fnp": {
+              "offered": 288,
+              "picked": 194,
+              "pick_rate_pct": 67.3611,
+              "mean_prob": 0.664898,
+              "median_prob": 0.971482
+            },
+            "fnp_in_deck": {
+              "offered": 4,
+              "picked": 3,
+              "pick_rate_pct": 75.0,
+              "mean_prob": 0.754758,
+              "median_prob": 0.996067
+            },
+            "stoke_and_fnp": {
+              "offered": 2,
+              "picked": 2,
+              "pick_rate_pct": 100.0,
+              "mean_prob": 0.996067,
+              "median_prob": 0.996067
+            }
+          }
+        }
+      },
+      "comparison_cards": {
+        "CARD.BURNING_PACT": {
+          "offered": 420,
+          "picked": 50,
+          "pick_rate_pct": 11.9048,
+          "by_act_offered": [
+            143,
+            148,
+            129
+          ],
+          "by_act_picked": [
+            0,
+            18,
+            32
+          ],
+          "policy_prob": {
+            "n": 420,
+            "mean": 0.124981,
+            "std": 0.260351,
+            "min": 0.0,
+            "q25": 3.8e-05,
+            "median": 0.002409,
+            "q75": 0.064937,
+            "p95": 0.833571,
+            "max": 0.999714,
+            "sum": 52.492045
+          },
+          "shop_affordable_offered": 210,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.005582,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 297,
+              "picked": 23,
+              "pick_rate_pct": 7.7441,
+              "mean_prob": 0.082957,
+              "median_prob": 0.000549
+            },
+            "1_source": {
+              "offered": 98,
+              "picked": 21,
+              "pick_rate_pct": 21.4286,
+              "mean_prob": 0.21994,
+              "median_prob": 0.038686
+            },
+            "ge2_sources": {
+              "offered": 25,
+              "picked": 6,
+              "pick_rate_pct": 24.0,
+              "mean_prob": 0.251984,
+              "median_prob": 0.060957
+            },
+            "no_stoke": {
+              "offered": 374,
+              "picked": 40,
+              "pick_rate_pct": 10.6952,
+              "mean_prob": 0.111029,
+              "median_prob": 0.001705
+            },
+            "stoke_in_deck": {
+              "offered": 46,
+              "picked": 10,
+              "pick_rate_pct": 21.7391,
+              "mean_prob": 0.238419,
+              "median_prob": 0.062804
+            },
+            "no_fnp": {
+              "offered": 409,
+              "picked": 45,
+              "pick_rate_pct": 11.0024,
+              "mean_prob": 0.116716,
+              "median_prob": 0.002113
+            },
+            "fnp_in_deck": {
+              "offered": 11,
+              "picked": 5,
+              "pick_rate_pct": 45.4545,
+              "mean_prob": 0.432303,
+              "median_prob": 0.157054
+            },
+            "stoke_and_fnp": {
+              "offered": 5,
+              "picked": 3,
+              "pick_rate_pct": 60.0,
+              "mean_prob": 0.52509,
+              "median_prob": 0.79374
+            }
+          }
+        },
+        "CARD.TRUE_GRIT": {
+          "offered": 1011,
+          "picked": 25,
+          "pick_rate_pct": 2.4728,
+          "by_act_offered": [
+            481,
+            286,
+            244
+          ],
+          "by_act_picked": [
+            0,
+            6,
+            19
+          ],
+          "policy_prob": {
+            "n": 1011,
+            "mean": 0.029308,
+            "std": 0.124377,
+            "min": 0.0,
+            "q25": 3e-06,
+            "median": 0.000252,
+            "q75": 0.003981,
+            "p95": 0.097478,
+            "max": 0.999813,
+            "sum": 29.6308
+          },
+          "shop_affordable_offered": 631,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.002465
+        },
+        "CARD.ASHEN_STRIKE": {
+          "offered": 400,
+          "picked": 33,
+          "pick_rate_pct": 8.25,
+          "by_act_offered": [
+            204,
+            104,
+            92
+          ],
+          "by_act_picked": [
+            27,
+            4,
+            2
+          ],
+          "policy_prob": {
+            "n": 400,
+            "mean": 0.098712,
+            "std": 0.22098,
+            "min": 0.0,
+            "q25": 0.000109,
+            "median": 0.003635,
+            "q75": 0.051642,
+            "p95": 0.682909,
+            "max": 0.999996,
+            "sum": 39.484972
+          },
+          "shop_affordable_offered": 173,
+          "shop_bought": 1,
+          "shop_prob_mean": 0.006561,
+          "conditional_by_deck_state": {
+            "0_sources": {
+              "offered": 306,
+              "picked": 29,
+              "pick_rate_pct": 9.4771,
+              "mean_prob": 0.106601,
+              "median_prob": 0.002948
+            },
+            "1_source": {
+              "offered": 78,
+              "picked": 4,
+              "pick_rate_pct": 5.1282,
+              "mean_prob": 0.081392,
+              "median_prob": 0.010174
+            },
+            "ge2_sources": {
+              "offered": 16,
+              "picked": 0,
+              "pick_rate_pct": 0.0,
+              "mean_prob": 0.032285,
+              "median_prob": 0.003966
+            },
+            "no_stoke": {
+              "offered": 375,
+              "picked": 32,
+              "pick_rate_pct": 8.5333,
+              "mean_prob": 0.101317,
+              "median_prob": 0.00328
+            },
+            "stoke_in_deck": {
+              "offered": 25,
+              "picked": 1,
+              "pick_rate_pct": 4.0,
+              "mean_prob": 0.059641,
+              "median_prob": 0.013346
+            },
+            "no_fnp": {
+              "offered": 386,
+              "picked": 31,
+              "pick_rate_pct": 8.0311,
+              "mean_prob": 0.095936,
+              "median_prob": 0.003318
+            },
+            "fnp_in_deck": {
+              "offered": 14,
+              "picked": 2,
+              "pick_rate_pct": 14.2857,
+              "mean_prob": 0.175253,
+              "median_prob": 0.063212
+            },
+            "stoke_and_fnp": {
+              "offered": 4,
+              "picked": 1,
+              "pick_rate_pct": 25.0,
+              "mean_prob": 0.224359,
+              "median_prob": 0.016314
+            }
+          }
+        },
+        "CARD.FIEND_FIRE": {
+          "offered": 261,
+          "picked": 3,
+          "pick_rate_pct": 1.1494,
+          "by_act_offered": [
+            119,
+            127,
+            15
+          ],
+          "by_act_picked": [
+            2,
+            0,
+            1
+          ],
+          "policy_prob": {
+            "n": 261,
+            "mean": 0.020256,
+            "std": 0.095441,
+            "min": 0.0,
+            "q25": 0.0,
+            "median": 7e-06,
+            "q75": 0.001574,
+            "p95": 0.095577,
+            "max": 0.866913,
+            "sum": 5.286936
+          },
+          "shop_affordable_offered": 25,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.00495
+        },
+        "CARD.OFFERING": {
+          "offered": 327,
+          "picked": 246,
+          "pick_rate_pct": 75.2294,
+          "by_act_offered": [
+            149,
+            144,
+            34
+          ],
+          "by_act_picked": [
+            116,
+            105,
+            25
+          ],
+          "policy_prob": {
+            "n": 327,
+            "mean": 0.742788,
+            "std": 0.386322,
+            "min": 0.0,
+            "q25": 0.483193,
+            "median": 0.995395,
+            "q75": 0.999971,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 242.891629
+          },
+          "shop_affordable_offered": 21,
+          "shop_bought": 12,
+          "shop_prob_mean": 0.446981
+        },
+        "CARD.IMPERVIOUS": {
+          "offered": 306,
+          "picked": 131,
+          "pick_rate_pct": 42.8105,
+          "by_act_offered": [
+            154,
+            117,
+            35
+          ],
+          "by_act_picked": [
+            72,
+            45,
+            14
+          ],
+          "policy_prob": {
+            "n": 306,
+            "mean": 0.419003,
+            "std": 0.448088,
+            "min": 0.0,
+            "q25": 0.000414,
+            "median": 0.101276,
+            "q75": 0.964997,
+            "p95": 0.999833,
+            "max": 0.999999,
+            "sum": 128.215019
+          },
+          "shop_affordable_offered": 13,
+          "shop_bought": 1,
+          "shop_prob_mean": 0.097867
+        },
+        "CARD.SHOCKWAVE": {
+          "offered": 23,
+          "picked": 21,
+          "pick_rate_pct": 91.3043,
+          "by_act_offered": [
+            12,
+            11,
+            0
+          ],
+          "by_act_picked": [
+            12,
+            9,
+            0
+          ],
+          "policy_prob": {
+            "n": 23,
+            "mean": 0.896007,
+            "std": 0.256964,
+            "min": 0.000368,
+            "q25": 0.989649,
+            "median": 0.999703,
+            "q75": 0.999997,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 20.608168
+          },
+          "shop_affordable_offered": 110,
+          "shop_bought": 86,
+          "shop_prob_mean": 0.68809
+        },
+        "CARD.BATTLE_TRANCE": {
+          "offered": 555,
+          "picked": 474,
+          "pick_rate_pct": 85.4054,
+          "by_act_offered": [
+            227,
+            187,
+            141
+          ],
+          "by_act_picked": [
+            206,
+            169,
+            99
+          ],
+          "policy_prob": {
+            "n": 555,
+            "mean": 0.838733,
+            "std": 0.305789,
+            "min": 0.0,
+            "q25": 0.887344,
+            "median": 0.998394,
+            "q75": 0.999997,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 465.496748
+          },
+          "shop_affordable_offered": 219,
+          "shop_bought": 92,
+          "shop_prob_mean": 0.373507
+        },
+        "CARD.CRIMSON_MANTLE": {
+          "offered": 316,
+          "picked": 279,
+          "pick_rate_pct": 88.2911,
+          "by_act_offered": [
+            136,
+            152,
+            28
+          ],
+          "by_act_picked": [
+            125,
+            131,
+            23
+          ],
+          "policy_prob": {
+            "n": 316,
+            "mean": 0.872984,
+            "std": 0.28422,
+            "min": 0.000103,
+            "q25": 0.953698,
+            "median": 0.999847,
+            "q75": 0.999999,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 275.862891
+          },
+          "shop_affordable_offered": 15,
+          "shop_bought": 12,
+          "shop_prob_mean": 0.571255
+        },
+        "CARD.STONE_ARMOR": {
+          "offered": 586,
+          "picked": 505,
+          "pick_rate_pct": 86.1775,
+          "by_act_offered": [
+            218,
+            180,
+            188
+          ],
+          "by_act_picked": [
+            188,
+            162,
+            155
+          ],
+          "policy_prob": {
+            "n": 586,
+            "mean": 0.830587,
+            "std": 0.307354,
+            "min": 0.0,
+            "q25": 0.843249,
+            "median": 0.993176,
+            "q75": 0.999903,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 486.723756
+          },
+          "shop_affordable_offered": 384,
+          "shop_bought": 111,
+          "shop_prob_mean": 0.269073
+        },
+        "CARD.UPPERCUT": {
+          "offered": 544,
+          "picked": 473,
+          "pick_rate_pct": 86.9485,
+          "by_act_offered": [
+            222,
+            166,
+            156
+          ],
+          "by_act_picked": [
+            203,
+            141,
+            129
+          ],
+          "policy_prob": {
+            "n": 544,
+            "mean": 0.839399,
+            "std": 0.300307,
+            "min": 0.0,
+            "q25": 0.855796,
+            "median": 0.997445,
+            "q75": 0.99996,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 456.632961
+          },
+          "shop_affordable_offered": 182,
+          "shop_bought": 61,
+          "shop_prob_mean": 0.321372
+        },
+        "CARD.DEMON_FORM": {
+          "offered": 309,
+          "picked": 252,
+          "pick_rate_pct": 81.5534,
+          "by_act_offered": [
+            142,
+            145,
+            22
+          ],
+          "by_act_picked": [
+            127,
+            108,
+            17
+          ],
+          "policy_prob": {
+            "n": 309,
+            "mean": 0.801413,
+            "std": 0.362018,
+            "min": 2e-06,
+            "q25": 0.833851,
+            "median": 0.999498,
+            "q75": 0.999999,
+            "p95": 1.0,
+            "max": 1.0,
+            "sum": 247.636584
+          },
+          "shop_affordable_offered": 11,
+          "shop_bought": 7,
+          "shop_prob_mean": 0.57144
+        },
+        "CARD.BLOODLETTING": {
+          "offered": 457,
+          "picked": 93,
+          "pick_rate_pct": 20.3501,
+          "by_act_offered": [
+            214,
+            134,
+            109
+          ],
+          "by_act_picked": [
+            16,
+            34,
+            43
+          ],
+          "policy_prob": {
+            "n": 457,
+            "mean": 0.203599,
+            "std": 0.338507,
+            "min": 0.0,
+            "q25": 7.2e-05,
+            "median": 0.005389,
+            "q75": 0.262264,
+            "p95": 0.982564,
+            "max": 0.999973,
+            "sum": 93.044877
+          },
+          "shop_affordable_offered": 220,
+          "shop_bought": 4,
+          "shop_prob_mean": 0.018562
+        },
+        "CARD.WHIRLWIND": {
+          "offered": 393,
+          "picked": 1,
+          "pick_rate_pct": 0.2545,
+          "by_act_offered": [
+            170,
+            127,
+            96
+          ],
+          "by_act_picked": [
+            1,
+            0,
+            0
+          ],
+          "policy_prob": {
+            "n": 393,
+            "mean": 0.0062,
+            "std": 0.034996,
+            "min": 0.0,
+            "q25": 5e-06,
+            "median": 0.000207,
+            "q75": 0.001761,
+            "p95": 0.026212,
+            "max": 0.637754,
+            "sum": 2.436637
+          },
+          "shop_affordable_offered": 188,
+          "shop_bought": 0,
+          "shop_prob_mean": 0.00147
+        }
+      },
+      "all_cards_count": 431
+    },
+    "rv1_1000_paired_revert_vs_std": {
+      "n_paired": 1000,
+      "wins_a": 667,
+      "win_rate_a_pct": 66.7,
+      "wilson_95_a_pct": [
+        63.72,
+        69.5522
+      ],
+      "wins_b": 661,
+      "win_rate_b_pct": 66.1,
+      "wilson_95_b_pct": [
+        63.1094,
+        68.9673
+      ],
+      "delta_b_minus_a_pp": -0.6,
+      "wald_95_ci_pp": [
+        -1.5186,
+        0.3186
+      ],
+      "both_win": 653,
+      "both_loss": 325,
+      "won_only_a": 14,
+      "won_only_b": 8,
+      "identical_outcome_seeds": 978,
+      "identical_outcome_and_floor_seeds": 972,
+      "identical_outcome_floor_steps_seeds": 880,
+      "mcnemar_exact_p": 0.286279
+    },
+    "published_routine_eval_4608_runs_ref": {
+      "FORGOTTEN_RITUAL": {
+        "offered": 1677,
+        "pick_rate_pct": 0.0,
+        "human_spire_codex_pct": 18.5
+      },
+      "DARK_EMBRACE": {
+        "offered": 1427,
+        "pick_rate_pct": 1.0,
+        "human_spire_codex_pct": 40.9
+      },
+      "SECOND_WIND": {
+        "offered": null,
+        "pick_rate_pct": 3.3,
+        "human_spire_codex_pct": 35.3
+      },
+      "BURNING_PACT": {
+        "offered": null,
+        "pick_rate_pct": 9.9,
+        "human_spire_codex_pct": 39.7
+      },
+      "PACT_S_END": {
+        "offered": 1374,
+        "pick_rate_pct": 0.0,
+        "human_spire_codex_pct": 22.8
+      }
+    },
+    "our_minimal_agent_comparison_ref": {
+      "v111_net_on_v111_old_rules_300": {
+        "offered": 177,
+        "picked": 130,
+        "pick_rate_pct": 73.45
+      },
+      "v111_net_on_v113_cold_1000_revert_recovery_pp": 10.2,
+      "v113_adapted_u31750_on_revert_300": {
+        "offered": 156,
+        "picked": 0,
+        "pick_rate_pct": 0.0,
+        "wins": 194,
+        "win_rate_pct": 64.67,
+        "plays": 16,
+        "energy_gained": 16
+      },
+      "iron_ctl_u40k_300_free": {
+        "FORGOTTEN_RITUAL": {
+          "offered": 158,
+          "picked": 0,
+          "pick_rate_pct": 0.0
+        },
+        "DARK_EMBRACE": {
+          "offered": 97,
+          "picked": 0,
+          "pick_rate_pct": 0.0
+        },
+        "FEEL_NO_PAIN": {
+          "offered": 168,
+          "picked": 1,
+          "pick_rate_pct": 0.6
+        },
+        "SECOND_WIND": {
+          "offered": 175,
+          "picked": 0,
+          "pick_rate_pct": 0.0
+        },
+        "STOKE": {
+          "offered": 92,
+          "picked": 17,
+          "pick_rate_pct": 18.48
+        },
+        "BURNING_PACT": {
+          "offered": 176,
+          "picked": 7,
+          "pick_rate_pct": 3.98
+        }
+      }
+    }
+  },
+  "probe2_in_combat_know_do": {
+    "alphadefect_reward_shop_forced": {
+      "runs": 80,
+      "wins": 45,
+      "win_rate_pct": 56.25,
+      "aborted_runs": 0,
+      "runs_holding_fr_at_end": 46,
+      "funnel": {
+        "screened": 440,
+        "eligible_verified_exhaust": 420,
+        "complete_points": 354,
+        "discarded_replay_points": 0,
+        "ritual_unavailable_after_exhaust": 66,
+        "terminal_value_unavailable": 0
+      },
+      "greedy_choice_rates": {
+        "any_exhaust_at_eligible_count": 131,
+        "any_exhaust_at_eligible_pct": 31.1905,
+        "any_exhaust_at_complete_count": 108,
+        "any_exhaust_at_complete_pct": 30.5085,
+        "selected_exhaust_at_complete_count": 106,
+        "selected_exhaust_at_complete_pct": 29.9435,
+        "ritual_greedy_in_s_count": 16,
+        "ritual_greedy_in_s_pct": 4.5198,
+        "ritual_greedy_in_s_prime_count": 229,
+        "ritual_greedy_in_s_prime_pct": 64.6893
+      },
+      "trigger_card_breakdown": {
+        "CARD.OFFERING": 66,
+        "CARD.HAVOC": 53,
+        "CARD.SHOCKWAVE": 35,
+        "CARD.NEOWS_FURY": 35,
+        "CARD.PANIC_BUTTON": 29,
+        "CARD.INFERNAL_BLADE": 18,
+        "CARD.MOLTEN_FIST": 14,
+        "CARD.CINDER": 14,
+        "CARD.SUPERCRITICAL": 11,
+        "CARD.DISCOVERY": 9,
+        "CARD.BRAND": 8,
+        "CARD.TOXIC": 8,
+        "CARD.BURNING_PACT": 8,
+        "CARD.IMPERVIOUS": 7,
+        "CARD.RELAX": 7,
+        "CARD.SKY_SHOT": 7,
+        "CARD.LUMINESCE": 6,
+        "CARD.TRUE_GRIT": 5,
+        "CARD.DRAMATIC_ENTRANCE": 4,
+        "CARD.SLIMED": 3,
+        "CARD.DOMINATE": 3,
+        "CARD.DARK_SHACKLES": 2,
+        "CARD.DISTRACTION": 1,
+        "CARD.TREMBLE": 1
+      },
+      "distributions": {
+        "p_ritual_in_s": {
+          "n": 354,
+          "mean": 0.057485,
+          "std": 0.148727,
+          "min": 0.0,
+          "q25": 7e-06,
+          "median": 0.001337,
+          "q75": 0.026794,
+          "p95": 0.394655,
+          "max": 0.950928,
+          "sum": 20.349726
+        },
+        "p_selected_exhaust_in_s": {
+          "n": 354,
+          "mean": 0.270364,
+          "std": 0.359753,
+          "min": 0.0,
+          "q25": 0.001797,
+          "median": 0.047825,
+          "q75": 0.511101,
+          "p95": 0.996085,
+          "max": 1.0,
+          "sum": 95.708703
+        },
+        "p_any_exhaust_in_s": {
+          "n": 354,
+          "mean": 0.287743,
+          "std": 0.368693,
+          "min": 0.0,
+          "q25": 0.001926,
+          "median": 0.059701,
+          "q75": 0.57612,
+          "p95": 0.997386,
+          "max": 1.0,
+          "sum": 101.860952
+        },
+        "p_other_in_s": {
+          "n": 354,
+          "mean": 0.672151,
+          "std": 0.365214,
+          "min": 0.0,
+          "q25": 0.3508,
+          "median": 0.863644,
+          "q75": 0.990946,
+          "p95": 0.999999,
+          "max": 1.0,
+          "sum": 237.941574
+        },
+        "p_ritual_in_s_prime": {
+          "n": 354,
+          "mean": 0.600987,
+          "std": 0.404156,
+          "min": 0.0,
+          "q25": 0.14311,
+          "median": 0.77497,
+          "q75": 0.996103,
+          "p95": 1.0,
+          "max": 1.0,
+          "sum": 212.749408
+        },
+        "delta_p_ritual_s_prime_minus_s": {
+          "n": 354,
+          "mean": 0.543502,
+          "std": 0.434339,
+          "min": -0.729801,
+          "q25": 0.076085,
+          "median": 0.638633,
+          "q75": 0.985817,
+          "p95": 0.999999,
+          "max": 1.0,
+          "sum": 192.399682
+        },
+        "v_s": {
+          "n": 354,
+          "mean": 4.079929,
+          "std": 1.379876,
+          "min": -0.116299,
+          "q25": 3.489754,
+          "median": 4.573586,
+          "q75": 5.028731,
+          "p95": 5.51345,
+          "max": 5.825949,
+          "sum": 1444.294759
+        },
+        "v_s_prime_after_exhaust": {
+          "n": 354,
+          "mean": 4.13911,
+          "std": 1.354197,
+          "min": -0.118455,
+          "q25": 3.62066,
+          "median": 4.635903,
+          "q75": 5.076241,
+          "p95": 5.505247,
+          "max": 5.829307,
+          "sum": 1465.244983
+        },
+        "v_s_double_prime_exhaust_then_ritual": {
+          "n": 354,
+          "mean": 4.112104,
+          "std": 1.366084,
+          "min": -0.095063,
+          "q25": 3.60071,
+          "median": 4.558375,
+          "q75": 5.054011,
+          "p95": 5.517273,
+          "max": 5.827038,
+          "sum": 1455.684771
+        },
+        "v_s_direct_ritual": {
+          "n": 354,
+          "mean": 4.070318,
+          "std": 1.407032,
+          "min": -0.116859,
+          "q25": 3.519352,
+          "median": 4.589892,
+          "q75": 5.04236,
+          "p95": 5.4989,
+          "max": 5.840202,
+          "sum": 1440.892551
+        },
+        "delta_v_two_step_minus_direct": {
+          "n": 354,
+          "mean": 0.041786,
+          "std": 0.152803,
+          "min": -0.391444,
+          "q25": -0.027916,
+          "median": 0.015005,
+          "q75": 0.075709,
+          "p95": 0.350208,
+          "max": 0.781329,
+          "sum": 14.79222
+        },
+        "delta_v_s_prime_minus_s": {
+          "n": 354,
+          "mean": 0.059181,
+          "std": 0.142561,
+          "min": -0.332409,
+          "q25": -0.015252,
+          "median": 0.038224,
+          "q75": 0.104544,
+          "p95": 0.348832,
+          "max": 0.829974,
+          "sum": 20.950224
+        },
+        "aux_win_s": {
+          "n": 354,
+          "mean": 0.945595,
+          "std": 0.182053,
+          "min": 0.000615,
+          "q25": 0.994639,
+          "median": 0.999769,
+          "q75": 0.999928,
+          "p95": 0.999976,
+          "max": 0.999991,
+          "sum": 334.740469
+        },
+        "aux_win_s_prime": {
+          "n": 354,
+          "mean": 0.950299,
+          "std": 0.175738,
+          "min": 0.000364,
+          "q25": 0.995535,
+          "median": 0.99977,
+          "q75": 0.999939,
+          "p95": 0.999976,
+          "max": 0.999991,
+          "sum": 336.405727
+        },
+        "aux_win_s_double_prime": {
+          "n": 354,
+          "mean": 0.948267,
+          "std": 0.179447,
+          "min": 0.000318,
+          "q25": 0.995131,
+          "median": 0.999793,
+          "q75": 0.999945,
+          "p95": 0.999979,
+          "max": 0.999992,
+          "sum": 335.686603
+        },
+        "aux_win_s_direct": {
+          "n": 354,
+          "mean": 0.940928,
+          "std": 0.189583,
+          "min": 0.000472,
+          "q25": 0.993152,
+          "median": 0.999707,
+          "q75": 0.999928,
+          "p95": 0.999977,
+          "max": 0.999993,
+          "sum": 333.08863
+        },
+        "delta_aux_win_two_step_minus_direct": {
+          "n": 354,
+          "mean": 0.007339,
+          "std": 0.030351,
+          "min": -0.077158,
+          "q25": -1.3e-05,
+          "median": 2e-05,
+          "q75": 0.000443,
+          "p95": 0.052899,
+          "max": 0.242873,
+          "sum": 2.597972
+        },
+        "p_ritual_s_prime_ablate_no_gain_preview": {
+          "n": 354,
+          "mean": 0.588227,
+          "std": 0.381234,
+          "min": 0.0,
+          "q25": 0.191106,
+          "median": 0.676637,
+          "q75": 0.979712,
+          "p95": 1.0,
+          "max": 1.0,
+          "sum": 208.232391
+        },
+        "p_ritual_s_prime_ablate_no_glow": {
+          "n": 354,
+          "mean": 0.107462,
+          "std": 0.224586,
+          "min": 0.0,
+          "q25": 0.000114,
+          "median": 0.006879,
+          "q75": 0.075276,
+          "p95": 0.686741,
+          "max": 0.999255,
+          "sum": 38.041661
+        },
+        "p_ritual_s_prime_ablate_no_both": {
+          "n": 354,
+          "mean": 0.079088,
+          "std": 0.173548,
+          "min": 0.0,
+          "q25": 1.4e-05,
+          "median": 0.00253,
+          "q75": 0.065711,
+          "p95": 0.459034,
+          "max": 0.92345,
+          "sum": 27.997255
+        },
+        "p_ritual_s_spoof_gain_preview": {
+          "n": 354,
+          "mean": 0.070775,
+          "std": 0.17913,
+          "min": 0.0,
+          "q25": 3.4e-05,
+          "median": 0.002485,
+          "q75": 0.025198,
+          "p95": 0.513056,
+          "max": 0.99373,
+          "sum": 25.054426
+        },
+        "p_ritual_s_spoof_glow": {
+          "n": 354,
+          "mean": 0.568704,
+          "std": 0.378822,
+          "min": 0.0,
+          "q25": 0.181885,
+          "median": 0.590899,
+          "q75": 0.972297,
+          "p95": 0.999996,
+          "max": 1.0,
+          "sum": 201.321253
+        },
+        "p_ritual_s_spoof_both": {
+          "n": 354,
+          "mean": 0.577878,
+          "std": 0.39604,
+          "min": 0.0,
+          "q25": 0.134718,
+          "median": 0.648146,
+          "q75": 0.991377,
+          "p95": 1.0,
+          "max": 1.0,
+          "sum": 204.568903
+        }
+      }
+    },
+    "alphadefect_starter_injected": {
+      "runs": 60,
+      "wins": 33,
+      "win_rate_pct": 55.0,
+      "aborted_runs": 0,
+      "runs_holding_fr_at_end": 54,
+      "funnel": {
+        "screened": 521,
+        "eligible_verified_exhaust": 472,
+        "complete_points": 362,
+        "discarded_replay_points": 0,
+        "ritual_unavailable_after_exhaust": 110,
+        "terminal_value_unavailable": 0
+      },
+      "greedy_choice_rates": {
+        "any_exhaust_at_eligible_count": 164,
+        "any_exhaust_at_eligible_pct": 34.7458,
+        "any_exhaust_at_complete_count": 126,
+        "any_exhaust_at_complete_pct": 34.8066,
+        "selected_exhaust_at_complete_count": 120,
+        "selected_exhaust_at_complete_pct": 33.1492,
+        "ritual_greedy_in_s_count": 12,
+        "ritual_greedy_in_s_pct": 3.3149,
+        "ritual_greedy_in_s_prime_count": 234,
+        "ritual_greedy_in_s_prime_pct": 64.6409
+      },
+      "trigger_card_breakdown": {
+        "CARD.OFFERING": 58,
+        "CARD.TREMBLE": 38,
+        "CARD.INFERNAL_BLADE": 29,
+        "CARD.DOMINATE": 23,
+        "CARD.MOLTEN_FIST": 23,
+        "CARD.DARK_SHACKLES": 23,
+        "CARD.HAVOC": 22,
+        "CARD.NEOWS_FURY": 21,
+        "CARD.SHOCKWAVE": 17,
+        "CARD.SLIMED": 15,
+        "CARD.LUMINESCE": 14,
+        "CARD.IMPERVIOUS": 12,
+        "CARD.THRASH": 12,
+        "CARD.DRAMATIC_ENTRANCE": 12,
+        "CARD.PANIC_BUTTON": 10,
+        "CARD.CINDER": 8,
+        "CARD.RELAX": 8,
+        "CARD.TRUE_GRIT": 6,
+        "CARD.DISCOVERY": 3,
+        "CARD.BRAND": 2,
+        "CARD.TOXIC": 2,
+        "CARD.BRIGHTEN_UP": 2,
+        "CARD.BURNING_PACT": 1,
+        "CARD.DISTRACTION": 1
+      },
+      "distributions": {
+        "p_ritual_in_s": {
+          "n": 362,
+          "mean": 0.039537,
+          "std": 0.127697,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.000133,
+          "q75": 0.006879,
+          "p95": 0.265564,
+          "max": 0.958281,
+          "sum": 14.312518
+        },
+        "p_selected_exhaust_in_s": {
+          "n": 362,
+          "mean": 0.299965,
+          "std": 0.36897,
+          "min": 0.0,
+          "q25": 0.001253,
+          "median": 0.094016,
+          "q75": 0.547877,
+          "p95": 0.999725,
+          "max": 1.0,
+          "sum": 108.587329
+        },
+        "p_any_exhaust_in_s": {
+          "n": 362,
+          "mean": 0.326348,
+          "std": 0.380959,
+          "min": 0.0,
+          "q25": 0.001663,
+          "median": 0.111967,
+          "q75": 0.638522,
+          "p95": 0.999806,
+          "max": 1.0,
+          "sum": 118.137983
+        },
+        "p_other_in_s": {
+          "n": 362,
+          "mean": 0.660498,
+          "std": 0.376077,
+          "min": 0.0,
+          "q25": 0.355603,
+          "median": 0.843379,
+          "q75": 0.995616,
+          "p95": 0.999999,
+          "max": 1.0,
+          "sum": 239.100153
+        },
+        "p_ritual_in_s_prime": {
+          "n": 362,
+          "mean": 0.628811,
+          "std": 0.419525,
+          "min": 0.0,
+          "q25": 0.109703,
+          "median": 0.874167,
+          "q75": 0.999266,
+          "p95": 1.0,
+          "max": 1.0,
+          "sum": 227.629634
+        },
+        "delta_p_ritual_s_prime_minus_s": {
+          "n": 362,
+          "mean": 0.589274,
+          "std": 0.431972,
+          "min": -0.390151,
+          "q25": 0.065919,
+          "median": 0.807106,
+          "q75": 0.997462,
+          "p95": 0.999999,
+          "max": 1.0,
+          "sum": 213.317116
+        },
+        "v_s": {
+          "n": 362,
+          "mean": 3.962078,
+          "std": 1.234746,
+          "min": 0.038205,
+          "q25": 3.19868,
+          "median": 4.288743,
+          "q75": 4.889859,
+          "p95": 5.483829,
+          "max": 5.922323,
+          "sum": 1434.272329
+        },
+        "v_s_prime_after_exhaust": {
+          "n": 362,
+          "mean": 4.035152,
+          "std": 1.224981,
+          "min": 0.079238,
+          "q25": 3.377265,
+          "median": 4.367606,
+          "q75": 4.955743,
+          "p95": 5.46443,
+          "max": 5.95415,
+          "sum": 1460.72517
+        },
+        "v_s_double_prime_exhaust_then_ritual": {
+          "n": 362,
+          "mean": 4.000216,
+          "std": 1.231413,
+          "min": 0.020404,
+          "q25": 3.265945,
+          "median": 4.310161,
+          "q75": 4.949681,
+          "p95": 5.488688,
+          "max": 5.910313,
+          "sum": 1448.078098
+        },
+        "v_s_direct_ritual": {
+          "n": 362,
+          "mean": 3.951941,
+          "std": 1.272396,
+          "min": 0.004134,
+          "q25": 3.159237,
+          "median": 4.315215,
+          "q75": 4.89024,
+          "p95": 5.475784,
+          "max": 5.926242,
+          "sum": 1430.602546
+        },
+        "delta_v_two_step_minus_direct": {
+          "n": 362,
+          "mean": 0.048275,
+          "std": 0.192788,
+          "min": -1.617611,
+          "q25": -0.027469,
+          "median": 0.026781,
+          "q75": 0.088857,
+          "p95": 0.286589,
+          "max": 1.638459,
+          "sum": 17.475553
+        },
+        "delta_v_s_prime_minus_s": {
+          "n": 362,
+          "mean": 0.073074,
+          "std": 0.148626,
+          "min": -1.190637,
+          "q25": -0.000899,
+          "median": 0.060576,
+          "q75": 0.150353,
+          "p95": 0.29971,
+          "max": 0.692161,
+          "sum": 26.452841
+        },
+        "aux_win_s": {
+          "n": 362,
+          "mean": 0.959407,
+          "std": 0.152456,
+          "min": 0.004757,
+          "q25": 0.99839,
+          "median": 0.99987,
+          "q75": 0.999949,
+          "p95": 0.999981,
+          "max": 0.999995,
+          "sum": 347.305324
+        },
+        "aux_win_s_prime": {
+          "n": 362,
+          "mean": 0.961899,
+          "std": 0.151155,
+          "min": 0.006875,
+          "q25": 0.998922,
+          "median": 0.999864,
+          "q75": 0.999946,
+          "p95": 0.99998,
+          "max": 0.999995,
+          "sum": 348.207283
+        },
+        "aux_win_s_double_prime": {
+          "n": 362,
+          "mean": 0.961888,
+          "std": 0.152286,
+          "min": 0.001092,
+          "q25": 0.998959,
+          "median": 0.999888,
+          "q75": 0.999958,
+          "p95": 0.999987,
+          "max": 0.999999,
+          "sum": 348.203481
+        },
+        "aux_win_s_direct": {
+          "n": 362,
+          "mean": 0.953661,
+          "std": 0.159563,
+          "min": 0.001484,
+          "q25": 0.997885,
+          "median": 0.999842,
+          "q75": 0.999949,
+          "p95": 0.999979,
+          "max": 0.99999,
+          "sum": 345.225412
+        },
+        "delta_aux_win_two_step_minus_direct": {
+          "n": 362,
+          "mean": 0.008227,
+          "std": 0.041023,
+          "min": -0.254785,
+          "q25": 0.0,
+          "median": 2.2e-05,
+          "q75": 0.000379,
+          "p95": 0.059664,
+          "max": 0.381404,
+          "sum": 2.978069
+        },
+        "p_ritual_s_prime_ablate_no_gain_preview": {
+          "n": 362,
+          "mean": 0.563973,
+          "std": 0.409213,
+          "min": 0.0,
+          "q25": 0.089646,
+          "median": 0.66025,
+          "q75": 0.99133,
+          "p95": 1.0,
+          "max": 1.0,
+          "sum": 204.158203
+        },
+        "p_ritual_s_prime_ablate_no_glow": {
+          "n": 362,
+          "mean": 0.11577,
+          "std": 0.257942,
+          "min": 0.0,
+          "q25": 3e-06,
+          "median": 0.001228,
+          "q75": 0.044056,
+          "p95": 0.881048,
+          "max": 0.999997,
+          "sum": 41.908581
+        },
+        "p_ritual_s_prime_ablate_no_both": {
+          "n": 362,
+          "mean": 0.067205,
+          "std": 0.174004,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 9.8e-05,
+          "q75": 0.020904,
+          "p95": 0.421338,
+          "max": 0.999842,
+          "sum": 24.328121
+        },
+        "p_ritual_s_spoof_gain_preview": {
+          "n": 362,
+          "mean": 0.058116,
+          "std": 0.169034,
+          "min": 0.0,
+          "q25": 4e-06,
+          "median": 0.000641,
+          "q75": 0.017071,
+          "p95": 0.339796,
+          "max": 0.997795,
+          "sum": 21.037822
+        },
+        "p_ritual_s_spoof_glow": {
+          "n": 362,
+          "mean": 0.557119,
+          "std": 0.391136,
+          "min": 0.0,
+          "q25": 0.139471,
+          "median": 0.605681,
+          "q75": 0.980737,
+          "p95": 0.999991,
+          "max": 1.0,
+          "sum": 201.676925
+        },
+        "p_ritual_s_spoof_both": {
+          "n": 362,
+          "mean": 0.605503,
+          "std": 0.403473,
+          "min": 0.0,
+          "q25": 0.169678,
+          "median": 0.788637,
+          "q75": 0.997261,
+          "p95": 0.999999,
+          "max": 1.0,
+          "sum": 219.192261
+        }
+      }
+    },
+    "our_minimal_agent_comparison_ref": {
+      "ctl_c": {
+        "runs": 72,
+        "complete_points": 320,
+        "greedy_any_exhaust_eligible_pct": 33.15,
+        "greedy_any_exhaust_complete_pct": 32.81,
+        "greedy_selected_exhaust_complete_pct": 32.19,
+        "p_ritual_s": {
+          "mean": 0.078,
+          "q25": 0.0002,
+          "median": 0.0234,
+          "q75": 0.127
+        },
+        "p_ritual_s_prime": {
+          "mean": 0.3763,
+          "q25": 0.1293,
+          "median": 0.2581,
+          "q75": 0.5863
+        },
+        "delta_v": {
+          "mean": 0.0129,
+          "q25": -0.0013,
+          "median": 0.0054,
+          "q75": 0.0177
+        }
+      },
+      "iron_avg39800": {
+        "runs": 108,
+        "complete_points": 364,
+        "greedy_any_exhaust_eligible_pct": 31.19,
+        "greedy_any_exhaust_complete_pct": 30.49,
+        "greedy_selected_exhaust_complete_pct": 29.12,
+        "p_ritual_s": {
+          "mean": 0.0532,
+          "q25": 0.0,
+          "median": 0.002,
+          "q75": 0.0693
+        },
+        "p_ritual_s_prime": {
+          "mean": 0.3195,
+          "q25": 0.0819,
+          "median": 0.2135,
+          "q75": 0.4462
+        },
+        "delta_v": {
+          "mean": 0.0256,
+          "q25": -0.0004,
+          "median": 0.009,
+          "q75": 0.0292
+        }
+      },
+      "exh3_c": {
+        "runs": 96,
+        "complete_points": 362,
+        "greedy_any_exhaust_eligible_pct": 37.47,
+        "greedy_any_exhaust_complete_pct": 39.5,
+        "greedy_selected_exhaust_complete_pct": 38.12,
+        "p_ritual_s": {
+          "mean": 0.0649,
+          "q25": 0.0001,
+          "median": 0.0073,
+          "q75": 0.0893
+        },
+        "p_ritual_s_prime": {
+          "mean": 0.5261,
+          "q25": 0.2295,
+          "median": 0.466,
+          "q75": 0.9039
+        },
+        "delta_v": {
+          "mean": 0.0173,
+          "q25": -0.0021,
+          "median": 0.0078,
+          "q75": 0.0213
+        }
+      }
+    }
+  }
+}

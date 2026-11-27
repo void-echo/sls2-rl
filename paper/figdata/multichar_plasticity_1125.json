@@ -1,0 +1,5667 @@
+{
+  "experiment": "Multi-character plasticity diagnostics across all 5 main characters (4.01B-6.68B env steps) plus Fool (1.66B steps)",
+  "protocol": {
+    "tool": "tools/plasticity.py (via character-parameterized wrapper run_plast_char.py)",
+    "engine": "v0.113.1 (engine_v3)",
+    "n_states_per_character": 4096,
+    "ascension_cycle": [
+      0,
+      10
+    ],
+    "sampling": "uniform reservoir over all decisions with policy stochastic rollouts (greedy=False), seed=0",
+    "probe_steps": 1000,
+    "probe_batch_size": 256,
+    "probe_optimizer": "AdamW(lr=1e-4, eps=1e-5, weight_decay=0), fp32 (TF32 disabled)",
+    "dormant_thresholds": [
+      0.025,
+      0.1
+    ],
+    "srank_delta": 0.01
+  },
+  "aggregate_5char": {
+    "n_characters": 5,
+    "env_steps_billions_range": [
+      4.011,
+      6.685
+    ],
+    "total_env_steps_billions_sum": 24.596,
+    "dormant_le_0_1_max": 0.004464285714285714,
+    "dormant_le_0_1_mean": 0.003069196428571429,
+    "attention_entropy_range": [
+      0.8545252680778503,
+      0.8647672235965729
+    ],
+    "srank_g_range": [
+      229,
+      231
+    ],
+    "srank_candidates_range": [
+      239,
+      240
+    ],
+    "smooth_probe_mse_range": [
+      0.0003006654733326286,
+      0.0011244775960221887
+    ],
+    "memory_probe_mse_range": [
+      0.04795738309621811,
+      0.0660952776670456
+    ],
+    "random_memory_probe_mse_range": [
+      0.22644565999507904,
+      0.2987249195575714
+    ]
+  },
+  "summary_table": [
+    {
+      "character": "Ironclad",
+      "is_five_main_characters": true,
+      "training_regime": "asynchronous 2-GPU PPO (64x8), step-KL target 0.00077, single epoch, A10",
+      "checkpoint": "ckpt_051000.pt",
+      "update": 51000,
+      "env_steps": 6684672000,
+      "env_steps_billions": 6.685,
+      "n_states": 4096,
+      "combat_states": 2847,
+      "build_states": 1249,
+      "non_embedding_norm": 131.85205277970616,
+      "random_non_embedding_norm": 128.19473770688697,
+      "blocks_norm": 76.1004251813947,
+      "blocks_non_ln_norm": 60.530912757698225,
+      "dormant_le_0_1": 0.0016741071428571428,
+      "dormant_le_0_025": 0.0,
+      "dormant_by_kind_le_0_1": {
+        "blocks": 0.0,
+        "cand_blocks": 0.0,
+        "logit": 0.00390625,
+        "value": 0.0078125
+      },
+      "attention_entropy": 0.8647672235965729,
+      "random_attention_entropy": 0.9893037527799606,
+      "srank_g": 231,
+      "random_srank_g": 187,
+      "srank_candidates": 240,
+      "random_srank_candidates": 236,
+      "srank_value_hidden": 228,
+      "erank_g": 90.86345672607422,
+      "residual_norm_last_block": 26.76142120361328,
+      "smooth_probe_mse_1000": 0.0006929956725798547,
+      "random_smooth_probe_mse_1000": 0.0014764120569452643,
+      "memory_probe_mse_1000": 0.04795738309621811,
+      "random_memory_probe_mse_1000": 0.22644565999507904
+    },
+    {
+      "character": "Silent",
+      "is_five_main_characters": true,
+      "training_regime": "synchronous 1-GPU PPO (32x8), approx-KL target 0.0005, single epoch, A10",
+      "checkpoint": "silent_ckpt_039500.pt",
+      "update": 39500,
+      "env_steps": 5177344000,
+      "env_steps_billions": 5.177,
+      "n_states": 4096,
+      "combat_states": 3210,
+      "build_states": 886,
+      "non_embedding_norm": 132.20907365222254,
+      "random_non_embedding_norm": 128.19473770688697,
+      "blocks_norm": 76.49011667461627,
+      "blocks_non_ln_norm": 61.010275997215935,
+      "dormant_le_0_1": 0.004464285714285714,
+      "dormant_le_0_025": 0.0,
+      "dormant_by_kind_le_0_1": {
+        "blocks": 0.0,
+        "cand_blocks": 0.0,
+        "logit": 0.0078125,
+        "value": 0.0234375
+      },
+      "attention_entropy": 0.8545252680778503,
+      "random_attention_entropy": 0.9887671023607254,
+      "srank_g": 230,
+      "random_srank_g": 185,
+      "srank_candidates": 239,
+      "random_srank_candidates": 235,
+      "srank_value_hidden": 224,
+      "erank_g": 85.75244903564453,
+      "residual_norm_last_block": 27.128738403320312,
+      "smooth_probe_mse_1000": 0.0011244775960221887,
+      "random_smooth_probe_mse_1000": 0.0016316348919644952,
+      "memory_probe_mse_1000": 0.0660952776670456,
+      "random_memory_probe_mse_1000": 0.29775312542915344,
+      "avg_ckpt_comparison": {
+        "checkpoint": "silent_v113.pt",
+        "update": 39000,
+        "env_steps": 5111808000,
+        "non_embedding_norm": 132.19576533399913,
+        "dormant_le_0_1": 0.00390625,
+        "attention_entropy": 0.8537529408931732,
+        "srank_g": 230,
+        "srank_candidates": 239,
+        "smooth_probe_mse_1000": 0.0009876493131741881,
+        "memory_probe_mse_1000": 0.052209511399269104
+      }
+    },
+    {
+      "character": "Necrobinder",
+      "is_five_main_characters": true,
+      "training_regime": "synchronous 1-GPU PPO (32x8), approx-KL target 0.0005, single epoch, A10",
+      "checkpoint": "necro_ckpt_035700.pt",
+      "update": 35700,
+      "env_steps": 4679270400,
+      "env_steps_billions": 4.679,
+      "n_states": 4096,
+      "combat_states": 3127,
+      "build_states": 969,
+      "non_embedding_norm": 132.12633602255906,
+      "random_non_embedding_norm": 128.19473770688697,
+      "blocks_norm": 76.39321481736023,
+      "blocks_non_ln_norm": 60.89192524527448,
+      "dormant_le_0_1": 0.0034877232142857145,
+      "dormant_le_0_025": 0.0,
+      "dormant_by_kind_le_0_1": {
+        "blocks": 0.0,
+        "cand_blocks": 0.0009765625,
+        "logit": 0.0078125,
+        "value": 0.015625
+      },
+      "attention_entropy": 0.8604595065116882,
+      "random_attention_entropy": 0.9890017956495285,
+      "srank_g": 231,
+      "random_srank_g": 185,
+      "srank_candidates": 239,
+      "random_srank_candidates": 235,
+      "srank_value_hidden": 224,
+      "erank_g": 88.73703002929688,
+      "residual_norm_last_block": 26.92288589477539,
+      "smooth_probe_mse_1000": 0.00031457291333936155,
+      "random_smooth_probe_mse_1000": 0.0005500608240254223,
+      "memory_probe_mse_1000": 0.05487319827079773,
+      "random_memory_probe_mse_1000": 0.25269612669944763,
+      "avg_ckpt_comparison": {
+        "checkpoint": "necro_v113.pt",
+        "update": 35200,
+        "env_steps": 4613734400,
+        "non_embedding_norm": 132.11576959338137,
+        "dormant_le_0_1": 0.004045758928571429,
+        "attention_entropy": 0.8612655997276306,
+        "srank_g": 231,
+        "srank_candidates": 239,
+        "smooth_probe_mse_1000": 0.00033516145776957273,
+        "memory_probe_mse_1000": 0.05541060492396355
+      }
+    },
+    {
+      "character": "Regent",
+      "is_five_main_characters": true,
+      "training_regime": "synchronous 1-GPU PPO (28x8), approx-KL target 0.0005, single epoch, A10",
+      "checkpoint": "regent_ckpt_030850.pt",
+      "update": 30850,
+      "env_steps": 4043571200,
+      "env_steps_billions": 4.044,
+      "n_states": 4096,
+      "combat_states": 3055,
+      "build_states": 1041,
+      "non_embedding_norm": 132.02122844284438,
+      "random_non_embedding_norm": 128.19473770688697,
+      "blocks_norm": 76.25716247300554,
+      "blocks_non_ln_norm": 60.75563006727278,
+      "dormant_le_0_1": 0.004045758928571429,
+      "dormant_le_0_025": 0.0,
+      "dormant_by_kind_le_0_1": {
+        "blocks": 0.0,
+        "cand_blocks": 0.0009765625,
+        "logit": 0.0078125,
+        "value": 0.01953125
+      },
+      "attention_entropy": 0.860311895608902,
+      "random_attention_entropy": 0.9893943220376968,
+      "srank_g": 230,
+      "random_srank_g": 184,
+      "srank_candidates": 239,
+      "random_srank_candidates": 236,
+      "srank_value_hidden": 223,
+      "erank_g": 85.70016479492188,
+      "residual_norm_last_block": 27.007936477661133,
+      "smooth_probe_mse_1000": 0.0003006654733326286,
+      "random_smooth_probe_mse_1000": 0.00040810168138705194,
+      "memory_probe_mse_1000": 0.050847023725509644,
+      "random_memory_probe_mse_1000": 0.25282105803489685,
+      "avg_ckpt_comparison": {
+        "checkpoint": "regent_v113.pt",
+        "update": 30500,
+        "env_steps": 3997696000,
+        "non_embedding_norm": 132.01058313438858,
+        "dormant_le_0_1": 0.004045758928571429,
+        "attention_entropy": 0.8593867421150208,
+        "srank_g": 229,
+        "srank_candidates": 239,
+        "smooth_probe_mse_1000": 0.0003408926131669432,
+        "memory_probe_mse_1000": 0.0506901741027832
+      }
+    },
+    {
+      "character": "Defect",
+      "is_five_main_characters": true,
+      "training_regime": "synchronous 1-GPU PPO (28x8), approx-KL target 0.0005, single epoch, A10",
+      "checkpoint": "defect_ckpt_030600.pt",
+      "update": 30600,
+      "env_steps": 4010803200,
+      "env_steps_billions": 4.011,
+      "n_states": 4096,
+      "combat_states": 3034,
+      "build_states": 1062,
+      "non_embedding_norm": 132.02898313673177,
+      "random_non_embedding_norm": 128.19473770688697,
+      "blocks_norm": 76.2615181174358,
+      "blocks_non_ln_norm": 60.778143996908206,
+      "dormant_le_0_1": 0.0016741071428571428,
+      "dormant_le_0_025": 0.0,
+      "dormant_by_kind_le_0_1": {
+        "blocks": 0.0,
+        "cand_blocks": 0.0,
+        "logit": 0.0078125,
+        "value": 0.00390625
+      },
+      "attention_entropy": 0.8644411265850067,
+      "random_attention_entropy": 0.9893458932638168,
+      "srank_g": 229,
+      "random_srank_g": 181,
+      "srank_candidates": 239,
+      "random_srank_candidates": 235,
+      "srank_value_hidden": 228,
+      "erank_g": 86.20280456542969,
+      "residual_norm_last_block": 27.485492706298828,
+      "smooth_probe_mse_1000": 0.00031296350061893463,
+      "random_smooth_probe_mse_1000": 0.0004317371058277786,
+      "memory_probe_mse_1000": 0.060408882796764374,
+      "random_memory_probe_mse_1000": 0.2987249195575714,
+      "avg_ckpt_comparison": {
+        "checkpoint": "defect_v113.pt",
+        "update": 30250,
+        "env_steps": 3964928000,
+        "non_embedding_norm": 132.0188554769485,
+        "dormant_le_0_1": 0.0011160714285714285,
+        "attention_entropy": 0.8630200177431107,
+        "srank_g": 229,
+        "srank_candidates": 239,
+        "smooth_probe_mse_1000": 0.0003008087514899671,
+        "memory_probe_mse_1000": 0.06840889900922775
+      }
+    },
+    {
+      "character": "Fool",
+      "is_five_main_characters": false,
+      "training_regime": "synchronous 1-GPU PPO (24x8), approx-KL target 0.0005, single epoch, A10 (forked from 5-char joint u8325)",
+      "checkpoint": "fool_ckpt_012650.pt",
+      "update": 12650,
+      "env_steps": 1658060800,
+      "env_steps_billions": 1.658,
+      "n_states": 4096,
+      "combat_states": 2892,
+      "build_states": 1204,
+      "non_embedding_norm": 131.8759258896182,
+      "random_non_embedding_norm": 128.19473770688697,
+      "blocks_norm": 76.07205960611977,
+      "blocks_non_ln_norm": 60.57411040978266,
+      "dormant_le_0_1": 0.0,
+      "dormant_le_0_025": 0.0,
+      "dormant_by_kind_le_0_1": {
+        "blocks": 0.0,
+        "cand_blocks": 0.0,
+        "logit": 0.0,
+        "value": 0.0
+      },
+      "attention_entropy": 0.8544380962848663,
+      "random_attention_entropy": 0.9889898151159286,
+      "srank_g": 230,
+      "random_srank_g": 187,
+      "srank_candidates": 239,
+      "random_srank_candidates": 236,
+      "srank_value_hidden": 232,
+      "erank_g": 88.21658325195312,
+      "residual_norm_last_block": 28.301021575927734,
+      "smooth_probe_mse_1000": 0.0003864858881570399,
+      "random_smooth_probe_mse_1000": 0.0004036503378301859,
+      "memory_probe_mse_1000": 0.050118327140808105,
+      "random_memory_probe_mse_1000": 0.1864122599363327
+    }
+  ],
+  "historical_high_kl_aged_controls_a0_a9": [
+    {
+      "ckpt": "random",
+      "group": "random",
+      "env_steps_M": "0",
+      "a0_win": "",
+      "blocks_norm": "55.49",
+      "non_table_norm": "128.19",
+      "dormant_025": "0.0",
+      "dormant_01": "0.0",
+      "attn_entropy": "0.9889",
+      "resid_norm_L3": "20.1",
+      "g_srank": "201",
+      "g_erank": "23.7",
+      "cand_srank": "237",
+      "policy_entropy": "1.73",
+      "probe_smooth_100": "0.01112",
+      "probe_smooth_1000": "0.00098",
+      "probe_memory_300": "0.85662",
+      "probe_memory_1000": "0.04181"
+    },
+    {
+      "ckpt": "boss_g1_013200",
+      "group": "lineage",
+      "env_steps_M": "433",
+      "a0_win": "0.705",
+      "blocks_norm": "174.2",
+      "non_table_norm": "253.23",
+      "dormant_025": "0.3178",
+      "dormant_01": "0.4595",
+      "attn_entropy": "0.0128",
+      "resid_norm_L3": "823.3",
+      "g_srank": "198",
+      "g_erank": "43.5",
+      "cand_srank": "189",
+      "policy_entropy": "0.542",
+      "probe_smooth_100": "0.48146",
+      "probe_smooth_1000": "0.02062",
+      "probe_memory_300": "0.98356",
+      "probe_memory_1000": "0.62209"
+    },
+    {
+      "ckpt": "mg_011800",
+      "group": "lineage",
+      "env_steps_M": "743",
+      "a0_win": "0.9",
+      "blocks_norm": "162.77",
+      "non_table_norm": "238.1",
+      "dormant_025": "0.257",
+      "dormant_01": "0.4326",
+      "attn_entropy": "0.0146",
+      "resid_norm_L3": "628.7",
+      "g_srank": "205",
+      "g_erank": "49.9",
+      "cand_srank": "195",
+      "policy_entropy": "0.65",
+      "probe_smooth_100": "0.43764",
+      "probe_smooth_1000": "0.01324",
+      "probe_memory_300": "0.96727",
+      "probe_memory_1000": "0.40856"
+    },
+    {
+      "ckpt": "kd_same_000600",
+      "group": "student",
+      "env_steps_M": "79",
+      "a0_win": "0.915",
+      "blocks_norm": "61.53",
+      "non_table_norm": "133.57",
+      "dormant_025": "0.0",
+      "dormant_01": "0.0045",
+      "attn_entropy": "0.6915",
+      "resid_norm_L3": "47.0",
+      "g_srank": "231",
+      "g_erank": "85.3",
+      "cand_srank": "236",
+      "policy_entropy": "0.701",
+      "probe_smooth_100": "0.027",
+      "probe_smooth_1000": "0.00095",
+      "probe_memory_300": "0.33849",
+      "probe_memory_1000": "0.00734"
+    }
+  ],
+  "by_character": {
+    "Ironclad": {
+      "character": "Ironclad",
+      "training_regime": "asynchronous 2-GPU PPO (64x8), step-KL target 0.00077, single epoch, A10",
+      "n_states": 4096,
+      "decision_counts": {
+        "combat": 2847,
+        "build": 1249
+      },
+      "ascension_counts": {
+        "0": 1829,
+        "10": 2267
+      },
+      "primary_checkpoint": "ckpt_051000.pt",
+      "checkpoints": [
+        {
+          "checkpoint": "random",
+          "checkpoint_path": "random",
+          "update": null,
+          "env_steps": null,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 81.92988586425781,
+            "total": 152.13939980645335,
+            "type_emb": 78.60938262939453,
+            "non_embedding": 128.19473770688697,
+            "tok_in": 29.217724687271506,
+            "blocks": 71.60660070026253,
+            "blocks_layernorm": 45.254833995939045,
+            "blocks_non_layernorm": 55.4932902596957,
+            "ln_f": 16.0,
+            "cand_in": 29.213790455169462,
+            "ref_primary": 9.295297999661386,
+            "ref_target": 9.285262371758225,
+            "ref_member": 9.238424265074245,
+            "ref_global": 9.2582658688324,
+            "cand_blocks": 43.3660870391171,
+            "logit": 18.496516595920138,
+            "value": 24.441935737060284
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 187,
+              "entropy_rank": 20.616718292236328,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 198,
+              "entropy_rank": 28.75873565673828,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 236,
+              "entropy_rank": 90.8962173461914,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.9893037527799606,
+          "attention_entropy_by_block": {
+            "0": 0.9886078834533691,
+            "1": 0.9886808395385742,
+            "2": 0.9893558621406555,
+            "3": 0.9905704259872437
+          },
+          "residual_norm_by_block": {
+            "0": 18.951745986938477,
+            "1": 19.376760482788086,
+            "2": 19.800395965576172,
+            "3": 20.075347900390625
+          },
+          "policy_entropy": 1.8157988786697388,
+          "value_std": 0.06917792558670044,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 2847,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 177,
+                  "entropy_rank": 15.645529747009277,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 187,
+                  "entropy_rank": 23.16899871826172,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 230,
+                  "entropy_rank": 71.61903381347656,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.959954023361206,
+              "value_std": 0.07706394791603088
+            },
+            "build": {
+              "n_states": 1249,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 154,
+                  "entropy_rank": 14.930545806884766,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 169,
+                  "entropy_rank": 17.689619064331055,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6992,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 234,
+                  "entropy_rank": 89.05821228027344,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.4872082471847534,
+              "value_std": 0.039986781775951385
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0894399881362915,
+                "100": 0.008120885118842125,
+                "300": 0.0020553332287818193,
+                "1000": 0.0014764120569452643
+              },
+              "final_mse": 0.0014764120569452643,
+              "target_mean": -2.3632310330867767e-08,
+              "target_std": 0.9999999403953552
+            },
+            "memory": {
+              "mse": {
+                "0": 1.063254475593567,
+                "100": 1.0277982950210571,
+                "300": 0.9429980516433716,
+                "1000": 0.22644565999507904
+              },
+              "final_mse": 0.22644565999507904,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "ckpt_040000.pt",
+          "checkpoint_path": "runs/v3_iron/eval_ckpts/ckpt_040000.pt",
+          "update": 40000,
+          "env_steps": 5242880000,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.32111358642578,
+            "total": 156.41312870278023,
+            "type_emb": 77.48442077636719,
+            "non_embedding": 131.73844022963684,
+            "tok_in": 30.082924385881295,
+            "blocks": 75.9577828547523,
+            "blocks_layernorm": 46.07670748849861,
+            "blocks_non_layernorm": 60.38643724570144,
+            "ln_f": 16.240192213803624,
+            "cand_in": 28.80365404299181,
+            "ref_primary": 10.184603748930465,
+            "ref_target": 10.17184408087829,
+            "ref_member": 9.81973289150813,
+            "ref_global": 9.770257848167796,
+            "cand_blocks": 46.53209479405058,
+            "logit": 19.785183916261612,
+            "value": 25.04900635496295
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0011160714285714285
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 231,
+              "entropy_rank": 90.18563842773438,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 229,
+              "entropy_rank": 73.58147430419922,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 240,
+              "entropy_rank": 120.57662200927734,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8638002872467041,
+          "attention_entropy_by_block": {
+            "0": 0.8323578238487244,
+            "1": 0.8644764423370361,
+            "2": 0.8835659027099609,
+            "3": 0.874800980091095
+          },
+          "residual_norm_by_block": {
+            "0": 23.516332626342773,
+            "1": 24.235448837280273,
+            "2": 25.25127601623535,
+            "3": 27.065153121948242
+          },
+          "policy_entropy": 0.7329986095428467,
+          "value_std": 0.8643800616264343,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 2847,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.005719866071428571
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0009765625
+                },
+                "logit": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.03515625
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.00390625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 227,
+                  "entropy_rank": 82.18162536621094,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 225,
+                  "entropy_rank": 67.91033935546875,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 238,
+                  "entropy_rank": 111.99298858642578,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.9237231612205505,
+              "value_std": 0.8869895339012146
+            },
+            "build": {
+              "n_states": 1249,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0027901785714285715
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.01953125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 216,
+                  "entropy_rank": 68.9236831665039,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 210,
+                  "entropy_rank": 51.66925048828125,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6992,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 236,
+                  "entropy_rank": 102.1866455078125,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.29825642704963684,
+              "value_std": 0.7958789467811584
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0164934396743774,
+                "100": 0.0075011178851127625,
+                "300": 0.001809893292374909,
+                "1000": 0.0008024428389035165
+              },
+              "final_mse": 0.0008024428389035165,
+              "target_mean": -2.3632310330867767e-08,
+              "target_std": 0.9999999403953552
+            },
+            "memory": {
+              "mse": {
+                "0": 1.8425217866897583,
+                "100": 1.0061767101287842,
+                "300": 0.5825471878051758,
+                "1000": 0.04795052111148834
+              },
+              "final_mse": 0.04795052111148834,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "ckpt_051000.pt",
+          "checkpoint_path": "runs/v3_iron/eval_ckpts/ckpt_051000.pt",
+          "update": 51000,
+          "env_steps": 6684672000,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.35855865478516,
+            "total": 156.52900766482628,
+            "type_emb": 77.47938537597656,
+            "non_embedding": 131.85205277970616,
+            "tok_in": 30.076121693313453,
+            "blocks": 76.1004251813947,
+            "blocks_layernorm": 46.12248164950556,
+            "blocks_non_layernorm": 60.530912757698225,
+            "ln_f": 16.244710284077453,
+            "cand_in": 28.795254858662076,
+            "ref_primary": 10.202795638309901,
+            "ref_target": 10.17364426770141,
+            "ref_member": 9.829175972227722,
+            "ref_global": 9.770012463280615,
+            "cand_blocks": 46.587761297388035,
+            "logit": 19.81641515388638,
+            "value": 25.10433842769501
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0016741071428571428
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 231,
+              "entropy_rank": 90.86345672607422,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 228,
+              "entropy_rank": 71.5661849975586,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 240,
+              "entropy_rank": 121.73011779785156,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8647672235965729,
+          "attention_entropy_by_block": {
+            "0": 0.8337411284446716,
+            "1": 0.8646242618560791,
+            "2": 0.8827680945396423,
+            "3": 0.8779354095458984
+          },
+          "residual_norm_by_block": {
+            "0": 23.230154037475586,
+            "1": 23.88483428955078,
+            "2": 24.905624389648438,
+            "3": 26.76142120361328
+          },
+          "policy_entropy": 0.7803877592086792,
+          "value_std": 0.865001916885376,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 2847,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.005719866071428571
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0009765625
+                },
+                "logit": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.03515625
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.00390625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 227,
+                  "entropy_rank": 82.73081970214844,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 224,
+                  "entropy_rank": 66.0189208984375,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 238,
+                  "entropy_rank": 113.1794204711914,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.9782876968383789,
+              "value_std": 0.8879590630531311
+            },
+            "build": {
+              "n_states": 1249,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0033482142857142855
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0234375
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 216,
+                  "entropy_rank": 69.24813079833984,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 207,
+                  "entropy_rank": 49.890201568603516,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6992,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 236,
+                  "entropy_rank": 102.90760040283203,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.32929015159606934,
+              "value_std": 0.7931650280952454
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 0.9767396450042725,
+                "100": 0.007064024452120066,
+                "300": 0.0017786581302061677,
+                "1000": 0.0006929956725798547
+              },
+              "final_mse": 0.0006929956725798547,
+              "target_mean": -2.3632310330867767e-08,
+              "target_std": 0.9999999403953552
+            },
+            "memory": {
+              "mse": {
+                "0": 1.8339797258377075,
+                "100": 1.007312297821045,
+                "300": 0.5572142601013184,
+                "1000": 0.04795738309621811
+              },
+              "final_mse": 0.04795738309621811,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "young_kd.pt",
+          "checkpoint_path": "runs/plast1125/young_kd.pt",
+          "update": 3500,
+          "env_steps": 458752000,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 83.45780944824219,
+            "total": 154.7639003925937,
+            "type_emb": 77.68614196777344,
+            "non_embedding": 130.33287730588003,
+            "tok_in": 29.880727997724502,
+            "blocks": 74.34698769164164,
+            "blocks_layernorm": 45.82697144491195,
+            "blocks_non_layernorm": 58.54368682452737,
+            "ln_f": 16.171374496464647,
+            "cand_in": 28.855963544198676,
+            "ref_primary": 9.866149913547575,
+            "ref_target": 9.852013931763544,
+            "ref_member": 9.473800626973347,
+            "ref_global": 9.48699850720152,
+            "cand_blocks": 45.608605746919444,
+            "logit": 19.336106600830497,
+            "value": 24.67429259468706
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 231,
+              "entropy_rank": 92.37012481689453,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 233,
+              "entropy_rank": 91.47289276123047,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 240,
+              "entropy_rank": 125.98406219482422,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.9176153242588043,
+          "attention_entropy_by_block": {
+            "0": 0.919800877571106,
+            "1": 0.9261414408683777,
+            "2": 0.9099803566932678,
+            "3": 0.9145386219024658
+          },
+          "residual_norm_by_block": {
+            "0": 21.80577850341797,
+            "1": 22.589088439941406,
+            "2": 23.3496036529541,
+            "3": 24.679473876953125
+          },
+          "policy_entropy": 0.6546232104301453,
+          "value_std": 0.8310987949371338,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 2847,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0005580357142857143
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.00390625
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 227,
+                  "entropy_rank": 85.34420013427734,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 231,
+                  "entropy_rank": 85.05769348144531,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 239,
+                  "entropy_rank": 117.97992706298828,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.8425342440605164,
+              "value_std": 0.8562113642692566
+            },
+            "build": {
+              "n_states": 1249,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0011160714285714285
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0078125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 216,
+                  "entropy_rank": 69.55132293701172,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 218,
+                  "entropy_rank": 69.96184539794922,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6992,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 105.36119842529297,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.2262943685054779,
+              "value_std": 0.7566441893577576
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.2967287302017212,
+                "100": 0.007564901374280453,
+                "300": 0.0019309950293973088,
+                "1000": 0.00036155953421257436
+              },
+              "final_mse": 0.00036155953421257436,
+              "target_mean": -2.3632310330867767e-08,
+              "target_std": 0.9999999403953552
+            },
+            "memory": {
+              "mse": {
+                "0": 1.9241979122161865,
+                "100": 0.9920940399169922,
+                "300": 0.5173137784004211,
+                "1000": 0.048003967851400375
+              },
+              "final_mse": 0.048003967851400375,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "ckpt_026700_enc2.pt",
+          "checkpoint_path": "runs/plast1125/ckpt_026700_enc2.pt",
+          "update": 26700,
+          "env_steps": 3499622400,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.2665786743164,
+            "total": 156.24787117206944,
+            "type_emb": 77.49046325683594,
+            "non_embedding": 131.5771293361003,
+            "tok_in": 30.09235165664642,
+            "blocks": 75.75400469347029,
+            "blocks_layernorm": 46.00958340070324,
+            "blocks_non_layernorm": 60.181288307845755,
+            "ln_f": 16.234130688934485,
+            "cand_in": 28.821304229717523,
+            "ref_primary": 10.158825334972033,
+            "ref_target": 10.163850980918758,
+            "ref_member": 9.812994526966039,
+            "ref_global": 9.770896053652397,
+            "cand_blocks": 46.45809436144741,
+            "logit": 19.729907738048873,
+            "value": 24.96880003607479
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0011160714285714285
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 231,
+              "entropy_rank": 89.55415344238281,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 229,
+              "entropy_rank": 76.47582244873047,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 240,
+              "entropy_rank": 120.17786407470703,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8666181862354279,
+          "attention_entropy_by_block": {
+            "0": 0.8371509313583374,
+            "1": 0.8664284348487854,
+            "2": 0.8840911984443665,
+            "3": 0.8788021802902222
+          },
+          "residual_norm_by_block": {
+            "0": 23.874738693237305,
+            "1": 24.640933990478516,
+            "2": 25.70549964904785,
+            "3": 27.56478500366211
+          },
+          "policy_entropy": 0.6795802712440491,
+          "value_std": 0.8748952746391296,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 2847,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.006417410714285714
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.001953125
+                },
+                "logit": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.0390625
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.00390625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 226,
+                  "entropy_rank": 81.62226104736328,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 2847,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 226,
+                  "entropy_rank": 70.76753997802734,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 238,
+                  "entropy_rank": 111.60914611816406,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.8512759208679199,
+              "value_std": 0.8959888219833374
+            },
+            "build": {
+              "n_states": 1249,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0016741071428571428
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.01171875
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 216,
+                  "entropy_rank": 68.35649871826172,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1249,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 210,
+                  "entropy_rank": 54.2961311340332,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6992,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 236,
+                  "entropy_rank": 102.39105987548828,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.2882130444049835,
+              "value_std": 0.809303879737854
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.1088742017745972,
+                "100": 0.007755909580737352,
+                "300": 0.0018645506352186203,
+                "1000": 0.0003301466640550643
+              },
+              "final_mse": 0.0003301466640550643,
+              "target_mean": -8.149072527885437e-09,
+              "target_std": 0.9999999403953552
+            },
+            "memory": {
+              "mse": {
+                "0": 1.897818684577942,
+                "100": 1.00730299949646,
+                "300": 0.5807048678398132,
+                "1000": 0.054398003965616226
+              },
+              "final_mse": 0.054398003965616226,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        }
+      ]
+    },
+    "Defect": {
+      "character": "Defect",
+      "training_regime": "synchronous 1-GPU PPO (28x8), approx-KL target 0.0005, single epoch, A10",
+      "n_states": 4096,
+      "n_seen": 4767,
+      "n_episodes": 6,
+      "decision_counts": {
+        "combat": 3034,
+        "build": 1062
+      },
+      "ascension_counts": {
+        "0": 1763,
+        "10": 2333
+      },
+      "primary_checkpoint": "defect_ckpt_030600.pt",
+      "checkpoints": [
+        {
+          "checkpoint": "random",
+          "checkpoint_path": "random",
+          "update": null,
+          "env_steps": 0,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 81.92988586425781,
+            "total": 152.13939980645335,
+            "type_emb": 78.60938262939453,
+            "non_embedding": 128.19473770688697,
+            "tok_in": 29.217724687271506,
+            "blocks": 71.60660070026253,
+            "blocks_layernorm": 45.254833995939045,
+            "blocks_non_layernorm": 55.4932902596957,
+            "ln_f": 16.0,
+            "cand_in": 29.213790455169462,
+            "ref_primary": 9.295297999661386,
+            "ref_target": 9.285262371758225,
+            "ref_member": 9.238424265074245,
+            "ref_global": 9.2582658688324,
+            "cand_blocks": 43.3660870391171,
+            "logit": 18.496516595920138,
+            "value": 24.441935737060284
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 181,
+              "entropy_rank": 19.378047943115234,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 195,
+              "entropy_rank": 27.29253387451172,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 235,
+              "entropy_rank": 89.73612213134766,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.9893458932638168,
+          "attention_entropy_by_block": {
+            "0": 0.9888929128646851,
+            "1": 0.9886859059333801,
+            "2": 0.9891602396965027,
+            "3": 0.9906445145606995
+          },
+          "residual_norm_by_block": {
+            "0": 18.95497703552246,
+            "1": 19.36305046081543,
+            "2": 19.786212921142578,
+            "3": 20.086589813232422
+          },
+          "policy_entropy": 1.7153382301330566,
+          "value_std": 0.05536280944943428,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3034,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3034,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 171,
+                  "entropy_rank": 14.465113639831543,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3034,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 183,
+                  "entropy_rank": 21.496679306030273,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 229,
+                  "entropy_rank": 69.55152130126953,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.8299182653427124,
+              "value_std": 0.05851973965764046
+            },
+            "build": {
+              "n_states": 1062,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1062,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 146,
+                  "entropy_rank": 14.158711433410645,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1062,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 163,
+                  "entropy_rank": 16.771902084350586,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6116,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 233,
+                  "entropy_rank": 87.70170593261719,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.3879976272583008,
+              "value_std": 0.04229065030813217
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.065535068511963,
+                "100": 0.007464863359928131,
+                "300": 0.004646850284188986,
+                "1000": 0.0004317371058277786
+              },
+              "final_mse": 0.0004317371058277786,
+              "target_mean": -8.218921720981598e-08,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.0573328733444214,
+                "100": 1.0307691097259521,
+                "300": 0.9673389792442322,
+                "1000": 0.2987249195575714
+              },
+              "final_mse": 0.2987249195575714,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "defect_ckpt_030600.pt",
+          "checkpoint_path": "runs/plast5char/ckpts/defect_ckpt_030600.pt",
+          "update": 30600,
+          "env_steps": 4010803200,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.557861328125,
+            "total": 156.78547222401,
+            "type_emb": 77.47953033447266,
+            "non_embedding": 132.02898313673177,
+            "tok_in": 30.159669292300897,
+            "blocks": 76.2615181174358,
+            "blocks_layernorm": 46.06339498850556,
+            "blocks_non_layernorm": 60.778143996908206,
+            "ln_f": 16.245533670128253,
+            "cand_in": 28.83317606622648,
+            "ref_primary": 10.247476033153125,
+            "ref_target": 10.241123507363886,
+            "ref_member": 9.819656045719132,
+            "ref_global": 9.872547598643067,
+            "cand_blocks": 46.65564304426252,
+            "logit": 19.851393606844795,
+            "value": 25.164846331427373
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0016741071428571428
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 229,
+              "entropy_rank": 86.20280456542969,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 228,
+              "entropy_rank": 71.15571594238281,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 113.63236236572266,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8644411265850067,
+          "attention_entropy_by_block": {
+            "0": 0.8198595643043518,
+            "1": 0.8795404434204102,
+            "2": 0.8849380612373352,
+            "3": 0.8734264373779297
+          },
+          "residual_norm_by_block": {
+            "0": 23.591373443603516,
+            "1": 24.395946502685547,
+            "2": 25.543344497680664,
+            "3": 27.485492706298828
+          },
+          "policy_entropy": 0.7596003413200378,
+          "value_std": 0.8880296349525452,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3034,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.009626116071428572
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0009765625
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0625
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.00390625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3034,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 224,
+                  "entropy_rank": 76.93165588378906,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3034,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 223,
+                  "entropy_rank": 65.4472427368164,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 104.68488311767578,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.9086009860038757,
+              "value_std": 0.9063549637794495
+            },
+            "build": {
+              "n_states": 1062,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0027901785714285715
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.01953125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1062,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 211,
+                  "entropy_rank": 63.58481979370117,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1062,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 204,
+                  "entropy_rank": 47.133216857910156,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6116,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 234,
+                  "entropy_rank": 95.3350830078125,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.33392438292503357,
+              "value_std": 0.7870386838912964
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0731971263885498,
+                "100": 0.008064789697527885,
+                "300": 0.0024661754723638296,
+                "1000": 0.00031296350061893463
+              },
+              "final_mse": 0.00031296350061893463,
+              "target_mean": -8.218921720981598e-08,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.876230001449585,
+                "100": 1.0186951160430908,
+                "300": 0.8136141896247864,
+                "1000": 0.060408882796764374
+              },
+              "final_mse": 0.060408882796764374,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "defect_v113.pt",
+          "checkpoint_path": "runs/colab/defect_v113.pt",
+          "update": 30250,
+          "env_steps": 3964928000,
+          "averaged_from": [
+            "ckpt_030100.pt",
+            "ckpt_030150.pt",
+            "ckpt_030200.pt",
+            "ckpt_030250.pt"
+          ],
+          "weight_norms": {
+            "table": 84.55303192138672,
+            "total": 156.77433912647328,
+            "type_emb": 77.4798355102539,
+            "non_embedding": 132.0188554769485,
+            "tok_in": 30.16078820175985,
+            "blocks": 76.24739310068067,
+            "blocks_layernorm": 46.06015913956405,
+            "blocks_non_layernorm": 60.76287266652033,
+            "ln_f": 16.24496981488647,
+            "cand_in": 28.83551648809382,
+            "ref_primary": 10.245225592813155,
+            "ref_target": 10.240354531167695,
+            "ref_member": 9.818272159622536,
+            "ref_global": 9.869544497035129,
+            "cand_blocks": 46.65189875907165,
+            "logit": 19.849647026684345,
+            "value": 25.161182517181498
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0011160714285714285
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.00390625
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 229,
+              "entropy_rank": 85.76663970947266,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 227,
+              "entropy_rank": 70.61699676513672,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 112.86958312988281,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8630200177431107,
+          "attention_entropy_by_block": {
+            "0": 0.8178163766860962,
+            "1": 0.8800806999206543,
+            "2": 0.8827748894691467,
+            "3": 0.8714081048965454
+          },
+          "residual_norm_by_block": {
+            "0": 23.65131187438965,
+            "1": 24.516324996948242,
+            "2": 25.66982650756836,
+            "3": 27.590736389160156
+          },
+          "policy_entropy": 0.7638874650001526,
+          "value_std": 0.8805394768714905,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3034,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.012974330357142858
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0009765625
+                },
+                "logit": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.0859375
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.00390625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3034,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 224,
+                  "entropy_rank": 76.52364349365234,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3034,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 222,
+                  "entropy_rank": 64.68621063232422,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 103.98062896728516,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.9195547699928284,
+              "value_std": 0.8917436599731445
+            },
+            "build": {
+              "n_states": 1062,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.002232142857142857
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.015625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1062,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 210,
+                  "entropy_rank": 63.37837600708008,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1062,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 204,
+                  "entropy_rank": 47.299293518066406,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6116,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 234,
+                  "entropy_rank": 94.39356994628906,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.31916528940200806,
+              "value_std": 0.8031931519508362
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0647145509719849,
+                "100": 0.007822712883353233,
+                "300": 0.0025461516343057156,
+                "1000": 0.0003008087514899671
+              },
+              "final_mse": 0.0003008087514899671,
+              "target_mean": -8.218921720981598e-08,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.8695590496063232,
+                "100": 1.0201289653778076,
+                "300": 0.8256681561470032,
+                "1000": 0.06840889900922775
+              },
+              "final_mse": 0.06840889900922775,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        }
+      ]
+    },
+    "Regent": {
+      "character": "Regent",
+      "training_regime": "synchronous 1-GPU PPO (28x8), approx-KL target 0.0005, single epoch, A10",
+      "n_states": 4096,
+      "n_seen": 4853,
+      "n_episodes": 6,
+      "decision_counts": {
+        "combat": 3055,
+        "build": 1041
+      },
+      "ascension_counts": {
+        "0": 1935,
+        "10": 2161
+      },
+      "primary_checkpoint": "regent_ckpt_030850.pt",
+      "checkpoints": [
+        {
+          "checkpoint": "random",
+          "checkpoint_path": "random",
+          "update": null,
+          "env_steps": 0,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 81.92988586425781,
+            "total": 152.13939980645335,
+            "type_emb": 78.60938262939453,
+            "non_embedding": 128.19473770688697,
+            "tok_in": 29.217724687271506,
+            "blocks": 71.60660070026253,
+            "blocks_layernorm": 45.254833995939045,
+            "blocks_non_layernorm": 55.4932902596957,
+            "ln_f": 16.0,
+            "cand_in": 29.213790455169462,
+            "ref_primary": 9.295297999661386,
+            "ref_target": 9.285262371758225,
+            "ref_member": 9.238424265074245,
+            "ref_global": 9.2582658688324,
+            "cand_blocks": 43.3660870391171,
+            "logit": 18.496516595920138,
+            "value": 24.441935737060284
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 184,
+              "entropy_rank": 19.85682487487793,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 197,
+              "entropy_rank": 28.214582443237305,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 236,
+              "entropy_rank": 90.07251739501953,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.9893943220376968,
+          "attention_entropy_by_block": {
+            "0": 0.9889485239982605,
+            "1": 0.9887248873710632,
+            "2": 0.9892674088478088,
+            "3": 0.9906364679336548
+          },
+          "residual_norm_by_block": {
+            "0": 18.929344177246094,
+            "1": 19.357877731323242,
+            "2": 19.768789291381836,
+            "3": 20.0489444732666
+          },
+          "policy_entropy": 1.7275582551956177,
+          "value_std": 0.05970422551035881,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3055,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3055,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 175,
+                  "entropy_rank": 15.139198303222656,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3055,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 187,
+                  "entropy_rank": 22.812288284301758,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 231,
+                  "entropy_rank": 72.76324462890625,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.8670138120651245,
+              "value_std": 0.06417275220155716
+            },
+            "build": {
+              "n_states": 1041,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1041,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 146,
+                  "entropy_rank": 14.099467277526855,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1041,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 163,
+                  "entropy_rank": 16.66823387145996,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 5044,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 233,
+                  "entropy_rank": 87.77449798583984,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.3183012008666992,
+              "value_std": 0.039000753313302994
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0640363693237305,
+                "100": 0.011089309118688107,
+                "300": 0.0019079616758972406,
+                "1000": 0.00040810168138705194
+              },
+              "final_mse": 0.00040810168138705194,
+              "target_mean": -1.2852251529693604e-07,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.054922342300415,
+                "100": 1.027448296546936,
+                "300": 0.9655944108963013,
+                "1000": 0.25282105803489685
+              },
+              "final_mse": 0.25282105803489685,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "regent_ckpt_030850.pt",
+          "checkpoint_path": "runs/plast5char/ckpts/regent_ckpt_030850.pt",
+          "update": 30850,
+          "env_steps": 4043571200,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.5322036743164,
+            "total": 156.7651052294285,
+            "type_emb": 77.48664093017578,
+            "non_embedding": 132.02122844284438,
+            "tok_in": 30.143492017615827,
+            "blocks": 76.25716247300554,
+            "blocks_layernorm": 46.085879003910314,
+            "blocks_non_layernorm": 60.75563006727278,
+            "ln_f": 16.245801455021606,
+            "cand_in": 28.82083168815483,
+            "ref_primary": 10.234457661862391,
+            "ref_target": 10.258773744767806,
+            "ref_member": 9.825798093069583,
+            "ref_global": 9.835889219863368,
+            "cand_blocks": 46.65321517417077,
+            "logit": 19.855661723424756,
+            "value": 25.160018233296512
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.004045758928571429
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.01953125
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.01953125
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 230,
+              "entropy_rank": 85.70016479492188,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 223,
+              "entropy_rank": 63.578208923339844,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 112.98583984375,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.860311895608902,
+          "attention_entropy_by_block": {
+            "0": 0.8126182556152344,
+            "1": 0.8758078813552856,
+            "2": 0.8808473944664001,
+            "3": 0.8719740509986877
+          },
+          "residual_norm_by_block": {
+            "0": 23.340253829956055,
+            "1": 24.044631958007812,
+            "2": 25.179405212402344,
+            "3": 27.007936477661133
+          },
+          "policy_entropy": 0.8462504148483276,
+          "value_std": 0.7814534306526184,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3055,
+              "dormant_mean": {
+                "0.025": 0.0016741071428571428,
+                "0.1": 0.014229910714285714
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.001953125
+                },
+                "logit": {
+                  "0.025": 0.01171875,
+                  "0.1": 0.078125
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.01953125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3055,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 225,
+                  "entropy_rank": 77.14155578613281,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3055,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 218,
+                  "entropy_rank": 58.02491760253906,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 104.90795135498047,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.0148779153823853,
+              "value_std": 0.7880557179450989
+            },
+            "build": {
+              "n_states": 1041,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.007254464285714286
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.05078125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1041,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 211,
+                  "entropy_rank": 63.26167678833008,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1041,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 197,
+                  "entropy_rank": 43.54972457885742,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 5044,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 235,
+                  "entropy_rank": 96.56825256347656,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.3513829708099365,
+              "value_std": 0.7503774762153625
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.124817967414856,
+                "100": 0.008396484889090061,
+                "300": 0.0016508055850863457,
+                "1000": 0.0003006654733326286
+              },
+              "final_mse": 0.0003006654733326286,
+              "target_mean": -1.2852251529693604e-07,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.8419394493103027,
+                "100": 1.0143871307373047,
+                "300": 0.6399919390678406,
+                "1000": 0.050847023725509644
+              },
+              "final_mse": 0.050847023725509644,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "regent_v113.pt",
+          "checkpoint_path": "runs/colab/regent_v113.pt",
+          "update": 30500,
+          "env_steps": 3997696000,
+          "averaged_from": [
+            "ckpt_030350.pt",
+            "ckpt_030400.pt",
+            "ckpt_030450.pt",
+            "ckpt_030500.pt"
+          ],
+          "weight_norms": {
+            "table": 84.52957153320312,
+            "total": 156.7547208956343,
+            "type_emb": 77.4869384765625,
+            "non_embedding": 132.01058313438858,
+            "tok_in": 30.143548932441377,
+            "blocks": 76.24417789394984,
+            "blocks_layernorm": 46.0820582229856,
+            "blocks_non_layernorm": 60.74223055385466,
+            "ln_f": 16.2465400945097,
+            "cand_in": 28.819682885415666,
+            "ref_primary": 10.235121833163443,
+            "ref_target": 10.256115706646446,
+            "ref_member": 9.823912841576636,
+            "ref_global": 9.835842050197495,
+            "cand_blocks": 46.648684393936314,
+            "logit": 19.85413638319339,
+            "value": 25.154539659768716
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.004045758928571429
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.01171875
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.015625
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.01171875
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.015625
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 229,
+              "entropy_rank": 85.67524719238281,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 224,
+              "entropy_rank": 65.96826171875,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 112.70651245117188,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8593867421150208,
+          "attention_entropy_by_block": {
+            "0": 0.8116135001182556,
+            "1": 0.8755890727043152,
+            "2": 0.8805222511291504,
+            "3": 0.8698221445083618
+          },
+          "residual_norm_by_block": {
+            "0": 23.379474639892578,
+            "1": 24.087547302246094,
+            "2": 25.194419860839844,
+            "3": 27.010101318359375
+          },
+          "policy_entropy": 0.8436167240142822,
+          "value_std": 0.7749443054199219,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3055,
+              "dormant_mean": {
+                "0.025": 0.0016741071428571428,
+                "0.1": 0.014229910714285714
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.001953125
+                },
+                "logit": {
+                  "0.025": 0.01171875,
+                  "0.1": 0.08203125
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.015625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3055,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 225,
+                  "entropy_rank": 77.16786193847656,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3055,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 221,
+                  "entropy_rank": 60.52216720581055,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 104.73062133789062,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.0087010860443115,
+              "value_std": 0.7864454388618469
+            },
+            "build": {
+              "n_states": 1041,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.006696428571428571
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.046875
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1041,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 211,
+                  "entropy_rank": 63.09484100341797,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1041,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 199,
+                  "entropy_rank": 44.652503967285156,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 5044,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 234,
+                  "entropy_rank": 95.94453430175781,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.3591468036174774,
+              "value_std": 0.7291789650917053
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0942379236221313,
+                "100": 0.008364316076040268,
+                "300": 0.0018638265319168568,
+                "1000": 0.0003408926131669432
+              },
+              "final_mse": 0.0003408926131669432,
+              "target_mean": -1.2852251529693604e-07,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.787126064300537,
+                "100": 1.0137690305709839,
+                "300": 0.6256445646286011,
+                "1000": 0.0506901741027832
+              },
+              "final_mse": 0.0506901741027832,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        }
+      ]
+    },
+    "Necrobinder": {
+      "character": "Necrobinder",
+      "training_regime": "synchronous 1-GPU PPO (32x8), approx-KL target 0.0005, single epoch, A10",
+      "n_states": 4096,
+      "n_seen": 5270,
+      "n_episodes": 6,
+      "decision_counts": {
+        "combat": 3127,
+        "build": 969
+      },
+      "ascension_counts": {
+        "0": 1829,
+        "10": 2267
+      },
+      "primary_checkpoint": "necro_ckpt_035700.pt",
+      "checkpoints": [
+        {
+          "checkpoint": "random",
+          "checkpoint_path": "random",
+          "update": null,
+          "env_steps": 0,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 81.92988586425781,
+            "total": 152.13939980645335,
+            "type_emb": 78.60938262939453,
+            "non_embedding": 128.19473770688697,
+            "tok_in": 29.217724687271506,
+            "blocks": 71.60660070026253,
+            "blocks_layernorm": 45.254833995939045,
+            "blocks_non_layernorm": 55.4932902596957,
+            "ln_f": 16.0,
+            "cand_in": 29.213790455169462,
+            "ref_primary": 9.295297999661386,
+            "ref_target": 9.285262371758225,
+            "ref_member": 9.238424265074245,
+            "ref_global": 9.2582658688324,
+            "cand_blocks": 43.3660870391171,
+            "logit": 18.496516595920138,
+            "value": 24.441935737060284
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 185,
+              "entropy_rank": 20.095077514648438,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 197,
+              "entropy_rank": 28.551279067993164,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 235,
+              "entropy_rank": 93.37529754638672,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.9890017956495285,
+          "attention_entropy_by_block": {
+            "0": 0.9885642528533936,
+            "1": 0.9883519411087036,
+            "2": 0.9888890981674194,
+            "3": 0.9902018904685974
+          },
+          "residual_norm_by_block": {
+            "0": 18.90943145751953,
+            "1": 19.3300724029541,
+            "2": 19.727323532104492,
+            "3": 20.01871681213379
+          },
+          "policy_entropy": 1.760072946548462,
+          "value_std": 0.06089538335800171,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3127,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3127,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 175,
+                  "entropy_rank": 15.351590156555176,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3127,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 186,
+                  "entropy_rank": 23.010591506958008,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 230,
+                  "entropy_rank": 74.75895690917969,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.8836625814437866,
+              "value_std": 0.06548211723566055
+            },
+            "build": {
+              "n_states": 969,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 969,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 146,
+                  "entropy_rank": 14.266496658325195,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 969,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 163,
+                  "entropy_rank": 16.9034423828125,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 5446,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 232,
+                  "entropy_rank": 89.0062484741211,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.3612442016601562,
+              "value_std": 0.03934616222977638
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0689712762832642,
+                "100": 0.007957319729030132,
+                "300": 0.004659757018089294,
+                "1000": 0.0005500608240254223
+              },
+              "final_mse": 0.0005500608240254223,
+              "target_mean": 4.889443516731262e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.0558561086654663,
+                "100": 1.0315883159637451,
+                "300": 0.9678608179092407,
+                "1000": 0.25269612669944763
+              },
+              "final_mse": 0.25269612669944763,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "necro_ckpt_035700.pt",
+          "checkpoint_path": "runs/plast5char/ckpts/necro_ckpt_035700.pt",
+          "update": 35700,
+          "env_steps": 4679270400,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.54756927490234,
+            "total": 156.86191424638616,
+            "type_emb": 77.46158599853516,
+            "non_embedding": 132.12633602255906,
+            "tok_in": 30.152696650865582,
+            "blocks": 76.39321481736023,
+            "blocks_layernorm": 46.13129859493716,
+            "blocks_non_layernorm": 60.89192524527448,
+            "ln_f": 16.247483478792567,
+            "cand_in": 28.819395492468562,
+            "ref_primary": 10.258462851434805,
+            "ref_target": 10.236699886018474,
+            "ref_member": 9.824260215758152,
+            "ref_global": 9.836558685253731,
+            "cand_blocks": 46.71077040917112,
+            "logit": 19.88455306170374,
+            "value": 25.23555271980903
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0034877232142857145
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.015625
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.015625
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 231,
+              "entropy_rank": 88.73703002929688,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 224,
+              "entropy_rank": 66.7533187866211,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 116.65057373046875,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8604595065116882,
+          "attention_entropy_by_block": {
+            "0": 0.8203029632568359,
+            "1": 0.8692249059677124,
+            "2": 0.876063346862793,
+            "3": 0.8762468099594116
+          },
+          "residual_norm_by_block": {
+            "0": 23.259634017944336,
+            "1": 24.073486328125,
+            "2": 25.084976196289062,
+            "3": 26.92288589477539
+          },
+          "policy_entropy": 0.8683840036392212,
+          "value_std": 0.7280067205429077,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3127,
+              "dormant_mean": {
+                "0.025": 0.0016741071428571428,
+                "0.1": 0.016462053571428572
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.001953125
+                },
+                "logit": {
+                  "0.025": 0.01171875,
+                  "0.1": 0.09375
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.01953125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3127,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 226,
+                  "entropy_rank": 80.2642593383789,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3127,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 220,
+                  "entropy_rank": 61.73242950439453,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 108.03173828125,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.0446972846984863,
+              "value_std": 0.743295431137085
+            },
+            "build": {
+              "n_states": 969,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.0027901785714285715
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.01953125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 969,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 212,
+                  "entropy_rank": 65.44815063476562,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 969,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 200,
+                  "entropy_rank": 45.692752838134766,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 5446,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 234,
+                  "entropy_rank": 97.9726333618164,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.2994142770767212,
+              "value_std": 0.6673822402954102
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.1442726850509644,
+                "100": 0.007862650789320469,
+                "300": 0.0016710222698748112,
+                "1000": 0.00031457291333936155
+              },
+              "final_mse": 0.00031457291333936155,
+              "target_mean": 4.889443516731262e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.8043155670166016,
+                "100": 1.0096930265426636,
+                "300": 0.7092745900154114,
+                "1000": 0.05487319827079773
+              },
+              "final_mse": 0.05487319827079773,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "necro_v113.pt",
+          "checkpoint_path": "runs/colab/necro_v113.pt",
+          "update": 35200,
+          "env_steps": 4613734400,
+          "averaged_from": [
+            "ckpt_035050.pt",
+            "ckpt_035100.pt",
+            "ckpt_035150.pt",
+            "ckpt_035200.pt"
+          ],
+          "weight_norms": {
+            "table": 84.54242706298828,
+            "total": 156.85024242554465,
+            "type_emb": 77.46196746826172,
+            "non_embedding": 132.11576959338137,
+            "tok_in": 30.15265965036027,
+            "blocks": 76.37793827285236,
+            "blocks_layernorm": 46.12719367923698,
+            "blocks_non_layernorm": 60.87586925941844,
+            "ln_f": 16.246925850715506,
+            "cand_in": 28.82250376732575,
+            "ref_primary": 10.256769381793168,
+            "ref_target": 10.233891114722915,
+            "ref_member": 9.82604683724231,
+            "ref_global": 9.834256402788183,
+            "cand_blocks": 46.70782264467211,
+            "logit": 19.881008843123183,
+            "value": 25.2324326930617
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.004045758928571429
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.01171875
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.015625
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0009765625
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.01171875
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.015625
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 231,
+              "entropy_rank": 88.2900619506836,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 225,
+              "entropy_rank": 68.54235076904297,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 117.33440399169922,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8612655997276306,
+          "attention_entropy_by_block": {
+            "0": 0.8210928440093994,
+            "1": 0.8701654672622681,
+            "2": 0.8777791261672974,
+            "3": 0.8760249614715576
+          },
+          "residual_norm_by_block": {
+            "0": 23.264394760131836,
+            "1": 24.069597244262695,
+            "2": 25.06215476989746,
+            "3": 26.889734268188477
+          },
+          "policy_entropy": 0.8577513098716736,
+          "value_std": 0.702865481376648,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3127,
+              "dormant_mean": {
+                "0.025": 0.0016741071428571428,
+                "0.1": 0.013671875
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.001953125
+                },
+                "logit": {
+                  "0.025": 0.01171875,
+                  "0.1": 0.078125
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.015625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3127,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 226,
+                  "entropy_rank": 79.73942565917969,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3127,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 221,
+                  "entropy_rank": 63.13029098510742,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 238,
+                  "entropy_rank": 108.90650939941406,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.0194212198257446,
+              "value_std": 0.7162306904792786
+            },
+            "build": {
+              "n_states": 969,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0027901785714285715
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.01953125
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 969,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 212,
+                  "entropy_rank": 65.2710952758789,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 969,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 201,
+                  "entropy_rank": 47.17396926879883,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 5446,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 234,
+                  "entropy_rank": 97.78472900390625,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.3360370099544525,
+              "value_std": 0.6519032120704651
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.106589913368225,
+                "100": 0.007632534950971603,
+                "300": 0.0017147049074992537,
+                "1000": 0.00033516145776957273
+              },
+              "final_mse": 0.00033516145776957273,
+              "target_mean": 4.889443516731262e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.7549880743026733,
+                "100": 1.009919285774231,
+                "300": 0.6966502666473389,
+                "1000": 0.05541060492396355
+              },
+              "final_mse": 0.05541060492396355,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        }
+      ]
+    },
+    "Silent": {
+      "character": "Silent",
+      "training_regime": "synchronous 1-GPU PPO (32x8), approx-KL target 0.0005, single epoch, A10",
+      "n_states": 4096,
+      "n_seen": 5757,
+      "n_episodes": 8,
+      "decision_counts": {
+        "combat": 3210,
+        "build": 886
+      },
+      "ascension_counts": {
+        "0": 2543,
+        "10": 1553
+      },
+      "primary_checkpoint": "silent_ckpt_039500.pt",
+      "checkpoints": [
+        {
+          "checkpoint": "random",
+          "checkpoint_path": "random",
+          "update": null,
+          "env_steps": 0,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 81.92988586425781,
+            "total": 152.13939980645335,
+            "type_emb": 78.60938262939453,
+            "non_embedding": 128.19473770688697,
+            "tok_in": 29.217724687271506,
+            "blocks": 71.60660070026253,
+            "blocks_layernorm": 45.254833995939045,
+            "blocks_non_layernorm": 55.4932902596957,
+            "ln_f": 16.0,
+            "cand_in": 29.213790455169462,
+            "ref_primary": 9.295297999661386,
+            "ref_target": 9.285262371758225,
+            "ref_member": 9.238424265074245,
+            "ref_global": 9.2582658688324,
+            "cand_blocks": 43.3660870391171,
+            "logit": 18.496516595920138,
+            "value": 24.441935737060284
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 185,
+              "entropy_rank": 19.968530654907227,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 197,
+              "entropy_rank": 28.25310707092285,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 235,
+              "entropy_rank": 89.9433364868164,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.9887671023607254,
+          "attention_entropy_by_block": {
+            "0": 0.9883978962898254,
+            "1": 0.9880458116531372,
+            "2": 0.9886472225189209,
+            "3": 0.9899774789810181
+          },
+          "residual_norm_by_block": {
+            "0": 18.978496551513672,
+            "1": 19.37183380126953,
+            "2": 19.781375885009766,
+            "3": 20.052947998046875
+          },
+          "policy_entropy": 1.7166920900344849,
+          "value_std": 0.06546805053949356,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3210,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3210,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 176,
+                  "entropy_rank": 15.295936584472656,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3210,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 187,
+                  "entropy_rank": 22.855348587036133,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 230,
+                  "entropy_rank": 72.16378021240234,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.8314218521118164,
+              "value_std": 0.0675068348646164
+            },
+            "build": {
+              "n_states": 886,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 886,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 146,
+                  "entropy_rank": 14.122664451599121,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 886,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 161,
+                  "entropy_rank": 16.531442642211914,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 4562,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 233,
+                  "entropy_rank": 90.24108123779297,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.3010237216949463,
+              "value_std": 0.044035304337739944
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0630353689193726,
+                "100": 0.009327040985226631,
+                "300": 0.0018165439832955599,
+                "1000": 0.0016316348919644952
+              },
+              "final_mse": 0.0016316348919644952,
+              "target_mean": 8.032657206058502e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.0518587827682495,
+                "100": 1.0316435098648071,
+                "300": 0.9835561513900757,
+                "1000": 0.29775312542915344
+              },
+              "final_mse": 0.29775312542915344,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "silent_ckpt_039500.pt",
+          "checkpoint_path": "runs/plast5char/ckpts/silent_ckpt_039500.pt",
+          "update": 39500,
+          "env_steps": 5177344000,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.60865783691406,
+            "total": 156.96453146154647,
+            "type_emb": 77.48008728027344,
+            "non_embedding": 132.20907365222254,
+            "tok_in": 30.153870412788564,
+            "blocks": 76.49011667461627,
+            "blocks_layernorm": 46.135497955911866,
+            "blocks_non_layernorm": 61.010275997215935,
+            "ln_f": 16.252390907377883,
+            "cand_in": 28.821245030501004,
+            "ref_primary": 10.287985716012567,
+            "ref_target": 10.261731421985305,
+            "ref_member": 9.82474974460016,
+            "ref_global": 9.848886413867378,
+            "cand_blocks": 46.723848721032226,
+            "logit": 19.90214635444309,
+            "value": 25.24661331963683
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.004464285714285714
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0234375
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0234375
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 230,
+              "entropy_rank": 85.75244903564453,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 224,
+              "entropy_rank": 64.66570281982422,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 112.81765747070312,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8545252680778503,
+          "attention_entropy_by_block": {
+            "0": 0.810677170753479,
+            "1": 0.861231803894043,
+            "2": 0.8778732419013977,
+            "3": 0.8683188557624817
+          },
+          "residual_norm_by_block": {
+            "0": 23.254528045654297,
+            "1": 23.989212036132812,
+            "2": 25.184722900390625,
+            "3": 27.128738403320312
+          },
+          "policy_entropy": 0.9197438955307007,
+          "value_std": 0.7561682462692261,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3210,
+              "dormant_mean": {
+                "0.025": 0.0033482142857142855,
+                "0.1": 0.023716517857142856
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.001953125
+                },
+                "logit": {
+                  "0.025": 0.0234375,
+                  "0.1": 0.140625
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0234375
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3210,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 225,
+                  "entropy_rank": 76.6852035522461,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3210,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 220,
+                  "entropy_rank": 58.94266891479492,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 104.3873519897461,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.0988870859146118,
+              "value_std": 0.767966628074646
+            },
+            "build": {
+              "n_states": 886,
+              "dormant_mean": {
+                "0.025": 0.0005580357142857143,
+                "0.1": 0.0078125
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.00390625,
+                  "0.1": 0.0546875
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 886,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 210,
+                  "entropy_rank": 64.00738525390625,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 886,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 198,
+                  "entropy_rank": 44.46201705932617,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 4562,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 235,
+                  "entropy_rank": 98.62834167480469,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.2707034945487976,
+              "value_std": 0.6977909207344055
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.12885320186615,
+                "100": 0.00829340796917677,
+                "300": 0.0017574531957507133,
+                "1000": 0.0011244775960221887
+              },
+              "final_mse": 0.0011244775960221887,
+              "target_mean": 8.032657206058502e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.906398057937622,
+                "100": 1.0118874311447144,
+                "300": 0.5508643984794617,
+                "1000": 0.0660952776670456
+              },
+              "final_mse": 0.0660952776670456,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "silent_v113.pt",
+          "checkpoint_path": "runs/colab/silent_v113.pt",
+          "update": 39000,
+          "env_steps": 5111808000,
+          "averaged_from": [
+            "ckpt_038850.pt",
+            "ckpt_038900.pt",
+            "ckpt_038950.pt",
+            "ckpt_039000.pt"
+          ],
+          "weight_norms": {
+            "table": 84.60428619384766,
+            "total": 156.95096563771833,
+            "type_emb": 77.48059844970703,
+            "non_embedding": 132.19576533399913,
+            "tok_in": 30.154201352567732,
+            "blocks": 76.4733905474832,
+            "blocks_layernorm": 46.13132026460229,
+            "blocks_non_layernorm": 60.99246471878792,
+            "ln_f": 16.251681374237798,
+            "cand_in": 28.822131535909634,
+            "ref_primary": 10.284762615727397,
+            "ref_target": 10.260356311733204,
+            "ref_member": 9.822378400530472,
+            "ref_global": 9.849676512477975,
+            "cand_blocks": 46.71700203875594,
+            "logit": 19.899189598621383,
+            "value": 25.242562797676634
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.00390625
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.01953125
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0078125
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.01953125
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 230,
+              "entropy_rank": 86.697021484375,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 225,
+              "entropy_rank": 68.38793182373047,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 113.5111083984375,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8537529408931732,
+          "attention_entropy_by_block": {
+            "0": 0.8083792924880981,
+            "1": 0.862757682800293,
+            "2": 0.8776705265045166,
+            "3": 0.8662042617797852
+          },
+          "residual_norm_by_block": {
+            "0": 23.250951766967773,
+            "1": 23.989091873168945,
+            "2": 25.12619400024414,
+            "3": 27.00932502746582
+          },
+          "policy_entropy": 0.8770607113838196,
+          "value_std": 0.7143513560295105,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 3210,
+              "dormant_mean": {
+                "0.025": 0.0033482142857142855,
+                "0.1": 0.019670758928571428
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0009765625
+                },
+                "logit": {
+                  "0.025": 0.0234375,
+                  "0.1": 0.11328125
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0234375
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 3210,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 225,
+                  "entropy_rank": 77.40279388427734,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 3210,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 220,
+                  "entropy_rank": 61.96952438354492,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 237,
+                  "entropy_rank": 105.01371002197266,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.0516537427902222,
+              "value_std": 0.7268147468566895
+            },
+            "build": {
+              "n_states": 886,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.006138392857142857
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.04296875
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 886,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 211,
+                  "entropy_rank": 65.04167938232422,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 886,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 201,
+                  "entropy_rank": 47.65018844604492,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 4562,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 235,
+                  "entropy_rank": 99.51860809326172,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.24450558423995972,
+              "value_std": 0.6548107266426086
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.0476577281951904,
+                "100": 0.008156795054674149,
+                "300": 0.0017251934623345733,
+                "1000": 0.0009876493131741881
+              },
+              "final_mse": 0.0009876493131741881,
+              "target_mean": 8.032657206058502e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.7815613746643066,
+                "100": 1.0159863233566284,
+                "300": 0.5861838459968567,
+                "1000": 0.052209511399269104
+              },
+              "final_mse": 0.052209511399269104,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        }
+      ]
+    },
+    "Fool": {
+      "character": "Fool",
+      "training_regime": "synchronous 1-GPU PPO (24x8), approx-KL target 0.0005, single epoch, A10 (forked from 5-char joint u8325)",
+      "n_states": 4096,
+      "n_seen": 5054,
+      "n_episodes": 8,
+      "decision_counts": {
+        "combat": 2892,
+        "build": 1204
+      },
+      "ascension_counts": {
+        "0": 2112,
+        "10": 1984
+      },
+      "primary_checkpoint": "fool_ckpt_012650.pt",
+      "checkpoints": [
+        {
+          "checkpoint": "random",
+          "checkpoint_path": "random",
+          "update": null,
+          "env_steps": 0,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 81.92988586425781,
+            "total": 152.13939980645335,
+            "type_emb": 78.60938262939453,
+            "non_embedding": 128.19473770688697,
+            "tok_in": 29.217724687271506,
+            "blocks": 71.60660070026253,
+            "blocks_layernorm": 45.254833995939045,
+            "blocks_non_layernorm": 55.4932902596957,
+            "ln_f": 16.0,
+            "cand_in": 29.213790455169462,
+            "ref_primary": 9.295297999661386,
+            "ref_target": 9.285262371758225,
+            "ref_member": 9.238424265074245,
+            "ref_global": 9.2582658688324,
+            "cand_blocks": 43.3660870391171,
+            "logit": 18.496516595920138,
+            "value": 24.441935737060284
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 187,
+              "entropy_rank": 21.1363468170166,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 198,
+              "entropy_rank": 29.395511627197266,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 236,
+              "entropy_rank": 92.88348388671875,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.9889898151159286,
+          "attention_entropy_by_block": {
+            "0": 0.9883264303207397,
+            "1": 0.9884876012802124,
+            "2": 0.9888067841529846,
+            "3": 0.9903384447097778
+          },
+          "residual_norm_by_block": {
+            "0": 19.019546508789062,
+            "1": 19.421367645263672,
+            "2": 19.86271858215332,
+            "3": 20.14333724975586
+          },
+          "policy_entropy": 1.666445016860962,
+          "value_std": 0.06926225870847702,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 2892,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 2892,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 178,
+                  "entropy_rank": 16.024959564208984,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 2892,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 187,
+                  "entropy_rank": 23.761259078979492,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 231,
+                  "entropy_rank": 71.8443374633789,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.8042089939117432,
+              "value_std": 0.07560009509325027
+            },
+            "build": {
+              "n_states": 1204,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1204,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 154,
+                  "entropy_rank": 15.16225528717041,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1204,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 168,
+                  "entropy_rank": 17.775840759277344,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6588,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 234,
+                  "entropy_rank": 90.76719665527344,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 1.335537075996399,
+              "value_std": 0.03854940086603165
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.077547311782837,
+                "100": 0.0077666970901191235,
+                "300": 0.0033986829221248627,
+                "1000": 0.0004036503378301859
+              },
+              "final_mse": 0.0004036503378301859,
+              "target_mean": 5.587935447692871e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 1.0526995658874512,
+                "100": 1.028662919998169,
+                "300": 0.9480800628662109,
+                "1000": 0.1864122599363327
+              },
+              "final_mse": 0.1864122599363327,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        },
+        {
+          "checkpoint": "fool_ckpt_012650.pt",
+          "checkpoint_path": "runs/plast5char/ckpts/fool_ckpt_012650.pt",
+          "update": 12650,
+          "env_steps": 1658060800,
+          "averaged_from": null,
+          "weight_norms": {
+            "table": 84.49815368652344,
+            "total": 156.6243844542586,
+            "type_emb": 77.49171447753906,
+            "non_embedding": 131.8759258896182,
+            "tok_in": 30.174752535843567,
+            "blocks": 76.07205960611977,
+            "blocks_layernorm": 46.018859185995666,
+            "blocks_non_layernorm": 60.57411040978266,
+            "ln_f": 16.241687321278224,
+            "cand_in": 28.828397536925177,
+            "ref_primary": 10.248588744156825,
+            "ref_target": 10.225895394561528,
+            "ref_member": 9.823053604360979,
+            "ref_global": 9.83984900146822,
+            "cand_blocks": 46.58993452021156,
+            "logit": 19.799586946556985,
+            "value": 25.067668448919417
+          },
+          "dormant": {
+            "mean": {
+              "0.025": 0.0,
+              "0.1": 0.0
+            },
+            "mean_by_kind": {
+              "blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            },
+            "per_layer_fraction": {
+              "blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.1.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.2.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "blocks.3.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "cand_blocks.0.mlp": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "logit": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "value": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              }
+            }
+          },
+          "features": {
+            "g": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 230,
+              "entropy_rank": 88.21658325195312,
+              "delta": 0.01,
+              "centered": false
+            },
+            "value_hidden": {
+              "n_samples": 4096,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 232,
+              "entropy_rank": 77.46271514892578,
+              "delta": 0.01,
+              "centered": false
+            },
+            "candidates": {
+              "n_samples": 8192,
+              "width": 256,
+              "max_rank": 256,
+              "srank": 239,
+              "entropy_rank": 114.981689453125,
+              "delta": 0.01,
+              "centered": false
+            }
+          },
+          "attention_entropy_mean": 0.8544380962848663,
+          "attention_entropy_by_block": {
+            "0": 0.8095861077308655,
+            "1": 0.8591789603233337,
+            "2": 0.868157684803009,
+            "3": 0.8808296322822571
+          },
+          "residual_norm_by_block": {
+            "0": 24.173503875732422,
+            "1": 25.159875869750977,
+            "2": 26.340700149536133,
+            "3": 28.301021575927734
+          },
+          "policy_entropy": 0.7116791605949402,
+          "value_std": 0.9638526439666748,
+          "by_decision_type": {
+            "combat": {
+              "n_states": 2892,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.006138392857142857
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0390625
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.00390625
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 2892,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 226,
+                  "entropy_rank": 79.34844970703125,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 2892,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 228,
+                  "entropy_rank": 70.69563293457031,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 8192,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 238,
+                  "entropy_rank": 105.57936096191406,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.8980287313461304,
+              "value_std": 0.9888827800750732
+            },
+            "build": {
+              "n_states": 1204,
+              "dormant_mean": {
+                "0.025": 0.0,
+                "0.1": 0.0
+              },
+              "dormant_by_kind": {
+                "blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "cand_blocks": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "logit": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                },
+                "value": {
+                  "0.025": 0.0,
+                  "0.1": 0.0
+                }
+              },
+              "features": {
+                "g": {
+                  "n_samples": 1204,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 214,
+                  "entropy_rank": 67.39458465576172,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "value_hidden": {
+                  "n_samples": 1204,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 213,
+                  "entropy_rank": 55.56705856323242,
+                  "delta": 0.01,
+                  "centered": false
+                },
+                "candidates": {
+                  "n_samples": 6588,
+                  "width": 256,
+                  "max_rank": 256,
+                  "srank": 235,
+                  "entropy_rank": 98.13309478759766,
+                  "delta": 0.01,
+                  "centered": false
+                }
+              },
+              "policy_entropy": 0.264068603515625,
+              "value_std": 0.8908652663230896
+            }
+          },
+          "probe": {
+            "steps": 1000,
+            "batch_size": 256,
+            "lr": 0.0001,
+            "eps": 1e-05,
+            "weight_decay": 0,
+            "order_seed": 0,
+            "smooth_seed": 12345,
+            "memory_seed": 67890,
+            "smooth": {
+              "mse": {
+                "0": 1.189492106437683,
+                "100": 0.007562634535133839,
+                "300": 0.0021980348974466324,
+                "1000": 0.0003864858881570399
+              },
+              "final_mse": 0.0003864858881570399,
+              "target_mean": 5.587935447692871e-09,
+              "target_std": 1.0
+            },
+            "memory": {
+              "mse": {
+                "0": 2.094403028488159,
+                "100": 1.0057910680770874,
+                "300": 0.5682763457298279,
+                "1000": 0.050118327140808105
+              },
+              "final_mse": 0.050118327140808105,
+              "target_mean": -0.00808998104184866,
+              "target_std": 1.0176745653152466
+            }
+          }
+        }
+      ]
+    }
+  }
+}

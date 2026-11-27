@@ -1,0 +1,7 @@
+{
+ "note": "Fool on v0.114 (run v4_fool_adapt, epsilon): sampled A10 win rate per update in paper/figdata/v4_fool_adapt.progress.csv (column w_win_rate, 200-episode window; fork at update 12660, 131072 steps per update). Before the update the same line (v3_fool_joint, v0.113.1) had a sampled A10 win rate of about 0.44 over its last 1,300 updates and 55.3% greedy on 2,000 seeds; untrained on v0.114 it is 21.1% greedy.",
+ "fool_pre_update_sampled_win": 0.44,
+ "fool_pre_update_greedy": 55.3,
+ "fool_v0114_greedy_untrained": 21.1,
+ "ironclad_v0113": "paper/figdata/catchup/*.progress.csv (three training seeds with KL 0.0005 after the v0.113 update; pre-update greedy 61.0%, back above it within 0.7-1.2e8 steps; see the old Figure 3e code in tmp/game_assets/fig3_restyle/fig3_patch_orig.py)"
+}

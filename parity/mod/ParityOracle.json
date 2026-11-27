@@ -1,0 +1,11 @@
+{
+  "id": "ParityOracle",
+  "name": "Parity Oracle",
+  "author": "sls2-rl",
+  "description": "Replays headless-engine action logs in the real client and dumps state digests. Inert unless a job file exists (see parity/README.md).",
+  "version": "0.1.0",
+  "has_pck": false,
+  "has_dll": true,
+  "dependencies": [],
+  "affects_gameplay": true
+}

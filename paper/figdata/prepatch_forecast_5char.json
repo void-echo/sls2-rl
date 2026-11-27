@@ -1,0 +1,3262 @@
+{
+  "experiment": "Prospective Patch-Shock Predictor Backtest (v0.111.0 -> v0.113.1, 5 Characters)",
+  "protocol": {
+    "prepatch_traces": "300 greedy A10 games per character on v0.111.0 engine (engine_v2), seeds pref_0..pref_299, max_steps=5000",
+    "cold_start_shock_source": "tmp/cold1115/res/*_{v2,v3}_a10.json (1,000 paired fresh1105 seeds at A10 greedy, Fig 3a)",
+    "patch_manifest_source": "tmp/codex/revert/classification.json and changes.tsv (20 rule-changed cards, 34 rule-changed relics)",
+    "zero_free_parameters": true
+  },
+  "summary_table": [
+    {
+      "character": "Ironclad",
+      "cold_start_v111_win_pct": 62.1,
+      "cold_start_v113_win_pct": 52.35,
+      "cold_start_delta_pts": -9.7,
+      "cold_start_delta_exact_pts": -9.748,
+      "revertible_78rules_shock_pts": -12.548,
+      "prepatch_trace_games": 300,
+      "prepatch_trace_win_pct": 67.67,
+      "nerfed_class_cards": [
+        "CARD.EXPECT_A_FIGHT",
+        "CARD.FORGOTTEN_RITUAL"
+      ],
+      "nerfed_class_plays_per_game": 6.0733,
+      "nerfed_class_plays_se": 0.4523,
+      "nerfed_class_deck_frac": 0.58,
+      "nerfed_class_copies_per_deck": 0.8233,
+      "reworked_or_gated_class_cards": [
+        "CARD.FORGOTTEN_RITUAL",
+        "CARD.EXPECT_A_FIGHT"
+      ],
+      "reworked_or_gated_class_plays_per_game": 6.0733,
+      "reworked_or_gated_class_deck_frac": 0.58,
+      "std_changed_class_plays_per_game": 6.0733,
+      "std_changed_class_deck_frac": 0.58,
+      "all_nerfed_cards_plays_per_game": 7.49,
+      "all_nerfed_cards_deck_frac": 0.6067,
+      "all_17_std_cards_plays_per_game": 7.6167,
+      "all_17_std_cards_deck_frac": 0.62,
+      "nerfed_relics_per_game": 0.4633,
+      "nerfed_relics_game_frac": 0.38
+    },
+    {
+      "character": "Silent",
+      "cold_start_v111_win_pct": 48.3,
+      "cold_start_v113_win_pct": 43.2,
+      "cold_start_delta_pts": -5.1,
+      "cold_start_delta_exact_pts": -5.1,
+      "revertible_78rules_shock_pts": -2.4,
+      "prepatch_trace_games": 300,
+      "prepatch_trace_win_pct": 53.33,
+      "nerfed_class_cards": [
+        "CARD.MEMENTO_MORI",
+        "CARD.PHANTOM_BLADES"
+      ],
+      "nerfed_class_plays_per_game": 7.0733,
+      "nerfed_class_plays_se": 0.48,
+      "nerfed_class_deck_frac": 0.5767,
+      "nerfed_class_copies_per_deck": 0.8167,
+      "reworked_or_gated_class_cards": [
+        "CARD.MEMENTO_MORI"
+      ],
+      "reworked_or_gated_class_plays_per_game": 0.4867,
+      "reworked_or_gated_class_deck_frac": 0.0133,
+      "std_changed_class_plays_per_game": 7.95,
+      "std_changed_class_deck_frac": 0.6067,
+      "all_nerfed_cards_plays_per_game": 8.0233,
+      "all_nerfed_cards_deck_frac": 0.5833,
+      "all_17_std_cards_plays_per_game": 8.9967,
+      "all_17_std_cards_deck_frac": 0.6133,
+      "nerfed_relics_per_game": 0.4967,
+      "nerfed_relics_game_frac": 0.4
+    },
+    {
+      "character": "Defect",
+      "cold_start_v111_win_pct": 57.6,
+      "cold_start_v113_win_pct": 55.1,
+      "cold_start_delta_pts": -2.5,
+      "cold_start_delta_exact_pts": -2.5,
+      "revertible_78rules_shock_pts": -2.1,
+      "prepatch_trace_games": 300,
+      "prepatch_trace_win_pct": 56.0,
+      "nerfed_class_cards": [
+        "CARD.HELIX_DRILL"
+      ],
+      "nerfed_class_plays_per_game": 3.9233,
+      "nerfed_class_plays_se": 0.4361,
+      "nerfed_class_deck_frac": 0.1633,
+      "nerfed_class_copies_per_deck": 0.1833,
+      "reworked_or_gated_class_cards": [],
+      "reworked_or_gated_class_plays_per_game": 0.0,
+      "reworked_or_gated_class_deck_frac": 0.0,
+      "std_changed_class_plays_per_game": 8.9133,
+      "std_changed_class_deck_frac": 0.3833,
+      "all_nerfed_cards_plays_per_game": 4.46,
+      "all_nerfed_cards_deck_frac": 0.19,
+      "all_17_std_cards_plays_per_game": 9.6367,
+      "all_17_std_cards_deck_frac": 0.4033,
+      "nerfed_relics_per_game": 0.55,
+      "nerfed_relics_game_frac": 0.4267
+    },
+    {
+      "character": "Necrobinder",
+      "cold_start_v111_win_pct": 40.6,
+      "cold_start_v113_win_pct": 38.2,
+      "cold_start_delta_pts": -2.4,
+      "cold_start_delta_exact_pts": -2.4,
+      "revertible_78rules_shock_pts": 0.6,
+      "prepatch_trace_games": 300,
+      "prepatch_trace_win_pct": 44.0,
+      "nerfed_class_cards": [],
+      "nerfed_class_plays_per_game": 0.0,
+      "nerfed_class_plays_se": 0.0,
+      "nerfed_class_deck_frac": 0.0,
+      "nerfed_class_copies_per_deck": 0.0,
+      "reworked_or_gated_class_cards": [],
+      "reworked_or_gated_class_plays_per_game": 0.0,
+      "reworked_or_gated_class_deck_frac": 0.0,
+      "std_changed_class_plays_per_game": 0.0,
+      "std_changed_class_deck_frac": 0.0,
+      "all_nerfed_cards_plays_per_game": 0.79,
+      "all_nerfed_cards_deck_frac": 0.0333,
+      "all_17_std_cards_plays_per_game": 0.8633,
+      "all_17_std_cards_deck_frac": 0.0767,
+      "nerfed_relics_per_game": 0.51,
+      "nerfed_relics_game_frac": 0.3933
+    },
+    {
+      "character": "Regent",
+      "cold_start_v111_win_pct": 54.1,
+      "cold_start_v113_win_pct": 52.6,
+      "cold_start_delta_pts": -1.5,
+      "cold_start_delta_exact_pts": -1.5,
+      "revertible_78rules_shock_pts": -1.5,
+      "prepatch_trace_games": 300,
+      "prepatch_trace_win_pct": 51.33,
+      "nerfed_class_cards": [],
+      "nerfed_class_plays_per_game": 0.0,
+      "nerfed_class_plays_se": 0.0,
+      "nerfed_class_deck_frac": 0.0,
+      "nerfed_class_copies_per_deck": 0.0,
+      "reworked_or_gated_class_cards": [],
+      "reworked_or_gated_class_plays_per_game": 0.0,
+      "reworked_or_gated_class_deck_frac": 0.0,
+      "std_changed_class_plays_per_game": 0.0,
+      "std_changed_class_deck_frac": 0.0,
+      "all_nerfed_cards_plays_per_game": 9.6067,
+      "all_nerfed_cards_deck_frac": 0.0267,
+      "all_17_std_cards_plays_per_game": 10.82,
+      "all_17_std_cards_deck_frac": 0.0467,
+      "nerfed_relics_per_game": 0.5167,
+      "nerfed_relics_game_frac": 0.42
+    }
+  ],
+  "correlations": {
+    "nerfed_class_plays_per_game": {
+      "values_by_character": {
+        "Ironclad": 6.073333333333333,
+        "Silent": 7.073333333333333,
+        "Defect": 3.9233333333333333,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.7325522933859153,
+        "r2": 0.5366328625449641,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.16666666666666666,
+        "p_perm_one_sided_neg": 0.06666666666666667,
+        "ols_slope_pts_per_unit": -0.7361950465015016,
+        "ols_intercept_pts": -1.7266301112438738,
+        "in_sample_mae_pts": 1.6702327447039196,
+        "loo_mae_pts": 2.7040733462971533
+      },
+      "vs_delta_exact": {
+        "r": -0.7311362226373043,
+        "r2": 0.5345601760523457,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.16666666666666666,
+        "p_perm_one_sided_neg": 0.06666666666666667,
+        "ols_slope_pts_per_unit": -0.7390726840917821,
+        "ols_intercept_pts": -1.7263353860401862,
+        "in_sample_mae_pts": 1.6825368430066086,
+        "loo_mae_pts": 2.7244624238341433
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.5882066250985437,
+        "r2": 0.34598703380981877,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.31666666666666665,
+        "p_perm_one_sided_neg": 0.11666666666666667,
+        "ols_slope_pts_per_unit": -0.9117659437510557,
+        "ols_intercept_pts": -0.4767605975634255,
+        "in_sample_mae_pts": 3.0226671816557547,
+        "loo_mae_pts": 5.145731191581741
+      }
+    },
+    "nerfed_class_deck_frac": {
+      "values_by_character": {
+        "Ironclad": 0.58,
+        "Silent": 0.5766666666666667,
+        "Defect": 0.16333333333333333,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.8598667546382078,
+        "r2": 0.7393708357320439,
+        "spearman_rho": -0.9746794344808964,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -9.732418349187652,
+        "ols_intercept_pts": -1.6706415558144605,
+        "in_sample_mae_pts": 1.2455656983368968,
+        "loo_mae_pts": 2.2707173712939888
+      },
+      "vs_delta_exact": {
+        "r": -0.8586728436086924,
+        "r2": 0.737319052351038,
+        "spearman_rho": -0.9746794344808964,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -9.775791513535893,
+        "ols_intercept_pts": -1.6687205699560552,
+        "in_sample_mae_pts": 1.2560989719538895,
+        "loo_mae_pts": 2.2904953839688598
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.7039974592724064,
+        "r2": 0.49561242266200356,
+        "spearman_rho": -0.9746794344808964,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -12.29022683943498,
+        "ols_intercept_pts": -0.34490964391869516,
+        "in_sample_mae_pts": 2.4917987171751887,
+        "loo_mae_pts": 4.68872922618463
+      }
+    },
+    "nerfed_class_copies_per_deck": {
+      "values_by_character": {
+        "Ironclad": 0.8233333333333334,
+        "Silent": 0.8166666666666667,
+        "Defect": 0.18333333333333332,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.866082617134144,
+        "r2": 0.7500990997019283,
+        "spearman_rho": -0.9746794344808964,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -6.837513937076048,
+        "ols_intercept_pts": -1.7465865842796013,
+        "in_sample_mae_pts": 1.1909094759659404,
+        "loo_mae_pts": 2.214540974379478
+      },
+      "vs_delta_exact": {
+        "r": -0.8648998406263955,
+        "r2": 0.7480517343155643,
+        "spearman_rho": -0.9746794344808964,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -6.868142723365314,
+        "ols_intercept_pts": -1.7449468164089792,
+        "in_sample_mae_pts": 1.2011932690369,
+        "loo_mae_pts": 2.234225829914999
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.705640488179495,
+        "r2": 0.497928498558196,
+        "spearman_rho": -0.9746794344808964,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -8.59254054824712,
+        "ols_intercept_pts": -0.45611640960208,
+        "in_sample_mae_pts": 2.4517897067757235,
+        "loo_mae_pts": 4.664290989421704
+      }
+    },
+    "reworked_or_gated_class_plays_per_game": {
+      "values_by_character": {
+        "Ironclad": 6.073333333333333,
+        "Silent": 0.4866666666666667,
+        "Defect": 0.0,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.942937816123333,
+        "r2": 0.8891317250754407,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -1.1775676637799197,
+        "ols_intercept_pts": -2.6950312251207458,
+        "in_sample_mae_pts": 0.7327543380692113,
+        "loo_mae_pts": 6.818864473173166
+      },
+      "vs_delta_exact": {
+        "r": -0.9437843655222856,
+        "r2": 0.8907289286043032,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -1.1855235584799921,
+        "ols_intercept_pts": -2.694122620803781,
+        "in_sample_mae_pts": 0.7315690322943829,
+        "loo_mae_pts": 6.807834256062312
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.9799749675469364,
+        "r2": 0.960350937018619,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -1.8876305449643809,
+        "ols_intercept_pts": -1.1129582545362622,
+        "in_sample_mae_pts": 0.6969913484700859,
+        "loo_mae_pts": 2.114398030706971
+      }
+    },
+    "reworked_or_gated_class_deck_frac": {
+      "values_by_character": {
+        "Ironclad": 0.58,
+        "Silent": 0.013333333333333334,
+        "Defect": 0.0,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.9237795773094413,
+        "r2": 0.85336870745401,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -11.94078947368421,
+        "ols_intercept_pts": -2.823026315789474,
+        "in_sample_mae_pts": 0.8471052631578952,
+        "loo_mae_pts": 25.409110866541603
+      },
+      "vs_delta_exact": {
+        "r": -0.9247558390320196,
+        "r2": 0.8551733618238146,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -12.02337406201286,
+        "ols_intercept_pts": -2.8227558075040045,
+        "in_sample_mae_pts": 0.84677301533433,
+        "loo_mae_pts": 25.399145019141883
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.9761034618204337,
+        "r2": 0.9527779681778349,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -19.46075717716114,
+        "ols_intercept_pts": -1.2801863445064083,
+        "in_sample_mae_pts": 0.7599856816474505,
+        "loo_mae_pts": 10.879022825315918
+      }
+    },
+    "std_changed_class_plays_per_game": {
+      "values_by_character": {
+        "Ironclad": 6.073333333333333,
+        "Silent": 7.95,
+        "Defect": 8.913333333333334,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.4259598916461343,
+        "r2": 0.18144182929118646,
+        "spearman_rho": -0.5642880936468347,
+        "p_perm_two_sided": 0.5333333333333333,
+        "p_perm_one_sided_neg": 0.23333333333333334,
+        "ols_slope_pts_per_unit": -0.3295089484828467,
+        "ols_intercept_pts": -2.7284326169930218,
+        "in_sample_mae_pts": 1.9881398810217963,
+        "loo_mae_pts": 3.12443191416423
+      },
+      "vs_delta_exact": {
+        "r": -0.42470562148258784,
+        "r2": 0.18037486491891117,
+        "spearman_rho": -0.5642880936468347,
+        "p_perm_two_sided": 0.5333333333333333,
+        "p_perm_one_sided_neg": 0.23333333333333334,
+        "ols_slope_pts_per_unit": -0.33046168020029626,
+        "ols_intercept_pts": -2.733591648557371,
+        "in_sample_mae_pts": 2.002820824536192,
+        "loo_mae_pts": 3.146865588076367
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.357183130976694,
+        "r2": 0.12757978905431416,
+        "spearman_rho": -0.5642880936468347,
+        "p_perm_two_sided": 0.7666666666666667,
+        "p_perm_one_sided_neg": 0.36666666666666664,
+        "ols_slope_pts_per_unit": -0.42617565886545683,
+        "ols_intercept_pts": -1.634519723760724,
+        "in_sample_mae_pts": 3.32992843561762,
+        "loo_mae_pts": 5.103939695527029
+      }
+    },
+    "std_changed_class_deck_frac": {
+      "values_by_character": {
+        "Ironclad": 0.58,
+        "Silent": 0.6066666666666667,
+        "Defect": 0.38333333333333336,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.756823612169933,
+        "r2": 0.5727819799379451,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.15,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -8.4304084720121,
+        "ols_intercept_pts": -1.5928517397882005,
+        "in_sample_mae_pts": 1.6098638426626324,
+        "loo_mae_pts": 2.5748561424049514
+      },
+      "vs_delta_exact": {
+        "r": -0.7555757040455771,
+        "r2": 0.5708946445439694,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.15,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -8.465771083451697,
+        "ols_intercept_pts": -1.5912774093256972,
+        "in_sample_mae_pts": 1.6219782402377088,
+        "loo_mae_pts": 2.5945188540283084
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.6338330826724058,
+        "r2": 0.4017443766900048,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.2,
+        "p_perm_one_sided_neg": 0.06666666666666667,
+        "ols_slope_pts_per_unit": -10.89000411338647,
+        "ols_intercept_pts": -0.17006823792617842,
+        "in_sample_mae_pts": 2.9565235144124564,
+        "loo_mae_pts": 4.942915791238566
+      }
+    },
+    "all_nerfed_cards_plays_per_game": {
+      "values_by_character": {
+        "Ironclad": 7.49,
+        "Silent": 8.023333333333333,
+        "Defect": 4.46,
+        "Necrobinder": 0.79,
+        "Regent": 9.606666666666667
+      },
+      "vs_delta_paper": {
+        "r": -0.263125460640186,
+        "r2": 0.06923500803711007,
+        "spearman_rho": 0.1,
+        "p_perm_two_sided": 0.625,
+        "p_perm_one_sided_neg": 0.375,
+        "ols_slope_pts_per_unit": -0.25115988624268787,
+        "ols_intercept_pts": -2.714454850961914,
+        "in_sample_mae_pts": 2.18990530513251,
+        "loo_mae_pts": 3.587949507218583
+      },
+      "vs_delta_exact": {
+        "r": -0.2630339991789953,
+        "r2": 0.06918688472409569,
+        "spearman_rho": 0.1,
+        "p_perm_two_sided": 0.625,
+        "p_perm_one_sided_neg": 0.375,
+        "ols_slope_pts_per_unit": -0.25254215618789544,
+        "ols_intercept_pts": -2.7155884728442534,
+        "in_sample_mae_pts": 2.199480020919037,
+        "loo_mae_pts": 3.6032967630945962
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.3830386401419404,
+        "r2": 0.1467185998417869,
+        "spearman_rho": -0.3,
+        "p_perm_two_sided": 0.5166666666666667,
+        "p_perm_one_sided_neg": 0.3,
+        "ols_slope_pts_per_unit": -0.5639351788141567,
+        "ols_intercept_pts": -0.1641872534123423,
+        "in_sample_mae_pts": 3.26383436196691,
+        "loo_mae_pts": 5.500383184255159
+      }
+    },
+    "all_nerfed_cards_deck_frac": {
+      "values_by_character": {
+        "Ironclad": 0.6066666666666667,
+        "Silent": 0.5833333333333334,
+        "Defect": 0.19,
+        "Necrobinder": 0.03333333333333333,
+        "Regent": 0.02666666666666667
+      },
+      "vs_delta_paper": {
+        "r": -0.8722132587534145,
+        "r2": 0.7607559687452508,
+        "spearman_rho": -1.0,
+        "p_perm_two_sided": 0.008333333333333333,
+        "p_perm_one_sided_neg": 0.008333333333333333,
+        "ols_slope_pts_per_unit": -10.102020296810691,
+        "ols_intercept_pts": -1.330618154518521,
+        "in_sample_mae_pts": 1.1893882804016465,
+        "loo_mae_pts": 2.1694457295718856
+      },
+      "vs_delta_exact": {
+        "r": -0.8710691044920632,
+        "r2": 0.758761384800605,
+        "spearman_rho": -1.0,
+        "p_perm_two_sided": 0.008333333333333333,
+        "p_perm_one_sided_neg": 0.008333333333333333,
+        "ols_slope_pts_per_unit": -10.14781998761729,
+        "ols_intercept_pts": -1.3269573730957505,
+        "in_sample_mae_pts": 1.1996512437524331,
+        "loo_mae_pts": 2.1887561010973906
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.7196899645004246,
+        "r2": 0.5179536450026223,
+        "spearman_rho": -0.9,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -12.856720286572957,
+        "ols_intercept_pts": 0.11320591300348237,
+        "in_sample_mae_pts": 2.4525879835300293,
+        "loo_mae_pts": 4.616987312705042
+      }
+    },
+    "all_17_std_cards_plays_per_game": {
+      "values_by_character": {
+        "Ironclad": 7.616666666666666,
+        "Silent": 8.996666666666666,
+        "Defect": 9.636666666666667,
+        "Necrobinder": 0.8633333333333333,
+        "Regent": 10.82
+      },
+      "vs_delta_paper": {
+        "r": -0.025187937086733673,
+        "r2": 0.0006344321746852536,
+        "spearman_rho": 0.4,
+        "p_perm_two_sided": 0.9916666666666667,
+        "p_perm_one_sided_neg": 0.6416666666666667,
+        "ols_slope_pts_per_unit": -0.02135841610340853,
+        "ols_intercept_pts": -4.077960816495474,
+        "in_sample_mae_pts": 2.5156975523244367,
+        "loo_mae_pts": 7.866057878619681
+      },
+      "vs_delta_exact": {
+        "r": -0.025068462341635588,
+        "r2": 0.0006284278041740016,
+        "spearman_rho": 0.4,
+        "p_perm_two_sided": 0.9916666666666667,
+        "p_perm_one_sided_neg": 0.6416666666666667,
+        "ols_slope_pts_per_unit": -0.02138152764659112,
+        "ols_intercept_pts": -4.0873150064507255,
+        "in_sample_mae_pts": 2.5271196755109995,
+        "loo_mae_pts": 7.905874829755457
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.2095297376945533,
+        "r2": 0.04390271097834831,
+        "spearman_rho": 0.0,
+        "p_perm_two_sided": 0.65,
+        "p_perm_one_sided_neg": 0.45,
+        "ols_slope_pts_per_unit": -0.2740446377510316,
+        "ols_intercept_pts": -1.5104442111250367,
+        "in_sample_mae_pts": 3.579958711594235,
+        "loo_mae_pts": 10.94105403382092
+      }
+    },
+    "all_17_std_cards_deck_frac": {
+      "values_by_character": {
+        "Ironclad": 0.62,
+        "Silent": 0.6133333333333333,
+        "Defect": 0.4033333333333333,
+        "Necrobinder": 0.07666666666666666,
+        "Regent": 0.04666666666666667
+      },
+      "vs_delta_paper": {
+        "r": -0.7900555561991967,
+        "r2": 0.6241877818812219,
+        "spearman_rho": -1.0,
+        "p_perm_two_sided": 0.09166666666666666,
+        "p_perm_one_sided_neg": 0.008333333333333333,
+        "ols_slope_pts_per_unit": -9.435590780151953,
+        "ols_intercept_pts": -0.9186720453865127,
+        "in_sample_mae_pts": 1.5320778869043372,
+        "loo_mae_pts": 2.4725159541172927
+      },
+      "vs_delta_exact": {
+        "r": -0.7888674407489559,
+        "r2": 0.6223118390738074,
+        "spearman_rho": -1.0,
+        "p_perm_two_sided": 0.09166666666666666,
+        "p_perm_one_sided_neg": 0.008333333333333333,
+        "ols_slope_pts_per_unit": -9.476546308114456,
+        "ols_intercept_pts": -0.913785229073242,
+        "in_sample_mae_pts": 1.544823681891805,
+        "loo_mae_pts": 2.49376502322475
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.6624861395430722,
+        "r2": 0.43888788508668297,
+        "spearman_rho": -0.9,
+        "p_perm_two_sided": 0.10833333333333334,
+        "p_perm_one_sided_neg": 0.025,
+        "ols_slope_pts_per_unit": -12.203585778985268,
+        "ols_intercept_pts": 0.7061326646732842,
+        "in_sample_mae_pts": 2.929675649734949,
+        "loo_mae_pts": 4.990221684448743
+      }
+    }
+  },
+  "sensitivity_iron_avg_ckpt": {
+    "nerfed_class_plays_per_game_with_iron_avg_ckpt": {
+      "values_by_character": {
+        "Ironclad": 5.95,
+        "Silent": 7.073333333333333,
+        "Defect": 3.9233333333333333,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.7226371237127722,
+        "r2": 0.5222044125678684,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.16666666666666666,
+        "p_perm_one_sided_neg": 0.06666666666666667,
+        "ols_slope_pts_per_unit": -0.7315985641891112,
+        "ols_intercept_pts": -1.7603685997750396,
+        "in_sample_mae_pts": 1.6905005374098843,
+        "loo_mae_pts": 2.732217899028714
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.5762477814300144,
+        "r2": 0.3320615056030137,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.36666666666666664,
+        "p_perm_one_sided_neg": 0.13333333333333333,
+        "ols_slope_pts_per_unit": -0.8998311808966016,
+        "ols_intercept_pts": -0.5397017137439817,
+        "in_sample_mae_pts": 3.045699477529963,
+        "loo_mae_pts": 5.1813018693874495
+      }
+    },
+    "nerfed_class_deck_frac_with_iron_avg_ckpt": {
+      "values_by_character": {
+        "Ironclad": 0.5666666666666667,
+        "Silent": 0.5766666666666667,
+        "Defect": 0.16333333333333333,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.8515609882153024,
+        "r2": 0.7251561166502223,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -9.755518539406896,
+        "ols_intercept_pts": -1.690557821701665,
+        "in_sample_mae_pts": 1.2763028737064386,
+        "loo_mae_pts": 2.324471228435808
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.6926029851442481,
+        "r2": 0.4796988950307236,
+        "spearman_rho": -0.872081599272381,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -12.23821719231134,
+        "ols_intercept_pts": -0.39127543660549957,
+        "in_sample_mae_pts": 2.5320428128507566,
+        "loo_mae_pts": 4.759906551972041
+      }
+    },
+    "reworked_or_gated_class_plays_per_game_with_iron_avg_ckpt": {
+      "values_by_character": {
+        "Ironclad": 5.95,
+        "Silent": 0.4866666666666667,
+        "Defect": 0.0,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.9434555914356646,
+        "r2": 0.8901084530112197,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -1.2029862188015479,
+        "ols_intercept_pts": -2.691355740996141,
+        "in_sample_mae_pts": 0.7292763863415096,
+        "loo_mae_pts": 6.663139245888066
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.9800412883143647,
+        "r2": 0.9604809268008796,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -1.927448389910158,
+        "ols_intercept_pts": -1.10826096891852,
+        "in_sample_mae_pts": 0.6948768840619317,
+        "loo_mae_pts": 2.041123054618843
+      }
+    },
+    "reworked_or_gated_class_deck_frac_with_iron_avg_ckpt": {
+      "values_by_character": {
+        "Ironclad": 0.5666666666666667,
+        "Silent": 0.013333333333333334,
+        "Defect": 0.0,
+        "Necrobinder": 0.0,
+        "Regent": 0.0
+      },
+      "vs_delta_paper": {
+        "r": -0.9239725819126824,
+        "r2": 0.8537253321263886,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -12.225818868980962,
+        "ols_intercept_pts": -2.821805011198209,
+        "in_sample_mae_pts": 0.8460736282194855,
+        "loo_mae_pts": 24.81402926434076
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.9761541936795474,
+        "r2": 0.9528770098381673,
+        "spearman_rho": -0.8944271909999159,
+        "p_perm_two_sided": 0.05,
+        "p_perm_one_sided_neg": 0.05,
+        "ols_slope_pts_per_unit": -19.922163204638014,
+        "ols_intercept_pts": -1.2785585977915201,
+        "in_sample_mae_pts": 0.7594781455587728,
+        "loo_mae_pts": 10.598281684019103
+      }
+    },
+    "all_nerfed_cards_deck_frac_with_iron_avg_ckpt": {
+      "values_by_character": {
+        "Ironclad": 0.6066666666666667,
+        "Silent": 0.5833333333333334,
+        "Defect": 0.19,
+        "Necrobinder": 0.03333333333333333,
+        "Regent": 0.02666666666666667
+      },
+      "vs_delta_paper": {
+        "r": -0.8722132587534145,
+        "r2": 0.7607559687452508,
+        "spearman_rho": -1.0,
+        "p_perm_two_sided": 0.008333333333333333,
+        "p_perm_one_sided_neg": 0.008333333333333333,
+        "ols_slope_pts_per_unit": -10.102020296810691,
+        "ols_intercept_pts": -1.330618154518521,
+        "in_sample_mae_pts": 1.1893882804016465,
+        "loo_mae_pts": 2.1694457295718856
+      },
+      "vs_delta_78rules_revertible": {
+        "r": -0.7196899645004246,
+        "r2": 0.5179536450026223,
+        "spearman_rho": -0.9,
+        "p_perm_two_sided": 0.016666666666666666,
+        "p_perm_one_sided_neg": 0.016666666666666666,
+        "ols_slope_pts_per_unit": -12.856720286572957,
+        "ols_intercept_pts": 0.11320591300348237,
+        "in_sample_mae_pts": 2.4525879835300293,
+        "loo_mae_pts": 4.616987312705042
+      }
+    }
+  },
+  "characters": {
+    "Ironclad": {
+      "character": "Ironclad",
+      "trace_file": "iron_v111_on_v2_a10.jsonl.gz",
+      "meta": {
+        "type": "meta",
+        "ckpt": "runs/cold1115/ckpts/v2r_kd_s1_main/ckpt_026700.pt",
+        "update": 26700,
+        "character": "Ironclad",
+        "ascension": 10,
+        "sample": false,
+        "n_seeds": 300,
+        "time": "2026-11-16 02:40:31"
+      },
+      "n_games": 300,
+      "n_aborted": 0,
+      "win_rate": 0.6766666666666666,
+      "mean_card_plays_per_game": 405.84,
+      "exposures": {
+        "nerfed_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL"
+          ],
+          "plays_per_game": 6.073333333333333,
+          "plays_per_game_se": 0.4522751437437811,
+          "share_of_all_card_plays": 0.014964846573362245,
+          "deck_game_frac": 0.58,
+          "deck_game_frac_se": 0.028543225449544855,
+          "copies_per_deck": 0.8233333333333334,
+          "copies_per_deck_se": 0.049257210244342604,
+          "total_plays": 1822,
+          "games_with_card": 174
+        },
+        "std_changed_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL"
+          ],
+          "plays_per_game": 6.073333333333333,
+          "plays_per_game_se": 0.4522751437437811,
+          "share_of_all_card_plays": 0.014964846573362245,
+          "deck_game_frac": 0.58,
+          "deck_game_frac_se": 0.028543225449544855,
+          "copies_per_deck": 0.8233333333333334,
+          "copies_per_deck_se": 0.049257210244342604,
+          "total_plays": 1822,
+          "games_with_card": 174
+        },
+        "all_9_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SPEEDSTER",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 6.16,
+          "plays_per_game_se": 0.4518797602523845,
+          "share_of_all_card_plays": 0.01517839542676917,
+          "deck_game_frac": 0.59,
+          "deck_game_frac_se": 0.028443454437435133,
+          "copies_per_deck": 0.8333333333333334,
+          "copies_per_deck_se": 0.04903377066043596,
+          "total_plays": 1848,
+          "games_with_card": 177
+        },
+        "all_nerfed_cards": {
+          "cards": [
+            "CARD.BYRDONIS_EGG",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO"
+          ],
+          "plays_per_game": 7.49,
+          "plays_per_game_se": 0.551646668459751,
+          "share_of_all_card_plays": 0.018455548984821605,
+          "deck_game_frac": 0.6066666666666667,
+          "deck_game_frac_se": 0.028250090846760858,
+          "copies_per_deck": 0.8833333333333333,
+          "copies_per_deck_se": 0.0502964086727959,
+          "total_plays": 2247,
+          "games_with_card": 182
+        },
+        "all_17_std_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 7.616666666666666,
+          "plays_per_game_se": 0.5522520697736724,
+          "share_of_all_card_plays": 0.018767658847493266,
+          "deck_game_frac": 0.62,
+          "deck_game_frac_se": 0.028070622832789726,
+          "copies_per_deck": 0.9133333333333333,
+          "copies_per_deck_se": 0.05126566070283697,
+          "total_plays": 2285,
+          "games_with_card": 186
+        },
+        "all_20_rule_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DEBT",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HAND_OF_GREED",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 7.616666666666666,
+          "plays_per_game_se": 0.5522520697736724,
+          "share_of_all_card_plays": 0.018767658847493266,
+          "deck_game_frac": 0.62,
+          "deck_game_frac_se": 0.028070622832789726,
+          "copies_per_deck": 0.9133333333333333,
+          "copies_per_deck_se": 0.05126566070283697,
+          "total_plays": 2285,
+          "games_with_card": 186
+        },
+        "nerfed_or_restricted_relics": {
+          "relics_per_game": 0.4633333333333333,
+          "relics_per_game_se": 0.03815661364197322,
+          "game_frac_with_any": 0.38,
+          "game_frac_with_any_se": 0.028070622832789726
+        }
+      },
+      "per_changed_card": {
+        "CARD.BEAT_DOWN": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 3,
+          "plays_per_game": 0.01
+        },
+        "CARD.CATASTROPHE": {
+          "offered_rewards": 4,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 3,
+          "deck_game_frac": 0.01,
+          "deck_copies_per_game": 0.01,
+          "total_plays": 22,
+          "plays_per_game": 0.07333333333333333
+        },
+        "CARD.EXPECT_A_FIGHT": {
+          "offered_rewards": 171,
+          "picked_rewards": 72,
+          "pick_rate": 0.42105263157894735,
+          "deck_games": 81,
+          "deck_game_frac": 0.27,
+          "deck_copies_per_game": 0.30333333333333334,
+          "total_plays": 308,
+          "plays_per_game": 1.0266666666666666
+        },
+        "CARD.EXPERTISE": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered_rewards": 177,
+          "picked_rewards": 130,
+          "pick_rate": 0.7344632768361582,
+          "deck_games": 125,
+          "deck_game_frac": 0.4166666666666667,
+          "deck_copies_per_game": 0.52,
+          "total_plays": 1514,
+          "plays_per_game": 5.046666666666667
+        },
+        "CARD.HELIX_DRILL": {
+          "offered_rewards": 3,
+          "picked_rewards": 1,
+          "pick_rate": 0.3333333333333333,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 13,
+          "plays_per_game": 0.043333333333333335
+        },
+        "CARD.MEMENTO_MORI": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.OMNISLICE": {
+          "offered_rewards": 7,
+          "picked_rewards": 5,
+          "pick_rate": 0.7142857142857143,
+          "deck_games": 13,
+          "deck_game_frac": 0.043333333333333335,
+          "deck_copies_per_game": 0.043333333333333335,
+          "total_plays": 328,
+          "plays_per_game": 1.0933333333333333
+        },
+        "CARD.PHANTOM_BLADES": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.SALVO": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 4,
+          "deck_game_frac": 0.013333333333333334,
+          "deck_copies_per_game": 0.013333333333333334,
+          "total_plays": 84,
+          "plays_per_game": 0.28
+        },
+        "CARD.SPEEDSTER": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.SPOILS_MAP": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.UPROAR": {
+          "offered_rewards": 5,
+          "picked_rewards": 2,
+          "pick_rate": 0.4,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 13,
+          "plays_per_game": 0.043333333333333335
+        }
+      },
+      "per_changed_relic": {
+        "RELIC.ALCHEMICAL_COFFER": {
+          "games": 22,
+          "game_frac": 0.07333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.ASTROLABE": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BEAUTIFUL_BRACELET": {
+          "games": 6,
+          "game_frac": 0.02,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BRILLIANT_SCARF": {
+          "games": 22,
+          "game_frac": 0.07333333333333333,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.BURNING_STICKS": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.FISHING_ROD": {
+          "games": 16,
+          "game_frac": 0.05333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JEWELED_MASK": {
+          "games": 18,
+          "game_frac": 0.06,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JOSS_PAPER": {
+          "games": 43,
+          "game_frac": 0.14333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.JUZU_BRACELET": {
+          "games": 49,
+          "game_frac": 0.16333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.KALEIDOSCOPE": {
+          "games": 5,
+          "game_frac": 0.016666666666666666,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.NEW_LEAF": {
+          "games": 14,
+          "game_frac": 0.04666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PAELS_LEGION": {
+          "games": 16,
+          "game_frac": 0.05333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PANDORAS_BOX": {
+          "games": 8,
+          "game_frac": 0.02666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PERMAFROST": {
+          "games": 33,
+          "game_frac": 0.11,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PHIAL_HOLSTER": {
+          "games": 27,
+          "game_frac": 0.09,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.POTION_BELT": {
+          "games": 104,
+          "game_frac": 0.3466666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.RAINBOW_RING": {
+          "games": 16,
+          "game_frac": 0.05333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.RINGING_TRIANGLE": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.ROYAL_STAMP": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.SAND_CASTLE": {
+          "games": 6,
+          "game_frac": 0.02,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.VELVET_CHOKER": {
+          "games": 6,
+          "game_frac": 0.02,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.WAR_HAMMER": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WAR_PAINT": {
+          "games": 69,
+          "game_frac": 0.23,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WHETSTONE": {
+          "games": 74,
+          "game_frac": 0.24666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WING_CHARM": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": false
+        }
+      },
+      "forgotten_ritual_unconditional_plays": {
+        "total_plays": 1514,
+        "plays_without_prior_exhaust": 1342,
+        "plays_without_prior_exhaust_per_game": 4.473333333333334,
+        "frac_broken_by_v113_precondition": 0.8863936591809776
+      }
+    },
+    "Silent": {
+      "character": "Silent",
+      "trace_file": "silent_v111_on_v2_a10.jsonl.gz",
+      "meta": {
+        "type": "meta",
+        "ckpt": "runs/colab/silent_v111.pt",
+        "update": 15600,
+        "character": "Silent",
+        "ascension": 10,
+        "sample": false,
+        "n_seeds": 300,
+        "time": "2026-11-25 01:32:35"
+      },
+      "n_games": 300,
+      "n_aborted": 0,
+      "win_rate": 0.5333333333333333,
+      "mean_card_plays_per_game": 645.6,
+      "exposures": {
+        "nerfed_class_cards": {
+          "cards": [
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES"
+          ],
+          "plays_per_game": 7.073333333333333,
+          "plays_per_game_se": 0.47999427099269065,
+          "share_of_all_card_plays": 0.010956216439487815,
+          "deck_game_frac": 0.5766666666666667,
+          "deck_game_frac_se": 0.028573804116352325,
+          "copies_per_deck": 0.8166666666666667,
+          "copies_per_deck_se": 0.050957024613765695,
+          "total_plays": 2122,
+          "games_with_card": 173
+        },
+        "std_changed_class_cards": {
+          "cards": [
+            "CARD.EXPERTISE",
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SPEEDSTER"
+          ],
+          "plays_per_game": 7.95,
+          "plays_per_game_se": 0.5123040180517118,
+          "share_of_all_card_plays": 0.012314126394052044,
+          "deck_game_frac": 0.6066666666666667,
+          "deck_game_frac_se": 0.028250090846760858,
+          "copies_per_deck": 0.93,
+          "copies_per_deck_se": 0.056616805396355066,
+          "total_plays": 2385,
+          "games_with_card": 182
+        },
+        "all_9_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SPEEDSTER",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 8.006666666666666,
+          "plays_per_game_se": 0.5210398943792552,
+          "share_of_all_card_plays": 0.012401900041305246,
+          "deck_game_frac": 0.6066666666666667,
+          "deck_game_frac_se": 0.028250090846760858,
+          "copies_per_deck": 0.9366666666666666,
+          "copies_per_deck_se": 0.05723045655884508,
+          "total_plays": 2402,
+          "games_with_card": 182
+        },
+        "all_nerfed_cards": {
+          "cards": [
+            "CARD.BYRDONIS_EGG",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO"
+          ],
+          "plays_per_game": 8.023333333333333,
+          "plays_per_game_se": 0.5729194988274986,
+          "share_of_all_card_plays": 0.012427715819909129,
+          "deck_game_frac": 0.5833333333333334,
+          "deck_game_frac_se": 0.028511310643917532,
+          "copies_per_deck": 0.8566666666666667,
+          "copies_per_deck_se": 0.05266971471359886,
+          "total_plays": 2407,
+          "games_with_card": 175
+        },
+        "all_17_std_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 8.996666666666666,
+          "plays_per_game_se": 0.6105993972578289,
+          "share_of_all_card_plays": 0.013935357290375879,
+          "deck_game_frac": 0.6133333333333333,
+          "deck_game_frac_se": 0.028163138908196883,
+          "copies_per_deck": 0.9833333333333333,
+          "copies_per_deck_se": 0.05962692136126034,
+          "total_plays": 2699,
+          "games_with_card": 184
+        },
+        "all_20_rule_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DEBT",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HAND_OF_GREED",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 9.0,
+          "plays_per_game_se": 0.6108823598084034,
+          "share_of_all_card_plays": 0.013940520446096654,
+          "deck_game_frac": 0.6133333333333333,
+          "deck_game_frac_se": 0.028163138908196883,
+          "copies_per_deck": 0.9866666666666667,
+          "copies_per_deck_se": 0.06009530397020757,
+          "total_plays": 2700,
+          "games_with_card": 184
+        },
+        "nerfed_or_restricted_relics": {
+          "relics_per_game": 0.49666666666666665,
+          "relics_per_game_se": 0.03850562319279648,
+          "game_frac_with_any": 0.4,
+          "game_frac_with_any_se": 0.02833152987899314
+        }
+      },
+      "per_changed_card": {
+        "CARD.BEAT_DOWN": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 1,
+          "plays_per_game": 0.0033333333333333335
+        },
+        "CARD.CATASTROPHE": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 27,
+          "plays_per_game": 0.09
+        },
+        "CARD.EXPECT_A_FIGHT": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.EXPERTISE": {
+          "offered_rewards": 157,
+          "picked_rewards": 27,
+          "pick_rate": 0.17197452229299362,
+          "deck_games": 30,
+          "deck_game_frac": 0.1,
+          "deck_copies_per_game": 0.10666666666666667,
+          "total_plays": 246,
+          "plays_per_game": 0.82
+        },
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered_rewards": 6,
+          "picked_rewards": 1,
+          "pick_rate": 0.16666666666666666,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 4,
+          "plays_per_game": 0.013333333333333334
+        },
+        "CARD.HAND_OF_GREED": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 1,
+          "plays_per_game": 0.0033333333333333335
+        },
+        "CARD.HELIX_DRILL": {
+          "offered_rewards": 4,
+          "picked_rewards": 1,
+          "pick_rate": 0.25,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 12,
+          "plays_per_game": 0.04
+        },
+        "CARD.MEMENTO_MORI": {
+          "offered_rewards": 164,
+          "picked_rewards": 4,
+          "pick_rate": 0.024390243902439025,
+          "deck_games": 4,
+          "deck_game_frac": 0.013333333333333334,
+          "deck_copies_per_game": 0.013333333333333334,
+          "total_plays": 146,
+          "plays_per_game": 0.4866666666666667
+        },
+        "CARD.OMNISLICE": {
+          "offered_rewards": 5,
+          "picked_rewards": 3,
+          "pick_rate": 0.6,
+          "deck_games": 8,
+          "deck_game_frac": 0.02666666666666667,
+          "deck_copies_per_game": 0.02666666666666667,
+          "total_plays": 258,
+          "plays_per_game": 0.86
+        },
+        "CARD.PHANTOM_BLADES": {
+          "offered_rewards": 165,
+          "picked_rewards": 137,
+          "pick_rate": 0.8303030303030303,
+          "deck_games": 171,
+          "deck_game_frac": 0.57,
+          "deck_copies_per_game": 0.8033333333333333,
+          "total_plays": 1976,
+          "plays_per_game": 6.586666666666667
+        },
+        "CARD.SALVO": {
+          "offered_rewards": 4,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 11,
+          "plays_per_game": 0.03666666666666667
+        },
+        "CARD.SPEEDSTER": {
+          "offered_rewards": 154,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 17,
+          "plays_per_game": 0.056666666666666664
+        },
+        "CARD.SPOILS_MAP": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.UPROAR": {
+          "offered_rewards": 6,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 1,
+          "plays_per_game": 0.0033333333333333335
+        }
+      },
+      "per_changed_relic": {
+        "RELIC.ALCHEMICAL_COFFER": {
+          "games": 16,
+          "game_frac": 0.05333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.ASTROLABE": {
+          "games": 5,
+          "game_frac": 0.016666666666666666,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BEAUTIFUL_BRACELET": {
+          "games": 3,
+          "game_frac": 0.01,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BRILLIANT_SCARF": {
+          "games": 20,
+          "game_frac": 0.06666666666666667,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.BURNING_STICKS": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.FISHING_ROD": {
+          "games": 20,
+          "game_frac": 0.06666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JEWELED_MASK": {
+          "games": 14,
+          "game_frac": 0.04666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JOSS_PAPER": {
+          "games": 42,
+          "game_frac": 0.14,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.JUZU_BRACELET": {
+          "games": 43,
+          "game_frac": 0.14333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.KALEIDOSCOPE": {
+          "games": 4,
+          "game_frac": 0.013333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.NEW_LEAF": {
+          "games": 11,
+          "game_frac": 0.03666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PAELS_LEGION": {
+          "games": 24,
+          "game_frac": 0.08,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PANDORAS_BOX": {
+          "games": 10,
+          "game_frac": 0.03333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PERMAFROST": {
+          "games": 38,
+          "game_frac": 0.12666666666666668,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PHIAL_HOLSTER": {
+          "games": 21,
+          "game_frac": 0.07,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.POTION_BELT": {
+          "games": 86,
+          "game_frac": 0.2866666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.RAINBOW_RING": {
+          "games": 23,
+          "game_frac": 0.07666666666666666,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.WAR_PAINT": {
+          "games": 69,
+          "game_frac": 0.23,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WHETSTONE": {
+          "games": 69,
+          "game_frac": 0.23,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WING_CHARM": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        }
+      }
+    },
+    "Defect": {
+      "character": "Defect",
+      "trace_file": "defect_v111_on_v2_a10.jsonl.gz",
+      "meta": {
+        "type": "meta",
+        "ckpt": "runs/colab/defect_v111.pt",
+        "update": 16400,
+        "character": "Defect",
+        "ascension": 10,
+        "sample": false,
+        "n_seeds": 300,
+        "time": "2026-11-25 02:01:34"
+      },
+      "n_games": 300,
+      "n_aborted": 0,
+      "win_rate": 0.56,
+      "mean_card_plays_per_game": 514.13,
+      "exposures": {
+        "nerfed_class_cards": {
+          "cards": [
+            "CARD.HELIX_DRILL"
+          ],
+          "plays_per_game": 3.9233333333333333,
+          "plays_per_game_se": 0.4360719140607743,
+          "share_of_all_card_plays": 0.007631014205226953,
+          "deck_game_frac": 0.16333333333333333,
+          "deck_game_frac_se": 0.021378540451223525,
+          "copies_per_deck": 0.18333333333333332,
+          "copies_per_deck_se": 0.025628480766214837,
+          "total_plays": 1177,
+          "games_with_card": 49
+        },
+        "std_changed_class_cards": {
+          "cards": [
+            "CARD.HELIX_DRILL",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 8.913333333333334,
+          "plays_per_game_se": 0.6968294710903145,
+          "share_of_all_card_plays": 0.017336730658264122,
+          "deck_game_frac": 0.38333333333333336,
+          "deck_game_frac_se": 0.028117579742899114,
+          "copies_per_deck": 0.52,
+          "copies_per_deck_se": 0.04415438608427679,
+          "total_plays": 2674,
+          "games_with_card": 115
+        },
+        "all_9_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SPEEDSTER",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 9.053333333333333,
+          "plays_per_game_se": 0.7063428719072385,
+          "share_of_all_card_plays": 0.017609035328289214,
+          "deck_game_frac": 0.38666666666666666,
+          "deck_game_frac_se": 0.028163138908196883,
+          "copies_per_deck": 0.5366666666666666,
+          "copies_per_deck_se": 0.04560954283504387,
+          "total_plays": 2716,
+          "games_with_card": 116
+        },
+        "all_nerfed_cards": {
+          "cards": [
+            "CARD.BYRDONIS_EGG",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO"
+          ],
+          "plays_per_game": 4.46,
+          "plays_per_game_se": 0.4767097375899128,
+          "share_of_all_card_plays": 0.008674848773656468,
+          "deck_game_frac": 0.19,
+          "deck_game_frac_se": 0.02268734711383297,
+          "copies_per_deck": 0.21666666666666667,
+          "copies_per_deck_se": 0.02771825655705308,
+          "total_plays": 1338,
+          "games_with_card": 57
+        },
+        "all_17_std_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 9.636666666666667,
+          "plays_per_game_se": 0.7392740772395141,
+          "share_of_all_card_plays": 0.018743638120060427,
+          "deck_game_frac": 0.4033333333333333,
+          "deck_game_frac_se": 0.02837019701695993,
+          "copies_per_deck": 0.5766666666666667,
+          "copies_per_deck_se": 0.048065899888276954,
+          "total_plays": 2891,
+          "games_with_card": 121
+        },
+        "all_20_rule_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DEBT",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HAND_OF_GREED",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 9.636666666666667,
+          "plays_per_game_se": 0.7392740772395141,
+          "share_of_all_card_plays": 0.018743638120060427,
+          "deck_game_frac": 0.4033333333333333,
+          "deck_game_frac_se": 0.02837019701695993,
+          "copies_per_deck": 0.5766666666666667,
+          "copies_per_deck_se": 0.048065899888276954,
+          "total_plays": 2891,
+          "games_with_card": 121
+        },
+        "nerfed_or_restricted_relics": {
+          "relics_per_game": 0.55,
+          "relics_per_game_se": 0.04173628520588612,
+          "game_frac_with_any": 0.4266666666666667,
+          "game_frac_with_any_se": 0.028603050929618477
+        }
+      },
+      "per_changed_card": {
+        "CARD.BEAT_DOWN": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 3,
+          "plays_per_game": 0.01
+        },
+        "CARD.CATASTROPHE": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 4,
+          "deck_game_frac": 0.013333333333333334,
+          "deck_copies_per_game": 0.013333333333333334,
+          "total_plays": 39,
+          "plays_per_game": 0.13
+        },
+        "CARD.EXPECT_A_FIGHT": {
+          "offered_rewards": 2,
+          "picked_rewards": 2,
+          "pick_rate": 1.0,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 7,
+          "plays_per_game": 0.023333333333333334
+        },
+        "CARD.EXPERTISE": {
+          "offered_rewards": 2,
+          "picked_rewards": 1,
+          "pick_rate": 0.5,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 14,
+          "plays_per_game": 0.04666666666666667
+        },
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered_rewards": 3,
+          "picked_rewards": 2,
+          "pick_rate": 0.6666666666666666,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 21,
+          "plays_per_game": 0.07
+        },
+        "CARD.HELIX_DRILL": {
+          "offered_rewards": 87,
+          "picked_rewards": 48,
+          "pick_rate": 0.5517241379310345,
+          "deck_games": 49,
+          "deck_game_frac": 0.16333333333333333,
+          "deck_copies_per_game": 0.18333333333333332,
+          "total_plays": 1177,
+          "plays_per_game": 3.9233333333333333
+        },
+        "CARD.MEMENTO_MORI": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.MINION_DIVE_BOMB": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 17,
+          "plays_per_game": 0.056666666666666664
+        },
+        "CARD.OMNISLICE": {
+          "offered_rewards": 3,
+          "picked_rewards": 1,
+          "pick_rate": 0.3333333333333333,
+          "deck_games": 5,
+          "deck_game_frac": 0.016666666666666666,
+          "deck_copies_per_game": 0.016666666666666666,
+          "total_plays": 109,
+          "plays_per_game": 0.36333333333333334
+        },
+        "CARD.PHANTOM_BLADES": {
+          "offered_rewards": 3,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.SALVO": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 7,
+          "plays_per_game": 0.023333333333333334
+        },
+        "CARD.SPEEDSTER": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.SPOILS_MAP": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.UPROAR": {
+          "offered_rewards": 540,
+          "picked_rewards": 94,
+          "pick_rate": 0.17407407407407408,
+          "deck_games": 86,
+          "deck_game_frac": 0.2866666666666667,
+          "deck_copies_per_game": 0.33666666666666667,
+          "total_plays": 1497,
+          "plays_per_game": 4.99
+        }
+      },
+      "per_changed_relic": {
+        "RELIC.ALCHEMICAL_COFFER": {
+          "games": 22,
+          "game_frac": 0.07333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.ASTROLABE": {
+          "games": 5,
+          "game_frac": 0.016666666666666666,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BEAUTIFUL_BRACELET": {
+          "games": 13,
+          "game_frac": 0.043333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BRILLIANT_SCARF": {
+          "games": 23,
+          "game_frac": 0.07666666666666666,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.BURNING_STICKS": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.FISHING_ROD": {
+          "games": 19,
+          "game_frac": 0.06333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JEWELED_MASK": {
+          "games": 5,
+          "game_frac": 0.016666666666666666,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JOSS_PAPER": {
+          "games": 43,
+          "game_frac": 0.14333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.JUZU_BRACELET": {
+          "games": 52,
+          "game_frac": 0.17333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.KALEIDOSCOPE": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.NEW_LEAF": {
+          "games": 11,
+          "game_frac": 0.03666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PAELS_LEGION": {
+          "games": 25,
+          "game_frac": 0.08333333333333333,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PANDORAS_BOX": {
+          "games": 11,
+          "game_frac": 0.03666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PERMAFROST": {
+          "games": 38,
+          "game_frac": 0.12666666666666668,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PHIAL_HOLSTER": {
+          "games": 24,
+          "game_frac": 0.08,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.POTION_BELT": {
+          "games": 92,
+          "game_frac": 0.30666666666666664,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.POWER_CELL": {
+          "games": 16,
+          "game_frac": 0.05333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.RAINBOW_RING": {
+          "games": 19,
+          "game_frac": 0.06333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.SAND_CASTLE": {
+          "games": 22,
+          "game_frac": 0.07333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WAR_PAINT": {
+          "games": 62,
+          "game_frac": 0.20666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WHETSTONE": {
+          "games": 69,
+          "game_frac": 0.23,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WING_CHARM": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": false
+        }
+      }
+    },
+    "Necrobinder": {
+      "character": "Necrobinder",
+      "trace_file": "necro_v111_on_v2_a10.jsonl.gz",
+      "meta": {
+        "type": "meta",
+        "ckpt": "runs/colab/necro_v111.pt",
+        "update": 13600,
+        "character": "Necrobinder",
+        "ascension": 10,
+        "sample": false,
+        "n_seeds": 300,
+        "time": "2026-11-25 02:04:03"
+      },
+      "n_games": 300,
+      "n_aborted": 0,
+      "win_rate": 0.44,
+      "mean_card_plays_per_game": 469.03,
+      "exposures": {
+        "nerfed_class_cards": {
+          "cards": [],
+          "plays_per_game": 0.0,
+          "plays_per_game_se": 0.0,
+          "share_of_all_card_plays": 0.0,
+          "deck_game_frac": 0.0,
+          "deck_game_frac_se": 0.0,
+          "copies_per_deck": 0.0,
+          "copies_per_deck_se": 0.0,
+          "total_plays": 0,
+          "games_with_card": 0
+        },
+        "std_changed_class_cards": {
+          "cards": [],
+          "plays_per_game": 0.0,
+          "plays_per_game_se": 0.0,
+          "share_of_all_card_plays": 0.0,
+          "deck_game_frac": 0.0,
+          "deck_game_frac_se": 0.0,
+          "copies_per_deck": 0.0,
+          "copies_per_deck_se": 0.0,
+          "total_plays": 0,
+          "games_with_card": 0
+        },
+        "all_9_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SPEEDSTER",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 0.06333333333333334,
+          "plays_per_game_se": 0.04140733117983627,
+          "share_of_all_card_plays": 0.00013503045292056657,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_game_frac_se": 0.004706155586970109,
+          "copies_per_deck": 0.01,
+          "copies_per_deck_se": 0.007443581928658478,
+          "total_plays": 19,
+          "games_with_card": 2
+        },
+        "all_nerfed_cards": {
+          "cards": [
+            "CARD.BYRDONIS_EGG",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO"
+          ],
+          "plays_per_game": 0.79,
+          "plays_per_game_se": 0.2615827393826298,
+          "share_of_all_card_plays": 0.001684327228535488,
+          "deck_game_frac": 0.03333333333333333,
+          "deck_game_frac_se": 0.010381070730216605,
+          "copies_per_deck": 0.03666666666666667,
+          "copies_per_deck_se": 0.011850361450944147,
+          "total_plays": 237,
+          "games_with_card": 10
+        },
+        "all_17_std_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 0.8633333333333333,
+          "plays_per_game_se": 0.2628502688650665,
+          "share_of_all_card_plays": 0.0018406782792856177,
+          "deck_game_frac": 0.07666666666666666,
+          "deck_game_frac_se": 0.015386751988387177,
+          "copies_per_deck": 0.08,
+          "copies_per_deck_se": 0.016384455748956712,
+          "total_plays": 259,
+          "games_with_card": 23
+        },
+        "all_20_rule_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DEBT",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HAND_OF_GREED",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 0.8633333333333333,
+          "plays_per_game_se": 0.2628502688650665,
+          "share_of_all_card_plays": 0.0018406782792856177,
+          "deck_game_frac": 0.07666666666666666,
+          "deck_game_frac_se": 0.015386751988387177,
+          "copies_per_deck": 0.08,
+          "copies_per_deck_se": 0.016384455748956712,
+          "total_plays": 259,
+          "games_with_card": 23
+        },
+        "nerfed_or_restricted_relics": {
+          "relics_per_game": 0.51,
+          "relics_per_game_se": 0.0418323350847154,
+          "game_frac_with_any": 0.3933333333333333,
+          "game_frac_with_any_se": 0.028250090846760858
+        }
+      },
+      "per_changed_card": {
+        "CARD.BEAT_DOWN": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 4,
+          "plays_per_game": 0.013333333333333334
+        },
+        "CARD.CATASTROPHE": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 15,
+          "plays_per_game": 0.05
+        },
+        "CARD.EXPECT_A_FIGHT": {
+          "offered_rewards": 3,
+          "picked_rewards": 1,
+          "pick_rate": 0.3333333333333333,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 1,
+          "plays_per_game": 0.0033333333333333335
+        },
+        "CARD.EXPERTISE": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered_rewards": 2,
+          "picked_rewards": 1,
+          "pick_rate": 0.5,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 11,
+          "plays_per_game": 0.03666666666666667
+        },
+        "CARD.HELIX_DRILL": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.OMNISLICE": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 7,
+          "deck_game_frac": 0.023333333333333334,
+          "deck_copies_per_game": 0.023333333333333334,
+          "total_plays": 208,
+          "plays_per_game": 0.6933333333333334
+        },
+        "CARD.PHANTOM_BLADES": {
+          "offered_rewards": 2,
+          "picked_rewards": 1,
+          "pick_rate": 0.5,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 4,
+          "plays_per_game": 0.013333333333333334
+        },
+        "CARD.SALVO": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 13,
+          "plays_per_game": 0.043333333333333335
+        },
+        "CARD.SPOILS_MAP": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 11,
+          "deck_game_frac": 0.03666666666666667,
+          "deck_copies_per_game": 0.03666666666666667,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.UPROAR": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 3,
+          "plays_per_game": 0.01
+        }
+      },
+      "per_changed_relic": {
+        "RELIC.ALCHEMICAL_COFFER": {
+          "games": 18,
+          "game_frac": 0.06,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.ASTROLABE": {
+          "games": 4,
+          "game_frac": 0.013333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BEAUTIFUL_BRACELET": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BOOK_REPAIR_KNIFE": {
+          "games": 20,
+          "game_frac": 0.06666666666666667,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.BRILLIANT_SCARF": {
+          "games": 22,
+          "game_frac": 0.07333333333333333,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.BURNING_STICKS": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.FISHING_ROD": {
+          "games": 26,
+          "game_frac": 0.08666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JEWELED_MASK": {
+          "games": 13,
+          "game_frac": 0.043333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JOSS_PAPER": {
+          "games": 42,
+          "game_frac": 0.14,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.JUZU_BRACELET": {
+          "games": 45,
+          "game_frac": 0.15,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.KALEIDOSCOPE": {
+          "games": 5,
+          "game_frac": 0.016666666666666666,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.NEW_LEAF": {
+          "games": 14,
+          "game_frac": 0.04666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PAELS_LEGION": {
+          "games": 18,
+          "game_frac": 0.06,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PANDORAS_BOX": {
+          "games": 10,
+          "game_frac": 0.03333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PERMAFROST": {
+          "games": 27,
+          "game_frac": 0.09,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PHIAL_HOLSTER": {
+          "games": 32,
+          "game_frac": 0.10666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.POTION_BELT": {
+          "games": 82,
+          "game_frac": 0.2733333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.RAINBOW_RING": {
+          "games": 17,
+          "game_frac": 0.056666666666666664,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.SAND_CASTLE": {
+          "games": 12,
+          "game_frac": 0.04,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.VELVET_CHOKER": {
+          "games": 5,
+          "game_frac": 0.016666666666666666,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.WAR_PAINT": {
+          "games": 60,
+          "game_frac": 0.2,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WHETSTONE": {
+          "games": 54,
+          "game_frac": 0.18,
+          "nerfed_or_restricted": false
+        }
+      }
+    },
+    "Regent": {
+      "character": "Regent",
+      "trace_file": "regent_v111_on_v2_a10.jsonl.gz",
+      "meta": {
+        "type": "meta",
+        "ckpt": "runs/colab/regent_v111.pt",
+        "update": 16400,
+        "character": "Regent",
+        "ascension": 10,
+        "sample": false,
+        "n_seeds": 300,
+        "time": "2026-11-25 01:55:09"
+      },
+      "n_games": 300,
+      "n_aborted": 0,
+      "win_rate": 0.5133333333333333,
+      "mean_card_plays_per_game": 482.5466666666667,
+      "exposures": {
+        "nerfed_class_cards": {
+          "cards": [],
+          "plays_per_game": 0.0,
+          "plays_per_game_se": 0.0,
+          "share_of_all_card_plays": 0.0,
+          "deck_game_frac": 0.0,
+          "deck_game_frac_se": 0.0,
+          "copies_per_deck": 0.0,
+          "copies_per_deck_se": 0.0,
+          "total_plays": 0,
+          "games_with_card": 0
+        },
+        "std_changed_class_cards": {
+          "cards": [],
+          "plays_per_game": 0.0,
+          "plays_per_game_se": 0.0,
+          "share_of_all_card_plays": 0.0,
+          "deck_game_frac": 0.0,
+          "deck_game_frac_se": 0.0,
+          "copies_per_deck": 0.0,
+          "copies_per_deck_se": 0.0,
+          "total_plays": 0,
+          "games_with_card": 0
+        },
+        "all_9_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SPEEDSTER",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 0.15,
+          "plays_per_game_se": 0.060308571080895275,
+          "share_of_all_card_plays": 0.00031085076400209997,
+          "deck_game_frac": 0.01,
+          "deck_game_frac_se": 0.005754160919975786,
+          "copies_per_deck": 0.01,
+          "copies_per_deck_se": 0.005754160919975786,
+          "total_plays": 45,
+          "games_with_card": 3
+        },
+        "all_nerfed_cards": {
+          "cards": [
+            "CARD.BYRDONIS_EGG",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO"
+          ],
+          "plays_per_game": 9.606666666666667,
+          "plays_per_game_se": 0.8062989662896525,
+          "share_of_all_card_plays": 0.019908264485645602,
+          "deck_game_frac": 0.02666666666666667,
+          "deck_game_frac_se": 0.009317074546885731,
+          "copies_per_deck": 0.02666666666666667,
+          "copies_per_deck_se": 0.009317074546885731,
+          "total_plays": 2882,
+          "games_with_card": 8
+        },
+        "all_17_std_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 10.82,
+          "plays_per_game_se": 0.8218469017942769,
+          "share_of_all_card_plays": 0.02242270177668481,
+          "deck_game_frac": 0.04666666666666667,
+          "deck_game_frac_se": 0.012198043717391777,
+          "copies_per_deck": 0.04666666666666667,
+          "copies_per_deck_se": 0.012198043717391777,
+          "total_plays": 3246,
+          "games_with_card": 14
+        },
+        "all_20_rule_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DEBT",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HAND_OF_GREED",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 10.83,
+          "plays_per_game_se": 0.8217115807642581,
+          "share_of_all_card_plays": 0.022443425160951616,
+          "deck_game_frac": 0.04666666666666667,
+          "deck_game_frac_se": 0.012198043717391777,
+          "copies_per_deck": 0.04666666666666667,
+          "copies_per_deck_se": 0.012198043717391777,
+          "total_plays": 3249,
+          "games_with_card": 14
+        },
+        "nerfed_or_restricted_relics": {
+          "relics_per_game": 0.5166666666666667,
+          "relics_per_game_se": 0.03906896778487433,
+          "game_frac_with_any": 0.42,
+          "game_frac_with_any_se": 0.028543225449544858
+        }
+      },
+      "per_changed_card": {
+        "CARD.BEAT_DOWN": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 94,
+          "plays_per_game": 0.31333333333333335
+        },
+        "CARD.CATASTROPHE": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 3,
+          "deck_game_frac": 0.01,
+          "deck_copies_per_game": 0.01,
+          "total_plays": 238,
+          "plays_per_game": 0.7933333333333333
+        },
+        "CARD.EXPECT_A_FIGHT": {
+          "offered_rewards": 5,
+          "picked_rewards": 1,
+          "pick_rate": 0.2,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.EXPERTISE": {
+          "offered_rewards": 2,
+          "picked_rewards": 2,
+          "pick_rate": 1.0,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 24,
+          "plays_per_game": 0.08
+        },
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.HELIX_DRILL": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 8,
+          "plays_per_game": 0.02666666666666667
+        },
+        "CARD.MEMENTO_MORI": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 2,
+          "plays_per_game": 0.006666666666666667
+        },
+        "CARD.MINION_DIVE_BOMB": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 2088,
+          "plays_per_game": 6.96
+        },
+        "CARD.OMNISLICE": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 5,
+          "deck_game_frac": 0.016666666666666666,
+          "deck_copies_per_game": 0.016666666666666666,
+          "total_plays": 468,
+          "plays_per_game": 1.56
+        },
+        "CARD.PHANTOM_BLADES": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.ROYALTIES": {
+          "offered_rewards": 84,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 3,
+          "plays_per_game": 0.01
+        },
+        "CARD.SALVO": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 316,
+          "plays_per_game": 1.0533333333333332
+        },
+        "CARD.SPEEDSTER": {
+          "offered_rewards": 3,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.SPOILS_MAP": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.UPROAR": {
+          "offered_rewards": 3,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 8,
+          "plays_per_game": 0.02666666666666667
+        }
+      },
+      "per_changed_relic": {
+        "RELIC.ALCHEMICAL_COFFER": {
+          "games": 22,
+          "game_frac": 0.07333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.ASTROLABE": {
+          "games": 4,
+          "game_frac": 0.013333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BEAUTIFUL_BRACELET": {
+          "games": 6,
+          "game_frac": 0.02,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BRILLIANT_SCARF": {
+          "games": 27,
+          "game_frac": 0.09,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.BURNING_STICKS": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.FISHING_ROD": {
+          "games": 19,
+          "game_frac": 0.06333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JEWELED_MASK": {
+          "games": 9,
+          "game_frac": 0.03,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JOSS_PAPER": {
+          "games": 46,
+          "game_frac": 0.15333333333333332,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.JUZU_BRACELET": {
+          "games": 47,
+          "game_frac": 0.15666666666666668,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.KALEIDOSCOPE": {
+          "games": 6,
+          "game_frac": 0.02,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.NEW_LEAF": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PAELS_LEGION": {
+          "games": 29,
+          "game_frac": 0.09666666666666666,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PANDORAS_BOX": {
+          "games": 9,
+          "game_frac": 0.03,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PERMAFROST": {
+          "games": 30,
+          "game_frac": 0.1,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PHIAL_HOLSTER": {
+          "games": 27,
+          "game_frac": 0.09,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.POTION_BELT": {
+          "games": 94,
+          "game_frac": 0.31333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.RAINBOW_RING": {
+          "games": 20,
+          "game_frac": 0.06666666666666667,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.ROYAL_STAMP": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.SAND_CASTLE": {
+          "games": 6,
+          "game_frac": 0.02,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.VELVET_CHOKER": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.WAR_PAINT": {
+          "games": 70,
+          "game_frac": 0.23333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WHETSTONE": {
+          "games": 70,
+          "game_frac": 0.23333333333333334,
+          "nerfed_or_restricted": false
+        }
+      }
+    }
+  },
+  "alternates": {
+    "Ironclad_avg_v111": {
+      "character": "Ironclad",
+      "trace_file": "iron_avg_v111_on_v2_a10.jsonl.gz",
+      "meta": {
+        "type": "meta",
+        "ckpt": "runs/colab/iron_v111.pt",
+        "update": 26700,
+        "character": "Ironclad",
+        "ascension": 10,
+        "sample": false,
+        "n_seeds": 300,
+        "time": "2026-11-25 02:23:52"
+      },
+      "n_games": 300,
+      "n_aborted": 0,
+      "win_rate": 0.66,
+      "mean_card_plays_per_game": 400.03,
+      "exposures": {
+        "nerfed_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL"
+          ],
+          "plays_per_game": 5.95,
+          "plays_per_game_se": 0.45190356702591644,
+          "share_of_all_card_plays": 0.0148738844586656,
+          "deck_game_frac": 0.5666666666666667,
+          "deck_game_frac_se": 0.02865756512070317,
+          "copies_per_deck": 0.82,
+          "copies_per_deck_se": 0.05261076863712056,
+          "total_plays": 1785,
+          "games_with_card": 170
+        },
+        "std_changed_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL"
+          ],
+          "plays_per_game": 5.95,
+          "plays_per_game_se": 0.45190356702591644,
+          "share_of_all_card_plays": 0.0148738844586656,
+          "deck_game_frac": 0.5666666666666667,
+          "deck_game_frac_se": 0.02865756512070317,
+          "copies_per_deck": 0.82,
+          "copies_per_deck_se": 0.05261076863712056,
+          "total_plays": 1785,
+          "games_with_card": 170
+        },
+        "all_9_class_cards": {
+          "cards": [
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SPEEDSTER",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 6.13,
+          "plays_per_game_se": 0.45125774929498297,
+          "share_of_all_card_plays": 0.01532385071119666,
+          "deck_game_frac": 0.59,
+          "deck_game_frac_se": 0.028443454437435133,
+          "copies_per_deck": 0.8433333333333334,
+          "copies_per_deck_se": 0.05211648331880364,
+          "total_plays": 1839,
+          "games_with_card": 177
+        },
+        "all_nerfed_cards": {
+          "cards": [
+            "CARD.BYRDONIS_EGG",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO"
+          ],
+          "plays_per_game": 7.503333333333333,
+          "plays_per_game_se": 0.5650839922047033,
+          "share_of_all_card_plays": 0.018756926563841047,
+          "deck_game_frac": 0.6066666666666667,
+          "deck_game_frac_se": 0.028250090846760858,
+          "copies_per_deck": 0.8966666666666666,
+          "copies_per_deck_se": 0.05340122490407911,
+          "total_plays": 2251,
+          "games_with_card": 182
+        },
+        "all_17_std_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 7.59,
+          "plays_per_game_se": 0.5650403247219378,
+          "share_of_all_card_plays": 0.01897357698172637,
+          "deck_game_frac": 0.6233333333333333,
+          "deck_game_frac_se": 0.02802226115126559,
+          "copies_per_deck": 0.92,
+          "copies_per_deck_se": 0.053846472367269416,
+          "total_plays": 2277,
+          "games_with_card": 187
+        },
+        "all_20_rule_cards": {
+          "cards": [
+            "CARD.BEAT_DOWN",
+            "CARD.BYRDONIS_EGG",
+            "CARD.CATASTROPHE",
+            "CARD.DEBT",
+            "CARD.DOWSING",
+            "CARD.ENLIGHTENMENT",
+            "CARD.EXPECT_A_FIGHT",
+            "CARD.EXPERTISE",
+            "CARD.FORGOTTEN_RITUAL",
+            "CARD.HAND_OF_GREED",
+            "CARD.HELIX_DRILL",
+            "CARD.MEMENTO_MORI",
+            "CARD.MINION_DIVE_BOMB",
+            "CARD.OMNISLICE",
+            "CARD.PHANTOM_BLADES",
+            "CARD.ROYALTIES",
+            "CARD.SALVO",
+            "CARD.SPEEDSTER",
+            "CARD.SPOILS_MAP",
+            "CARD.UPROAR"
+          ],
+          "plays_per_game": 7.59,
+          "plays_per_game_se": 0.5650403247219378,
+          "share_of_all_card_plays": 0.01897357698172637,
+          "deck_game_frac": 0.6233333333333333,
+          "deck_game_frac_se": 0.02802226115126559,
+          "copies_per_deck": 0.92,
+          "copies_per_deck_se": 0.053846472367269416,
+          "total_plays": 2277,
+          "games_with_card": 187
+        },
+        "nerfed_or_restricted_relics": {
+          "relics_per_game": 0.49,
+          "relics_per_game_se": 0.037325588462462575,
+          "game_frac_with_any": 0.41,
+          "game_frac_with_any_se": 0.028443454437435133
+        }
+      },
+      "per_changed_card": {
+        "CARD.BEAT_DOWN": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 6,
+          "plays_per_game": 0.02
+        },
+        "CARD.CATASTROPHE": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 1,
+          "deck_game_frac": 0.0033333333333333335,
+          "deck_copies_per_game": 0.0033333333333333335,
+          "total_plays": 12,
+          "plays_per_game": 0.04
+        },
+        "CARD.EXPECT_A_FIGHT": {
+          "offered_rewards": 178,
+          "picked_rewards": 80,
+          "pick_rate": 0.449438202247191,
+          "deck_games": 87,
+          "deck_game_frac": 0.29,
+          "deck_copies_per_game": 0.33666666666666667,
+          "total_plays": 395,
+          "plays_per_game": 1.3166666666666667
+        },
+        "CARD.EXPERTISE": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.FORGOTTEN_RITUAL": {
+          "offered_rewards": 165,
+          "picked_rewards": 114,
+          "pick_rate": 0.6909090909090909,
+          "deck_games": 119,
+          "deck_game_frac": 0.39666666666666667,
+          "deck_copies_per_game": 0.48333333333333334,
+          "total_plays": 1390,
+          "plays_per_game": 4.633333333333334
+        },
+        "CARD.HELIX_DRILL": {
+          "offered_rewards": 7,
+          "picked_rewards": 5,
+          "pick_rate": 0.7142857142857143,
+          "deck_games": 5,
+          "deck_game_frac": 0.016666666666666666,
+          "deck_copies_per_game": 0.016666666666666666,
+          "total_plays": 46,
+          "plays_per_game": 0.15333333333333332
+        },
+        "CARD.MEMENTO_MORI": {
+          "offered_rewards": 2,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.OMNISLICE": {
+          "offered_rewards": 9,
+          "picked_rewards": 6,
+          "pick_rate": 0.6666666666666666,
+          "deck_games": 14,
+          "deck_game_frac": 0.04666666666666667,
+          "deck_copies_per_game": 0.04666666666666667,
+          "total_plays": 326,
+          "plays_per_game": 1.0866666666666667
+        },
+        "CARD.PHANTOM_BLADES": {
+          "offered_rewards": 3,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.SALVO": {
+          "offered_rewards": 3,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 4,
+          "deck_game_frac": 0.013333333333333334,
+          "deck_copies_per_game": 0.013333333333333334,
+          "total_plays": 94,
+          "plays_per_game": 0.31333333333333335
+        },
+        "CARD.SPEEDSTER": {
+          "offered_rewards": 1,
+          "picked_rewards": 0,
+          "pick_rate": 0.0,
+          "deck_games": 0,
+          "deck_game_frac": 0.0,
+          "deck_copies_per_game": 0.0,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.SPOILS_MAP": {
+          "offered_rewards": 0,
+          "picked_rewards": 0,
+          "pick_rate": null,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 0,
+          "plays_per_game": 0.0
+        },
+        "CARD.UPROAR": {
+          "offered_rewards": 5,
+          "picked_rewards": 2,
+          "pick_rate": 0.4,
+          "deck_games": 2,
+          "deck_game_frac": 0.006666666666666667,
+          "deck_copies_per_game": 0.006666666666666667,
+          "total_plays": 8,
+          "plays_per_game": 0.02666666666666667
+        }
+      },
+      "per_changed_relic": {
+        "RELIC.ALCHEMICAL_COFFER": {
+          "games": 21,
+          "game_frac": 0.07,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.ASTROLABE": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BEAUTIFUL_BRACELET": {
+          "games": 8,
+          "game_frac": 0.02666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.BRILLIANT_SCARF": {
+          "games": 19,
+          "game_frac": 0.06333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.BURNING_STICKS": {
+          "games": 4,
+          "game_frac": 0.013333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.FISHING_ROD": {
+          "games": 16,
+          "game_frac": 0.05333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JEWELED_MASK": {
+          "games": 13,
+          "game_frac": 0.043333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.JOSS_PAPER": {
+          "games": 48,
+          "game_frac": 0.16,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.JUZU_BRACELET": {
+          "games": 49,
+          "game_frac": 0.16333333333333333,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.KALEIDOSCOPE": {
+          "games": 4,
+          "game_frac": 0.013333333333333334,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.NEW_LEAF": {
+          "games": 14,
+          "game_frac": 0.04666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PAELS_LEGION": {
+          "games": 16,
+          "game_frac": 0.05333333333333334,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PANDORAS_BOX": {
+          "games": 8,
+          "game_frac": 0.02666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.PERMAFROST": {
+          "games": 36,
+          "game_frac": 0.12,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.PHIAL_HOLSTER": {
+          "games": 27,
+          "game_frac": 0.09,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.POTION_BELT": {
+          "games": 99,
+          "game_frac": 0.33,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.RAINBOW_RING": {
+          "games": 17,
+          "game_frac": 0.056666666666666664,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.RINGING_TRIANGLE": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.ROYAL_STAMP": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.SAND_CASTLE": {
+          "games": 5,
+          "game_frac": 0.016666666666666666,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.VELVET_CHOKER": {
+          "games": 6,
+          "game_frac": 0.02,
+          "nerfed_or_restricted": true
+        },
+        "RELIC.WAR_HAMMER": {
+          "games": 2,
+          "game_frac": 0.006666666666666667,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WAR_PAINT": {
+          "games": 68,
+          "game_frac": 0.22666666666666666,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WHETSTONE": {
+          "games": 66,
+          "game_frac": 0.22,
+          "nerfed_or_restricted": false
+        },
+        "RELIC.WING_CHARM": {
+          "games": 1,
+          "game_frac": 0.0033333333333333335,
+          "nerfed_or_restricted": false
+        }
+      },
+      "forgotten_ritual_unconditional_plays": {
+        "total_plays": 1390,
+        "plays_without_prior_exhaust": 1208,
+        "plays_without_prior_exhaust_per_game": 4.026666666666666,
+        "frac_broken_by_v113_precondition": 0.8690647482014389
+      }
+    }
+  }
+}

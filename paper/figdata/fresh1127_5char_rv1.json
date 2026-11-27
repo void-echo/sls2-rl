@@ -1,0 +1,118 @@
+{
+  "fresh1105_2000": {
+    "Ironclad": {
+      "update": 54050,
+      "env_steps": 7084441600,
+      "n": 2000,
+      "wins": 1449,
+      "win_pct": 72.45,
+      "ci95": [
+        0.7045032729547405,
+        0.7436359412426292
+      ],
+      "floor_mean": 46.91
+    },
+    "Defect": {
+      "update": 33800,
+      "env_steps": 4430233600,
+      "n": 2000,
+      "wins": 1507,
+      "win_pct": 75.35,
+      "ci95": [
+        0.7341376419904565,
+        0.7718903793860833
+      ],
+      "floor_mean": 47.36
+    },
+    "Regent": {
+      "update": 33850,
+      "env_steps": 4436787200,
+      "n": 2000,
+      "wins": 1492,
+      "win_pct": 74.6,
+      "ci95": [
+        0.7264630926318592,
+        0.7645936855086886
+      ],
+      "floor_mean": 46.9
+    },
+    "Silent": {
+      "update": 47250,
+      "env_steps": 6193152000,
+      "n": 2000,
+      "wins": 1443,
+      "win_pct": 72.15,
+      "ci95": [
+        0.7014437100852082,
+        0.7407070068177646
+      ],
+      "floor_mean": 46.47
+    },
+    "Necrobinder": {
+      "update": 43000,
+      "env_steps": 5636096000,
+      "n": 2000,
+      "wins": 1409,
+      "win_pct": 70.45,
+      "ci95": [
+        0.6841264888827439,
+        0.7240894100186464
+      ],
+      "floor_mean": 45.8
+    }
+  },
+  "rv1_paired": {
+    "Ironclad": {
+      "n": 1000,
+      "ours_wins": 729,
+      "theirs_wins": 665,
+      "ours_pct": 72.9,
+      "theirs_pct": 66.5,
+      "paper_pct": 66.5,
+      "delta_pct": 6.4,
+      "se_pct": 1.89,
+      "z": 3.39,
+      "only_ours": 210,
+      "only_theirs": 146
+    },
+    "Necrobinder": {
+      "n": 1000,
+      "ours_wins": 697,
+      "theirs_wins": 631,
+      "ours_pct": 69.7,
+      "theirs_pct": 63.1,
+      "paper_pct": 63.1,
+      "delta_pct": 6.6,
+      "se_pct": 1.95,
+      "z": 3.39,
+      "only_ours": 223,
+      "only_theirs": 157
+    },
+    "Silent": {
+      "n": 2999,
+      "ours_wins": 2185,
+      "theirs_wins": 2131,
+      "ours_pct": 72.86,
+      "theirs_pct": 71.06,
+      "paper_pct": 71.1,
+      "delta_pct": 1.8,
+      "se_pct": 1.09,
+      "z": 1.65,
+      "only_ours": 564,
+      "only_theirs": 510
+    },
+    "Defect": {
+      "n": 1000,
+      "ours_wins": 754,
+      "theirs_wins": 748,
+      "ours_pct": 75.4,
+      "theirs_pct": 74.8,
+      "paper_pct": 74.8,
+      "delta_pct": 0.6,
+      "se_pct": 1.78,
+      "z": 0.34,
+      "only_ours": 161,
+      "only_theirs": 155
+    }
+  }
+}

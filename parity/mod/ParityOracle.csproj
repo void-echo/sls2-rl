@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Parity oracle mod for the real Slay the Spire 2 client (see parity/README.md).
+       Build: DOTNET_ROOT=~/.dotnet ~/.dotnet/dotnet build -c Release parity/mod/ParityOracle.csproj -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ParityOracle</AssemblyName>
+    <RootNamespace>ParityOracle</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>CS1591;CS0618</NoWarn>
+    <STS2GameDataDir Condition="'$(STS2GameDataDir)' == ''">$(MSBuildThisFileDirectory)../../engine/lib</STS2GameDataDir>
+    <GodotSharpReferencePath Condition="Exists('$(STS2GameDataDir)/GodotSharp.dll')">$(STS2GameDataDir)/GodotSharp.dll</GodotSharpReferencePath>
+    <GodotSharpReferencePath Condition="'$(GodotSharpReferencePath)' == ''">$(STS2GameDataDir)/GodotSharp.api.dll</GodotSharpReferencePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The observation: the engine's own code (engine/src/Shared), so the client builds it exactly like the engine -->
+    <Compile Include="../../engine/src/Shared/*.cs" Link="Shared/%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="sts2"><HintPath>$(STS2GameDataDir)/sts2.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="GodotSharp"><HintPath>$(GodotSharpReferencePath)</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(STS2GameDataDir)/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="SmartFormat"><HintPath>$(STS2GameDataDir)/SmartFormat.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

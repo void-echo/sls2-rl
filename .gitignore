@@ -1,0 +1,22 @@
+# Game binaries and decompiled source: copyrighted, never commit
+game_dlls/
+decompiled/
+# Scratch
+tmp/
+# Caches / builds
+__pycache__/
+*.pyc
+bin/
+obj/
+target/
+.venv/
+.DS_Store
+# Engine build inputs/outputs (game DLLs and text are copyrighted)
+engine/lib/
+engine/lib_x64/
+engine/logs/
+engine/localization_eng/
+engine/localization_zhs/
+
+# RL runs (checkpoints, logs)
+runs/

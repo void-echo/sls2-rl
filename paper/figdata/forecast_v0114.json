@@ -1,0 +1,1296 @@
+{
+ "calibration_v0113": {
+  "slope_pts_per_unit_deck_frac": -10.102020296810691,
+  "intercept_pts": -1.330618154518521
+ },
+ "sets": {
+  "weakened(nerf,rework,mixed)": [
+   "CARD.ARCHERY",
+   "CARD.ARROW_STAB",
+   "CARD.BOUNCE",
+   "CARD.CHO_BARBS",
+   "CARD.CHO_FIRM",
+   "CARD.CHO_READY",
+   "CARD.DEATH",
+   "CARD.FLORESCENCE",
+   "CARD.GROWTH",
+   "CARD.HEAVY_SHOT",
+   "CARD.KI_REST",
+   "CARD.LULLABY",
+   "CARD.MELODIC_SHOT",
+   "CARD.MOTIF",
+   "CARD.MYTHIC_FORM",
+   "CARD.MY_SHINIES",
+   "CARD.PUNCH_OF_JOY",
+   "CARD.QUIVER",
+   "CARD.RECALL",
+   "CARD.REPEAT_SHOT",
+   "CARD.SIMPLETON",
+   "CARD.SONG_PATH",
+   "CARD.TEMPERANCE",
+   "CARD.THE_EMPEROR",
+   "CARD.THE_FOOL",
+   "CARD.THE_HIEROPHANT",
+   "CARD.THE_SHOT",
+   "CARD.THE_SUN",
+   "CARD.THE_TOWER",
+   "CARD.TRICK_SHOT",
+   "CARD.TUNE",
+   "CARD.VIOLENT_CHORD",
+   "CARD.VITRIOL",
+   "CARD.WAH_CHO_KI",
+   "CARD.WAH_HAMMER",
+   "CARD.WAH_KI",
+   "CARD.WAH_SYMPHONY"
+  ],
+  "buffed": [
+   "CARD.ALL_IS_WELL",
+   "CARD.BLOT_OUT_THE_SKY",
+   "CARD.CHO_CHORUS",
+   "CARD.EXPLOSIVE_ARROWS",
+   "CARD.HARMONIC_SHIELD",
+   "CARD.HONING",
+   "CARD.JEST",
+   "CARD.SERRATED_ARROWS",
+   "CARD.SHOW_OFF",
+   "CARD.SORROWFUL_STRIKE",
+   "CARD.THE_HERMIT",
+   "CARD.TIMBER",
+   "CARD.UPROOT"
+  ],
+  "rule_relics": [
+   "RELIC.FAKE_HAPPY_FLOWER",
+   "RELIC.HAPPY_FLOWER",
+   "RELIC.PAELS_GROWTH",
+   "RELIC.WUPPY"
+  ]
+ },
+ "characters": {
+  "Defect": {
+   "ckpt": "runs/colab/defect_v113.pt",
+   "n_games": 300,
+   "win_pct_v0113": 70.33,
+   "card_plays_per_game": 502.7,
+   "deck_frac_weakened": 0.0067,
+   "deck_frac_nerf_or_rework": 0.0,
+   "deck_frac_buffed": 0.0,
+   "plays_per_game_weakened": 0.063,
+   "plays_per_game_nerf_or_rework": 0.0,
+   "plays_per_game_buffed": 0.007,
+   "relic_game_frac": {
+    "RELIC.FAKE_HAPPY_FLOWER": 0.1,
+    "RELIC.HAPPY_FLOWER": 0.29,
+    "RELIC.PAELS_GROWTH": 0.0,
+    "RELIC.WUPPY": 0.0
+   },
+   "calibrated_delta_pts": -1.4,
+   "changed_cards_used": [
+    {
+     "id": "CARD.MY_SHINIES",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.06,
+     "offered": 0,
+     "picked": 0,
+     "desc": "由每 20/10 金币打 1 段 1 伤，改为保底 1 段、每 25 金币再打 1 段 2/3 伤，单段更重但高金币时段数更少。"
+    },
+    {
+     "id": "CARD.CHO_BARBS",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.003,
+     "offered": 1,
+     "picked": 1,
+     "desc": "格挡从 7/9 增至 8/10，临时荆棘从 3/4 降至 2/3。"
+    },
+    {
+     "id": "CARD.SORROWFUL_STRIKE",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 0,
+     "picked": 0,
+     "desc": "伤害仍为 13/17，附带的悲伤从 2 张减至 1 张，少占一个手牌位。"
+    },
+    {
+     "id": "CARD.TIMBER",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 0,
+     "picked": 0,
+     "desc": "单体 20/25 伤害与击杀后的全体 30/35 伤害合算一次攻击，活力等一次性加成可覆盖两段。"
+    },
+    {
+     "id": "CARD.MOTIF",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由罕见升至稀有，更难取得，费用和每种旋律首次触发的抽牌数相同。"
+    },
+    {
+     "id": "CARD.RECALL",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由 1/0 费拔箭并将 1 张弃牌置顶，改为 0 费保留、只拔箭，基础版消耗而升级版可重复使用。"
+    },
+    {
+     "id": "CARD.TUNE",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由 2/1 费、打过叽牌时回合末给下一张牌免能量，改为 1 费、每回合首张叽牌后随机升级 1/2 张手牌。"
+    }
+   ]
+  },
+  "Fool": {
+   "ckpt": "runs/plast5char/ckpts/fool_ckpt_012650.pt",
+   "n_games": 300,
+   "win_pct_v0113": 49.67,
+   "card_plays_per_game": 365.8,
+   "deck_frac_weakened": 0.9967,
+   "deck_frac_nerf_or_rework": 0.9933,
+   "deck_frac_buffed": 0.11,
+   "plays_per_game_weakened": 102.637,
+   "plays_per_game_nerf_or_rework": 89.16,
+   "plays_per_game_buffed": 1.193,
+   "relic_game_frac": {
+    "RELIC.FAKE_HAPPY_FLOWER": 0.0733,
+    "RELIC.HAPPY_FLOWER": 0.2533,
+    "RELIC.PAELS_GROWTH": 0.0,
+    "RELIC.WUPPY": 0.0
+   },
+   "calibrated_delta_pts": -11.4,
+   "changed_cards_used": [
+    {
+     "id": "CARD.CHO_FIRM",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.78,
+     "plays_per_game": 16.407,
+     "offered": 444,
+     "picked": 318,
+     "desc": "每次获得的格挡从 6/8 降至 5/7，有箭时两次都按新值计算。"
+    },
+    {
+     "id": "CARD.CHO_READY",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.6367,
+     "plays_per_game": 13.507,
+     "offered": 429,
+     "picked": 241,
+     "desc": "格挡从 8/11 降至 7/9，瞄准从 3/5 降至 3/4。"
+    },
+    {
+     "id": "CARD.WAH_HAMMER",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.56,
+     "plays_per_game": 12.47,
+     "offered": 450,
+     "picked": 173,
+     "desc": "普通版仍为 9 伤害，升级版 12→11，对扎穿目标的升级伤害 24→22。"
+    },
+    {
+     "id": "CARD.WAH_KI",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.4467,
+     "plays_per_game": 9.883,
+     "offered": 140,
+     "picked": 132,
+     "desc": "两击每击伤害从 2/4 变为 3/4，原先下回合多 1 能量、多抽 1 张，现改为立即选 1 张弃牌置顶。"
+    },
+    {
+     "id": "CARD.CHO_BARBS",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.4967,
+     "plays_per_game": 7.743,
+     "offered": 429,
+     "picked": 147,
+     "desc": "格挡从 7/9 增至 8/10，临时荆棘从 3/4 降至 2/3。"
+    },
+    {
+     "id": "CARD.BOUNCE",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.2067,
+     "plays_per_game": 6.09,
+     "offered": 90,
+     "picked": 62,
+     "desc": "拉伸从 10/13 降至 8/11。"
+    },
+    {
+     "id": "CARD.WAH_SYMPHONY",
+     "direction": "nerf",
+     "gated": true,
+     "deck_frac": 0.3133,
+     "plays_per_game": 4.927,
+     "offered": 94,
+     "picked": 93,
+     "desc": "基础全体伤害仍为 6，每张牌的 4/6 点加伤现在要求带啾或叽，仅带哇的牌不再计入。"
+    },
+    {
+     "id": "CARD.WAH_CHO_KI",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.27,
+     "plays_per_game": 4.887,
+     "offered": 100,
+     "picked": 82,
+     "desc": "费用 1→2，伤害和格挡各从 9/12 降至 8/10，格挡移到攻击之后，仍抽 1/2 张。"
+    },
+    {
+     "id": "CARD.KI_REST",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.4133,
+     "plays_per_game": 4.803,
+     "offered": 154,
+     "picked": 115,
+     "desc": "下回合获得的额外能量从 5/6 降至 4/5。"
+    },
+    {
+     "id": "CARD.MOTIF",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.5567,
+     "plays_per_game": 3.763,
+     "offered": 167,
+     "picked": 144,
+     "desc": "由罕见升至稀有，更难取得，费用和每种旋律首次触发的抽牌数相同。"
+    },
+    {
+     "id": "CARD.MELODIC_SHOT",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.23,
+     "plays_per_game": 3.323,
+     "offered": 86,
+     "picked": 70,
+     "desc": "普通版仍为 1 费每段 12 伤，升级版由 0 费每段 13 伤改为 1 费每段 14 伤。"
+    },
+    {
+     "id": "CARD.SONG_PATH",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.34,
+     "plays_per_game": 2.353,
+     "offered": 195,
+     "picked": 93,
+     "desc": "每回合首张啾牌触发的格挡从 5/7 降至 4/6。"
+    },
+    {
+     "id": "CARD.VIOLENT_CHORD",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.2967,
+     "plays_per_game": 2.307,
+     "offered": 171,
+     "picked": 71,
+     "desc": "每回合首张哇牌触发的全体伤害从 9/12 降至 7/9。"
+    },
+    {
+     "id": "CARD.REPEAT_SHOT",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.1667,
+     "plays_per_game": 1.977,
+     "offered": 103,
+     "picked": 49,
+     "desc": "X连击的每段伤害从 15/20 降至 13/16。"
+    },
+    {
+     "id": "CARD.VITRIOL",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.16,
+     "plays_per_game": 1.593,
+     "offered": 139,
+     "picked": 38,
+     "desc": "仍施加 2/3 层虚弱，加入手牌的悲伤由 1 张增至 2 张。"
+    },
+    {
+     "id": "CARD.LULLABY",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.1633,
+     "plays_per_game": 1.39,
+     "offered": 80,
+     "picked": 48,
+     "desc": "费用从 0 升至 1，凑齐三种旋律的格挡从 20/20 降至 12/16，升级失去固有。"
+    },
+    {
+     "id": "CARD.MYTHIC_FORM",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.22,
+     "plays_per_game": 1.333,
+     "offered": 76,
+     "picked": 74,
+     "desc": "加入战斗生成池，但基础版新增虚无，升级只移除虚无，生成的塔罗牌也失去升级。"
+    },
+    {
+     "id": "CARD.ARROW_STAB",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0367,
+     "plays_per_game": 0.897,
+     "offered": 448,
+     "picked": 9,
+     "desc": "费用从 1 升至 2，伤害从 9/12 增至 13/15，取回发射牌改为获得 6/8 点瞄准。"
+    },
+    {
+     "id": "CARD.SORROWFUL_STRIKE",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0233,
+     "plays_per_game": 0.28,
+     "offered": 454,
+     "picked": 4,
+     "desc": "伤害仍为 13/17，附带的悲伤从 2 张减至 1 张，少占一个手牌位。"
+    },
+    {
+     "id": "CARD.HEAVY_SHOT",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0333,
+     "plays_per_game": 0.277,
+     "offered": 427,
+     "picked": 6,
+     "desc": "由普通升至罕见，基础伤害从 20/25 降至 16/17，瞄准倍率从 2/2 升至 3/4。"
+    },
+    {
+     "id": "CARD.THE_SUN",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.273,
+     "offered": 0,
+     "picked": 0,
+     "desc": "抽牌和回能仍各为 2（升级 3），代价由往弃牌堆放 1 张 煤灰 改为往抽牌堆随机插入 2 张。"
+    },
+    {
+     "id": "CARD.DEATH",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.27,
+     "offered": 0,
+     "picked": 0,
+     "desc": "施加的灾厄从 75/99 层降至 66/81 层。"
+    },
+    {
+     "id": "CARD.THE_TOWER",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.25,
+     "offered": 0,
+     "picked": 0,
+     "desc": "伤害按当前楼层数计算，每层的伤害从 2/3 降至 1/2。"
+    },
+    {
+     "id": "CARD.TRICK_SHOT",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0167,
+     "plays_per_game": 0.25,
+     "offered": 163,
+     "picked": 1,
+     "desc": "打出时有箭可让本牌回手，现改为成功发射后抽 2/3 张，箭伤从 12/15 变为 12/14。"
+    },
+    {
+     "id": "CARD.THE_EMPEROR",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.23,
+     "offered": 0,
+     "picked": 0,
+     "desc": "获得的能量由 7 降至 3，升级后由 9 降至 4。"
+    },
+    {
+     "id": "CARD.THE_HIEROPHANT",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.21,
+     "offered": 0,
+     "picked": 0,
+     "desc": "生成的 3 张不同无色牌（升级 4 张）失去本回合首次打出时的 1 点费用减免。"
+    },
+    {
+     "id": "CARD.QUIVER",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0133,
+     "plays_per_game": 0.197,
+     "offered": 95,
+     "picked": 0,
+     "desc": "由稀有降至罕见，升级由获得 2 支箭矢改为固有且获得 1 支。"
+    },
+    {
+     "id": "CARD.ARCHERY",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.03,
+     "plays_per_game": 0.19,
+     "offered": 160,
+     "picked": 7,
+     "desc": "每回合获得的瞄准从 4/5 增至 6/8，稀有度从罕见升至稀有。"
+    },
+    {
+     "id": "CARD.TIMBER",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0067,
+     "plays_per_game": 0.187,
+     "offered": 154,
+     "picked": 1,
+     "desc": "单体 20/25 伤害与击杀后的全体 30/35 伤害合算一次攻击，活力等一次性加成可覆盖两段。"
+    },
+    {
+     "id": "CARD.TEMPERANCE",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.183,
+     "offered": 0,
+     "picked": 0,
+     "desc": "格挡由 30 降至 20，升级后由 35 降至 25。"
+    },
+    {
+     "id": "CARD.THE_FOOL",
+     "direction": "mixed",
+     "gated": true,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.177,
+     "offered": 0,
+     "picked": 0,
+     "desc": "仍尝试打出 2/3 张随机手牌，只剩不能打出的牌时将其留在手中，灼伤仍会伤人，晕眩则可在回合末消耗。"
+    },
+    {
+     "id": "CARD.THE_HERMIT",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.167,
+     "offered": 0,
+     "picked": 0,
+     "desc": "选 1 张手牌弃掉（诅咒则消耗），随后的抽牌量从 2/3 增至 3/4。"
+    },
+    {
+     "id": "CARD.TUNE",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0433,
+     "plays_per_game": 0.153,
+     "offered": 163,
+     "picked": 4,
+     "desc": "由 2/1 费、打过叽牌时回合末给下一张牌免能量，改为 1 费、每回合首张叽牌后随机升级 1/2 张手牌。"
+    },
+    {
+     "id": "CARD.JEST",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.03,
+     "plays_per_game": 0.15,
+     "offered": 433,
+     "picked": 1,
+     "desc": "格挡从 14/18 增至 15/19，仍生成 1 张悲伤。"
+    },
+    {
+     "id": "CARD.PUNCH_OF_JOY",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.01,
+     "plays_per_game": 0.137,
+     "offered": 147,
+     "picked": 0,
+     "desc": "伤害从 13/17 调为 14/16，升级后可将 2 张悲伤变为喜悦，原为 1 张。"
+    },
+    {
+     "id": "CARD.HARMONIC_SHIELD",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.02,
+     "plays_per_game": 0.093,
+     "offered": 168,
+     "picked": 0,
+     "desc": "格挡由 5/7 × 旋律种类数改为 4/6 ×（旋律种类数 + 1），在 0 至 3 种旋律下均提高。"
+    },
+    {
+     "id": "CARD.BLOT_OUT_THE_SKY",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0167,
+     "plays_per_game": 0.063,
+     "offered": 155,
+     "picked": 0,
+     "desc": "生成发射牌改为固定使用愚者卡池，其他角色拿到此牌也能获得 1 张本回合免费的发射牌。"
+    },
+    {
+     "id": "CARD.EXPLOSIVE_ARROWS",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0067,
+     "plays_per_game": 0.06,
+     "offered": 101,
+     "picked": 0,
+     "desc": "扎穿触发的群伤从 6/8 增至 8/11，稀有度从稀有降至罕见。"
+    },
+    {
+     "id": "CARD.MY_SHINIES",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.057,
+     "offered": 0,
+     "picked": 0,
+     "desc": "由每 20/10 金币打 1 段 1 伤，改为保底 1 段、每 25 金币再打 1 段 2/3 伤，单段更重但高金币时段数更少。"
+    },
+    {
+     "id": "CARD.RECALL",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.01,
+     "plays_per_game": 0.057,
+     "offered": 475,
+     "picked": 0,
+     "desc": "由 1/0 费拔箭并将 1 张弃牌置顶，改为 0 费保留、只拔箭，基础版消耗而升级版可重复使用。"
+    },
+    {
+     "id": "CARD.SERRATED_ARROWS",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0133,
+     "plays_per_game": 0.057,
+     "offered": 189,
+     "picked": 0,
+     "desc": "自己或宠物攻击扎穿目标时，额外伤害从 25%/50% 升至 50%/75%。"
+    },
+    {
+     "id": "CARD.CHO_CHORUS",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0067,
+     "plays_per_game": 0.043,
+     "offered": 85,
+     "picked": 0,
+     "desc": "自动打出手中哇、叽牌前获得的格挡从 12/15 增至 14/18。"
+    },
+    {
+     "id": "CARD.SIMPLETON",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.01,
+     "plays_per_game": 0.043,
+     "offered": 94,
+     "picked": 0,
+     "desc": "普通版仍为 2 费，升级版从 1 费自动打出 1 张最低费手牌改为 2 费自动打出最多 2 张。"
+    },
+    {
+     "id": "CARD.SHOW_OFF",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.03,
+     "offered": 94,
+     "picked": 0,
+     "desc": "普通版和升级版均由 1 费降至 0 费，瞄准及其永久成长数值相同。"
+    },
+    {
+     "id": "CARD.HONING",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.027,
+     "offered": 90,
+     "picked": 0,
+     "desc": "箭矢攻击的额外伤害从 50% 升至 100%，普通版和升级版均生效。"
+    },
+    {
+     "id": "CARD.GROWTH",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0067,
+     "plays_per_game": 0.023,
+     "offered": 169,
+     "picked": 0,
+     "desc": "由消耗全部悲伤、每张获得 4/6 拉伸，改为获得 8/11 格挡并把随机 1 张悲伤变为生长的复制。"
+    },
+    {
+     "id": "CARD.UPROOT",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0067,
+     "plays_per_game": 0.023,
+     "offered": 161,
+     "picked": 0,
+     "desc": "取回目标身上自己的全部箭矢并施加 3/4 层易伤，费用从 1 降至 0。"
+    },
+    {
+     "id": "CARD.ALL_IS_WELL",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.013,
+     "offered": 171,
+     "picked": 0,
+     "desc": "每生成一张悲伤所得的格挡从 4/5 增至 4/6。"
+    },
+    {
+     "id": "CARD.FLORESCENCE",
+     "direction": "rework",
+     "gated": true,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 85,
+     "picked": 0,
+     "desc": "由 0 费、消耗自身和所有发射牌来生成全力射击，改为 1 费可重复使用，须将 1 张手牌变成 20/25 伤害的全力射击。"
+    },
+    {
+     "id": "CARD.THE_SHOT",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 0,
+     "picked": 0,
+     "desc": "由 1 费、伤害等于怒放消耗的发射牌数 × 10/13，改为 0 费、固定 20/25 伤害且自身消耗。"
+    }
+   ]
+  },
+  "Ironclad": {
+   "ckpt": "runs/colab/iron_v113.pt",
+   "n_games": 300,
+   "win_pct_v0113": 73.33,
+   "card_plays_per_game": 373.4,
+   "deck_frac_weakened": 0.0033,
+   "deck_frac_nerf_or_rework": 0.0033,
+   "deck_frac_buffed": 0.0033,
+   "plays_per_game_weakened": 0.053,
+   "plays_per_game_nerf_or_rework": 0.02,
+   "plays_per_game_buffed": 0.043,
+   "relic_game_frac": {
+    "RELIC.FAKE_HAPPY_FLOWER": 0.08,
+    "RELIC.HAPPY_FLOWER": 0.33,
+    "RELIC.PAELS_GROWTH": 0.0,
+    "RELIC.WUPPY": 0.0
+   },
+   "calibrated_delta_pts": -1.36,
+   "changed_cards_used": [
+    {
+     "id": "CARD.SORROWFUL_STRIKE",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.043,
+     "offered": 2,
+     "picked": 1,
+     "desc": "伤害仍为 13/17，附带的悲伤从 2 张减至 1 张，少占一个手牌位。"
+    },
+    {
+     "id": "CARD.MY_SHINIES",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.033,
+     "offered": 0,
+     "picked": 0,
+     "desc": "由每 20/10 金币打 1 段 1 伤，改为保底 1 段、每 25 金币再打 1 段 2/3 伤，单段更重但高金币时段数更少。"
+    },
+    {
+     "id": "CARD.CHO_READY",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.013,
+     "offered": 2,
+     "picked": 1,
+     "desc": "格挡从 8/11 降至 7/9，瞄准从 3/5 降至 3/4。"
+    },
+    {
+     "id": "CARD.ARROW_STAB",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 1,
+     "picked": 0,
+     "desc": "费用从 1 升至 2，伤害从 9/12 增至 13/15，取回发射牌改为获得 6/8 点瞄准。"
+    },
+    {
+     "id": "CARD.WAH_SYMPHONY",
+     "direction": "nerf",
+     "gated": true,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 0,
+     "picked": 0,
+     "desc": "基础全体伤害仍为 6，每张牌的 4/6 点加伤现在要求带啾或叽，仅带哇的牌不再计入。"
+    },
+    {
+     "id": "CARD.CHO_FIRM",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "每次获得的格挡从 6/8 降至 5/7，有箭时两次都按新值计算。"
+    },
+    {
+     "id": "CARD.JEST",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "格挡从 14/18 增至 15/19，仍生成 1 张悲伤。"
+    },
+    {
+     "id": "CARD.MOTIF",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由罕见升至稀有，更难取得，费用和每种旋律首次触发的抽牌数相同。"
+    },
+    {
+     "id": "CARD.QUIVER",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由稀有降至罕见，升级由获得 2 支箭矢改为固有且获得 1 支。"
+    },
+    {
+     "id": "CARD.REPEAT_SHOT",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "X连击的每段伤害从 15/20 降至 13/16。"
+    },
+    {
+     "id": "CARD.SIMPLETON",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "普通版仍为 2 费，升级版从 1 费自动打出 1 张最低费手牌改为 2 费自动打出最多 2 张。"
+    },
+    {
+     "id": "CARD.TUNE",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 2,
+     "picked": 0,
+     "desc": "由 2/1 费、打过叽牌时回合末给下一张牌免能量，改为 1 费、每回合首张叽牌后随机升级 1/2 张手牌。"
+    },
+    {
+     "id": "CARD.UPROOT",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "取回目标身上自己的全部箭矢并施加 3/4 层易伤，费用从 1 降至 0。"
+    },
+    {
+     "id": "CARD.VIOLENT_CHORD",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "每回合首张哇牌触发的全体伤害从 9/12 降至 7/9。"
+    },
+    {
+     "id": "CARD.WAH_KI",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "两击每击伤害从 2/4 变为 3/4，原先下回合多 1 能量、多抽 1 张，现改为立即选 1 张弃牌置顶。"
+    }
+   ]
+  },
+  "Necrobinder": {
+   "ckpt": "runs/colab/necro_v113.pt",
+   "n_games": 300,
+   "win_pct_v0113": 61.33,
+   "card_plays_per_game": 454.8,
+   "deck_frac_weakened": 0.0067,
+   "deck_frac_nerf_or_rework": 0.0,
+   "deck_frac_buffed": 0.0,
+   "plays_per_game_weakened": 0.043,
+   "plays_per_game_nerf_or_rework": 0.0,
+   "plays_per_game_buffed": 0.0,
+   "relic_game_frac": {
+    "RELIC.FAKE_HAPPY_FLOWER": 0.0967,
+    "RELIC.HAPPY_FLOWER": 0.29,
+    "RELIC.PAELS_GROWTH": 0.0,
+    "RELIC.WUPPY": 0.0
+   },
+   "calibrated_delta_pts": -1.4,
+   "changed_cards_used": [
+    {
+     "id": "CARD.HEAVY_SHOT",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.033,
+     "offered": 1,
+     "picked": 1,
+     "desc": "由普通升至罕见，基础伤害从 20/25 降至 16/17，瞄准倍率从 2/2 升至 3/4。"
+    },
+    {
+     "id": "CARD.MY_SHINIES",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.01,
+     "offered": 0,
+     "picked": 0,
+     "desc": "由每 20/10 金币打 1 段 1 伤，改为保底 1 段、每 25 金币再打 1 段 2/3 伤，单段更重但高金币时段数更少。"
+    },
+    {
+     "id": "CARD.ARCHERY",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "每回合获得的瞄准从 4/5 增至 6/8，稀有度从罕见升至稀有。"
+    },
+    {
+     "id": "CARD.ARROW_STAB",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "费用从 1 升至 2，伤害从 9/12 增至 13/15，取回发射牌改为获得 6/8 点瞄准。"
+    },
+    {
+     "id": "CARD.CHO_FIRM",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "每次获得的格挡从 6/8 降至 5/7，有箭时两次都按新值计算。"
+    },
+    {
+     "id": "CARD.CHO_READY",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "格挡从 8/11 降至 7/9，瞄准从 3/5 降至 3/4。"
+    },
+    {
+     "id": "CARD.QUIVER",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由稀有降至罕见，升级由获得 2 支箭矢改为固有且获得 1 支。"
+    },
+    {
+     "id": "CARD.UPROOT",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "取回目标身上自己的全部箭矢并施加 3/4 层易伤，费用从 1 降至 0。"
+    }
+   ]
+  },
+  "Regent": {
+   "ckpt": "runs/colab/regent_v113.pt",
+   "n_games": 300,
+   "win_pct_v0113": 74.67,
+   "card_plays_per_game": 473.1,
+   "deck_frac_weakened": 0.01,
+   "deck_frac_nerf_or_rework": 0.01,
+   "deck_frac_buffed": 0.0,
+   "plays_per_game_weakened": 0.963,
+   "plays_per_game_nerf_or_rework": 0.123,
+   "plays_per_game_buffed": 0.003,
+   "relic_game_frac": {
+    "RELIC.FAKE_HAPPY_FLOWER": 0.08,
+    "RELIC.HAPPY_FLOWER": 0.3133,
+    "RELIC.PAELS_GROWTH": 0.0,
+    "RELIC.WUPPY": 0.0
+   },
+   "calibrated_delta_pts": -1.43,
+   "changed_cards_used": [
+    {
+     "id": "CARD.MY_SHINIES",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.797,
+     "offered": 0,
+     "picked": 0,
+     "desc": "由每 20/10 金币打 1 段 1 伤，改为保底 1 段、每 25 金币再打 1 段 2/3 伤，单段更重但高金币时段数更少。"
+    },
+    {
+     "id": "CARD.ARROW_STAB",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.053,
+     "offered": 1,
+     "picked": 1,
+     "desc": "费用从 1 升至 2，伤害从 9/12 增至 13/15，取回发射牌改为获得 6/8 点瞄准。"
+    },
+    {
+     "id": "CARD.HEAVY_SHOT",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.027,
+     "offered": 2,
+     "picked": 0,
+     "desc": "由普通升至罕见，基础伤害从 20/25 降至 16/17，瞄准倍率从 2/2 升至 3/4。"
+    },
+    {
+     "id": "CARD.WAH_KI",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.027,
+     "offered": 1,
+     "picked": 0,
+     "desc": "两击每击伤害从 2/4 变为 3/4，原先下回合多 1 能量、多抽 1 张，现改为立即选 1 张弃牌置顶。"
+    },
+    {
+     "id": "CARD.MELODIC_SHOT",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.013,
+     "offered": 0,
+     "picked": 0,
+     "desc": "普通版仍为 1 费每段 12 伤，升级版由 0 费每段 13 伤改为 1 费每段 14 伤。"
+    },
+    {
+     "id": "CARD.CHO_READY",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.01,
+     "offered": 2,
+     "picked": 1,
+     "desc": "格挡从 8/11 降至 7/9，瞄准从 3/5 降至 3/4。"
+    },
+    {
+     "id": "CARD.WAH_CHO_KI",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.01,
+     "offered": 0,
+     "picked": 0,
+     "desc": "费用 1→2，伤害和格挡各从 9/12 降至 8/10，格挡移到攻击之后，仍抽 1/2 张。"
+    },
+    {
+     "id": "CARD.WAH_SYMPHONY",
+     "direction": "nerf",
+     "gated": true,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.01,
+     "offered": 0,
+     "picked": 0,
+     "desc": "基础全体伤害仍为 6，每张牌的 4/6 点加伤现在要求带啾或叽，仅带哇的牌不再计入。"
+    },
+    {
+     "id": "CARD.MOTIF",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.007,
+     "offered": 1,
+     "picked": 1,
+     "desc": "由罕见升至稀有，更难取得，费用和每种旋律首次触发的抽牌数相同。"
+    },
+    {
+     "id": "CARD.REPEAT_SHOT",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.007,
+     "offered": 0,
+     "picked": 0,
+     "desc": "X连击的每段伤害从 15/20 降至 13/16。"
+    },
+    {
+     "id": "CARD.PUNCH_OF_JOY",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 0,
+     "picked": 0,
+     "desc": "伤害从 13/17 调为 14/16，升级后可将 2 张悲伤变为喜悦，原为 1 张。"
+    },
+    {
+     "id": "CARD.TIMBER",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.003,
+     "offered": 0,
+     "picked": 0,
+     "desc": "单体 20/25 伤害与击杀后的全体 30/35 伤害合算一次攻击，活力等一次性加成可覆盖两段。"
+    },
+    {
+     "id": "CARD.ARCHERY",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "每回合获得的瞄准从 4/5 增至 6/8，稀有度从罕见升至稀有。"
+    },
+    {
+     "id": "CARD.CHO_FIRM",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "每次获得的格挡从 6/8 降至 5/7，有箭时两次都按新值计算。"
+    },
+    {
+     "id": "CARD.RECALL",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由 1/0 费拔箭并将 1 张弃牌置顶，改为 0 费保留、只拔箭，基础版消耗而升级版可重复使用。"
+    },
+    {
+     "id": "CARD.SIMPLETON",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "普通版仍为 2 费，升级版从 1 费自动打出 1 张最低费手牌改为 2 费自动打出最多 2 张。"
+    },
+    {
+     "id": "CARD.SORROWFUL_STRIKE",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 2,
+     "picked": 0,
+     "desc": "伤害仍为 13/17，附带的悲伤从 2 张减至 1 张，少占一个手牌位。"
+    },
+    {
+     "id": "CARD.TUNE",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由 2/1 费、打过叽牌时回合末给下一张牌免能量，改为 1 费、每回合首张叽牌后随机升级 1/2 张手牌。"
+    },
+    {
+     "id": "CARD.UPROOT",
+     "direction": "buff",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "取回目标身上自己的全部箭矢并施加 3/4 层易伤，费用从 1 降至 0。"
+    },
+    {
+     "id": "CARD.WAH_HAMMER",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "普通版仍为 9 伤害，升级版 12→11，对扎穿目标的升级伤害 24→22。"
+    }
+   ]
+  },
+  "Silent": {
+   "ckpt": "runs/colab/silent_v113.pt",
+   "n_games": 300,
+   "win_pct_v0113": 67.33,
+   "card_plays_per_game": 625.7,
+   "deck_frac_weakened": 0.0033,
+   "deck_frac_nerf_or_rework": 0.0,
+   "deck_frac_buffed": 0.0,
+   "plays_per_game_weakened": 0.02,
+   "plays_per_game_nerf_or_rework": 0.0,
+   "plays_per_game_buffed": 0.0,
+   "relic_game_frac": {
+    "RELIC.FAKE_HAPPY_FLOWER": 0.09,
+    "RELIC.HAPPY_FLOWER": 0.2767,
+    "RELIC.PAELS_GROWTH": 0.0,
+    "RELIC.WUPPY": 0.0
+   },
+   "calibrated_delta_pts": -1.36,
+   "changed_cards_used": [
+    {
+     "id": "CARD.MY_SHINIES",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0033,
+     "plays_per_game": 0.02,
+     "offered": 0,
+     "picked": 0,
+     "desc": "由每 20/10 金币打 1 段 1 伤，改为保底 1 段、每 25 金币再打 1 段 2/3 伤，单段更重但高金币时段数更少。"
+    },
+    {
+     "id": "CARD.ARROW_STAB",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "费用从 1 升至 2，伤害从 9/12 增至 13/15，取回发射牌改为获得 6/8 点瞄准。"
+    },
+    {
+     "id": "CARD.CHO_FIRM",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 2,
+     "picked": 0,
+     "desc": "每次获得的格挡从 6/8 降至 5/7，有箭时两次都按新值计算。"
+    },
+    {
+     "id": "CARD.CHO_READY",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "格挡从 8/11 降至 7/9，瞄准从 3/5 降至 3/4。"
+    },
+    {
+     "id": "CARD.HEAVY_SHOT",
+     "direction": "mixed",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 2,
+     "picked": 0,
+     "desc": "由普通升至罕见，基础伤害从 20/25 降至 16/17，瞄准倍率从 2/2 升至 3/4。"
+    },
+    {
+     "id": "CARD.KI_REST",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "下回合获得的额外能量从 5/6 降至 4/5。"
+    },
+    {
+     "id": "CARD.REPEAT_SHOT",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "X连击的每段伤害从 15/20 降至 13/16。"
+    },
+    {
+     "id": "CARD.TUNE",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "由 2/1 费、打过叽牌时回合末给下一张牌免能量，改为 1 费、每回合首张叽牌后随机升级 1/2 张手牌。"
+    },
+    {
+     "id": "CARD.WAH_HAMMER",
+     "direction": "nerf",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "普通版仍为 9 伤害，升级版 12→11，对扎穿目标的升级伤害 24→22。"
+    },
+    {
+     "id": "CARD.WAH_KI",
+     "direction": "rework",
+     "gated": false,
+     "deck_frac": 0.0,
+     "plays_per_game": 0.0,
+     "offered": 1,
+     "picked": 0,
+     "desc": "两击每击伤害从 2/4 变为 3/4，原先下回合多 1 能量、多抽 1 张，现改为立即选 1 张弃牌置顶。"
+    }
+   ]
+  }
+ }
+}
